@@ -8,6 +8,7 @@ execute:
 book:
   title: "STAT 210 Section Notes"
   author: "Zad Chin & Jarell Cheong"
+  favicon: assets/img/stat210-clear_bg.png
   output-file: "users-guide"
   reader-mode: true
   public-url: https://zadchin.github.io/STAT210_Section/
