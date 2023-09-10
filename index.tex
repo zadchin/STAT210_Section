@@ -229,7 +229,7 @@
 
 \begin{document}
 \maketitle
-\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[frame hidden, boxrule=0pt, sharp corners, interior hidden, breakable, enhanced, borderline west={3pt}{0pt}{shadecolor}]}{\end{tcolorbox}}\fi
+\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[boxrule=0pt, breakable, borderline west={3pt}{0pt}{shadecolor}, enhanced, interior hidden, sharp corners, frame hidden]}{\end{tcolorbox}}\fi
 
 \renewcommand*\contentsname{Table of contents}
 {
@@ -247,35 +247,35 @@
 
 \includegraphics{./assets/img/stat210-logo.png}
 
-This is a set of section notes for STAT 210: Probability I, a graduate
-level probability course, at Harvard University taught by Professor
-\href{mailto:blitz@g.harvard.edu}{Joe Blitzstein}, created by
-\href{mailto:zadchin@college.harvard.edu}{Zad Chin} \&
+This website contains section notes for STAT 210: Probability I, a
+graduate level probability course at Harvard University taught by
+Professor \href{mailto:blitz@g.harvard.edu}{Joe Blitzstein}. These notes
+are created by \href{mailto:zadchin@college.harvard.edu}{Zad Chin} and
 \href{mailto:jarellcheong@college.harvard.edu}{Jarell Cheong Tze Wen}.
 
-\hypertarget{important-logistics}{%
-\section*{Important Logistics}\label{important-logistics}}
-\addcontentsline{toc}{section}{Important Logistics}
+\hypertarget{logistics}{%
+\section*{Logistics}\label{logistics}}
+\addcontentsline{toc}{section}{Logistics}
 
-\markright{Important Logistics}
+\markright{Logistics}
 
 \begin{itemize}
 \tightlist
 \item
-  Section Time: 12:00 - 1:00 pm every Friday at SC316
+  Sections: 12:00 - 1:00 pm on Fridays at SC316
 \item
-  Office Hour: 1:15 - 3:15pm every Friday at SC316
+  Office Hours: 1:15 - 3:15pm on Fridays at SC316
 \end{itemize}
 
-In Section, we will only briefly go through definition highlights in
-class, and focus more on pencil problems that will strengthen
-understandings for those concepts/definitions. Section note will be
-posted here before Friday (latest by Thursday night), and section note
-with solution will be posted after section (on Friday night).
+In section, we will only briefly go through the results from class,
+focusing more on pencil problems that will strengthen your understanding
+about those results. Section notes will be posted here before Friday
+(latest by Thursday night), and section notes with solutions will be
+posted after section (on Friday night).
 
-In office hour, we will mainly discuss concept or problem on this week's
-homework. Besides Section \& Office Hours, please feel free to ask
-questions on Ed, or email Joe or us as well.
+In office hours, we will mostly discuss concepts or problems on the
+presently assigned homework. Besides section and office hours, please
+feel free to ask questions on Ed, or email Joe or us as well.
 
 \hypertarget{notes}{%
 \section*{Notes}\label{notes}}
@@ -283,9 +283,9 @@ questions on Ed, or email Joe or us as well.
 
 \markright{Notes}
 
-The section notes will be presented as a book, and the source for this
-book at \url{https://zadchin.github.io/STAT210_Section/}. Any typos or
-errors can be reported at
+These section notes will be presented as an online book, and the source
+for this book at \url{https://zadchin.github.io/STAT210_Section/}. Any
+typos or errors can be reported at
 \url{https://github.com/zadchin/STAT210_Section/issues}. Thanks for
 reading.
 
@@ -300,12 +300,11 @@ This is a Quarto book. To learn more about Quarto books visit
 
 We extend our profound gratitude to the Department of Statistics at
 Harvard University, with a special acknowledgment to Professor Joe
-Blitzstein for his invaluable insights and knowledge-sharing. Our
-appreciation also goes to our peers from STAT 210, whose contributions
-to discussions on the textbook problems have been invaluable. Finally,
-we are indebted to the Stat-exchange platform for facilitating
-discussions that addressed challenges we encountered, which have
-subsequently enriched the content of our section notes.
+Blitzstein for his invaluable insights and knowledge-sharing.
+
+Our appreciation also goes to our peers from STAT 210, whose
+contributions to discussions on the textbook problems have been
+invaluable.
 
 \(\,\)
 
@@ -330,15 +329,15 @@ In this section, we will discuss:
 \begin{itemize}
 \tightlist
 \item
-  \(\sigma\)-algebra
+  \(\sigma\)-algebras
 \item
-  Borel \(\sigma\)-algebra
+  Borel \(\sigma\)-algebras
 \item
-  Probability measure
+  Probability measures
 \item
-  Random Variables \& Random Vectors
+  Random variables and random vectors
 \item
-  Limits of Events
+  Limits of events
 \end{itemize}
 
 \hypertarget{sigma-algebras}{%
@@ -347,7 +346,7 @@ In this section, we will discuss:
 
 \markright{\(\sigma\)-algebras}
 
-In STAT 210 textbook, we define \(\sigma\)-algebra as follow:
+In the STAT 210 textbook, we defined a \(\sigma\)-algebra as follows:
 
 \emph{Definition 2.2.1 from textbook}
 
@@ -355,17 +354,17 @@ In STAT 210 textbook, we define \(\sigma\)-algebra as follow:
 \begin{definition}[]\label{def-sigma-algebra}
 
 A \(\sigma\)-algebra on \(\Omega\) is a collection \(\mathcal{F}\) of
-subsets of \(\Omega\) such that
+subsets of \(\Omega\) such that:
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
 \item
-  \(\emptyset \in \mathcal{F}\)
+  \(\emptyset \in \mathcal{F}\).
 \item
-  If \(A \in \mathcal{F}\), then \(A^c \in \mathcal{F}\)
+  If \(A \in \mathcal{F}\), then \(A^c \in \mathcal{F}\).
 \item
   If \(A_1, A_2, \cdots \in \mathcal{F}\), then
-  \(\cup_{j=1}^{\infty} A_j \in \mathcal{F}\)
+  \(\cup_{j=1}^{\infty} A_j \in \mathcal{F}\).
 \end{enumerate}
 
 \end{definition}
@@ -375,12 +374,13 @@ subsets of \(\Omega\) such that
 \addcontentsline{toc}{subsection}{✏️ Pencil 2.2.5}
 
 Show that \(\sigma\)-algebra is automatically closed under countable
-intersections, i.e., if \(A_1, A_2, \cdots\) are in \(\sigma\)-algebra
-\(\mathcal{F}\), then \(\cap_{j=1}^{\infty} A_j \in \mathcal{F}\). Then
-show that the requirement \(\emptyset \in \mathcal{F}\) can be replaced
-by the requirements \(\mathcal{F} \neq \emptyset\).
+intersections, i.e.~if \(A_1, A_2, \cdots\) are in the
+\(\sigma\)-algebra \(\mathcal{F}\), then
+\(\cap_{j=1}^{\infty} A_j \in \mathcal{F}\). Then, show that the
+requirement \(\emptyset \in \mathcal{F}\) can be replaced by the
+requirements \(\mathcal{F} \neq \emptyset\).
 
-\begin{tcolorbox}[enhanced jigsaw, colframe=quarto-callout-tip-color-frame, bottomrule=.15mm, rightrule=.15mm, breakable, leftrule=.75mm, colback=white, left=2mm, opacityback=0, arc=.35mm, toprule=.15mm]
+\begin{tcolorbox}[enhanced jigsaw, leftrule=.75mm, colback=white, rightrule=.15mm, colframe=quarto-callout-tip-color-frame, breakable, left=2mm, bottomrule=.15mm, arc=.35mm, toprule=.15mm, opacityback=0]
 \begin{minipage}[t]{5.5mm}
 \textcolor{quarto-callout-tip-color}{\faLightbulb}
 \end{minipage}%
@@ -388,16 +388,16 @@ by the requirements \(\mathcal{F} \neq \emptyset\).
 
 \textbf{Solution}\vspace{2mm}
 
-Will be added after section
+Will be added after section. 😛
 
 \end{minipage}%
 \end{tcolorbox}
 
-\begin{tcolorbox}[enhanced jigsaw, colframe=quarto-callout-note-color-frame, bottomrule=.15mm, rightrule=.15mm, opacitybacktitle=0.6, breakable, leftrule=.75mm, toptitle=1mm, opacityback=0, coltitle=black, bottomtitle=1mm, titlerule=0mm, colback=white, left=2mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Tip: De Morgan Laws}, toprule=.15mm, arc=.35mm, colbacktitle=quarto-callout-note-color!10!white]
+\begin{tcolorbox}[enhanced jigsaw, toprule=.15mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Tip: De Morgan Laws}, titlerule=0mm, colframe=quarto-callout-note-color-frame, breakable, colbacktitle=quarto-callout-note-color!10!white, arc=.35mm, leftrule=.75mm, coltitle=black, opacitybacktitle=0.6, colback=white, rightrule=.15mm, bottomtitle=1mm, toptitle=1mm, bottomrule=.15mm, left=2mm, opacityback=0]
 
-\[\left(\bigcup_{n=1}^{\infty} A_n \right)^c = \bigcap_{n=1}^{\infty} A_n ^c\]
+\[\left(\bigcup_{n=1}^{\infty} A_n \right)^c = \bigcap_{n=1}^{\infty} A_n ^c.\]
 
-\[\left(\bigcap_{n=1}^{\infty} A_n \right)^c = \bigcup_{n=1}^{\infty} A_n ^c\]
+\[\left(\bigcap_{n=1}^{\infty} A_n \right)^c = \bigcup_{n=1}^{\infty} A_n ^c.\]
 
 \end{tcolorbox}
 
@@ -409,7 +409,7 @@ Check that an intersection of \(\sigma-\)algebras, even uncountably
 many, is \(\sigma\)-algebra. Give a simple example showing that a union
 of \(\sigma\)-algebras may not be a \(\sigma\)-algebra.
 
-\begin{tcolorbox}[enhanced jigsaw, colframe=quarto-callout-tip-color-frame, bottomrule=.15mm, rightrule=.15mm, breakable, leftrule=.75mm, colback=white, left=2mm, opacityback=0, arc=.35mm, toprule=.15mm]
+\begin{tcolorbox}[enhanced jigsaw, leftrule=.75mm, colback=white, rightrule=.15mm, colframe=quarto-callout-tip-color-frame, breakable, left=2mm, bottomrule=.15mm, arc=.35mm, toprule=.15mm, opacityback=0]
 \begin{minipage}[t]{5.5mm}
 \textcolor{quarto-callout-tip-color}{\faLightbulb}
 \end{minipage}%
@@ -417,31 +417,31 @@ of \(\sigma\)-algebras may not be a \(\sigma\)-algebra.
 
 \textbf{Solution}\vspace{2mm}
 
-Will be added after section
+Will be added after section. 😛
 
 \end{minipage}%
 \end{tcolorbox}
 
-\begin{tcolorbox}[enhanced jigsaw, colframe=quarto-callout-important-color-frame, bottomrule=.15mm, rightrule=.15mm, breakable, leftrule=.75mm, colback=white, left=2mm, opacityback=0, arc=.35mm, toprule=.15mm]
+\begin{tcolorbox}[enhanced jigsaw, leftrule=.75mm, colback=white, rightrule=.15mm, colframe=quarto-callout-important-color-frame, breakable, left=2mm, bottomrule=.15mm, arc=.35mm, toprule=.15mm, opacityback=0]
 \begin{minipage}[t]{5.5mm}
 \textcolor{quarto-callout-important-color}{\faExclamation}
 \end{minipage}%
 \begin{minipage}[t]{\textwidth - 5.5mm}
 
-As noted in the textbook as well as hazard 2.2.2: Note that a
-\(\sigma\)-algebra \(\mathcal{F}\) is a collection of sets, and an
-element of \(\mathcal{F}\) is a subset of \(\omega\). An interesection
-of \(\sigma\)-algebras is very different from an intersection of events!
+As noted in the textbook as well as Hazard 2.2.2, a \(\sigma\)-algebra
+\(\mathcal{F}\) is a collection of sets, and an element of
+\(\mathcal{F}\) is a subset of \(\omega\). An intersection of
+\(\sigma\)-algebras is very different from an intersection of events!
 
 \end{minipage}%
 \end{tcolorbox}
 
-\hypertarget{borel-sigma-algebra}{%
+\hypertarget{borel-sigma-algebras}{%
 \section*{\texorpdfstring{Borel
-\(\sigma\)-algebra}{Borel \textbackslash sigma-algebra}}\label{borel-sigma-algebra}}
-\addcontentsline{toc}{section}{Borel \(\sigma\)-algebra}
+\(\sigma\)-algebras}{Borel \textbackslash sigma-algebras}}\label{borel-sigma-algebras}}
+\addcontentsline{toc}{section}{Borel \(\sigma\)-algebras}
 
-\markright{Borel \(\sigma\)-algebra}
+\markright{Borel \(\sigma\)-algebras}
 
 \emph{Definition 2.3.1 from textbook}
 
@@ -449,8 +449,8 @@ of \(\sigma\)-algebras is very different from an intersection of events!
 \begin{definition}[]\label{def-borel-sigma-algebra}
 
 The Borel \(\sigma\)-algebra \(\mathcal{B}\) on \(\mathbb{R}\) is
-definied to be the \(\sigma\)-algebra generated by all open intervals
-\((a,b)\) with \(a,b\in \mathbb{R}\). A \emph{Borel Set} is a set in the
+defined to be the \(\sigma\)-algebra generated by all open intervals
+\((a,b)\) with \(a,b\in \mathbb{R}\). A \emph{Borel set} is a set in the
 Borel \(\sigma\)-algebra.
 
 \end{definition}
@@ -464,7 +464,7 @@ intervals \([a,b]\) instead of open intervals to generate it, and that
 it is also the same if we use ``semi-inifinite'' intervals
 \((-\infty,b)\) to generate it.
 
-\begin{tcolorbox}[enhanced jigsaw, colframe=quarto-callout-tip-color-frame, bottomrule=.15mm, rightrule=.15mm, breakable, leftrule=.75mm, colback=white, left=2mm, opacityback=0, arc=.35mm, toprule=.15mm]
+\begin{tcolorbox}[enhanced jigsaw, leftrule=.75mm, colback=white, rightrule=.15mm, colframe=quarto-callout-tip-color-frame, breakable, left=2mm, bottomrule=.15mm, arc=.35mm, toprule=.15mm, opacityback=0]
 \begin{minipage}[t]{5.5mm}
 \textcolor{quarto-callout-tip-color}{\faLightbulb}
 \end{minipage}%
@@ -472,7 +472,7 @@ it is also the same if we use ``semi-inifinite'' intervals
 
 \textbf{Solution}\vspace{2mm}
 
-Will be added after section
+Will be added after section. 😛
 
 \end{minipage}%
 \end{tcolorbox}
@@ -496,14 +496,14 @@ function) \(P\) satisfying the following axioms:
 \def\labelenumi{\arabic{enumi}.}
 \tightlist
 \item
-  \(P(\emptyset) = 0\), \(P(\Omega) = 1\)
+  \(P(\emptyset) = 0\), \(P(\Omega) = 1\).
 \item
-  \(\forall A \in \mathcal{F}\), \(P(A) \geq 0\)
+  \(\forall A \in \mathcal{F}\), \(P(A) \geq 0\).
 \item
   If \(\{A_i\}^{\infty}_{i=1}\) is a collection of mutually disjoint
   sets in \(\mathcal{F}\), i.e.~\(\forall i \neq j\),
   \(A_i \cap A_j = \emptyset\), then
-  \[P\left( \bigcup_{i=1}^{\infty} A_i \right) = \sum_{i=1}^{\infty} P(A_i) \]
+  \[P\left( \bigcup_{i=1}^{\infty} A_i \right) = \sum_{i=1}^{\infty} P(A_i). \]
   \textbackslash end\{itemize\} This property is known as
   \(\sigma\)-additivity.
 \end{enumerate}
@@ -517,7 +517,7 @@ function) \(P\) satisfying the following axioms:
 Show that in the first axiom, the condition \(P(\emptyset) = 0\) can be
 eliminated.
 
-\begin{tcolorbox}[enhanced jigsaw, colframe=quarto-callout-tip-color-frame, bottomrule=.15mm, rightrule=.15mm, breakable, leftrule=.75mm, colback=white, left=2mm, opacityback=0, arc=.35mm, toprule=.15mm]
+\begin{tcolorbox}[enhanced jigsaw, leftrule=.75mm, colback=white, rightrule=.15mm, colframe=quarto-callout-tip-color-frame, breakable, left=2mm, bottomrule=.15mm, arc=.35mm, toprule=.15mm, opacityback=0]
 \begin{minipage}[t]{5.5mm}
 \textcolor{quarto-callout-tip-color}{\faLightbulb}
 \end{minipage}%
@@ -525,7 +525,7 @@ eliminated.
 
 \textbf{Solution}\vspace{2mm}
 
-Will be added after section
+Will be added after section. 😛
 
 \end{minipage}%
 \end{tcolorbox}
@@ -536,9 +536,9 @@ Will be added after section
 
 Show that \(P\) is subadditive, i.e.~if \(\{A_i\}^{\infty}_{i=1}\) is
 \textit{any} collection of sets in \(\mathcal{F}\), then
-\[P\left( \bigcup_{i=1}^{\infty} A_i\right) \leq  \sum_{i=1}^{\infty} P(A_i)\]
+\[P\left( \bigcup_{i=1}^{\infty} A_i\right) \leq  \sum_{i=1}^{\infty} P(A_i).\]
 
-\begin{tcolorbox}[enhanced jigsaw, colframe=quarto-callout-tip-color-frame, bottomrule=.15mm, rightrule=.15mm, breakable, leftrule=.75mm, colback=white, left=2mm, opacityback=0, arc=.35mm, toprule=.15mm]
+\begin{tcolorbox}[enhanced jigsaw, leftrule=.75mm, colback=white, rightrule=.15mm, colframe=quarto-callout-tip-color-frame, breakable, left=2mm, bottomrule=.15mm, arc=.35mm, toprule=.15mm, opacityback=0]
 \begin{minipage}[t]{5.5mm}
 \textcolor{quarto-callout-tip-color}{\faLightbulb}
 \end{minipage}%
@@ -546,7 +546,7 @@ Show that \(P\) is subadditive, i.e.~if \(\{A_i\}^{\infty}_{i=1}\) is
 
 \textbf{Solution}\vspace{2mm}
 
-Will be added after section
+Will be added after section. 😛
 
 \end{minipage}%
 \end{tcolorbox}
@@ -560,7 +560,7 @@ Let \(A_1,A_2,...\) be a sequence of sets in \(\mathcal{F}\) such that
 \(P(A_n) \xrightarrow{n \to \infty} P(A)\). Show that the result also
 holds for \(A_n \downarrow A\). Does the result hold for any measure?
 
-\begin{tcolorbox}[enhanced jigsaw, colframe=quarto-callout-tip-color-frame, bottomrule=.15mm, rightrule=.15mm, breakable, leftrule=.75mm, colback=white, left=2mm, opacityback=0, arc=.35mm, toprule=.15mm]
+\begin{tcolorbox}[enhanced jigsaw, leftrule=.75mm, colback=white, rightrule=.15mm, colframe=quarto-callout-tip-color-frame, breakable, left=2mm, bottomrule=.15mm, arc=.35mm, toprule=.15mm, opacityback=0]
 \begin{minipage}[t]{5.5mm}
 \textcolor{quarto-callout-tip-color}{\faLightbulb}
 \end{minipage}%
@@ -568,7 +568,7 @@ holds for \(A_n \downarrow A\). Does the result hold for any measure?
 
 \textbf{Solution}\vspace{2mm}
 
-Will be added after section
+Will be added after section. 😛
 
 \end{minipage}%
 \end{tcolorbox}
@@ -586,7 +586,7 @@ Vectors}\label{random-variables-and-random-vectors}}
 \begin{definition}[]\label{def-random-variable}
 
 A \emph{random variable} is a measurable function \(X\) from \(\sigma\)
-to \(\mathbb{R}\) where ``measurable'' means that the preimage
+to \(\mathbb{R}\), where ``measurable'' means that the preimage
 \(X^{-1}(\mathcal{B}) = \{\omega \in \sigma : X(\omega) \in \mathcal{B}\}\)
 is in \(\mathcal{F}\) for all Borel sets \(\mathcal{B}\).
 
@@ -611,7 +611,7 @@ is in \(\mathcal{F}\) for all Borel sets \(\mathcal{B}\) in
 Show that if \(X\) is a random variable, then so is \(g(X)\) for any
 measurable function \(g\).
 
-\begin{tcolorbox}[enhanced jigsaw, colframe=quarto-callout-tip-color-frame, bottomrule=.15mm, rightrule=.15mm, breakable, leftrule=.75mm, colback=white, left=2mm, opacityback=0, arc=.35mm, toprule=.15mm]
+\begin{tcolorbox}[enhanced jigsaw, leftrule=.75mm, colback=white, rightrule=.15mm, colframe=quarto-callout-tip-color-frame, breakable, left=2mm, bottomrule=.15mm, arc=.35mm, toprule=.15mm, opacityback=0]
 \begin{minipage}[t]{5.5mm}
 \textcolor{quarto-callout-tip-color}{\faLightbulb}
 \end{minipage}%
@@ -619,7 +619,7 @@ measurable function \(g\).
 
 \textbf{Solution}\vspace{2mm}
 
-Will be added after section
+Will be added after section. 😛
 
 \end{minipage}%
 \end{tcolorbox}
@@ -630,9 +630,9 @@ Will be added after section
 
 Let \(F(x,y)\) be a bivariate CDF. Prove that for all \(a_1 \leq b_1\)
 and \(a_2 \leq b_2\),
-\[F(b_1, b_2)-F(a_1, b_2)-F(b_1,a_2)+F(a_1,a_2) \geq 0\]
+\[F(b_1, b_2)-F(a_1, b_2)-F(b_1,a_2)+F(a_1,a_2) \geq 0.\]
 
-\begin{tcolorbox}[enhanced jigsaw, colframe=quarto-callout-tip-color-frame, bottomrule=.15mm, rightrule=.15mm, breakable, leftrule=.75mm, colback=white, left=2mm, opacityback=0, arc=.35mm, toprule=.15mm]
+\begin{tcolorbox}[enhanced jigsaw, leftrule=.75mm, colback=white, rightrule=.15mm, colframe=quarto-callout-tip-color-frame, breakable, left=2mm, bottomrule=.15mm, arc=.35mm, toprule=.15mm, opacityback=0]
 \begin{minipage}[t]{5.5mm}
 \textcolor{quarto-callout-tip-color}{\faLightbulb}
 \end{minipage}%
@@ -640,7 +640,7 @@ and \(a_2 \leq b_2\),
 
 \textbf{Solution}\vspace{2mm}
 
-Will be added after section
+Will be added after section. 😛
 
 \end{minipage}%
 \end{tcolorbox}
@@ -657,9 +657,9 @@ Will be added after section
 \begin{definition}[]\label{def-lim}
 
 Let \(A_1, A_2,...\) be a sequence of events on
-\((\Omega, \mathcal{F}, P)\). Define,
+\((\Omega, \mathcal{F}, P)\). Define
 
-\[B_n = \bigcup_{m=n}^{\infty} A_m ,\hspace{0.2cm} C_n = \bigcap_{m=n}^{\infty} A_m, \hspace{0.2cm} n\geq 1 \]
+\[B_n = \bigcup_{m=n}^{\infty} A_m ,\hspace{0.2cm} C_n = \bigcap_{m=n}^{\infty} A_m, \hspace{0.2cm} n\geq 1 .\]
 
 Then, \(C_n \subseteq A_n \subseteq B_n\), \$\forall n\geq 1 \$, and
 \(\{B_n\}^{\infty}_{n=1}\) and \(\{C_n\}^{\infty}_{n=1}\) are decreasing
@@ -668,7 +668,7 @@ limiting sets. Then,
 
 \[B = \bigcap_{n=1}^{\infty}\bigcup_{m=n}^{\infty} A_m ,\hspace{0.2cm} C = \bigcup_{n=1}^{\infty} \bigcap_{m=n}^{\infty} A_m  \]
 We call \(B\) and \(C\), \(\limsup\limits_{n \to \infty}A_n\) and
-\(\liminf \limits_{n \to \infty}A_n\) respectively.
+\(\liminf \limits_{n \to \infty}A_n\), respectively.
 
 \end{definition}
 
@@ -679,7 +679,7 @@ We call \(B\) and \(C\), \(\limsup\limits_{n \to \infty}A_n\) and
 Show that
 \(B = \{\omega \in \Omega : \omega \in A_n \text{ for infinitely many values of } n\}\).
 
-\begin{tcolorbox}[enhanced jigsaw, colframe=quarto-callout-tip-color-frame, bottomrule=.15mm, rightrule=.15mm, breakable, leftrule=.75mm, colback=white, left=2mm, opacityback=0, arc=.35mm, toprule=.15mm]
+\begin{tcolorbox}[enhanced jigsaw, leftrule=.75mm, colback=white, rightrule=.15mm, colframe=quarto-callout-tip-color-frame, breakable, left=2mm, bottomrule=.15mm, arc=.35mm, toprule=.15mm, opacityback=0]
 \begin{minipage}[t]{5.5mm}
 \textcolor{quarto-callout-tip-color}{\faLightbulb}
 \end{minipage}%
@@ -687,7 +687,7 @@ Show that
 
 \textbf{Solution}\vspace{2mm}
 
-Will be added after section.
+Will be added after section. 😛
 
 \end{minipage}%
 \end{tcolorbox}
@@ -699,7 +699,7 @@ Will be added after section.
 Show that
 \(C = \{\omega \in \Omega: \omega \in A_n \text{ for all but finitely many values of } n\}\).
 
-\begin{tcolorbox}[enhanced jigsaw, colframe=quarto-callout-tip-color-frame, bottomrule=.15mm, rightrule=.15mm, breakable, leftrule=.75mm, colback=white, left=2mm, opacityback=0, arc=.35mm, toprule=.15mm]
+\begin{tcolorbox}[enhanced jigsaw, leftrule=.75mm, colback=white, rightrule=.15mm, colframe=quarto-callout-tip-color-frame, breakable, left=2mm, bottomrule=.15mm, arc=.35mm, toprule=.15mm, opacityback=0]
 \begin{minipage}[t]{5.5mm}
 \textcolor{quarto-callout-tip-color}{\faLightbulb}
 \end{minipage}%
@@ -707,7 +707,7 @@ Show that
 
 \textbf{Solution}\vspace{2mm}
 
-Will be added after section
+Will be added after section. 😛
 
 \end{minipage}%
 \end{tcolorbox}
@@ -725,9 +725,9 @@ that case, we write \(\lim\limits_{n\to \infty} A_n = A\).
 \subsection*{✏️ Section Problem 5}\label{section-problem-5}}
 \addcontentsline{toc}{subsection}{✏️ Section Problem 5}
 
-Assume above is the case. Show that \(A \in \mathcal{F}.\)
+Assume the above is the case. Show that \(A \in \mathcal{F}.\)
 
-\begin{tcolorbox}[enhanced jigsaw, colframe=quarto-callout-tip-color-frame, bottomrule=.15mm, rightrule=.15mm, breakable, leftrule=.75mm, colback=white, left=2mm, opacityback=0, arc=.35mm, toprule=.15mm]
+\begin{tcolorbox}[enhanced jigsaw, leftrule=.75mm, colback=white, rightrule=.15mm, colframe=quarto-callout-tip-color-frame, breakable, left=2mm, bottomrule=.15mm, arc=.35mm, toprule=.15mm, opacityback=0]
 \begin{minipage}[t]{5.5mm}
 \textcolor{quarto-callout-tip-color}{\faLightbulb}
 \end{minipage}%
@@ -735,7 +735,7 @@ Assume above is the case. Show that \(A \in \mathcal{F}.\)
 
 \textbf{Solution}\vspace{2mm}
 
-Will be added after section
+Will be added after section. 😛
 
 \end{minipage}%
 \end{tcolorbox}
@@ -746,13 +746,13 @@ Will be added after section
 
 Show that \(\lim\limits_{n \to \infty} P(A_n) = P(A)\).
 
-\begin{tcolorbox}[enhanced jigsaw, colframe=quarto-callout-note-color-frame, bottomrule=.15mm, rightrule=.15mm, opacitybacktitle=0.6, breakable, leftrule=.75mm, toptitle=1mm, opacityback=0, coltitle=black, bottomtitle=1mm, titlerule=0mm, colback=white, left=2mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Tip: A useful inequality}, toprule=.15mm, arc=.35mm, colbacktitle=quarto-callout-note-color!10!white]
+\begin{tcolorbox}[enhanced jigsaw, toprule=.15mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Tip: A useful inequality}, titlerule=0mm, colframe=quarto-callout-note-color-frame, breakable, colbacktitle=quarto-callout-note-color!10!white, arc=.35mm, leftrule=.75mm, coltitle=black, opacitybacktitle=0.6, colback=white, rightrule=.15mm, bottomtitle=1mm, toptitle=1mm, bottomrule=.15mm, left=2mm, opacityback=0]
 
-\[P(\liminf\limits_{n \to \infty}A_n) \leq \liminf\limits_{n \to \infty}P(A_n) \leq \limsup\limits_{n \to \infty}P(A_n) \leq P(\limsup\limits_{n \to \infty}A_n)\]
+\[P(\liminf\limits_{n \to \infty}A_n) \leq \liminf\limits_{n \to \infty}P(A_n) \leq \limsup\limits_{n \to \infty}P(A_n) \leq P(\limsup\limits_{n \to \infty}A_n).\]
 
 \end{tcolorbox}
 
-\begin{tcolorbox}[enhanced jigsaw, colframe=quarto-callout-tip-color-frame, bottomrule=.15mm, rightrule=.15mm, breakable, leftrule=.75mm, colback=white, left=2mm, opacityback=0, arc=.35mm, toprule=.15mm]
+\begin{tcolorbox}[enhanced jigsaw, leftrule=.75mm, colback=white, rightrule=.15mm, colframe=quarto-callout-tip-color-frame, breakable, left=2mm, bottomrule=.15mm, arc=.35mm, toprule=.15mm, opacityback=0]
 \begin{minipage}[t]{5.5mm}
 \textcolor{quarto-callout-tip-color}{\faLightbulb}
 \end{minipage}%
@@ -760,7 +760,7 @@ Show that \(\lim\limits_{n \to \infty} P(A_n) = P(A)\).
 
 \textbf{Solution}\vspace{2mm}
 
-Will be added after section
+Will be added after section. 😛
 
 \end{minipage}%
 \end{tcolorbox}
@@ -776,7 +776,7 @@ Next week, we will discuss:
 \begin{itemize}
 \tightlist
 \item
-  Joe's favourtie theorem: \(\pi-\lambda\) theorem
+  Joe's favourtie theorem, the \(\pi\)-\(\lambda\) theorem
 \item
   Independence of random variables
 \item

@@ -127,7 +127,7 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#pencil-2.2.5" id="toc-pencil-2.2.5" class="nav-link" data-scroll-target="#pencil-2.2.5">✏️ Pencil 2.2.5</a></li>
   <li><a href="#pencil-2.2.6" id="toc-pencil-2.2.6" class="nav-link" data-scroll-target="#pencil-2.2.6">✏️ Pencil 2.2.6</a></li>
   </ul></li>
-  <li><a href="#borel-sigma-algebra" id="toc-borel-sigma-algebra" class="nav-link" data-scroll-target="#borel-sigma-algebra">Borel <span class="math inline">\(\sigma\)</span>-algebra</a>
+  <li><a href="#borel-sigma-algebras" id="toc-borel-sigma-algebras" class="nav-link" data-scroll-target="#borel-sigma-algebras">Borel <span class="math inline">\(\sigma\)</span>-algebras</a>
   <ul class="collapse">
   <li><a href="#pencil-2.3.2" id="toc-pencil-2.3.2" class="nav-link" data-scroll-target="#pencil-2.3.2">✏️ Pencil 2.3.2</a></li>
   </ul></li>
@@ -235,28 +235,28 @@ $$
 <h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
 <p>In this section, we will discuss:</p>
 <ul>
-<li><span class="math inline">\(\sigma\)</span>-algebra</li>
-<li>Borel <span class="math inline">\(\sigma\)</span>-algebra</li>
-<li>Probability measure</li>
-<li>Random Variables &amp; Random Vectors</li>
-<li>Limits of Events</li>
+<li><span class="math inline">\(\sigma\)</span>-algebras</li>
+<li>Borel <span class="math inline">\(\sigma\)</span>-algebras</li>
+<li>Probability measures</li>
+<li>Random variables and random vectors</li>
+<li>Limits of events</li>
 </ul>
 </section>
 <section id="sigma-algebras" class="level2">
 <h2 class="anchored" data-anchor-id="sigma-algebras"><span class="math inline">\(\sigma\)</span>-algebras</h2>
-<p>In STAT 210 textbook, we define <span class="math inline">\(\sigma\)</span>-algebra as follow:</p>
+<p>In the STAT 210 textbook, we defined a <span class="math inline">\(\sigma\)</span>-algebra as follows:</p>
 <p><em>Definition 2.2.1 from textbook</em></p>
 <div id="def-sigma-algebra" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 1 </strong></span>A <span class="math inline">\(\sigma\)</span>-algebra on <span class="math inline">\(\Omega\)</span> is a collection <span class="math inline">\(\mathcal{F}\)</span> of subsets of <span class="math inline">\(\Omega\)</span> such that</p>
+<p><span class="theorem-title"><strong>Definition 1 </strong></span>A <span class="math inline">\(\sigma\)</span>-algebra on <span class="math inline">\(\Omega\)</span> is a collection <span class="math inline">\(\mathcal{F}\)</span> of subsets of <span class="math inline">\(\Omega\)</span> such that:</p>
 <ol type="1">
-<li><p><span class="math inline">\(\emptyset \in \mathcal{F}\)</span></p></li>
-<li><p>If <span class="math inline">\(A \in \mathcal{F}\)</span>, then <span class="math inline">\(A^c \in \mathcal{F}\)</span></p></li>
-<li><p>If <span class="math inline">\(A_1, A_2, \cdots \in \mathcal{F}\)</span>, then <span class="math inline">\(\cup_{j=1}^{\infty} A_j \in \mathcal{F}\)</span></p></li>
+<li><p><span class="math inline">\(\emptyset \in \mathcal{F}\)</span>.</p></li>
+<li><p>If <span class="math inline">\(A \in \mathcal{F}\)</span>, then <span class="math inline">\(A^c \in \mathcal{F}\)</span>.</p></li>
+<li><p>If <span class="math inline">\(A_1, A_2, \cdots \in \mathcal{F}\)</span>, then <span class="math inline">\(\cup_{j=1}^{\infty} A_j \in \mathcal{F}\)</span>.</p></li>
 </ol>
 </div>
 <section id="pencil-2.2.5" class="level3">
 <h3 class="anchored" data-anchor-id="pencil-2.2.5">✏️ Pencil 2.2.5</h3>
-<p>Show that <span class="math inline">\(\sigma\)</span>-algebra is automatically closed under countable intersections, i.e., if <span class="math inline">\(A_1, A_2, \cdots\)</span> are in <span class="math inline">\(\sigma\)</span>-algebra <span class="math inline">\(\mathcal{F}\)</span>, then <span class="math inline">\(\cap_{j=1}^{\infty} A_j \in \mathcal{F}\)</span>. Then show that the requirement <span class="math inline">\(\emptyset \in \mathcal{F}\)</span> can be replaced by the requirements <span class="math inline">\(\mathcal{F} \neq \emptyset\)</span>.</p>
+<p>Show that <span class="math inline">\(\sigma\)</span>-algebra is automatically closed under countable intersections, i.e.&nbsp;if <span class="math inline">\(A_1, A_2, \cdots\)</span> are in the <span class="math inline">\(\sigma\)</span>-algebra <span class="math inline">\(\mathcal{F}\)</span>, then <span class="math inline">\(\cap_{j=1}^{\infty} A_j \in \mathcal{F}\)</span>. Then, show that the requirement <span class="math inline">\(\emptyset \in \mathcal{F}\)</span> can be replaced by the requirements <span class="math inline">\(\mathcal{F} \neq \emptyset\)</span>.</p>
 <div class="callout-tip callout callout-style-simple callout-captioned">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
@@ -269,7 +269,7 @@ Solution
 </div>
 <div id="callout-1" class="callout-1-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>Will be added after section <!--
+<p>Will be added after section. 😛 <!--
 If $A_1, A_2, \cdots \in \mathcal{F}$, by De Morgan's laws, $\bigcap_{j=1}^{\infty} A_j = \left(\bigcup_{j=1}^{\infty} A_j^c \right)^c \in F$ since each $A_j^c \in \mathcal{F}$, which implies that $\bigcup_{j=1}^{\infty} A_j^c \in \mathcal{F}$, which further implies that $\left(\bigcup_{j=1}^{\infty} A_j^c \right)^c \in F$. 
 
 Also note that if $\mathcal{F} \notin \emptyset, \mathcal{F}$ contains some element of A. Then $A \cap A^c = \emptyset \in \mathcal{F}$.
@@ -287,8 +287,8 @@ Tip: De Morgan Laws
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p><span class="math display">\[\left(\bigcup_{n=1}^{\infty} A_n \right)^c = \bigcap_{n=1}^{\infty} A_n ^c\]</span></p>
-<p><span class="math display">\[\left(\bigcap_{n=1}^{\infty} A_n \right)^c = \bigcup_{n=1}^{\infty} A_n ^c\]</span></p>
+<p><span class="math display">\[\left(\bigcup_{n=1}^{\infty} A_n \right)^c = \bigcap_{n=1}^{\infty} A_n ^c.\]</span></p>
+<p><span class="math display">\[\left(\bigcap_{n=1}^{\infty} A_n \right)^c = \bigcup_{n=1}^{\infty} A_n ^c.\]</span></p>
 </div>
 </div>
 </section>
@@ -307,7 +307,7 @@ Solution
 </div>
 <div id="callout-3" class="callout-3-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>Will be added after section <!--
+<p>Will be added after section. 😛 <!--
 Let $\{\mathcal{F}_i\}_{i\in I}$ be $\sigma$-algebras, and consider $\mathcal{F}' = \cup_{i\in I} \mathcal{F}_i$. Since each $\mathcal{F}_i contains \emptyset$, $\emptyset \in \mathcal{F}'$. If $A\in \mathcal{F}'$, $A\in \mathcal{F}_i \forall i\in I$, which implies that $A^c \in \mathcal{F}_i \forall i \in I$, so is $A^c \in \mathcal{F}'$. If $A_1, A_2, \cdots, \in \mathcal{F}'$, $\bigcup_{j=1}^{\infty} A_j \in \mathcal{F}_i \forall i\in I$, which implies that $\bigcup_{j=1}^{\infty} A_j \in \mathcal{F}'$.
 
 Let $\mathcal{F_1} = \{\emptyset, \{a\},  \{b,c\},  \{a, b, c\}\}$ and $\mathcal{F_2} = \{\emptyset, \{a,b\},  \{c\},  \{a, b, c\}\}$, note that $\mathcal{F_1} \cup \mathcal{F_2}$ contains $\{a,b\}$ and $\{b,c\}$, but not their intersection.
@@ -321,17 +321,17 @@ Let $\mathcal{F_1} = \{\emptyset, \{a\},  \{b,c\},  \{a, b, c\}\}$ and $\mathcal
 <i class="callout-icon"></i>
 </div>
 <div class="callout-body-container">
-<p>As noted in the textbook as well as hazard 2.2.2: Note that a <span class="math inline">\(\sigma\)</span>-algebra <span class="math inline">\(\mathcal{F}\)</span> is a collection of sets, and an element of <span class="math inline">\(\mathcal{F}\)</span> is a subset of <span class="math inline">\(\omega\)</span>. An interesection of <span class="math inline">\(\sigma\)</span>-algebras is very different from an intersection of events!</p>
+<p>As noted in the textbook as well as Hazard 2.2.2, a <span class="math inline">\(\sigma\)</span>-algebra <span class="math inline">\(\mathcal{F}\)</span> is a collection of sets, and an element of <span class="math inline">\(\mathcal{F}\)</span> is a subset of <span class="math inline">\(\omega\)</span>. An intersection of <span class="math inline">\(\sigma\)</span>-algebras is very different from an intersection of events!</p>
 </div>
 </div>
 </div>
 </section>
 </section>
-<section id="borel-sigma-algebra" class="level2">
-<h2 class="anchored" data-anchor-id="borel-sigma-algebra">Borel <span class="math inline">\(\sigma\)</span>-algebra</h2>
+<section id="borel-sigma-algebras" class="level2">
+<h2 class="anchored" data-anchor-id="borel-sigma-algebras">Borel <span class="math inline">\(\sigma\)</span>-algebras</h2>
 <p><em>Definition 2.3.1 from textbook</em></p>
 <div id="def-borel-sigma-algebra" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 2 </strong></span>The Borel <span class="math inline">\(\sigma\)</span>-algebra <span class="math inline">\(\mathcal{B}\)</span> on <span class="math inline">\(\mathbb{R}\)</span> is definied to be the <span class="math inline">\(\sigma\)</span>-algebra generated by all open intervals <span class="math inline">\((a,b)\)</span> with <span class="math inline">\(a,b\in \mathbb{R}\)</span>. A <em>Borel Set</em> is a set in the Borel <span class="math inline">\(\sigma\)</span>-algebra.</p>
+<p><span class="theorem-title"><strong>Definition 2 </strong></span>The Borel <span class="math inline">\(\sigma\)</span>-algebra <span class="math inline">\(\mathcal{B}\)</span> on <span class="math inline">\(\mathbb{R}\)</span> is defined to be the <span class="math inline">\(\sigma\)</span>-algebra generated by all open intervals <span class="math inline">\((a,b)\)</span> with <span class="math inline">\(a,b\in \mathbb{R}\)</span>. A <em>Borel set</em> is a set in the Borel <span class="math inline">\(\sigma\)</span>-algebra.</p>
 </div>
 <section id="pencil-2.3.2" class="level3">
 <h3 class="anchored" data-anchor-id="pencil-2.3.2">✏️ Pencil 2.3.2</h3>
@@ -348,7 +348,7 @@ Solution
 </div>
 <div id="callout-4" class="callout-4-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>Will be added after section <!--
+<p>Will be added after section. 😛 <!--
 $[a,b] = ((-\infty, a) \cup (b,\infty))^c\in \mathcal{B}. (-\infty, b]=(b, \infty)^c \in \mathcal{B}$. Furhtermore, since $\mathbb{Q}$ is dense in $\mathbb{R}$, there always exists a sequence of rationals that converge to any real number, so $(-\infty, b]$ for $b\in \mathbb{R}$ can be obtained from the union $(-\infty, b_n) \forall b_n \in \mathbb{Q}$, and letting $n \rightarrow \infty$.
 --></p>
 </div>
@@ -362,9 +362,9 @@ $[a,b] = ((-\infty, a) \cup (b,\infty))^c\in \mathcal{B}. (-\infty, b]=(b, \inft
 <div id="def-probability" class="theorem definition">
 <p><span class="theorem-title"><strong>Definition 3 </strong></span>A <em>probability space</em> <span class="math inline">\((\Omega, \mathcal{F}, P)\)</span> consists of a measurable space <span class="math inline">\((\Omega, \mathcal{F})\)</span> and a map (the probability function) <span class="math inline">\(P\)</span> satisfying the following axioms:</p>
 <ol type="1">
-<li><span class="math inline">\(P(\emptyset) = 0\)</span>, <span class="math inline">\(P(\Omega) = 1\)</span></li>
-<li><span class="math inline">\(\forall A \in \mathcal{F}\)</span>, <span class="math inline">\(P(A) \geq 0\)</span></li>
-<li>If <span class="math inline">\(\{A_i\}^{\infty}_{i=1}\)</span> is a collection of mutually disjoint sets in <span class="math inline">\(\mathcal{F}\)</span>, i.e.&nbsp;<span class="math inline">\(\forall i \neq j\)</span>, <span class="math inline">\(A_i \cap A_j = \emptyset\)</span>, then <span class="math display">\[P\left( \bigcup_{i=1}^{\infty} A_i \right) = \sum_{i=1}^{\infty} P(A_i) \]</span> \end{itemize} This property is known as <span class="math inline">\(\sigma\)</span>-additivity.</li>
+<li><span class="math inline">\(P(\emptyset) = 0\)</span>, <span class="math inline">\(P(\Omega) = 1\)</span>.</li>
+<li><span class="math inline">\(\forall A \in \mathcal{F}\)</span>, <span class="math inline">\(P(A) \geq 0\)</span>.</li>
+<li>If <span class="math inline">\(\{A_i\}^{\infty}_{i=1}\)</span> is a collection of mutually disjoint sets in <span class="math inline">\(\mathcal{F}\)</span>, i.e.&nbsp;<span class="math inline">\(\forall i \neq j\)</span>, <span class="math inline">\(A_i \cap A_j = \emptyset\)</span>, then <span class="math display">\[P\left( \bigcup_{i=1}^{\infty} A_i \right) = \sum_{i=1}^{\infty} P(A_i). \]</span> \end{itemize} This property is known as <span class="math inline">\(\sigma\)</span>-additivity.</li>
 </ol>
 </div>
 <section id="pencil-2.5.1" class="level3">
@@ -382,7 +382,7 @@ Solution
 </div>
 <div id="callout-5" class="callout-5-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>Will be added after section <!--
+<p>Will be added after section. 😛 <!--
 By the first axiom, $P(\sigma)=1$, and by the second axiom, we find that $P(\sigma)=P(\sigma \cup \emptyset) = P(\sigma)+ P(\emptyset)$ since each $\sigma$ and $\emptyset$ are disjoint by definition, $P(\emptyset)=0$ follows.
 --></p>
 </div>
@@ -391,7 +391,7 @@ By the first axiom, $P(\sigma)=1$, and by the second axiom, we find that $P(\sig
 </section>
 <section id="section-problem-1" class="level3">
 <h3 class="anchored" data-anchor-id="section-problem-1">✏️ Section Problem 1</h3>
-<p>Show that <span class="math inline">\(P\)</span> is subadditive, i.e.&nbsp;if <span class="math inline">\(\{A_i\}^{\infty}_{i=1}\)</span> is collection of sets in <span class="math inline">\(\mathcal{F}\)</span>, then <span class="math display">\[P\left( \bigcup_{i=1}^{\infty} A_i\right) \leq  \sum_{i=1}^{\infty} P(A_i)\]</span></p>
+<p>Show that <span class="math inline">\(P\)</span> is subadditive, i.e.&nbsp;if <span class="math inline">\(\{A_i\}^{\infty}_{i=1}\)</span> is collection of sets in <span class="math inline">\(\mathcal{F}\)</span>, then <span class="math display">\[P\left( \bigcup_{i=1}^{\infty} A_i\right) \leq  \sum_{i=1}^{\infty} P(A_i).\]</span></p>
 <div class="callout-tip callout callout-style-simple callout-captioned">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
@@ -404,13 +404,12 @@ Solution
 </div>
 <div id="callout-6" class="callout-6-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>Will be added after section <!--
+<p>Will be added after section. 😛 <!--
 Let us construct a new collection of subsets of $\Omega$, denoted by $\{B_i\}_{i=1}^{\infty}$, where
     $$B_1 = A_1 \text{  and  } B_i = A_i \cap \Big (\bigcup_{j=1}^{i-1}A_j  \Big )^c, i \geq 2 $$
     
-We observe that, $B_i \in \mathcal{F}$, $\forall i\geq 1$. Moreover, $B_i$'s are disjoint and satisfies $\bigcup_{i=1}^{\infty} A_i = \bigcup_{i=1}^{\infty} B_i$. This technique of constructing disjoint sets that preserve unions from a general list of sets is called disjointification. We further note that $B_i \subseteq A_i$, $\forall i\geq 1$, implying $P(B_i) \leq P(A_i)$, $\forall i\geq 1$. Using the $\sigma$-additivity of probability we get,
-    
-  $$P \left(\bigcup_{i=1}^{\infty} A_i\right) = P\left(\bigcup_{i=1}^{\infty} B_i\right) = \sum_{i=1}^{\infty}P(B_i) \leq \sum_{i=1}^{\infty}P(A_i)$$
+We observe that, $B_i \in \mathcal{F}$, $\forall i\geq 1$. Moreover, $B_i$'s are disjoint and satisfies $\bigcup_{i=1}^{\infty} A_i = \bigcup_{i=1}^{\infty} B_i$. This technique of constructing disjoint sets that preserve unions from a general list of sets is called disjointification. We further note that $B_i \subseteq A_i$, $\forall i\geq 1$, implying $P(B_i) \leq P(A_i)$, $\forall i\geq 1$. Using the $\sigma$-additivity of probability we get
+$$P \left(\bigcup_{i=1}^{\infty} A_i\right) = P\left(\bigcup_{i=1}^{\infty} B_i\right) = \sum_{i=1}^{\infty}P(B_i) \leq \sum_{i=1}^{\infty}P(A_i).$$
 --></p>
 </div>
 </div>
@@ -431,7 +430,7 @@ Solution
 </div>
 <div id="callout-7" class="callout-7-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>Will be added after section</p>
+<p>Will be added after section. 😛</p>
 <!--
  The notation $A_n \uparrow A$ means that we have a list of increasing sets $A_1 \subseteq A_2 \subseteq ... $ with the limit being equal to their union, i.e. $A = \bigcup_{i=1}^{\infty}A_i$ $ (\in \mathcal{F})$. Let us construct $\{B_i\}_{i=1}^{\infty}$ by disjointifying $\{A_i\}_{i=1}^{\infty}$, as part (i). We observe that,
     $$P(A_n) = P(\bigcup_{i=1}^{n} A_i) = P(\bigcup_{i=1}^{n} B_i) = \sum_{i=1}^{n}P(B_i) \xrightarrow{n\to \infty} \sum_{i=1}^{\infty} P(B_i) = P(\bigcup_{i=1}^{\infty} B_i) = P(A)$$
@@ -452,7 +451,7 @@ Analogously, $A_n \downarrow A$ means we have a list of decreasing sets $A_1 \su
 <h2 class="anchored" data-anchor-id="random-variables-and-random-vectors">Random Variables and Random Vectors</h2>
 <p><em>Definition 2.6.1 from textbook</em></p>
 <div id="def-random-variable" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 4 </strong></span>A <em>random variable</em> is a measurable function <span class="math inline">\(X\)</span> from <span class="math inline">\(\sigma\)</span> to <span class="math inline">\(\mathbb{R}\)</span> where “measurable” means that the preimage <span class="math inline">\(X^{-1}(\mathcal{B}) = \{\omega \in \sigma : X(\omega) \in \mathcal{B}\}\)</span> is in <span class="math inline">\(\mathcal{F}\)</span> for all Borel sets <span class="math inline">\(\mathcal{B}\)</span>.</p>
+<p><span class="theorem-title"><strong>Definition 4 </strong></span>A <em>random variable</em> is a measurable function <span class="math inline">\(X\)</span> from <span class="math inline">\(\sigma\)</span> to <span class="math inline">\(\mathbb{R}\)</span>, where “measurable” means that the preimage <span class="math inline">\(X^{-1}(\mathcal{B}) = \{\omega \in \sigma : X(\omega) \in \mathcal{B}\}\)</span> is in <span class="math inline">\(\mathcal{F}\)</span> for all Borel sets <span class="math inline">\(\mathcal{B}\)</span>.</p>
 </div>
 <div id="def-random-vector" class="theorem definition">
 <p><span class="theorem-title"><strong>Definition 5 </strong></span>A <em>random vector</em> in <span class="math inline">\(\mathbb{R}^n\)</span> is a measurable function <span class="math inline">\(\mathbf{X}\)</span> from <span class="math inline">\(\sigma\)</span> into <span class="math inline">\(\mathbb{R}^n\)</span>, where “measurable” means that the preimage <span class="math inline">\(\mathbf{X}^{-1} (\mathcal{B}) \equiv \{\omega \in \sigma: \mathbf{X}(\omega) \in \mathcal{B}\}\)</span> is in <span class="math inline">\(\mathcal{F}\)</span> for all Borel sets <span class="math inline">\(\mathcal{B}\)</span> in <span class="math inline">\(\mathbb{R}^n\)</span>.</p>
@@ -472,7 +471,7 @@ Solution
 </div>
 <div id="callout-8" class="callout-8-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>Will be added after section <!--
+<p>Will be added after section. 😛 <!--
 $X$ is a random variable. By definiton, $X^{-1}(\mathcal{B}) \in \mathcal{F}$. $g$ is measurable, so $g^{-1}(\mathcal{B})$ is Borel. Thus, $(gX)^{-1}(\mathcal{B}) = X^{-1}(g^{-1}(\mathcal{B})) \in \mathcal{F}$, so $g(X)$ is a random variable.
 --></p>
 </div>
@@ -481,7 +480,7 @@ $X$ is a random variable. By definiton, $X^{-1}(\mathcal{B}) \in \mathcal{F}$. $
 </section>
 <section id="pencil-2.7.2" class="level3">
 <h3 class="anchored" data-anchor-id="pencil-2.7.2">✏️ Pencil 2.7.2</h3>
-<p>Let <span class="math inline">\(F(x,y)\)</span> be a bivariate CDF. Prove that for all <span class="math inline">\(a_1 \leq b_1\)</span> and <span class="math inline">\(a_2 \leq b_2\)</span>, <span class="math display">\[F(b_1, b_2)-F(a_1, b_2)-F(b_1,a_2)+F(a_1,a_2) \geq 0\]</span></p>
+<p>Let <span class="math inline">\(F(x,y)\)</span> be a bivariate CDF. Prove that for all <span class="math inline">\(a_1 \leq b_1\)</span> and <span class="math inline">\(a_2 \leq b_2\)</span>, <span class="math display">\[F(b_1, b_2)-F(a_1, b_2)-F(b_1,a_2)+F(a_1,a_2) \geq 0.\]</span></p>
 <div class="callout-tip callout callout-style-simple callout-captioned">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-9-contents" aria-controls="callout-9" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
@@ -494,7 +493,7 @@ Solution
 </div>
 <div id="callout-9" class="callout-9-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>Will be added after section <!--
+<p>Will be added after section. 😛 <!--
 By the axiom of probability, observe that:
 $$
 \begin{align*}
@@ -516,10 +515,10 @@ $$
 <h2 class="anchored" data-anchor-id="limits-of-events">Limits of Events</h2>
 <p><em>Section 2.8 from textbook</em></p>
 <div id="def-lim" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 6 </strong></span>Let <span class="math inline">\(A_1, A_2,...\)</span> be a sequence of events on <span class="math inline">\((\Omega, \mathcal{F}, P)\)</span>. Define,</p>
-<p><span class="math display">\[B_n = \bigcup_{m=n}^{\infty} A_m ,\hspace{0.2cm} C_n = \bigcap_{m=n}^{\infty} A_m, \hspace{0.2cm} n\geq 1 \]</span></p>
+<p><span class="theorem-title"><strong>Definition 6 </strong></span>Let <span class="math inline">\(A_1, A_2,...\)</span> be a sequence of events on <span class="math inline">\((\Omega, \mathcal{F}, P)\)</span>. Define</p>
+<p><span class="math display">\[B_n = \bigcup_{m=n}^{\infty} A_m ,\hspace{0.2cm} C_n = \bigcap_{m=n}^{\infty} A_m, \hspace{0.2cm} n\geq 1 .\]</span></p>
 <p>Then, <span class="math inline">\(C_n \subseteq A_n \subseteq B_n\)</span>, $n $, and <span class="math inline">\(\{B_n\}^{\infty}_{n=1}\)</span> and <span class="math inline">\(\{C_n\}^{\infty}_{n=1}\)</span> are decreasing and increasing respectively. Let <span class="math inline">\(B\)</span> and <span class="math inline">\(C\)</span> be their respective limiting sets. Then,</p>
-<p><span class="math display">\[B = \bigcap_{n=1}^{\infty}\bigcup_{m=n}^{\infty} A_m ,\hspace{0.2cm} C = \bigcup_{n=1}^{\infty} \bigcap_{m=n}^{\infty} A_m  \]</span> We call <span class="math inline">\(B\)</span> and <span class="math inline">\(C\)</span>, <span class="math inline">\(\limsup\limits_{n \to \infty}A_n\)</span> and <span class="math inline">\(\liminf \limits_{n \to \infty}A_n\)</span> respectively.</p>
+<p><span class="math display">\[B = \bigcap_{n=1}^{\infty}\bigcup_{m=n}^{\infty} A_m ,\hspace{0.2cm} C = \bigcup_{n=1}^{\infty} \bigcap_{m=n}^{\infty} A_m  \]</span> We call <span class="math inline">\(B\)</span> and <span class="math inline">\(C\)</span>, <span class="math inline">\(\limsup\limits_{n \to \infty}A_n\)</span> and <span class="math inline">\(\liminf \limits_{n \to \infty}A_n\)</span>, respectively.</p>
 </div>
 <section id="section-problem-3" class="level3">
 <h3 class="anchored" data-anchor-id="section-problem-3">✏️ Section Problem 3</h3>
@@ -536,7 +535,7 @@ Solution
 </div>
 <div id="callout-10" class="callout-10-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>Will be added after section. <!--
+<p>Will be added after section. 😛 <!--
 It is useful to think about "$\bigcup$" as "there exists" ($\exists$) and "$\bigcap$" as "for all" ($\forall$). So,
 $$
 \begin{eqnarray*}
@@ -567,7 +566,7 @@ Solution
 </div>
 <div id="callout-11" class="callout-11-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>Will be added after section</p>
+<p>Will be added after section. 😛</p>
 <!--
 We observe that,
 $$
@@ -592,7 +591,7 @@ Thus, $$ \begin{align*} C &= \{\omega \in \Omega: \omega \in A^c_n \text{ for fi
 </section>
 <section id="section-problem-5" class="level3">
 <h3 class="anchored" data-anchor-id="section-problem-5">✏️ Section Problem 5</h3>
-<p>Assume above is the case. Show that <span class="math inline">\(A \in \mathcal{F}.\)</span></p>
+<p>Assume the above is the case. Show that <span class="math inline">\(A \in \mathcal{F}.\)</span></p>
 <div class="callout-tip callout callout-style-simple callout-captioned">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-12-contents" aria-controls="callout-12" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
@@ -605,7 +604,7 @@ Solution
 </div>
 <div id="callout-12" class="callout-12-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>Will be added after section</p>
+<p>Will be added after section. 😛</p>
 </div>
 </div>
 </div>
@@ -623,7 +622,7 @@ Tip: A useful inequality
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p><span class="math display">\[P(\liminf\limits_{n \to \infty}A_n) \leq \liminf\limits_{n \to \infty}P(A_n) \leq \limsup\limits_{n \to \infty}P(A_n) \leq P(\limsup\limits_{n \to \infty}A_n)\]</span></p>
+<p><span class="math display">\[P(\liminf\limits_{n \to \infty}A_n) \leq \liminf\limits_{n \to \infty}P(A_n) \leq \limsup\limits_{n \to \infty}P(A_n) \leq P(\limsup\limits_{n \to \infty}A_n).\]</span></p>
 </div>
 </div>
 <div class="callout-tip callout callout-style-simple callout-captioned">
@@ -638,7 +637,7 @@ Solution
 </div>
 <div id="callout-14" class="callout-14-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>Will be added after section <!--
+<p>Will be added after section. 😛 <!--
 Note that, the result is immediate if we can prove (1). We shall now show that (1) holds for a general sequence of events $\{A_n\}_{n=1}^{\infty}$.\\
     We know that (from Problem 2)
     $$P(\liminf\limits_{n\to \infty} A_n) =  \lim \limits_{n\to \infty} P(C_n)$$
@@ -660,7 +659,7 @@ Finally, it is always true that
 <h2 class="anchored" data-anchor-id="next-week">Next Week</h2>
 <p>Next week, we will discuss:</p>
 <ul>
-<li>Joe’s favourtie theorem: <span class="math inline">\(\pi-\lambda\)</span> theorem</li>
+<li>Joe’s favourtie theorem, the <span class="math inline">\(\pi\)</span>-<span class="math inline">\(\lambda\)</span> theorem</li>
 <li>Independence of random variables</li>
 <li>A primer on reasoning by representation</li>
 </ul>
