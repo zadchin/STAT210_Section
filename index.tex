@@ -229,7 +229,7 @@
 
 \begin{document}
 \maketitle
-\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[interior hidden, boxrule=0pt, sharp corners, borderline west={3pt}{0pt}{shadecolor}, enhanced, breakable, frame hidden]}{\end{tcolorbox}}\fi
+\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[interior hidden, breakable, frame hidden, enhanced, borderline west={3pt}{0pt}{shadecolor}, boxrule=0pt, sharp corners]}{\end{tcolorbox}}\fi
 
 \renewcommand*\contentsname{Table of contents}
 {
@@ -284,7 +284,7 @@ questions on Ed, or email Joe or us as well.
 \markright{Notes}
 
 The section notes will be presented as a book, and the source for this
-book at \url{https://github.com/zadchin/STAT210_Section}. Any typos or
+book at \url{https://zadchin.github.io/STAT210_Section/}. Any typos or
 errors can be reported at
 \url{https://github.com/zadchin/STAT210_Section/issues}. Thanks for
 reading.
@@ -380,7 +380,7 @@ intersections, i.e., if \(A_1, A_2, \cdots\) are in \(\sigma\)-algebra
 show that the requirement \(\emptyset \in \mathcal{F}\) can be replaced
 by the requirements \(\mathcal{F} \neq \emptyset\).
 
-\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, colback=white, leftrule=.75mm, rightrule=.15mm, toprule=.15mm, bottomrule=.15mm, breakable, opacityback=0, left=2mm, colframe=quarto-callout-tip-color-frame]
+\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, colback=white, rightrule=.15mm, leftrule=.75mm, breakable, opacityback=0, left=2mm, bottomrule=.15mm, toprule=.15mm, colframe=quarto-callout-tip-color-frame]
 \begin{minipage}[t]{5.5mm}
 \textcolor{quarto-callout-tip-color}{\faLightbulb}
 \end{minipage}%
@@ -393,7 +393,7 @@ Will be added after section
 \end{minipage}%
 \end{tcolorbox}
 
-\begin{tcolorbox}[enhanced jigsaw, colbacktitle=quarto-callout-note-color!10!white, leftrule=.75mm, coltitle=black, rightrule=.15mm, toptitle=1mm, bottomrule=.15mm, breakable, arc=.35mm, colback=white, titlerule=0mm, bottomtitle=1mm, toprule=.15mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Tip: De Morgan Laws}, left=2mm, opacityback=0, opacitybacktitle=0.6, colframe=quarto-callout-note-color-frame]
+\begin{tcolorbox}[enhanced jigsaw, bottomtitle=1mm, colback=white, coltitle=black, leftrule=.75mm, left=2mm, opacitybacktitle=0.6, arc=.35mm, rightrule=.15mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Tip: De Morgan Laws}, toptitle=1mm, breakable, opacityback=0, titlerule=0mm, toprule=.15mm, bottomrule=.15mm, colbacktitle=quarto-callout-note-color!10!white, colframe=quarto-callout-note-color-frame]
 
 \[\left(\bigcup_{n=1}^{\infty} A_n \right)^c = \bigcap_{n=1}^{\infty} A_n ^c\]
 
@@ -409,7 +409,7 @@ Check that an intersection of \(\sigma-\)algebras, even uncountably
 many, is \(\sigma\)-algebra. Give a simple example showing that a union
 of \(\sigma\)-algebras may not be a \(\sigma\)-algebra.
 
-\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, colback=white, leftrule=.75mm, rightrule=.15mm, toprule=.15mm, bottomrule=.15mm, breakable, opacityback=0, left=2mm, colframe=quarto-callout-tip-color-frame]
+\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, colback=white, rightrule=.15mm, leftrule=.75mm, breakable, opacityback=0, left=2mm, bottomrule=.15mm, toprule=.15mm, colframe=quarto-callout-tip-color-frame]
 \begin{minipage}[t]{5.5mm}
 \textcolor{quarto-callout-tip-color}{\faLightbulb}
 \end{minipage}%
@@ -422,7 +422,7 @@ Will be added after section
 \end{minipage}%
 \end{tcolorbox}
 
-\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, colback=white, leftrule=.75mm, rightrule=.15mm, toprule=.15mm, bottomrule=.15mm, breakable, opacityback=0, left=2mm, colframe=quarto-callout-important-color-frame]
+\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, colback=white, rightrule=.15mm, leftrule=.75mm, breakable, opacityback=0, left=2mm, bottomrule=.15mm, toprule=.15mm, colframe=quarto-callout-important-color-frame]
 \begin{minipage}[t]{5.5mm}
 \textcolor{quarto-callout-important-color}{\faExclamation}
 \end{minipage}%
@@ -464,7 +464,7 @@ intervals \([a,b]\) instead of open intervals to generate it, and that
 it is also the same if we use ``semi-inifinite'' intervals
 \((-\infty,b)\) to generate it.
 
-\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, colback=white, leftrule=.75mm, rightrule=.15mm, toprule=.15mm, bottomrule=.15mm, breakable, opacityback=0, left=2mm, colframe=quarto-callout-tip-color-frame]
+\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, colback=white, rightrule=.15mm, leftrule=.75mm, breakable, opacityback=0, left=2mm, bottomrule=.15mm, toprule=.15mm, colframe=quarto-callout-tip-color-frame]
 \begin{minipage}[t]{5.5mm}
 \textcolor{quarto-callout-tip-color}{\faLightbulb}
 \end{minipage}%
@@ -517,7 +517,7 @@ function) \(P\) satisfying the following axioms:
 Show that in the first axiom, the condition \(P(\emptyset) = 0\) can be
 eliminated.
 
-\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, colback=white, leftrule=.75mm, rightrule=.15mm, toprule=.15mm, bottomrule=.15mm, breakable, opacityback=0, left=2mm, colframe=quarto-callout-tip-color-frame]
+\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, colback=white, rightrule=.15mm, leftrule=.75mm, breakable, opacityback=0, left=2mm, bottomrule=.15mm, toprule=.15mm, colframe=quarto-callout-tip-color-frame]
 \begin{minipage}[t]{5.5mm}
 \textcolor{quarto-callout-tip-color}{\faLightbulb}
 \end{minipage}%
@@ -538,7 +538,7 @@ Show that \(P\) is subadditive, i.e.~if \(\{A_i\}^{\infty}_{i=1}\) is
 \textit{any} collection of sets in \(\mathcal{F}\), then
 \[P\left( \bigcup_{i=1}^{\infty} A_i\right) \leq  \sum_{i=1}^{\infty} P(A_i)\]
 
-\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, colback=white, leftrule=.75mm, rightrule=.15mm, toprule=.15mm, bottomrule=.15mm, breakable, opacityback=0, left=2mm, colframe=quarto-callout-tip-color-frame]
+\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, colback=white, rightrule=.15mm, leftrule=.75mm, breakable, opacityback=0, left=2mm, bottomrule=.15mm, toprule=.15mm, colframe=quarto-callout-tip-color-frame]
 \begin{minipage}[t]{5.5mm}
 \textcolor{quarto-callout-tip-color}{\faLightbulb}
 \end{minipage}%
@@ -560,7 +560,7 @@ Let \(A_1,A_2,...\) be a sequence of sets in \(\mathcal{F}\) such that
 \(P(A_n) \xrightarrow{n \to \infty} P(A)\). Show that the result also
 holds for \(A_n \downarrow A\). Does the result hold for any measure?
 
-\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, colback=white, leftrule=.75mm, rightrule=.15mm, toprule=.15mm, bottomrule=.15mm, breakable, opacityback=0, left=2mm, colframe=quarto-callout-tip-color-frame]
+\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, colback=white, rightrule=.15mm, leftrule=.75mm, breakable, opacityback=0, left=2mm, bottomrule=.15mm, toprule=.15mm, colframe=quarto-callout-tip-color-frame]
 \begin{minipage}[t]{5.5mm}
 \textcolor{quarto-callout-tip-color}{\faLightbulb}
 \end{minipage}%
@@ -611,7 +611,7 @@ is in \(\mathcal{F}\) for all Borel sets \(\mathcal{B}\) in
 Show that if \(X\) is a random variable, then so is \(g(X)\) for any
 measurable function \(g\).
 
-\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, colback=white, leftrule=.75mm, rightrule=.15mm, toprule=.15mm, bottomrule=.15mm, breakable, opacityback=0, left=2mm, colframe=quarto-callout-tip-color-frame]
+\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, colback=white, rightrule=.15mm, leftrule=.75mm, breakable, opacityback=0, left=2mm, bottomrule=.15mm, toprule=.15mm, colframe=quarto-callout-tip-color-frame]
 \begin{minipage}[t]{5.5mm}
 \textcolor{quarto-callout-tip-color}{\faLightbulb}
 \end{minipage}%
@@ -632,7 +632,7 @@ Let \(F(x,y)\) be a bivariate CDF. Prove that for all \(a_1 \leq b_1\)
 and \(a_2 \leq b_2\),
 \[F(b_1, b_2)-F(a_1, b_2)-F(b_1,a_2)+F(a_1,a_2) \geq 0\]
 
-\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, colback=white, leftrule=.75mm, rightrule=.15mm, toprule=.15mm, bottomrule=.15mm, breakable, opacityback=0, left=2mm, colframe=quarto-callout-tip-color-frame]
+\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, colback=white, rightrule=.15mm, leftrule=.75mm, breakable, opacityback=0, left=2mm, bottomrule=.15mm, toprule=.15mm, colframe=quarto-callout-tip-color-frame]
 \begin{minipage}[t]{5.5mm}
 \textcolor{quarto-callout-tip-color}{\faLightbulb}
 \end{minipage}%
@@ -679,7 +679,7 @@ We call \(B\) and \(C\), \(\limsup\limits_{n \to \infty}A_n\) and
 Show that
 \(B = \{\omega \in \Omega : \omega \in A_n \text{ for infinitely many values of } n\}\).
 
-\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, colback=white, leftrule=.75mm, rightrule=.15mm, toprule=.15mm, bottomrule=.15mm, breakable, opacityback=0, left=2mm, colframe=quarto-callout-tip-color-frame]
+\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, colback=white, rightrule=.15mm, leftrule=.75mm, breakable, opacityback=0, left=2mm, bottomrule=.15mm, toprule=.15mm, colframe=quarto-callout-tip-color-frame]
 \begin{minipage}[t]{5.5mm}
 \textcolor{quarto-callout-tip-color}{\faLightbulb}
 \end{minipage}%
@@ -699,7 +699,7 @@ Will be added after section.
 Show that
 \(C = \{\omega \in \Omega: \omega \in A_n \text{ for all but finitely many values of } n\}\).
 
-\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, colback=white, leftrule=.75mm, rightrule=.15mm, toprule=.15mm, bottomrule=.15mm, breakable, opacityback=0, left=2mm, colframe=quarto-callout-tip-color-frame]
+\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, colback=white, rightrule=.15mm, leftrule=.75mm, breakable, opacityback=0, left=2mm, bottomrule=.15mm, toprule=.15mm, colframe=quarto-callout-tip-color-frame]
 \begin{minipage}[t]{5.5mm}
 \textcolor{quarto-callout-tip-color}{\faLightbulb}
 \end{minipage}%
@@ -727,7 +727,7 @@ that case, we write \(\lim\limits_{n\to \infty} A_n = A\).
 
 Assume above is the case. Show that \(A \in \mathcal{F}.\)
 
-\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, colback=white, leftrule=.75mm, rightrule=.15mm, toprule=.15mm, bottomrule=.15mm, breakable, opacityback=0, left=2mm, colframe=quarto-callout-tip-color-frame]
+\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, colback=white, rightrule=.15mm, leftrule=.75mm, breakable, opacityback=0, left=2mm, bottomrule=.15mm, toprule=.15mm, colframe=quarto-callout-tip-color-frame]
 \begin{minipage}[t]{5.5mm}
 \textcolor{quarto-callout-tip-color}{\faLightbulb}
 \end{minipage}%
@@ -746,13 +746,13 @@ Will be added after section
 
 Show that \(\lim\limits_{n \to \infty} P(A_n) = P(A)\).
 
-\begin{tcolorbox}[enhanced jigsaw, colbacktitle=quarto-callout-note-color!10!white, leftrule=.75mm, coltitle=black, rightrule=.15mm, toptitle=1mm, bottomrule=.15mm, breakable, arc=.35mm, colback=white, titlerule=0mm, bottomtitle=1mm, toprule=.15mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Tip: A useful inequality}, left=2mm, opacityback=0, opacitybacktitle=0.6, colframe=quarto-callout-note-color-frame]
+\begin{tcolorbox}[enhanced jigsaw, bottomtitle=1mm, colback=white, coltitle=black, leftrule=.75mm, left=2mm, opacitybacktitle=0.6, arc=.35mm, rightrule=.15mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Tip: A useful inequality}, toptitle=1mm, breakable, opacityback=0, titlerule=0mm, toprule=.15mm, bottomrule=.15mm, colbacktitle=quarto-callout-note-color!10!white, colframe=quarto-callout-note-color-frame]
 
 \[P(\liminf\limits_{n \to \infty}A_n) \leq \liminf\limits_{n \to \infty}P(A_n) \leq \limsup\limits_{n \to \infty}P(A_n) \leq P(\limsup\limits_{n \to \infty}A_n)\]
 
 \end{tcolorbox}
 
-\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, colback=white, leftrule=.75mm, rightrule=.15mm, toprule=.15mm, bottomrule=.15mm, breakable, opacityback=0, left=2mm, colframe=quarto-callout-tip-color-frame]
+\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, colback=white, rightrule=.15mm, leftrule=.75mm, breakable, opacityback=0, left=2mm, bottomrule=.15mm, toprule=.15mm, colframe=quarto-callout-tip-color-frame]
 \begin{minipage}[t]{5.5mm}
 \textcolor{quarto-callout-tip-color}{\faLightbulb}
 \end{minipage}%

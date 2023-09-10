@@ -12,7 +12,7 @@ book:
   reader-mode: true
   public-url: https://zadchin.github.io/STAT210_Section/
   repo-url: https://github.com/zadchin/STAT210_Section
-  repo-actions: [edit, issue]
+  repo-actions: [issue]
   chapters:
     - index.qmd
     - 01_Section_1.qmd
