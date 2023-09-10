@@ -6,8 +6,8 @@ This website contains section notes for STAT 210: Probability I, a graduate leve
 
 ## Logistics
 
-- Sections: 12:00 - 1:00 pm on Fridays at SC316
-- Office Hours: 1:15 - 3:15pm on Fridays at SC316
+- Sections: 12:00 - 1:15 pm on Fridays at SC112
+- Office Hours: 1:30 - 3:30pm on Fridays at SC222
 
 In section, we will only briefly go through the results from class, focusing more on pencil problems that will strengthen your understanding about those results. Section notes will be posted here before Friday (latest by Thursday night), and section notes with solutions will be posted after section (on Friday night). 
 
