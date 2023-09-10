@@ -1,0 +1,36 @@
+project:
+  type: book
+  output-dir: _book
+
+execute:
+  freeze: auto
+  
+book:
+  title: "STAT 210 Section Notes"
+  author: "Zad Chin & Jarell Cheong"
+  output-file: "users-guide"
+  reader-mode: true
+  public-url: https://github.com/zadchin/STAT210_Section
+  repo-url: https://github.com/zadchin/STAT210_Section
+  repo-actions: [edit, issue]
+  chapters:
+    - index.qmd
+    - 01_Section_1.qmd
+
+bibliography: references.bib
+
+format:
+  html:
+    theme: cosmo
+    css: style.css
+    include-before-body:
+      - _dollars.tex
+      - _bold_html.tex
+      - _macros.tex
+      - _dollars.tex
+        
+  pdf:
+    documentclass: scrreprt
+    include-in-header:
+      - _bold.tex
+      - _macros_pdf.tex

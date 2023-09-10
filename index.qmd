@@ -1,0 +1,39 @@
+![](assets/img/stat210-logo.png)
+
+# Preface {.unnumbered}
+
+This is a set of section notes for STAT 210: Probability I, a graduate level probability course, at Harvard University taught by Professor [Joe Blitzstein](mailto:blitz@g.harvard.edu), created by [Zad Chin](mailto:zadchin@college.harvard.edu) & [Jarell Cheong Tze Wen](mailto:jarellcheong@college.harvard.edu). 
+
+## Important Logistics
+
+- Section Time: 12:00 - 1:00 pm every Friday at SC316
+- Office Hour: 1:15 - 3:15pm every Friday at SC316
+
+In Section, we will only briefly go through definition highlights in class, and focus more on pencil problems that will strengthen understandings for those concepts/definitions. Section note will be posted here before Friday (latest by Thursday night), and section note with solution will be posted after section (on Friday night). 
+
+In office hour, we will mainly discuss concept or problem on this week's homework. Besides Section & Office Hours, please feel free to ask questions on Ed, or email Joe or us as well.
+
+
+## Notes
+
+The section notes will be presented as a book, and the source for this book at <https://github.com/zadchin/STAT210_Section>. Any typos or errors can be reported at <https://github.com/zadchin/STAT210_Section/issues>. Thanks for reading. 
+
+
+This is a Quarto book. To learn more about Quarto books visit <https://quarto.org/docs/books>. 
+
+## Acknowledgement
+
+  
+We extend our profound gratitude to the Department of Statistics at Harvard University,
+with a special acknowledgment to Professor Joe Blitzstein for his invaluable insights and knowledge-sharing.
+Our appreciation also goes to our peers from STAT 210, whose contributions to discussions
+on the textbook problems have been invaluable. Finally, we are indebted to the Stat-exchange platform for facilitating discussions that addressed challenges we encountered, which have subsequently
+enriched the content of our section notes.
+
+ 
+
+
+
+
+
+$\,$
