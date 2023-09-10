@@ -16,7 +16,7 @@ In office hour, we will mainly discuss concept or problem on this week's homewor
 
 ## Notes
 
-The section notes will be presented as a book, and the source for this book at <https://github.com/zadchin/STAT210_Section>. Any typos or errors can be reported at <https://github.com/zadchin/STAT210_Section/issues>. Thanks for reading. 
+The section notes will be presented as a book, and the source for this book at <https://zadchin.github.io/STAT210_Section/>. Any typos or errors can be reported at <https://github.com/zadchin/STAT210_Section/issues>. Thanks for reading. 
 
 
 This is a Quarto book. To learn more about Quarto books visit <https://quarto.org/docs/books>. 
