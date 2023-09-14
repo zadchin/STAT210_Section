@@ -1,0 +1,24 @@
+# Meme & Quotes {.unnumbered}
+
+## Quotes
+
+> How will our participation grade be measured? *Joe*: Using measure theory.
+
+> Measure theory is just about measuring things - Jun Liu, Spring 2023
+
+> What I don't like about measure theory is that you have to say "almost everywhere" almost everywhere. - Kurt Friedrichs
+
+## Meme
+
+![](assets/img/meme/meme1.png){.fragment width="500" height="300"}
+![](assets/img/meme/meme3.jpeg){.fragment width="500" height="300"}
+
+![](assets/img/meme/meme2.webp){.fragment width="500" height="700"}
+
+## Upload your meme / quotes
+
+If you would like to contribute to this meme + quotes page, please upload it at this [form](https://forms.gle/RBmMNYJp4u3qD5W79)
+
+Note that a verified email address is needed in the GForm so we don't get scammy input! :) 
+
+$\,$

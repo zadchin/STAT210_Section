@@ -30,6 +30,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
+<link href="./meme.html" rel="next">
 <link href="./index.html" rel="prev">
 <link href="./assets/img/stat210-clear_bg.png" rel="icon" type="image/png">
 <script src="site_libs/quarto-html/quarto.js"></script>
@@ -113,6 +114,11 @@ ul.task-list li input[type="checkbox"] {
   <a href="./01_Section_1.html" class="sidebar-item-text sidebar-link active">Section 1</a>
   </div>
 </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./meme.html" class="sidebar-item-text sidebar-link">Meme &amp; Quotes</a>
+  </div>
+</li>
     </ul>
     </div>
 </nav>
@@ -149,6 +155,15 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#section-problem-4" id="toc-section-problem-4" class="nav-link" data-scroll-target="#section-problem-4">✏️ Section Problem 4</a></li>
   <li><a href="#section-problem-5" id="toc-section-problem-5" class="nav-link" data-scroll-target="#section-problem-5">✏️ Section Problem 5</a></li>
   <li><a href="#section-problem-6" id="toc-section-problem-6" class="nav-link" data-scroll-target="#section-problem-6">✏️ Section Problem 6</a></li>
+  </ul></li>
+  <li><a href="#independence" id="toc-independence" class="nav-link" data-scroll-target="#independence">Independence</a>
+  <ul class="collapse">
+  <li><a href="#pnecil-2.9.13" id="toc-pnecil-2.9.13" class="nav-link" data-scroll-target="#pnecil-2.9.13">✏️ Pnecil 2.9.13</a></li>
+  <li><a href="#pnecil-2.9.15" id="toc-pnecil-2.9.15" class="nav-link" data-scroll-target="#pnecil-2.9.15">✏️ Pnecil 2.9.15</a></li>
+  </ul></li>
+  <li><a href="#uniqueness-and-pi-lambda" id="toc-uniqueness-and-pi-lambda" class="nav-link" data-scroll-target="#uniqueness-and-pi-lambda">Uniqueness and <span class="math inline">\(\pi-\lambda\)</span></a>
+  <ul class="collapse">
+  <li><a href="#pnecil-2.10.2" id="toc-pnecil-2.10.2" class="nav-link" data-scroll-target="#pnecil-2.10.2">✏️ Pnecil 2.10.2</a></li>
   </ul></li>
   <li><a href="#next-week" id="toc-next-week" class="nav-link" data-scroll-target="#next-week">Next Week</a></li>
   </ul>
@@ -231,6 +246,7 @@ $$
 
 </header>
 
+<p>Last Updated: 14 Sept 2023</p>
 <p>Date: 15 Sept 2023</p>
 <section id="introduction" class="level2">
 <h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
@@ -241,6 +257,8 @@ $$
 <li>Probability measures</li>
 <li>Random variables and random vectors</li>
 <li>Limits of events</li>
+<li>Independence</li>
+<li>Uniqueness and <span class="math inline">\(\pi-\lambda\)</span></li>
 </ul>
 </section>
 <section id="sigma-algebras" class="level2">
@@ -656,14 +674,116 @@ Finally, it is always true that
 </div>
 </section>
 </section>
+<section id="independence" class="level2">
+<h2 class="anchored" data-anchor-id="independence">Independence</h2>
+<div id="def-indepence-RV" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 8 </strong></span>Two random variables <span class="math inline">\(X_1,X_2\)</span> are <em>independent</em> if the event <span class="math inline">\(X_1\in B_1\)</span> is independent of the event <span class="math inline">\(X_2\in B_2\)</span> for all Borel <span class="math inline">\(B_1, B_2\)</span></p>
+</div>
+<p>As remarked in Remark 2.9.12, it is helpful and simple to think directly about distributions and preimages. In set operations, if <span class="math inline">\(f\)</span> is a function from a set <span class="math inline">\(S\)</span> into a set <span class="math inline">\(T\)</span>, and <span class="math inline">\(B_{\alpha} \subseteq T\)</span> for all <span class="math inline">\(\alpha\)</span> in some index set <span class="math inline">\(A\)</span>, we then have the following convenient properties:</p>
+<ol type="1">
+<li><p>$f^{-1}(<em>B</em>{}) = <em>f^{-1} (B</em>)</p></li>
+<li><p>$f^{-1}(<em>B</em>{}) = <em>f^{-1} (B</em>)</p></li>
+<li><p>$f^{-1} (B_^C) =(f<sup>{-1}(B_))</sup>C</p></li>
+</ol>
+<section id="pnecil-2.9.13" class="level3">
+<h3 class="anchored" data-anchor-id="pnecil-2.9.13">✏️ Pnecil 2.9.13</h3>
+<p>Verify the above properties of preimages</p>
+<div class="callout-tip callout callout-style-simple callout-captioned">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-15-contents" aria-controls="callout-15" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Solution
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-15" class="callout-15-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Will be added after section. 😛 <!--
+1. Suppose $x\in f^{-1}(\cup_\alpha B_{\alpha})$, then note that $f(x) \in \cup_\alpha B_\alpha$, which implies that $f(x) \in B_\alpha$ for some $\alpha$. Thus, $x \in f^{-1} (B_\alpha) for some $\alpha$, which implies $x \in \cup_\alpha f^{-1} (B_\alpha)$.
+
+2. Suppose $x\in f^{-1}(\cap_\alpha B_{\alpha})$. Analogously, by replacing "some" with "all", $x\in \cap_\alpha f^{-1} (B_\alpha)$
+
+3. Suppose $x\in f^{-1} (B_\alpha^C)$, then $f(x) \in B_\alpha^C$, which is equivalent to $f(x)\notin B_\alpha$. Thus, $x\notin f^{-1}(B_\alpha)$, which implies that $x\in (f^{-1}(B_\alpha))^C$
+--></p>
+</div>
+</div>
+</div>
+</section>
+<section id="pnecil-2.9.15" class="level3">
+<h3 class="anchored" data-anchor-id="pnecil-2.9.15">✏️ Pnecil 2.9.15</h3>
+<p>If <span class="math inline">\(\mathbf{X}_1, \mathbf{X}_2 , \mathbf{X}_3\)</span> are random vectors (possibly in different dimensions) with <span class="math inline">\(\mathbf{X}_1 \perp\!\!\!\perp \mathbf{X}_2\)</span> and <span class="math inline">\((\mathbf{X}_1 , \mathbf{X}_2) \perp\!\!\!\perp \mathbf{X}_3\)</span>, then <span class="math inline">\(\mathbf{X}_1, \mathbf{X}_2 , \mathbf{X}_3\)</span> are independent.</p>
+<div class="callout-tip callout callout-style-simple callout-captioned">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-16-contents" aria-controls="callout-16" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Solution
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-16" class="callout-16-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Will be added after section. 😛 <!--
+$$
+\begin{align*}
+P(\mathbf{X}_1 \in A, \mathbf{X}_2 \in B, \mathbf{X}_3 \in C) 
+&= P(\mathbf{X}_1, \mathbf{X}_2 \in A \times B, \mathbf{X}_3 \in C)\\
+&= P(\mathbf{X}_1, \mathbf{X}_2 \in A \times B)P(\mathbf{X}_3 \in C)\\
+&= P(\mathbf{X}_1 \in A, \mathbf{X}_2 \in B)P(\mathbf{X}_3 \in C)\\
+&= P(\mathbf{X}_1 \in A)P(\mathbf{X}_2 \in B)P(\mathbf{X}_3 \in C)\\
+\end{align*}
+$$
+--></p>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="uniqueness-and-pi-lambda" class="level2">
+<h2 class="anchored" data-anchor-id="uniqueness-and-pi-lambda">Uniqueness and <span class="math inline">\(\pi-\lambda\)</span></h2>
+<div id="def-indepence-RV" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 9 </strong></span>A collection <span class="math inline">\(\mathcal{A}\)</span> of subsets of <span class="math inline">\(\Omega\)</span> is called a <em><span class="math inline">\(\pi-\)</span>system</em> if <span class="math inline">\(A\cap B\in \mathcal{A}\)</span> for all <span class="math inline">\(A, B\in \mathcal{A}\)</span> The collection <span class="math inline">\(\mathcal{L}\)</span> of subsets of <span class="math inline">\(\Omega\)</span> is called a <em><span class="math inline">\(\lambda-system\)</span></em> if the following conditions hold:</p>
+<ol type="1">
+<li><p><span class="math inline">\(\Omega \in \mathcal{L}\)</span></p></li>
+<li><p>(Closure under proper difference) If <span class="math inline">\(A, B \in \mathcal{L}\)</span> with <span class="math inline">\(A \subseteq B\)</span>, then $B &nbsp;A </p></li>
+<li><p>(Closure under increasing unions) If <span class="math inline">\(A_1 \subseteq A_2 \subseteq \cdots\)</span> are in <span class="math inline">\(\mathcal{L}\)</span>, then <span class="math inline">\(\bigcup_{i=1}^\infty A_i \in \mathcal{L}\)</span></p></li>
+</ol>
+</div>
+<section id="pnecil-2.10.2" class="level3">
+<h3 class="anchored" data-anchor-id="pnecil-2.10.2">✏️ Pnecil 2.10.2</h3>
+<p>Show that if <span class="math inline">\(\mathcal{A}\)</span> is both a <span class="math inline">\(\pi\)</span>-system and a <span class="math inline">\(\lambda\)</span>-system, then it is a <span class="math inline">\(\sigma\)</span>-algebra.</p>
+<div class="callout-tip callout callout-style-simple callout-captioned">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-17-contents" aria-controls="callout-17" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Solution
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-17" class="callout-17-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Will be added after section. 😛 <!--
+$\Omega \in \mathcal{A}$, so for any $A\in \mathcal{A}$, $A \subseteq \Omega$. This implies that $\Omega-A = A^c \in \mathcal{A}$. Trivially, we also observe that $\mathcal{A}\neq \emptyset$. Finally, if $A_1, A_2, \cdots \in \mathcal{A}$, then $A_1 \cap A_2 \cap \cdots \subseteq \cdots \subseteq A \in \mathcal{A}$, so their union $\bigcup_{i=1}^\infty A_i \in \mathcal{A}$
+--></p>
+</div>
+</div>
+</div>
+</section>
+</section>
 <section id="next-week" class="level2">
 <h2 class="anchored" data-anchor-id="next-week">Next Week</h2>
 <p>Next week, we will discuss:</p>
 <ul>
-<li>Joe’s favourtie theorem, the <span class="math inline">\(\pi\)</span>-<span class="math inline">\(\lambda\)</span> theorem</li>
-<li>Independence of random variables</li>
-<li>A primer on reasoning by representation</li>
+<li>Discuss more <span class="math inline">\(\pi-\lambda\)</span></li>
+<li>Reasoning by representation</li>
 </ul>
+<p>Feel free to upload the pencil problem you wish to be discussed next week <a href="https://forms.gle/RBmMNYJp4u3qD5W79">here</a>.</p>
+<p>Note that a verified email address is needed in the GForm so we don’t get scammy input! :)</p>
 <p><span class="math inline">\(\,\)</span></p>
 
 
@@ -810,6 +930,9 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       </a>          
   </div>
   <div class="nav-page nav-page-next">
+      <a href="./meme.html" class="pagination-link">
+        <span class="nav-page-text">Meme &amp; Quotes</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
   </div>
 </nav>
 </div> <!-- /content -->

@@ -229,7 +229,7 @@
 
 \begin{document}
 \maketitle
-\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[sharp corners, borderline west={3pt}{0pt}{shadecolor}, interior hidden, boxrule=0pt, enhanced, breakable, frame hidden]}{\end{tcolorbox}}\fi
+\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[sharp corners, boxrule=0pt, enhanced, borderline west={3pt}{0pt}{shadecolor}, breakable, frame hidden, interior hidden]}{\end{tcolorbox}}\fi
 
 \renewcommand*\contentsname{Table of contents}
 {
@@ -264,14 +264,19 @@ are created by \href{mailto:zadchin@college.harvard.edu}{Zad Chin} and
 \item
   Sections: 12:00 - 1:15 pm on Fridays at SC112
 \item
-  Office Hours: 1:30 - 3:30pm on Fridays at SC222
+  Office Hours: 1:30 - 2:45pm on Fridays at SC222
 \end{itemize}
 
 In section, we will only briefly go through the results from class,
 focusing more on pencil problems that will strengthen your understanding
 about those results. Section notes will be posted here before Friday
 (latest by Thursday night), and section notes with solutions will be
-posted after section (on Friday night).
+posted after section (on Friday night). Please note that the solution to
+the pencil problem is not the official solution but more of the result
+of discussion with peers. If you find any error or mistakes, please
+report them on Github. Furthermore, feel free to upload the pencil
+problem you wish to be discussed in the following section at the link
+\href{https://forms.gle/RBmMNYJp4u3qD5W79}{here}.
 
 In office hours, we will mostly discuss concepts or problems on the
 presently assigned homework. Besides section and office hours, please
@@ -302,8 +307,8 @@ We extend our profound gratitude to the Department of Statistics at
 Harvard University, with a special acknowledgment to Professor Joe
 Blitzstein for his invaluable insights and knowledge-sharing.
 
-Our appreciation also goes to our peers from STAT 210, whose
-contributions to discussions on the textbook problems have been
+Our appreciation also goes to our peers from STAT 210 in Fall 2022,
+whose contributions to discussions on the textbook problems have been
 invaluable.
 
 \(\,\)
@@ -315,6 +320,8 @@ invaluable.
 \addcontentsline{toc}{chapter}{Section 1}
 
 \markboth{Section 1}{Section 1}
+
+Last Updated: 14 Sept 2023
 
 Date: 15 Sept 2023
 
@@ -338,6 +345,10 @@ In this section, we will discuss:
   Random variables and random vectors
 \item
   Limits of events
+\item
+  Independence
+\item
+  Uniqueness and \(\pi-\lambda\)
 \end{itemize}
 
 \hypertarget{sigma-algebras}{%
@@ -380,7 +391,7 @@ intersections, i.e.~if \(A_1, A_2, \cdots\) are in the
 requirement \(\emptyset \in \mathcal{F}\) can be replaced by the
 requirements \(\mathcal{F} \neq \emptyset\).
 
-\begin{tcolorbox}[enhanced jigsaw, colframe=quarto-callout-tip-color-frame, bottomrule=.15mm, rightrule=.15mm, leftrule=.75mm, colback=white, opacityback=0, breakable, arc=.35mm, toprule=.15mm, left=2mm]
+\begin{tcolorbox}[enhanced jigsaw, leftrule=.75mm, opacityback=0, colframe=quarto-callout-tip-color-frame, left=2mm, colback=white, rightrule=.15mm, arc=.35mm, bottomrule=.15mm, toprule=.15mm, breakable]
 \begin{minipage}[t]{5.5mm}
 \textcolor{quarto-callout-tip-color}{\faLightbulb}
 \end{minipage}%
@@ -393,7 +404,7 @@ Will be added after section. 😛
 \end{minipage}%
 \end{tcolorbox}
 
-\begin{tcolorbox}[enhanced jigsaw, colframe=quarto-callout-note-color-frame, colbacktitle=quarto-callout-note-color!10!white, leftrule=.75mm, colback=white, breakable, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Tip: De Morgan Laws}, arc=.35mm, bottomrule=.15mm, rightrule=.15mm, bottomtitle=1mm, toprule=.15mm, opacityback=0, opacitybacktitle=0.6, toptitle=1mm, titlerule=0mm, coltitle=black, left=2mm]
+\begin{tcolorbox}[enhanced jigsaw, bottomtitle=1mm, opacityback=0, opacitybacktitle=0.6, titlerule=0mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Tip: De Morgan Laws}, colbacktitle=quarto-callout-note-color!10!white, leftrule=.75mm, colframe=quarto-callout-note-color-frame, left=2mm, bottomrule=.15mm, arc=.35mm, colback=white, rightrule=.15mm, coltitle=black, toptitle=1mm, toprule=.15mm, breakable]
 
 \[\left(\bigcup_{n=1}^{\infty} A_n \right)^c = \bigcap_{n=1}^{\infty} A_n ^c.\]
 
@@ -409,7 +420,7 @@ Check that an intersection of \(\sigma-\)algebras, even uncountably
 many, is \(\sigma\)-algebra. Give a simple example showing that a union
 of \(\sigma\)-algebras may not be a \(\sigma\)-algebra.
 
-\begin{tcolorbox}[enhanced jigsaw, colframe=quarto-callout-tip-color-frame, bottomrule=.15mm, rightrule=.15mm, leftrule=.75mm, colback=white, opacityback=0, breakable, arc=.35mm, toprule=.15mm, left=2mm]
+\begin{tcolorbox}[enhanced jigsaw, leftrule=.75mm, opacityback=0, colframe=quarto-callout-tip-color-frame, left=2mm, colback=white, rightrule=.15mm, arc=.35mm, bottomrule=.15mm, toprule=.15mm, breakable]
 \begin{minipage}[t]{5.5mm}
 \textcolor{quarto-callout-tip-color}{\faLightbulb}
 \end{minipage}%
@@ -422,7 +433,7 @@ Will be added after section. 😛
 \end{minipage}%
 \end{tcolorbox}
 
-\begin{tcolorbox}[enhanced jigsaw, colframe=quarto-callout-important-color-frame, bottomrule=.15mm, rightrule=.15mm, leftrule=.75mm, colback=white, opacityback=0, breakable, arc=.35mm, toprule=.15mm, left=2mm]
+\begin{tcolorbox}[enhanced jigsaw, leftrule=.75mm, opacityback=0, colframe=quarto-callout-important-color-frame, left=2mm, colback=white, rightrule=.15mm, arc=.35mm, bottomrule=.15mm, toprule=.15mm, breakable]
 \begin{minipage}[t]{5.5mm}
 \textcolor{quarto-callout-important-color}{\faExclamation}
 \end{minipage}%
@@ -464,7 +475,7 @@ intervals \([a,b]\) instead of open intervals to generate it, and that
 it is also the same if we use ``semi-inifinite'' intervals
 \((-\infty,b)\) to generate it.
 
-\begin{tcolorbox}[enhanced jigsaw, colframe=quarto-callout-tip-color-frame, bottomrule=.15mm, rightrule=.15mm, leftrule=.75mm, colback=white, opacityback=0, breakable, arc=.35mm, toprule=.15mm, left=2mm]
+\begin{tcolorbox}[enhanced jigsaw, leftrule=.75mm, opacityback=0, colframe=quarto-callout-tip-color-frame, left=2mm, colback=white, rightrule=.15mm, arc=.35mm, bottomrule=.15mm, toprule=.15mm, breakable]
 \begin{minipage}[t]{5.5mm}
 \textcolor{quarto-callout-tip-color}{\faLightbulb}
 \end{minipage}%
@@ -517,7 +528,7 @@ function) \(P\) satisfying the following axioms:
 Show that in the first axiom, the condition \(P(\emptyset) = 0\) can be
 eliminated.
 
-\begin{tcolorbox}[enhanced jigsaw, colframe=quarto-callout-tip-color-frame, bottomrule=.15mm, rightrule=.15mm, leftrule=.75mm, colback=white, opacityback=0, breakable, arc=.35mm, toprule=.15mm, left=2mm]
+\begin{tcolorbox}[enhanced jigsaw, leftrule=.75mm, opacityback=0, colframe=quarto-callout-tip-color-frame, left=2mm, colback=white, rightrule=.15mm, arc=.35mm, bottomrule=.15mm, toprule=.15mm, breakable]
 \begin{minipage}[t]{5.5mm}
 \textcolor{quarto-callout-tip-color}{\faLightbulb}
 \end{minipage}%
@@ -538,7 +549,7 @@ Show that \(P\) is subadditive, i.e.~if \(\{A_i\}^{\infty}_{i=1}\) is
 \textit{any} collection of sets in \(\mathcal{F}\), then
 \[P\left( \bigcup_{i=1}^{\infty} A_i\right) \leq  \sum_{i=1}^{\infty} P(A_i).\]
 
-\begin{tcolorbox}[enhanced jigsaw, colframe=quarto-callout-tip-color-frame, bottomrule=.15mm, rightrule=.15mm, leftrule=.75mm, colback=white, opacityback=0, breakable, arc=.35mm, toprule=.15mm, left=2mm]
+\begin{tcolorbox}[enhanced jigsaw, leftrule=.75mm, opacityback=0, colframe=quarto-callout-tip-color-frame, left=2mm, colback=white, rightrule=.15mm, arc=.35mm, bottomrule=.15mm, toprule=.15mm, breakable]
 \begin{minipage}[t]{5.5mm}
 \textcolor{quarto-callout-tip-color}{\faLightbulb}
 \end{minipage}%
@@ -560,7 +571,7 @@ Let \(A_1,A_2,...\) be a sequence of sets in \(\mathcal{F}\) such that
 \(P(A_n) \xrightarrow{n \to \infty} P(A)\). Show that the result also
 holds for \(A_n \downarrow A\). Does the result hold for any measure?
 
-\begin{tcolorbox}[enhanced jigsaw, colframe=quarto-callout-tip-color-frame, bottomrule=.15mm, rightrule=.15mm, leftrule=.75mm, colback=white, opacityback=0, breakable, arc=.35mm, toprule=.15mm, left=2mm]
+\begin{tcolorbox}[enhanced jigsaw, leftrule=.75mm, opacityback=0, colframe=quarto-callout-tip-color-frame, left=2mm, colback=white, rightrule=.15mm, arc=.35mm, bottomrule=.15mm, toprule=.15mm, breakable]
 \begin{minipage}[t]{5.5mm}
 \textcolor{quarto-callout-tip-color}{\faLightbulb}
 \end{minipage}%
@@ -611,7 +622,7 @@ is in \(\mathcal{F}\) for all Borel sets \(\mathcal{B}\) in
 Show that if \(X\) is a random variable, then so is \(g(X)\) for any
 measurable function \(g\).
 
-\begin{tcolorbox}[enhanced jigsaw, colframe=quarto-callout-tip-color-frame, bottomrule=.15mm, rightrule=.15mm, leftrule=.75mm, colback=white, opacityback=0, breakable, arc=.35mm, toprule=.15mm, left=2mm]
+\begin{tcolorbox}[enhanced jigsaw, leftrule=.75mm, opacityback=0, colframe=quarto-callout-tip-color-frame, left=2mm, colback=white, rightrule=.15mm, arc=.35mm, bottomrule=.15mm, toprule=.15mm, breakable]
 \begin{minipage}[t]{5.5mm}
 \textcolor{quarto-callout-tip-color}{\faLightbulb}
 \end{minipage}%
@@ -632,7 +643,7 @@ Let \(F(x,y)\) be a bivariate CDF. Prove that for all \(a_1 \leq b_1\)
 and \(a_2 \leq b_2\),
 \[F(b_1, b_2)-F(a_1, b_2)-F(b_1,a_2)+F(a_1,a_2) \geq 0.\]
 
-\begin{tcolorbox}[enhanced jigsaw, colframe=quarto-callout-tip-color-frame, bottomrule=.15mm, rightrule=.15mm, leftrule=.75mm, colback=white, opacityback=0, breakable, arc=.35mm, toprule=.15mm, left=2mm]
+\begin{tcolorbox}[enhanced jigsaw, leftrule=.75mm, opacityback=0, colframe=quarto-callout-tip-color-frame, left=2mm, colback=white, rightrule=.15mm, arc=.35mm, bottomrule=.15mm, toprule=.15mm, breakable]
 \begin{minipage}[t]{5.5mm}
 \textcolor{quarto-callout-tip-color}{\faLightbulb}
 \end{minipage}%
@@ -679,7 +690,7 @@ We call \(B\) and \(C\), \(\limsup\limits_{n \to \infty}A_n\) and
 Show that
 \(B = \{\omega \in \Omega : \omega \in A_n \text{ for infinitely many values of } n\}\).
 
-\begin{tcolorbox}[enhanced jigsaw, colframe=quarto-callout-tip-color-frame, bottomrule=.15mm, rightrule=.15mm, leftrule=.75mm, colback=white, opacityback=0, breakable, arc=.35mm, toprule=.15mm, left=2mm]
+\begin{tcolorbox}[enhanced jigsaw, leftrule=.75mm, opacityback=0, colframe=quarto-callout-tip-color-frame, left=2mm, colback=white, rightrule=.15mm, arc=.35mm, bottomrule=.15mm, toprule=.15mm, breakable]
 \begin{minipage}[t]{5.5mm}
 \textcolor{quarto-callout-tip-color}{\faLightbulb}
 \end{minipage}%
@@ -699,7 +710,7 @@ Will be added after section. 😛
 Show that
 \(C = \{\omega \in \Omega: \omega \in A_n \text{ for all but finitely many values of } n\}\).
 
-\begin{tcolorbox}[enhanced jigsaw, colframe=quarto-callout-tip-color-frame, bottomrule=.15mm, rightrule=.15mm, leftrule=.75mm, colback=white, opacityback=0, breakable, arc=.35mm, toprule=.15mm, left=2mm]
+\begin{tcolorbox}[enhanced jigsaw, leftrule=.75mm, opacityback=0, colframe=quarto-callout-tip-color-frame, left=2mm, colback=white, rightrule=.15mm, arc=.35mm, bottomrule=.15mm, toprule=.15mm, breakable]
 \begin{minipage}[t]{5.5mm}
 \textcolor{quarto-callout-tip-color}{\faLightbulb}
 \end{minipage}%
@@ -727,7 +738,7 @@ that case, we write \(\lim\limits_{n\to \infty} A_n = A\).
 
 Assume the above is the case. Show that \(A \in \mathcal{F}.\)
 
-\begin{tcolorbox}[enhanced jigsaw, colframe=quarto-callout-tip-color-frame, bottomrule=.15mm, rightrule=.15mm, leftrule=.75mm, colback=white, opacityback=0, breakable, arc=.35mm, toprule=.15mm, left=2mm]
+\begin{tcolorbox}[enhanced jigsaw, leftrule=.75mm, opacityback=0, colframe=quarto-callout-tip-color-frame, left=2mm, colback=white, rightrule=.15mm, arc=.35mm, bottomrule=.15mm, toprule=.15mm, breakable]
 \begin{minipage}[t]{5.5mm}
 \textcolor{quarto-callout-tip-color}{\faLightbulb}
 \end{minipage}%
@@ -746,13 +757,140 @@ Will be added after section. 😛
 
 Show that \(\lim\limits_{n \to \infty} P(A_n) = P(A)\).
 
-\begin{tcolorbox}[enhanced jigsaw, colframe=quarto-callout-note-color-frame, colbacktitle=quarto-callout-note-color!10!white, leftrule=.75mm, colback=white, breakable, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Tip: A useful inequality}, arc=.35mm, bottomrule=.15mm, rightrule=.15mm, bottomtitle=1mm, toprule=.15mm, opacityback=0, opacitybacktitle=0.6, toptitle=1mm, titlerule=0mm, coltitle=black, left=2mm]
+\begin{tcolorbox}[enhanced jigsaw, bottomtitle=1mm, opacityback=0, opacitybacktitle=0.6, titlerule=0mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Tip: A useful inequality}, colbacktitle=quarto-callout-note-color!10!white, leftrule=.75mm, colframe=quarto-callout-note-color-frame, left=2mm, bottomrule=.15mm, arc=.35mm, colback=white, rightrule=.15mm, coltitle=black, toptitle=1mm, toprule=.15mm, breakable]
 
 \[P(\liminf\limits_{n \to \infty}A_n) \leq \liminf\limits_{n \to \infty}P(A_n) \leq \limsup\limits_{n \to \infty}P(A_n) \leq P(\limsup\limits_{n \to \infty}A_n).\]
 
 \end{tcolorbox}
 
-\begin{tcolorbox}[enhanced jigsaw, colframe=quarto-callout-tip-color-frame, bottomrule=.15mm, rightrule=.15mm, leftrule=.75mm, colback=white, opacityback=0, breakable, arc=.35mm, toprule=.15mm, left=2mm]
+\begin{tcolorbox}[enhanced jigsaw, leftrule=.75mm, opacityback=0, colframe=quarto-callout-tip-color-frame, left=2mm, colback=white, rightrule=.15mm, arc=.35mm, bottomrule=.15mm, toprule=.15mm, breakable]
+\begin{minipage}[t]{5.5mm}
+\textcolor{quarto-callout-tip-color}{\faLightbulb}
+\end{minipage}%
+\begin{minipage}[t]{\textwidth - 5.5mm}
+
+\textbf{Solution}\vspace{2mm}
+
+Will be added after section. 😛
+
+\end{minipage}%
+\end{tcolorbox}
+
+\hypertarget{independence}{%
+\section*{Independence}\label{independence}}
+\addcontentsline{toc}{section}{Independence}
+
+\markright{Independence}
+
+\leavevmode\vadjust pre{\hypertarget{def-indepence-RV}{}}%
+\begin{definition}[]\label{def-indepence-RV}
+
+Two random variables \(X_1,X_2\) are \emph{independent} if the event
+\(X_1\in B_1\) is independent of the event \(X_2\in B_2\) for all Borel
+\(B_1, B_2\)
+
+\end{definition}
+
+As remarked in Remark 2.9.12, it is helpful and simple to think directly
+about distributions and preimages. In set operations, if \(f\) is a
+function from a set \(S\) into a set \(T\), and
+\(B_{\alpha} \subseteq T\) for all \(\alpha\) in some index set \(A\),
+we then have the following convenient properties:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  \$f\^{}\{-1\}(\cup\emph{\alpha B}\{\alpha\}) =
+  \cup\emph{\alpha f\^{}\{-1\} (B}\alpha)
+\item
+  \$f\^{}\{-1\}(\cap\emph{\alpha B}\{\alpha\}) =
+  \cap\emph{\alpha f\^{}\{-1\} (B}\alpha)
+\item
+  \$f\^{}\{-1\} (B\_\alpha\^{}C)
+  =(f\textsuperscript{\{-1\}(B\_\alpha))}C
+\end{enumerate}
+
+\hypertarget{pnecil-2.9.13}{%
+\subsection*{✏️ Pnecil 2.9.13}\label{pnecil-2.9.13}}
+\addcontentsline{toc}{subsection}{✏️ Pnecil 2.9.13}
+
+Verify the above properties of preimages
+
+\begin{tcolorbox}[enhanced jigsaw, leftrule=.75mm, opacityback=0, colframe=quarto-callout-tip-color-frame, left=2mm, colback=white, rightrule=.15mm, arc=.35mm, bottomrule=.15mm, toprule=.15mm, breakable]
+\begin{minipage}[t]{5.5mm}
+\textcolor{quarto-callout-tip-color}{\faLightbulb}
+\end{minipage}%
+\begin{minipage}[t]{\textwidth - 5.5mm}
+
+\textbf{Solution}\vspace{2mm}
+
+Will be added after section. 😛
+
+\end{minipage}%
+\end{tcolorbox}
+
+\hypertarget{pnecil-2.9.15}{%
+\subsection*{✏️ Pnecil 2.9.15}\label{pnecil-2.9.15}}
+\addcontentsline{toc}{subsection}{✏️ Pnecil 2.9.15}
+
+If \(\mathbf{X}_1, \mathbf{X}_2 , \mathbf{X}_3\) are random vectors
+(possibly in different dimensions) with
+\(\mathbf{X}_1 \perp\!\!\!\perp \mathbf{X}_2\) and
+\((\mathbf{X}_1 , \mathbf{X}_2) \perp\!\!\!\perp \mathbf{X}_3\), then
+\(\mathbf{X}_1, \mathbf{X}_2 , \mathbf{X}_3\) are independent.
+
+\begin{tcolorbox}[enhanced jigsaw, leftrule=.75mm, opacityback=0, colframe=quarto-callout-tip-color-frame, left=2mm, colback=white, rightrule=.15mm, arc=.35mm, bottomrule=.15mm, toprule=.15mm, breakable]
+\begin{minipage}[t]{5.5mm}
+\textcolor{quarto-callout-tip-color}{\faLightbulb}
+\end{minipage}%
+\begin{minipage}[t]{\textwidth - 5.5mm}
+
+\textbf{Solution}\vspace{2mm}
+
+Will be added after section. 😛
+
+\end{minipage}%
+\end{tcolorbox}
+
+\hypertarget{uniqueness-and-pi-lambda}{%
+\section*{\texorpdfstring{Uniqueness and
+\(\pi-\lambda\)}{Uniqueness and \textbackslash pi-\textbackslash lambda}}\label{uniqueness-and-pi-lambda}}
+\addcontentsline{toc}{section}{Uniqueness and \(\pi-\lambda\)}
+
+\markright{Uniqueness and \(\pi-\lambda\)}
+
+\leavevmode\vadjust pre{\hypertarget{def-indepence-RV}{}}%
+\begin{definition}[]\label{def-indepence-RV}
+
+A collection \(\mathcal{A}\) of subsets of \(\Omega\) is called a
+\emph{\(\pi-\)system} if \(A\cap B\in \mathcal{A}\) for all
+\(A, B\in \mathcal{A}\) The collection \(\mathcal{L}\) of subsets of
+\(\Omega\) is called a \emph{\(\lambda-system\)} if the following
+conditions hold:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  \(\Omega \in \mathcal{L}\)
+\item
+  (Closure under proper difference) If \(A, B \in \mathcal{L}\) with
+  \(A \subseteq B\), then \$B ~A \in \mathcal{L}
+\item
+  (Closure under increasing unions) If
+  \(A_1 \subseteq A_2 \subseteq \cdots\) are in \(\mathcal{L}\), then
+  \(\bigcup_{i=1}^\infty A_i \in \mathcal{L}\)
+\end{enumerate}
+
+\end{definition}
+
+\hypertarget{pnecil-2.10.2}{%
+\subsection*{✏️ Pnecil 2.10.2}\label{pnecil-2.10.2}}
+\addcontentsline{toc}{subsection}{✏️ Pnecil 2.10.2}
+
+Show that if \(\mathcal{A}\) is both a \(\pi\)-system and a
+\(\lambda\)-system, then it is a \(\sigma\)-algebra.
+
+\begin{tcolorbox}[enhanced jigsaw, leftrule=.75mm, opacityback=0, colframe=quarto-callout-tip-color-frame, left=2mm, colback=white, rightrule=.15mm, arc=.35mm, bottomrule=.15mm, toprule=.15mm, breakable]
 \begin{minipage}[t]{5.5mm}
 \textcolor{quarto-callout-tip-color}{\faLightbulb}
 \end{minipage}%
@@ -776,12 +914,69 @@ Next week, we will discuss:
 \begin{itemize}
 \tightlist
 \item
-  Joe's favourtie theorem, the \(\pi\)-\(\lambda\) theorem
+  Discuss more \(\pi-\lambda\)
 \item
-  Independence of random variables
-\item
-  A primer on reasoning by representation
+  Reasoning by representation
 \end{itemize}
+
+Feel free to upload the pencil problem you wish to be discussed next
+week \href{https://forms.gle/RBmMNYJp4u3qD5W79}{here}.
+
+Note that a verified email address is needed in the GForm so we don't
+get scammy input! :)
+
+\(\,\)
+
+\bookmarksetup{startatroot}
+
+\hypertarget{meme-quotes}{%
+\chapter*{Meme \& Quotes}\label{meme-quotes}}
+\addcontentsline{toc}{chapter}{Meme \& Quotes}
+
+\markboth{Meme \& Quotes}{Meme \& Quotes}
+
+\hypertarget{quotes}{%
+\section*{Quotes}\label{quotes}}
+\addcontentsline{toc}{section}{Quotes}
+
+\markright{Quotes}
+
+\begin{quote}
+How will our participation grade be measured? \emph{Joe}: Using measure
+theory.
+\end{quote}
+
+\begin{quote}
+Measure theory is just about measuring things - Jun Liu, Spring 2023
+\end{quote}
+
+\begin{quote}
+What I don't like about measure theory is that you have to say ``almost
+everywhere'' almost everywhere. - Kurt Friedrichs
+\end{quote}
+
+\hypertarget{meme}{%
+\section*{Meme}\label{meme}}
+\addcontentsline{toc}{section}{Meme}
+
+\markright{Meme}
+
+\includegraphics[width=5.20833in,height=3.125in]{./assets/img/meme/meme1.png}
+\includegraphics[width=5.20833in,height=3.125in]{./assets/img/meme/meme3.jpeg}
+
+\includegraphics[width=5.20833in,height=7.29167in]{./assets/img/meme/meme2.webp}
+
+\hypertarget{upload-your-meme-quotes}{%
+\section*{Upload your meme / quotes}\label{upload-your-meme-quotes}}
+\addcontentsline{toc}{section}{Upload your meme / quotes}
+
+\markright{Upload your meme / quotes}
+
+If you would like to contribute to this meme + quotes page, please
+upload it at this \href{https://forms.gle/RBmMNYJp4u3qD5W79}{form}
+
+Note that a verified email address is needed in the GForm so we don't
+get scammy input! :)
 
 \(\,\)
 
