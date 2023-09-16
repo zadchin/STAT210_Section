@@ -1,6 +1,6 @@
 # Section 1 {.unnumbered}
 
-Last Updated: 14 Sept 2023
+Last Updated: 16 Sept 2023
 
 Date: 15 Sept 2023
 
@@ -15,6 +15,7 @@ In this section, we will discuss:
 - Limits of events
 - Independence 
 - Uniqueness and $\pi-\lambda$
+- Additional Questions 
 
 
 ## $\sigma$-algebras
@@ -41,12 +42,10 @@ Show that $\sigma$-algebra is automatically closed under countable intersections
 ::: {.callout-tip collapse="true" appearance="simple"}
 
 ## Solution 
-Will be added after section. 😛
-<!--
 If $A_1, A_2, \cdots \in \mathcal{F}$, by De Morgan's laws, $\bigcap_{j=1}^{\infty} A_j = \left(\bigcup_{j=1}^{\infty} A_j^c \right)^c \in F$ since each $A_j^c \in \mathcal{F}$, which implies that $\bigcup_{j=1}^{\infty} A_j^c \in \mathcal{F}$, which further implies that $\left(\bigcup_{j=1}^{\infty} A_j^c \right)^c \in F$. 
 
 Also note that if $\mathcal{F} \notin \emptyset, \mathcal{F}$ contains some element of A. Then $A \cap A^c = \emptyset \in \mathcal{F}$.
--->
+
 :::
 
 ::: {.callout-note}
@@ -65,12 +64,9 @@ Check that an intersection of $\sigma-$algebras, even uncountably many, is $\sig
 ::: {.callout-tip collapse="true" appearance="simple"}
 
 ## Solution
-Will be added after section. 😛
-<!--
 Let $\{\mathcal{F}_i\}_{i\in I}$ be $\sigma$-algebras, and consider $\mathcal{F}' = \cup_{i\in I} \mathcal{F}_i$. Since each $\mathcal{F}_i contains \emptyset$, $\emptyset \in \mathcal{F}'$. If $A\in \mathcal{F}'$, $A\in \mathcal{F}_i \forall i\in I$, which implies that $A^c \in \mathcal{F}_i \forall i \in I$, so is $A^c \in \mathcal{F}'$. If $A_1, A_2, \cdots, \in \mathcal{F}'$, $\bigcup_{j=1}^{\infty} A_j \in \mathcal{F}_i \forall i\in I$, which implies that $\bigcup_{j=1}^{\infty} A_j \in \mathcal{F}'$.
 
 Let $\mathcal{F_1} = \{\emptyset, \{a\},  \{b,c\},  \{a, b, c\}\}$ and $\mathcal{F_2} = \{\emptyset, \{a,b\},  \{c\},  \{a, b, c\}\}$, note that $\mathcal{F_1} \cup \mathcal{F_2}$ contains $\{a,b\}$ and $\{b,c\}$, but not their intersection.
--->
 :::
 
 
@@ -96,10 +92,7 @@ Show that the Borel $\sigma$-algebra is the same if we use closed intervals $[a,
 ::: {.callout-tip collapse="true" appearance="simple"}
 
 ## Solution 
-Will be added after section. 😛
-<!--
 $[a,b] = ((-\infty, a) \cup (b,\infty))^c\in \mathcal{B}. (-\infty, b]=(b, \infty)^c \in \mathcal{B}$. Furhtermore, since $\mathbb{Q}$ is dense in $\mathbb{R}$, there always exists a sequence of rationals that converge to any real number, so $(-\infty, b]$ for $b\in \mathbb{R}$ can be obtained from the union $(-\infty, b_n) \forall b_n \in \mathbb{Q}$, and letting $n \rightarrow \infty$.
--->
 :::
 
 
@@ -124,10 +117,7 @@ Show that in the first axiom, the condition $P(\emptyset) = 0$ can be eliminated
 
 ::: {.callout-tip collapse="true" appearance="simple"}
 ## Solution
-Will be added after section. 😛
-<!--
 By the first axiom, $P(\sigma)=1$, and by the second axiom, we find that $P(\sigma)=P(\sigma \cup \emptyset) = P(\sigma)+ P(\emptyset)$ since each $\sigma$ and $\emptyset$ are disjoint by definition, $P(\emptyset)=0$ follows.
--->
 :::
 
 ### ✏️ Section Problem 1
@@ -138,14 +128,11 @@ Show that $P$ is subadditive, i.e. if $\{A_i\}^{\infty}_{i=1}$ is \textit{any} c
 ::: {.callout-tip collapse="true" appearance="simple"}
 
 ## Solution
-Will be added after section. 😛
-<!--
 Let us construct a new collection of subsets of $\Omega$, denoted by $\{B_i\}_{i=1}^{\infty}$, where
     $$B_1 = A_1 \text{  and  } B_i = A_i \cap \Big (\bigcup_{j=1}^{i-1}A_j  \Big )^c, i \geq 2 $$
     
 We observe that, $B_i \in \mathcal{F}$, $\forall i\geq 1$. Moreover, $B_i$'s are disjoint and satisfies $\bigcup_{i=1}^{\infty} A_i = \bigcup_{i=1}^{\infty} B_i$. This technique of constructing disjoint sets that preserve unions from a general list of sets is called disjointification. We further note that $B_i \subseteq A_i$, $\forall i\geq 1$, implying $P(B_i) \leq P(A_i)$, $\forall i\geq 1$. Using the $\sigma$-additivity of probability we get
 $$P \left(\bigcup_{i=1}^{\infty} A_i\right) = P\left(\bigcup_{i=1}^{\infty} B_i\right) = \sum_{i=1}^{\infty}P(B_i) \leq \sum_{i=1}^{\infty}P(A_i).$$
--->
 :::
 
 
@@ -157,9 +144,6 @@ Let $A_1,A_2,...$ be a sequence of sets in $\mathcal{F}$ such that $A_n\uparrow 
 ::: {.callout-tip collapse="true" appearance="simple"}
 
 ## Solution
-Will be added after section. 😛
-
-<!--
  The notation $A_n \uparrow A$ means that we have a list of increasing sets $A_1 \subseteq A_2 \subseteq ... $ with the limit being equal to their union, i.e. $A = \bigcup_{i=1}^{\infty}A_i$ $ (\in \mathcal{F})$. Let us construct $\{B_i\}_{i=1}^{\infty}$ by disjointifying $\{A_i\}_{i=1}^{\infty}$, as part (i). We observe that,
     $$P(A_n) = P(\bigcup_{i=1}^{n} A_i) = P(\bigcup_{i=1}^{n} B_i) = \sum_{i=1}^{n}P(B_i) \xrightarrow{n\to \infty} \sum_{i=1}^{\infty} P(B_i) = P(\bigcup_{i=1}^{\infty} B_i) = P(A)$$
     This property is also known as `continuity from below'.
@@ -169,7 +153,6 @@ Analogously, $A_n \downarrow A$ means we have a list of decreasing sets $A_1 \su
     $$P(C_n) \xrightarrow{n\to \infty} P(A_1\backslash A) = P(A_1) - P(A) $$
      We complete the proof by noting that $P(C_n) = P(A_1) - P(A_n)$. This property is also known as `continuity from above'.
      Let $m$ be a general measure. Following similar steps as above, one can prove that $m$ is continuous from below. However, $m$ is not continuous from above, in general. As a counterexample, suppose $\Omega = \mathbb{R}, \mathcal{F}=\mathcal{B}$ (the Borel $\sigma$-algebra on $\mathbb{R}$) and $m$ is the Lebesgue measure on $\mathbb{R}$. Let $A_n = [n,\infty)$, $n\geq 1$. Here $m(A_n) = \infty$, $\forall n\geq 1$, but $A_n \downarrow \emptyset$ and $m(\emptyset) = 0$. Notice that, the continuity property holds for a sequence of sets $A_n \downarrow A$ and a general measure $m$ if $m(A_k)$ is finite for some $k \geq 1$.  
--->
 :::
 
 
@@ -191,10 +174,7 @@ Show that if $X$ is a random variable, then so is $g(X)$ for any measurable func
 ::: {.callout-tip collapse="true" appearance="simple"}
 
 ## Solution
-Will be added after section. 😛
-<!--
 $X$ is a random variable. By definiton, $X^{-1}(\mathcal{B}) \in \mathcal{F}$. $g$ is measurable, so $g^{-1}(\mathcal{B})$ is Borel. Thus, $(gX)^{-1}(\mathcal{B}) = X^{-1}(g^{-1}(\mathcal{B})) \in \mathcal{F}$, so $g(X)$ is a random variable.
--->
 :::
 
 ### ✏️ Pencil 2.7.2
@@ -205,8 +185,6 @@ $$F(b_1, b_2)-F(a_1, b_2)-F(b_1,a_2)+F(a_1,a_2) \geq 0.$$
 ::: {.callout-tip collapse="true" appearance="simple"}
 
 ## Solution
-Will be added after section. 😛
-<!--
 By the axiom of probability, observe that:
 $$
 \begin{align*}
@@ -218,7 +196,6 @@ F(&b_1, b_2)-F(a_1, b_2)-F(b_1,a_2)+F(a_1,a_2)  \\
 &\geq 0\\
 \end{align*}
 $$
--->
 :::
 
 
@@ -243,8 +220,6 @@ Show that $B = \{\omega \in \Omega : \omega \in A_n \text{ for infinitely many v
 ::: {.callout-tip collapse="true" appearance="simple"}
 
 ## Solution
-Will be added after section. 😛
-<!--
 It is useful to think about "$\bigcup$" as "there exists" ($\exists$) and "$\bigcap$" as "for all" ($\forall$). So,
 $$
 \begin{eqnarray*}
@@ -255,7 +230,6 @@ $$
     & \iff & \omega \in A_n \text{ for infinitely many values of } n
     \end{eqnarray*}
 $$
--->
 :::
 
 
@@ -264,9 +238,6 @@ Show that $C = \{\omega \in \Omega: \omega \in A_n \text{ for all but finitely m
 
 ::: {.callout-tip collapse="true" appearance="simple"}
 ## Solution
-Will be added after section. 😛
-
-<!--
 We observe that,
 $$
     \begin{eqnarray*}
@@ -280,7 +251,6 @@ $$
     We can also prove this result by using part (i). Notice that  $$ \begin{align*}C^c &= \Big(\bigcup_{n=1}^{\infty} \bigcap_{m=n}^{\infty} A_m \Big)^c \\ &= \bigcap_{n=1}^{\infty} \bigcup_{m=n}^{\infty} A^c_m \\ &= \{\omega \in \Omega : \omega \in A^c_n \text{ for infinitely many values of } n\} \end{align*}$$. 
     
 Thus, $$ \begin{align*} C &= \{\omega \in \Omega: \omega \in A^c_n \text{ for finitely many values of } n\}  \\ &= \{\omega \in \Omega: \omega \in A_n \text{ for all but finitely many values of } n\} \end{align*}$$
--->
 :::
 
 ::: {#def-limits-to-An}
@@ -292,7 +262,8 @@ Assume the above is the case. Show that $A \in \mathcal{F}.$
 
 ::: {.callout-tip collapse="true" appearance="simple"}
 ## Solution
-Will be added after section. 😛
+Since $\mathcal{F}$ is closed under countable unions, $B_n \in \mathcal{F}$ $\forall n \geq 1$. Again, since $\mathcal{F}$ is closed under countable intersections, $\bigcap_{n=1}^{\infty} B_n \in \mathcal{F}$. So, $A=B \in \mathcal{F}$.
+    
 :::
 
 
@@ -307,8 +278,6 @@ $$P(\liminf\limits_{n \to \infty}A_n) \leq \liminf\limits_{n \to \infty}P(A_n) \
 
 ::: {.callout-tip collapse="true" appearance="simple"}
 ## Solution
-Will be added after section. 😛
-<!--
 Note that, the result is immediate if we can prove (1). We shall now show that (1) holds for a general sequence of events $\{A_n\}_{n=1}^{\infty}$.\\
     We know that (from Problem 2)
     $$P(\liminf\limits_{n\to \infty} A_n) =  \lim \limits_{n\to \infty} P(C_n)$$
@@ -320,7 +289,6 @@ Note that, the result is immediate if we can prove (1). We shall now show that (
     $$\lim \limits_{n\to \infty} P(B_n)=\limsup \limits_{n\to \infty} P(B_n) \geq \limsup\limits_{n\to \infty} P(A_n) $$
 Finally, it is always true that
     $$\liminf\limits_{n\to \infty} P(A_n) \leq \limsup\limits_{n\to \infty} P(A_n)$$
--->
 :::
 
 
@@ -337,31 +305,26 @@ As remarked in Remark 2.9.12, it is helpful and simple to think directly about d
 
 3. $f^{-1} (B_\alpha^C) =(f^{-1}(B_\alpha))^C
 
-### ✏️ Pnecil 2.9.13 
+### ✏️ Pencil 2.9.13 
 
 Verify the above properties of preimages
 
 ::: {.callout-tip collapse="true" appearance="simple"}
 ## Solution
-Will be added after section. 😛
-<!--
 1. Suppose $x\in f^{-1}(\cup_\alpha B_{\alpha})$, then note that $f(x) \in \cup_\alpha B_\alpha$, which implies that $f(x) \in B_\alpha$ for some $\alpha$. Thus, $x \in f^{-1} (B_\alpha) for some $\alpha$, which implies $x \in \cup_\alpha f^{-1} (B_\alpha)$.
 
 2. Suppose $x\in f^{-1}(\cap_\alpha B_{\alpha})$. Analogously, by replacing "some" with "all", $x\in \cap_\alpha f^{-1} (B_\alpha)$
 
 3. Suppose $x\in f^{-1} (B_\alpha^C)$, then $f(x) \in B_\alpha^C$, which is equivalent to $f(x)\notin B_\alpha$. Thus, $x\notin f^{-1}(B_\alpha)$, which implies that $x\in (f^{-1}(B_\alpha))^C$
--->
 :::
 
 
-### ✏️ Pnecil 2.9.15 
+### ✏️ Pencil 2.9.15 
 
 If $\mathbf{X}_1, \mathbf{X}_2 , \mathbf{X}_3$ are random vectors (possibly in different dimensions) with $\mathbf{X}_1  \perp\!\!\!\perp \mathbf{X}_2$ and $(\mathbf{X}_1 , \mathbf{X}_2) \perp\!\!\!\perp \mathbf{X}_3$, then $\mathbf{X}_1, \mathbf{X}_2 , \mathbf{X}_3$ are independent.
 
 ::: {.callout-tip collapse="true" appearance="simple"}
 ## Solution
-Will be added after section. 😛
-<!--
 $$
 \begin{align*}
 P(\mathbf{X}_1 \in A, \mathbf{X}_2 \in B, \mathbf{X}_3 \in C) 
@@ -371,7 +334,6 @@ P(\mathbf{X}_1 \in A, \mathbf{X}_2 \in B, \mathbf{X}_3 \in C)
 &= P(\mathbf{X}_1 \in A)P(\mathbf{X}_2 \in B)P(\mathbf{X}_3 \in C)\\
 \end{align*}
 $$
--->
 :::
 
 ## Uniqueness and $\pi-\lambda$
@@ -387,16 +349,13 @@ A collection $\mathcal{A}$ of subsets of $\Omega$ is called a *$\pi-$system* if 
 :::
 
 
-### ✏️ Pnecil 2.10.2 
+### ✏️ Pencil 2.10.2 
 
 Show that if $\mathcal{A}$ is both a $\pi$-system and a $\lambda$-system, then it is a $\sigma$-algebra.
 
 ::: {.callout-tip collapse="true" appearance="simple"}
 ## Solution
-Will be added after section. 😛
-<!--
 $\Omega \in \mathcal{A}$, so for any $A\in \mathcal{A}$, $A \subseteq \Omega$. This implies that $\Omega-A = A^c \in \mathcal{A}$. Trivially, we also observe that $\mathcal{A}\neq \emptyset$. Finally, if $A_1, A_2, \cdots \in \mathcal{A}$, then $A_1 \cap A_2 \cap \cdots \subseteq \cdots \subseteq A \in \mathcal{A}$, so their union $\bigcup_{i=1}^\infty A_i \in \mathcal{A}$
--->
 :::
 
 ## Next Week

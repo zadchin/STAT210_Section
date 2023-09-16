@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022) (preloaded format=xelatex 2022.9.17)  14 SEP 2023 14:27
+This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022) (preloaded format=xelatex 2022.9.17)  16 SEP 2023 18:31
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1352,12 +1352,12 @@ LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
 ] [4]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 356.
+(hyperref)                removing `math shift' on input line 358.
 
 ! Improper alphabetic constant.
 <to be read again> 
                    \mitsigma 
-l.356 ...tsline{toc}{section}{\(\sigma\)-algebras}
+l.358 ...tsline{toc}{section}{\(\sigma\)-algebras}
                                                    
 Here is how much of TeX's memory you used:
  39033 strings out of 476179

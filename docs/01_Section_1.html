@@ -38,10 +38,12 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -87,8 +89,9 @@ ul.task-list li input[type="checkbox"] {
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
       <a href="./">STAT 210 Section Notes</a> 
-        <div class="sidebar-tools-main">
+        <div class="sidebar-tools-main tools-wide">
     <a href="https://github.com/zadchin/STAT210_Section" title="Source Code" class="sidebar-tool px-1"><i class="bi bi-github"></i></a>
+  <a href="" class="quarto-color-scheme-toggle sidebar-tool" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
   <a href="" class="quarto-reader-toggle sidebar-tool" onclick="window.quartoToggleReader(); return false;" title="Toggle reader mode">
   <div class="quarto-reader-toggle-btn">
   <i class="bi"></i>
@@ -158,12 +161,12 @@ ul.task-list li input[type="checkbox"] {
   </ul></li>
   <li><a href="#independence" id="toc-independence" class="nav-link" data-scroll-target="#independence">Independence</a>
   <ul class="collapse">
-  <li><a href="#pnecil-2.9.13" id="toc-pnecil-2.9.13" class="nav-link" data-scroll-target="#pnecil-2.9.13">✏️ Pnecil 2.9.13</a></li>
-  <li><a href="#pnecil-2.9.15" id="toc-pnecil-2.9.15" class="nav-link" data-scroll-target="#pnecil-2.9.15">✏️ Pnecil 2.9.15</a></li>
+  <li><a href="#pencil-2.9.13" id="toc-pencil-2.9.13" class="nav-link" data-scroll-target="#pencil-2.9.13">✏️ Pencil 2.9.13</a></li>
+  <li><a href="#pencil-2.9.15" id="toc-pencil-2.9.15" class="nav-link" data-scroll-target="#pencil-2.9.15">✏️ Pencil 2.9.15</a></li>
   </ul></li>
   <li><a href="#uniqueness-and-pi-lambda" id="toc-uniqueness-and-pi-lambda" class="nav-link" data-scroll-target="#uniqueness-and-pi-lambda">Uniqueness and <span class="math inline">\(\pi-\lambda\)</span></a>
   <ul class="collapse">
-  <li><a href="#pnecil-2.10.2" id="toc-pnecil-2.10.2" class="nav-link" data-scroll-target="#pnecil-2.10.2">✏️ Pnecil 2.10.2</a></li>
+  <li><a href="#pencil-2.10.2" id="toc-pencil-2.10.2" class="nav-link" data-scroll-target="#pencil-2.10.2">✏️ Pencil 2.10.2</a></li>
   </ul></li>
   <li><a href="#next-week" id="toc-next-week" class="nav-link" data-scroll-target="#next-week">Next Week</a></li>
   </ul>
@@ -246,7 +249,7 @@ $$
 
 </header>
 
-<p>Last Updated: 14 Sept 2023</p>
+<p>Last Updated: 16 Sept 2023</p>
 <p>Date: 15 Sept 2023</p>
 <section id="introduction" class="level2">
 <h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
@@ -259,6 +262,7 @@ $$
 <li>Limits of events</li>
 <li>Independence</li>
 <li>Uniqueness and <span class="math inline">\(\pi-\lambda\)</span></li>
+<li>Additional Questions</li>
 </ul>
 </section>
 <section id="sigma-algebras" class="level2">
@@ -288,11 +292,8 @@ Solution
 </div>
 <div id="callout-1" class="callout-1-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>Will be added after section. 😛 <!--
-If $A_1, A_2, \cdots \in \mathcal{F}$, by De Morgan's laws, $\bigcap_{j=1}^{\infty} A_j = \left(\bigcup_{j=1}^{\infty} A_j^c \right)^c \in F$ since each $A_j^c \in \mathcal{F}$, which implies that $\bigcup_{j=1}^{\infty} A_j^c \in \mathcal{F}$, which further implies that $\left(\bigcup_{j=1}^{\infty} A_j^c \right)^c \in F$. 
-
-Also note that if $\mathcal{F} \notin \emptyset, \mathcal{F}$ contains some element of A. Then $A \cap A^c = \emptyset \in \mathcal{F}$.
---></p>
+<p>If <span class="math inline">\(A_1, A_2, \cdots \in \mathcal{F}\)</span>, by De Morgan’s laws, <span class="math inline">\(\bigcap_{j=1}^{\infty} A_j = \left(\bigcup_{j=1}^{\infty} A_j^c \right)^c \in F\)</span> since each <span class="math inline">\(A_j^c \in \mathcal{F}\)</span>, which implies that <span class="math inline">\(\bigcup_{j=1}^{\infty} A_j^c \in \mathcal{F}\)</span>, which further implies that <span class="math inline">\(\left(\bigcup_{j=1}^{\infty} A_j^c \right)^c \in F\)</span>.</p>
+<p>Also note that if <span class="math inline">\(\mathcal{F} \notin \emptyset, \mathcal{F}\)</span> contains some element of A. Then <span class="math inline">\(A \cap A^c = \emptyset \in \mathcal{F}\)</span>.</p>
 </div>
 </div>
 </div>
@@ -326,11 +327,8 @@ Solution
 </div>
 <div id="callout-3" class="callout-3-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>Will be added after section. 😛 <!--
-Let $\{\mathcal{F}_i\}_{i\in I}$ be $\sigma$-algebras, and consider $\mathcal{F}' = \cup_{i\in I} \mathcal{F}_i$. Since each $\mathcal{F}_i contains \emptyset$, $\emptyset \in \mathcal{F}'$. If $A\in \mathcal{F}'$, $A\in \mathcal{F}_i \forall i\in I$, which implies that $A^c \in \mathcal{F}_i \forall i \in I$, so is $A^c \in \mathcal{F}'$. If $A_1, A_2, \cdots, \in \mathcal{F}'$, $\bigcup_{j=1}^{\infty} A_j \in \mathcal{F}_i \forall i\in I$, which implies that $\bigcup_{j=1}^{\infty} A_j \in \mathcal{F}'$.
-
-Let $\mathcal{F_1} = \{\emptyset, \{a\},  \{b,c\},  \{a, b, c\}\}$ and $\mathcal{F_2} = \{\emptyset, \{a,b\},  \{c\},  \{a, b, c\}\}$, note that $\mathcal{F_1} \cup \mathcal{F_2}$ contains $\{a,b\}$ and $\{b,c\}$, but not their intersection.
---></p>
+<p>Let <span class="math inline">\(\{\mathcal{F}_i\}_{i\in I}\)</span> be <span class="math inline">\(\sigma\)</span>-algebras, and consider <span class="math inline">\(\mathcal{F}' = \cup_{i\in I} \mathcal{F}_i\)</span>. Since each <span class="math inline">\(\mathcal{F}_i contains \emptyset\)</span>, <span class="math inline">\(\emptyset \in \mathcal{F}'\)</span>. If <span class="math inline">\(A\in \mathcal{F}'\)</span>, <span class="math inline">\(A\in \mathcal{F}_i \forall i\in I\)</span>, which implies that <span class="math inline">\(A^c \in \mathcal{F}_i \forall i \in I\)</span>, so is <span class="math inline">\(A^c \in \mathcal{F}'\)</span>. If <span class="math inline">\(A_1, A_2, \cdots, \in \mathcal{F}'\)</span>, <span class="math inline">\(\bigcup_{j=1}^{\infty} A_j \in \mathcal{F}_i \forall i\in I\)</span>, which implies that <span class="math inline">\(\bigcup_{j=1}^{\infty} A_j \in \mathcal{F}'\)</span>.</p>
+<p>Let <span class="math inline">\(\mathcal{F_1} = \{\emptyset, \{a\}, \{b,c\}, \{a, b, c\}\}\)</span> and <span class="math inline">\(\mathcal{F_2} = \{\emptyset, \{a,b\}, \{c\}, \{a, b, c\}\}\)</span>, note that <span class="math inline">\(\mathcal{F_1} \cup \mathcal{F_2}\)</span> contains <span class="math inline">\(\{a,b\}\)</span> and <span class="math inline">\(\{b,c\}\)</span>, but not their intersection.</p>
 </div>
 </div>
 </div>
@@ -367,9 +365,7 @@ Solution
 </div>
 <div id="callout-4" class="callout-4-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>Will be added after section. 😛 <!--
-$[a,b] = ((-\infty, a) \cup (b,\infty))^c\in \mathcal{B}. (-\infty, b]=(b, \infty)^c \in \mathcal{B}$. Furhtermore, since $\mathbb{Q}$ is dense in $\mathbb{R}$, there always exists a sequence of rationals that converge to any real number, so $(-\infty, b]$ for $b\in \mathbb{R}$ can be obtained from the union $(-\infty, b_n) \forall b_n \in \mathbb{Q}$, and letting $n \rightarrow \infty$.
---></p>
+<p><span class="math inline">\([a,b] = ((-\infty, a) \cup (b,\infty))^c\in \mathcal{B}. (-\infty, b]=(b, \infty)^c \in \mathcal{B}\)</span>. Furhtermore, since <span class="math inline">\(\mathbb{Q}\)</span> is dense in <span class="math inline">\(\mathbb{R}\)</span>, there always exists a sequence of rationals that converge to any real number, so <span class="math inline">\((-\infty, b]\)</span> for <span class="math inline">\(b\in \mathbb{R}\)</span> can be obtained from the union <span class="math inline">\((-\infty, b_n) \forall b_n \in \mathbb{Q}\)</span>, and letting <span class="math inline">\(n \rightarrow \infty\)</span>.</p>
 </div>
 </div>
 </div>
@@ -401,9 +397,7 @@ Solution
 </div>
 <div id="callout-5" class="callout-5-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>Will be added after section. 😛 <!--
-By the first axiom, $P(\sigma)=1$, and by the second axiom, we find that $P(\sigma)=P(\sigma \cup \emptyset) = P(\sigma)+ P(\emptyset)$ since each $\sigma$ and $\emptyset$ are disjoint by definition, $P(\emptyset)=0$ follows.
---></p>
+<p>By the first axiom, <span class="math inline">\(P(\sigma)=1\)</span>, and by the second axiom, we find that <span class="math inline">\(P(\sigma)=P(\sigma \cup \emptyset) = P(\sigma)+ P(\emptyset)\)</span> since each <span class="math inline">\(\sigma\)</span> and <span class="math inline">\(\emptyset\)</span> are disjoint by definition, <span class="math inline">\(P(\emptyset)=0\)</span> follows.</p>
 </div>
 </div>
 </div>
@@ -423,13 +417,8 @@ Solution
 </div>
 <div id="callout-6" class="callout-6-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>Will be added after section. 😛 <!--
-Let us construct a new collection of subsets of $\Omega$, denoted by $\{B_i\}_{i=1}^{\infty}$, where
-    $$B_1 = A_1 \text{  and  } B_i = A_i \cap \Big (\bigcup_{j=1}^{i-1}A_j  \Big )^c, i \geq 2 $$
-    
-We observe that, $B_i \in \mathcal{F}$, $\forall i\geq 1$. Moreover, $B_i$'s are disjoint and satisfies $\bigcup_{i=1}^{\infty} A_i = \bigcup_{i=1}^{\infty} B_i$. This technique of constructing disjoint sets that preserve unions from a general list of sets is called disjointification. We further note that $B_i \subseteq A_i$, $\forall i\geq 1$, implying $P(B_i) \leq P(A_i)$, $\forall i\geq 1$. Using the $\sigma$-additivity of probability we get
-$$P \left(\bigcup_{i=1}^{\infty} A_i\right) = P\left(\bigcup_{i=1}^{\infty} B_i\right) = \sum_{i=1}^{\infty}P(B_i) \leq \sum_{i=1}^{\infty}P(A_i).$$
---></p>
+<p>Let us construct a new collection of subsets of <span class="math inline">\(\Omega\)</span>, denoted by <span class="math inline">\(\{B_i\}_{i=1}^{\infty}\)</span>, where <span class="math display">\[B_1 = A_1 \text{  and  } B_i = A_i \cap \Big (\bigcup_{j=1}^{i-1}A_j  \Big )^c, i \geq 2 \]</span></p>
+<p>We observe that, <span class="math inline">\(B_i \in \mathcal{F}\)</span>, <span class="math inline">\(\forall i\geq 1\)</span>. Moreover, <span class="math inline">\(B_i\)</span>’s are disjoint and satisfies <span class="math inline">\(\bigcup_{i=1}^{\infty} A_i = \bigcup_{i=1}^{\infty} B_i\)</span>. This technique of constructing disjoint sets that preserve unions from a general list of sets is called disjointification. We further note that <span class="math inline">\(B_i \subseteq A_i\)</span>, <span class="math inline">\(\forall i\geq 1\)</span>, implying <span class="math inline">\(P(B_i) \leq P(A_i)\)</span>, <span class="math inline">\(\forall i\geq 1\)</span>. Using the <span class="math inline">\(\sigma\)</span>-additivity of probability we get <span class="math display">\[P \left(\bigcup_{i=1}^{\infty} A_i\right) = P\left(\bigcup_{i=1}^{\infty} B_i\right) = \sum_{i=1}^{\infty}P(B_i) \leq \sum_{i=1}^{\infty}P(A_i).\]</span></p>
 </div>
 </div>
 </div>
@@ -449,18 +438,8 @@ Solution
 </div>
 <div id="callout-7" class="callout-7-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>Will be added after section. 😛</p>
-<!--
- The notation $A_n \uparrow A$ means that we have a list of increasing sets $A_1 \subseteq A_2 \subseteq ... $ with the limit being equal to their union, i.e. $A = \bigcup_{i=1}^{\infty}A_i$ $ (\in \mathcal{F})$. Let us construct $\{B_i\}_{i=1}^{\infty}$ by disjointifying $\{A_i\}_{i=1}^{\infty}$, as part (i). We observe that,
-    $$P(A_n) = P(\bigcup_{i=1}^{n} A_i) = P(\bigcup_{i=1}^{n} B_i) = \sum_{i=1}^{n}P(B_i) \xrightarrow{n\to \infty} \sum_{i=1}^{\infty} P(B_i) = P(\bigcup_{i=1}^{\infty} B_i) = P(A)$$
-    This property is also known as `continuity from below'.
-    
-    
-Analogously, $A_n \downarrow A$ means we have a list of decreasing sets $A_1 \supseteq A_2 \supseteq ... $ with the limit being equal to their intersection, i.e. $A = \bigcap_{i=1}^{\infty}A_i$ $(\in \mathcal{F})$. For this case, let $C_i = A_1 \backslash A_i$, $i \geq 1$. Then $C_n \uparrow A_1 \backslash \bigcap_{i=1}^{\infty}A_i = A_1 \backslash A$. Applying the previous result, we get
-    $$P(C_n) \xrightarrow{n\to \infty} P(A_1\backslash A) = P(A_1) - P(A) $$
-     We complete the proof by noting that $P(C_n) = P(A_1) - P(A_n)$. This property is also known as `continuity from above'.
-     Let $m$ be a general measure. Following similar steps as above, one can prove that $m$ is continuous from below. However, $m$ is not continuous from above, in general. As a counterexample, suppose $\Omega = \mathbb{R}, \mathcal{F}=\mathcal{B}$ (the Borel $\sigma$-algebra on $\mathbb{R}$) and $m$ is the Lebesgue measure on $\mathbb{R}$. Let $A_n = [n,\infty)$, $n\geq 1$. Here $m(A_n) = \infty$, $\forall n\geq 1$, but $A_n \downarrow \emptyset$ and $m(\emptyset) = 0$. Notice that, the continuity property holds for a sequence of sets $A_n \downarrow A$ and a general measure $m$ if $m(A_k)$ is finite for some $k \geq 1$.  
--->
+<p>The notation <span class="math inline">\(A_n \uparrow A\)</span> means that we have a list of increasing sets $A_1 A_2 … $ with the limit being equal to their union, i.e.&nbsp;<span class="math inline">\(A = \bigcup_{i=1}^{\infty}A_i\)</span> $ ()$. Let us construct <span class="math inline">\(\{B_i\}_{i=1}^{\infty}\)</span> by disjointifying <span class="math inline">\(\{A_i\}_{i=1}^{\infty}\)</span>, as part (i). We observe that, <span class="math display">\[P(A_n) = P(\bigcup_{i=1}^{n} A_i) = P(\bigcup_{i=1}^{n} B_i) = \sum_{i=1}^{n}P(B_i) \xrightarrow{n\to \infty} \sum_{i=1}^{\infty} P(B_i) = P(\bigcup_{i=1}^{\infty} B_i) = P(A)\]</span> This property is also known as `continuity from below’.</p>
+<p>Analogously, <span class="math inline">\(A_n \downarrow A\)</span> means we have a list of decreasing sets $A_1 A_2 … $ with the limit being equal to their intersection, i.e.&nbsp;<span class="math inline">\(A = \bigcap_{i=1}^{\infty}A_i\)</span> <span class="math inline">\((\in \mathcal{F})\)</span>. For this case, let <span class="math inline">\(C_i = A_1 \backslash A_i\)</span>, <span class="math inline">\(i \geq 1\)</span>. Then <span class="math inline">\(C_n \uparrow A_1 \backslash \bigcap_{i=1}^{\infty}A_i = A_1 \backslash A\)</span>. Applying the previous result, we get <span class="math display">\[P(C_n) \xrightarrow{n\to \infty} P(A_1\backslash A) = P(A_1) - P(A) \]</span> We complete the proof by noting that <span class="math inline">\(P(C_n) = P(A_1) - P(A_n)\)</span>. This property is also known as `continuity from above’. Let <span class="math inline">\(m\)</span> be a general measure. Following similar steps as above, one can prove that <span class="math inline">\(m\)</span> is continuous from below. However, <span class="math inline">\(m\)</span> is not continuous from above, in general. As a counterexample, suppose <span class="math inline">\(\Omega = \mathbb{R}, \mathcal{F}=\mathcal{B}\)</span> (the Borel <span class="math inline">\(\sigma\)</span>-algebra on <span class="math inline">\(\mathbb{R}\)</span>) and <span class="math inline">\(m\)</span> is the Lebesgue measure on <span class="math inline">\(\mathbb{R}\)</span>. Let <span class="math inline">\(A_n = [n,\infty)\)</span>, <span class="math inline">\(n\geq 1\)</span>. Here <span class="math inline">\(m(A_n) = \infty\)</span>, <span class="math inline">\(\forall n\geq 1\)</span>, but <span class="math inline">\(A_n \downarrow \emptyset\)</span> and <span class="math inline">\(m(\emptyset) = 0\)</span>. Notice that, the continuity property holds for a sequence of sets <span class="math inline">\(A_n \downarrow A\)</span> and a general measure <span class="math inline">\(m\)</span> if <span class="math inline">\(m(A_k)\)</span> is finite for some <span class="math inline">\(k \geq 1\)</span>.</p>
 </div>
 </div>
 </div>
@@ -490,9 +469,7 @@ Solution
 </div>
 <div id="callout-8" class="callout-8-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>Will be added after section. 😛 <!--
-$X$ is a random variable. By definiton, $X^{-1}(\mathcal{B}) \in \mathcal{F}$. $g$ is measurable, so $g^{-1}(\mathcal{B})$ is Borel. Thus, $(gX)^{-1}(\mathcal{B}) = X^{-1}(g^{-1}(\mathcal{B})) \in \mathcal{F}$, so $g(X)$ is a random variable.
---></p>
+<p><span class="math inline">\(X\)</span> is a random variable. By definiton, <span class="math inline">\(X^{-1}(\mathcal{B}) \in \mathcal{F}\)</span>. <span class="math inline">\(g\)</span> is measurable, so <span class="math inline">\(g^{-1}(\mathcal{B})\)</span> is Borel. Thus, <span class="math inline">\((gX)^{-1}(\mathcal{B}) = X^{-1}(g^{-1}(\mathcal{B})) \in \mathcal{F}\)</span>, so <span class="math inline">\(g(X)\)</span> is a random variable.</p>
 </div>
 </div>
 </div>
@@ -512,19 +489,16 @@ Solution
 </div>
 <div id="callout-9" class="callout-9-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>Will be added after section. 😛 <!--
-By the axiom of probability, observe that:
-$$
+<p>By the axiom of probability, observe that: <span class="math display">\[
 \begin{align*}
-F(&b_1, b_2)-F(a_1, b_2)-F(b_1,a_2)+F(a_1,a_2)  \\
-&= P(X \leq b_1, Y \leq b_2) - P(X \leq a_1, Y\leq b_2)\\
-&-P(X \leq b_1, Y \leq a_2) + P(X \leq a_1, Y\leq a_2)\\
-&= P(a \leq X \leq b_1, Y \leq b_2) - P(a_1 \leq X\leq b_1, Y \leq a_2)\\
-&= P(a_1 \leq X \leq b_1, a_2 \leq Y \leq b_2)\\
-&\geq 0\\
+F(&amp;b_1, b_2)-F(a_1, b_2)-F(b_1,a_2)+F(a_1,a_2)  \\
+&amp;= P(X \leq b_1, Y \leq b_2) - P(X \leq a_1, Y\leq b_2)\\
+&amp;-P(X \leq b_1, Y \leq a_2) + P(X \leq a_1, Y\leq a_2)\\
+&amp;= P(a \leq X \leq b_1, Y \leq b_2) - P(a_1 \leq X\leq b_1, Y \leq a_2)\\
+&amp;= P(a_1 \leq X \leq b_1, a_2 \leq Y \leq b_2)\\
+&amp;\geq 0\\
 \end{align*}
-$$
---></p>
+\]</span></p>
 </div>
 </div>
 </div>
@@ -554,18 +528,15 @@ Solution
 </div>
 <div id="callout-10" class="callout-10-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>Will be added after section. 😛 <!--
-It is useful to think about "$\bigcup$" as "there exists" ($\exists$) and "$\bigcap$" as "for all" ($\forall$). So,
-$$
+<p>It is useful to think about “<span class="math inline">\(\bigcup\)</span>” as “there exists” (<span class="math inline">\(\exists\)</span>) and “<span class="math inline">\(\bigcap\)</span>” as “for all” (<span class="math inline">\(\forall\)</span>). So, <span class="math display">\[
 \begin{eqnarray*}
-    \omega \in B &\iff& \omega \in \bigcap_{n=1}^{\infty} B_n\\
-    & \iff & \omega \in B_n, \hspace{0.2cm}\forall n\geq 1\\
-    & \iff & \forall n\geq 1, \hspace{0.2cm} \omega \in \bigcup_{m=n}^{\infty} A_m\\
-    & \iff & \forall n\geq 1, \hspace{0.1cm} \exists m_n\geq n \text{ such that } \omega \in A_{m_n}\\
-    & \iff & \omega \in A_n \text{ for infinitely many values of } n
+    \omega \in B &amp;\iff&amp; \omega \in \bigcap_{n=1}^{\infty} B_n\\
+    &amp; \iff &amp; \omega \in B_n, \hspace{0.2cm}\forall n\geq 1\\
+    &amp; \iff &amp; \forall n\geq 1, \hspace{0.2cm} \omega \in \bigcup_{m=n}^{\infty} A_m\\
+    &amp; \iff &amp; \forall n\geq 1, \hspace{0.1cm} \exists m_n\geq n \text{ such that } \omega \in A_{m_n}\\
+    &amp; \iff &amp; \omega \in A_n \text{ for infinitely many values of } n
     \end{eqnarray*}
-$$
---></p>
+\]</span></p>
 </div>
 </div>
 </div>
@@ -585,22 +556,16 @@ Solution
 </div>
 <div id="callout-11" class="callout-11-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>Will be added after section. 😛</p>
-<!--
-We observe that,
-$$
+<p>We observe that, <span class="math display">\[
     \begin{eqnarray*}
-    \omega \in C &\iff& \omega \in \bigcup_{n=1}^{\infty} C_n\\
-    & \iff & \exists n\geq 1 \text{ such that } \omega \in C_n \\
-    & \iff & \exists n\geq 1 \text{ such that } \omega \in \bigcap_{m=n}^{\infty} A_m\\
-    & \iff & \exists n\geq 1 \text{ such that } \forall m\geq n,  \omega \in A_m\\
-    & \iff & \omega \in A_n \text{ for all but finitely many values of } n
+    \omega \in C &amp;\iff&amp; \omega \in \bigcup_{n=1}^{\infty} C_n\\
+    &amp; \iff &amp; \exists n\geq 1 \text{ such that } \omega \in C_n \\
+    &amp; \iff &amp; \exists n\geq 1 \text{ such that } \omega \in \bigcap_{m=n}^{\infty} A_m\\
+    &amp; \iff &amp; \exists n\geq 1 \text{ such that } \forall m\geq n,  \omega \in A_m\\
+    &amp; \iff &amp; \omega \in A_n \text{ for all but finitely many values of } n
     \end{eqnarray*}
-$$
-    We can also prove this result by using part (i). Notice that  $$ \begin{align*}C^c &= \Big(\bigcup_{n=1}^{\infty} \bigcap_{m=n}^{\infty} A_m \Big)^c \\ &= \bigcap_{n=1}^{\infty} \bigcup_{m=n}^{\infty} A^c_m \\ &= \{\omega \in \Omega : \omega \in A^c_n \text{ for infinitely many values of } n\} \end{align*}$$. 
-    
-Thus, $$ \begin{align*} C &= \{\omega \in \Omega: \omega \in A^c_n \text{ for finitely many values of } n\}  \\ &= \{\omega \in \Omega: \omega \in A_n \text{ for all but finitely many values of } n\} \end{align*}$$
--->
+\]</span> We can also prove this result by using part (i). Notice that <span class="math display">\[ \begin{align*}C^c &amp;= \Big(\bigcup_{n=1}^{\infty} \bigcap_{m=n}^{\infty} A_m \Big)^c \\ &amp;= \bigcap_{n=1}^{\infty} \bigcup_{m=n}^{\infty} A^c_m \\ &amp;= \{\omega \in \Omega : \omega \in A^c_n \text{ for infinitely many values of } n\} \end{align*}\]</span>.</p>
+<p>Thus, <span class="math display">\[ \begin{align*} C &amp;= \{\omega \in \Omega: \omega \in A^c_n \text{ for finitely many values of } n\}  \\ &amp;= \{\omega \in \Omega: \omega \in A_n \text{ for all but finitely many values of } n\} \end{align*}\]</span></p>
 </div>
 </div>
 </div>
@@ -623,7 +588,7 @@ Solution
 </div>
 <div id="callout-12" class="callout-12-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>Will be added after section. 😛</p>
+<p>Since <span class="math inline">\(\mathcal{F}\)</span> is closed under countable unions, <span class="math inline">\(B_n \in \mathcal{F}\)</span> <span class="math inline">\(\forall n \geq 1\)</span>. Again, since <span class="math inline">\(\mathcal{F}\)</span> is closed under countable intersections, <span class="math inline">\(\bigcap_{n=1}^{\infty} B_n \in \mathcal{F}\)</span>. So, <span class="math inline">\(A=B \in \mathcal{F}\)</span>.</p>
 </div>
 </div>
 </div>
@@ -656,19 +621,7 @@ Solution
 </div>
 <div id="callout-14" class="callout-14-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>Will be added after section. 😛 <!--
-Note that, the result is immediate if we can prove (1). We shall now show that (1) holds for a general sequence of events $\{A_n\}_{n=1}^{\infty}$.\\
-    We know that (from Problem 2)
-    $$P(\liminf\limits_{n\to \infty} A_n) =  \lim \limits_{n\to \infty} P(C_n)$$
-    Note that $C_n \subseteq A_n$, $\forall n \geq 1$, which implies $P(C_n) \leq P(A_n)$. Hence we have,
-    $$\lim \limits_{n\to \infty} P(C_n) = \liminf \limits_{n\to \infty} P(C_n) \leq \liminf\limits_{n\to \infty} P(A_n) $$
-    Similarly, we have
-    $$P(\limsup\limits_{n\to \infty} A_n) =  \lim \limits_{n\to \infty} P(B_n) $$
-    Note that $B_n \supseteq A_n$, $\forall n \geq 1$, which implies $P(B_n) \geq P(A_n)$. Hence we have,
-    $$\lim \limits_{n\to \infty} P(B_n)=\limsup \limits_{n\to \infty} P(B_n) \geq \limsup\limits_{n\to \infty} P(A_n) $$
-Finally, it is always true that
-    $$\liminf\limits_{n\to \infty} P(A_n) \leq \limsup\limits_{n\to \infty} P(A_n)$$
---></p>
+<p>Note that, the result is immediate if we can prove (1). We shall now show that (1) holds for a general sequence of events <span class="math inline">\(\{A_n\}_{n=1}^{\infty}\)</span>.\ We know that (from Problem 2) <span class="math display">\[P(\liminf\limits_{n\to \infty} A_n) =  \lim \limits_{n\to \infty} P(C_n)\]</span> Note that <span class="math inline">\(C_n \subseteq A_n\)</span>, <span class="math inline">\(\forall n \geq 1\)</span>, which implies <span class="math inline">\(P(C_n) \leq P(A_n)\)</span>. Hence we have, <span class="math display">\[\lim \limits_{n\to \infty} P(C_n) = \liminf \limits_{n\to \infty} P(C_n) \leq \liminf\limits_{n\to \infty} P(A_n) \]</span> Similarly, we have <span class="math display">\[P(\limsup\limits_{n\to \infty} A_n) =  \lim \limits_{n\to \infty} P(B_n) \]</span> Note that <span class="math inline">\(B_n \supseteq A_n\)</span>, <span class="math inline">\(\forall n \geq 1\)</span>, which implies <span class="math inline">\(P(B_n) \geq P(A_n)\)</span>. Hence we have, <span class="math display">\[\lim \limits_{n\to \infty} P(B_n)=\limsup \limits_{n\to \infty} P(B_n) \geq \limsup\limits_{n\to \infty} P(A_n) \]</span> Finally, it is always true that <span class="math display">\[\liminf\limits_{n\to \infty} P(A_n) \leq \limsup\limits_{n\to \infty} P(A_n)\]</span></p>
 </div>
 </div>
 </div>
@@ -685,8 +638,8 @@ Finally, it is always true that
 <li><p>$f^{-1}(<em>B</em>{}) = <em>f^{-1} (B</em>)</p></li>
 <li><p>$f^{-1} (B_^C) =(f<sup>{-1}(B_))</sup>C</p></li>
 </ol>
-<section id="pnecil-2.9.13" class="level3">
-<h3 class="anchored" data-anchor-id="pnecil-2.9.13">✏️ Pnecil 2.9.13</h3>
+<section id="pencil-2.9.13" class="level3">
+<h3 class="anchored" data-anchor-id="pencil-2.9.13">✏️ Pencil 2.9.13</h3>
 <p>Verify the above properties of preimages</p>
 <div class="callout-tip callout callout-style-simple callout-captioned">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-15-contents" aria-controls="callout-15" aria-expanded="false" aria-label="Toggle callout">
@@ -700,19 +653,17 @@ Solution
 </div>
 <div id="callout-15" class="callout-15-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>Will be added after section. 😛 <!--
-1. Suppose $x\in f^{-1}(\cup_\alpha B_{\alpha})$, then note that $f(x) \in \cup_\alpha B_\alpha$, which implies that $f(x) \in B_\alpha$ for some $\alpha$. Thus, $x \in f^{-1} (B_\alpha) for some $\alpha$, which implies $x \in \cup_\alpha f^{-1} (B_\alpha)$.
-
-2. Suppose $x\in f^{-1}(\cap_\alpha B_{\alpha})$. Analogously, by replacing "some" with "all", $x\in \cap_\alpha f^{-1} (B_\alpha)$
-
-3. Suppose $x\in f^{-1} (B_\alpha^C)$, then $f(x) \in B_\alpha^C$, which is equivalent to $f(x)\notin B_\alpha$. Thus, $x\notin f^{-1}(B_\alpha)$, which implies that $x\in (f^{-1}(B_\alpha))^C$
---></p>
+<ol type="1">
+<li><p>Suppose <span class="math inline">\(x\in f^{-1}(\cup_\alpha B_{\alpha})\)</span>, then note that <span class="math inline">\(f(x) \in \cup_\alpha B_\alpha\)</span>, which implies that <span class="math inline">\(f(x) \in B_\alpha\)</span> for some <span class="math inline">\(\alpha\)</span>. Thus, $x f^{-1} (B_) for some <span class="math inline">\(\alpha\)</span>, which implies <span class="math inline">\(x \in \cup_\alpha f^{-1} (B_\alpha)\)</span>.</p></li>
+<li><p>Suppose <span class="math inline">\(x\in f^{-1}(\cap_\alpha B_{\alpha})\)</span>. Analogously, by replacing “some” with “all”, <span class="math inline">\(x\in \cap_\alpha f^{-1} (B_\alpha)\)</span></p></li>
+<li><p>Suppose <span class="math inline">\(x\in f^{-1} (B_\alpha^C)\)</span>, then <span class="math inline">\(f(x) \in B_\alpha^C\)</span>, which is equivalent to <span class="math inline">\(f(x)\notin B_\alpha\)</span>. Thus, <span class="math inline">\(x\notin f^{-1}(B_\alpha)\)</span>, which implies that <span class="math inline">\(x\in (f^{-1}(B_\alpha))^C\)</span></p></li>
+</ol>
 </div>
 </div>
 </div>
 </section>
-<section id="pnecil-2.9.15" class="level3">
-<h3 class="anchored" data-anchor-id="pnecil-2.9.15">✏️ Pnecil 2.9.15</h3>
+<section id="pencil-2.9.15" class="level3">
+<h3 class="anchored" data-anchor-id="pencil-2.9.15">✏️ Pencil 2.9.15</h3>
 <p>If <span class="math inline">\(\mathbf{X}_1, \mathbf{X}_2 , \mathbf{X}_3\)</span> are random vectors (possibly in different dimensions) with <span class="math inline">\(\mathbf{X}_1 \perp\!\!\!\perp \mathbf{X}_2\)</span> and <span class="math inline">\((\mathbf{X}_1 , \mathbf{X}_2) \perp\!\!\!\perp \mathbf{X}_3\)</span>, then <span class="math inline">\(\mathbf{X}_1, \mathbf{X}_2 , \mathbf{X}_3\)</span> are independent.</p>
 <div class="callout-tip callout callout-style-simple callout-captioned">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-16-contents" aria-controls="callout-16" aria-expanded="false" aria-label="Toggle callout">
@@ -726,17 +677,15 @@ Solution
 </div>
 <div id="callout-16" class="callout-16-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>Will be added after section. 😛 <!--
-$$
+<p><span class="math display">\[
 \begin{align*}
-P(\mathbf{X}_1 \in A, \mathbf{X}_2 \in B, \mathbf{X}_3 \in C) 
-&= P(\mathbf{X}_1, \mathbf{X}_2 \in A \times B, \mathbf{X}_3 \in C)\\
-&= P(\mathbf{X}_1, \mathbf{X}_2 \in A \times B)P(\mathbf{X}_3 \in C)\\
-&= P(\mathbf{X}_1 \in A, \mathbf{X}_2 \in B)P(\mathbf{X}_3 \in C)\\
-&= P(\mathbf{X}_1 \in A)P(\mathbf{X}_2 \in B)P(\mathbf{X}_3 \in C)\\
+P(\mathbf{X}_1 \in A, \mathbf{X}_2 \in B, \mathbf{X}_3 \in C)
+&amp;= P(\mathbf{X}_1, \mathbf{X}_2 \in A \times B, \mathbf{X}_3 \in C)\\
+&amp;= P(\mathbf{X}_1, \mathbf{X}_2 \in A \times B)P(\mathbf{X}_3 \in C)\\
+&amp;= P(\mathbf{X}_1 \in A, \mathbf{X}_2 \in B)P(\mathbf{X}_3 \in C)\\
+&amp;= P(\mathbf{X}_1 \in A)P(\mathbf{X}_2 \in B)P(\mathbf{X}_3 \in C)\\
 \end{align*}
-$$
---></p>
+\]</span></p>
 </div>
 </div>
 </div>
@@ -752,8 +701,8 @@ $$
 <li><p>(Closure under increasing unions) If <span class="math inline">\(A_1 \subseteq A_2 \subseteq \cdots\)</span> are in <span class="math inline">\(\mathcal{L}\)</span>, then <span class="math inline">\(\bigcup_{i=1}^\infty A_i \in \mathcal{L}\)</span></p></li>
 </ol>
 </div>
-<section id="pnecil-2.10.2" class="level3">
-<h3 class="anchored" data-anchor-id="pnecil-2.10.2">✏️ Pnecil 2.10.2</h3>
+<section id="pencil-2.10.2" class="level3">
+<h3 class="anchored" data-anchor-id="pencil-2.10.2">✏️ Pencil 2.10.2</h3>
 <p>Show that if <span class="math inline">\(\mathcal{A}\)</span> is both a <span class="math inline">\(\pi\)</span>-system and a <span class="math inline">\(\lambda\)</span>-system, then it is a <span class="math inline">\(\sigma\)</span>-algebra.</p>
 <div class="callout-tip callout callout-style-simple callout-captioned">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-17-contents" aria-controls="callout-17" aria-expanded="false" aria-label="Toggle callout">
@@ -767,9 +716,7 @@ Solution
 </div>
 <div id="callout-17" class="callout-17-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>Will be added after section. 😛 <!--
-$\Omega \in \mathcal{A}$, so for any $A\in \mathcal{A}$, $A \subseteq \Omega$. This implies that $\Omega-A = A^c \in \mathcal{A}$. Trivially, we also observe that $\mathcal{A}\neq \emptyset$. Finally, if $A_1, A_2, \cdots \in \mathcal{A}$, then $A_1 \cap A_2 \cap \cdots \subseteq \cdots \subseteq A \in \mathcal{A}$, so their union $\bigcup_{i=1}^\infty A_i \in \mathcal{A}$
---></p>
+<p><span class="math inline">\(\Omega \in \mathcal{A}\)</span>, so for any <span class="math inline">\(A\in \mathcal{A}\)</span>, <span class="math inline">\(A \subseteq \Omega\)</span>. This implies that <span class="math inline">\(\Omega-A = A^c \in \mathcal{A}\)</span>. Trivially, we also observe that <span class="math inline">\(\mathcal{A}\neq \emptyset\)</span>. Finally, if <span class="math inline">\(A_1, A_2, \cdots \in \mathcal{A}\)</span>, then <span class="math inline">\(A_1 \cap A_2 \cap \cdots \subseteq \cdots \subseteq A \in \mathcal{A}\)</span>, so their union <span class="math inline">\(\bigcup_{i=1}^\infty A_i \in \mathcal{A}\)</span></p>
 </div>
 </div>
 </div>
@@ -810,6 +757,121 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
   toggleBodyColorPrimary();  
+  const disableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'prefetch';
+    }
+  }
+  const enableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'stylesheet';
+    }
+  }
+  const manageTransitions = (selector, allowTransitions) => {
+    const els = window.document.querySelectorAll(selector);
+    for (let i=0; i < els.length; i++) {
+      const el = els[i];
+      if (allowTransitions) {
+        el.classList.remove('notransition');
+      } else {
+        el.classList.add('notransition');
+      }
+    }
+  }
+  const toggleColorMode = (alternate) => {
+    // Switch the stylesheets
+    const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+    manageTransitions('#quarto-margin-sidebar .nav-link', false);
+    if (alternate) {
+      enableStylesheet(alternateStylesheets);
+      for (const sheetNode of alternateStylesheets) {
+        if (sheetNode.id === "quarto-bootstrap") {
+          toggleBodyColorMode(sheetNode);
+        }
+      }
+    } else {
+      disableStylesheet(alternateStylesheets);
+      toggleBodyColorPrimary();
+    }
+    manageTransitions('#quarto-margin-sidebar .nav-link', true);
+    // Switch the toggles
+    const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+    for (let i=0; i < toggles.length; i++) {
+      const toggle = toggles[i];
+      if (toggle) {
+        if (alternate) {
+          toggle.classList.add("alternate");     
+        } else {
+          toggle.classList.remove("alternate");
+        }
+      }
+    }
+    // Hack to workaround the fact that safari doesn't
+    // properly recolor the scrollbar when toggling (#1455)
+    if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+      manageTransitions("body", false);
+      window.scrollTo(0, 1);
+      setTimeout(() => {
+        window.scrollTo(0, 0);
+        manageTransitions("body", true);
+      }, 40);  
+    }
+  }
+  const isFileUrl = () => { 
+    return window.location.protocol === 'file:';
+  }
+  const hasAlternateSentinel = () => {  
+    let styleSentinel = getColorSchemeSentinel();
+    if (styleSentinel !== null) {
+      return styleSentinel === "alternate";
+    } else {
+      return false;
+    }
+  }
+  const setStyleSentinel = (alternate) => {
+    const value = alternate ? "alternate" : "default";
+    if (!isFileUrl()) {
+      window.localStorage.setItem("quarto-color-scheme", value);
+    } else {
+      localAlternateSentinel = value;
+    }
+  }
+  const getColorSchemeSentinel = () => {
+    if (!isFileUrl()) {
+      const storageValue = window.localStorage.getItem("quarto-color-scheme");
+      return storageValue != null ? storageValue : localAlternateSentinel;
+    } else {
+      return localAlternateSentinel;
+    }
+  }
+  let localAlternateSentinel = 'default';
+  // Dark / light mode switch
+  window.quartoToggleColorScheme = () => {
+    // Read the current dark / light value 
+    let toAlternate = !hasAlternateSentinel();
+    toggleColorMode(toAlternate);
+    setStyleSentinel(toAlternate);
+  };
+  // Ensure there is a toggle, if there isn't float one in the top right
+  if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+    const a = window.document.createElement('a');
+    a.classList.add('top-right');
+    a.classList.add('quarto-color-scheme-toggle');
+    a.href = "";
+    a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+    const i = window.document.createElement("i");
+    i.classList.add('bi');
+    a.appendChild(i);
+    window.document.body.appendChild(a);
+  }
+  // Switch to dark mode if need be
+  if (hasAlternateSentinel()) {
+    toggleColorMode(true);
+  } else {
+    toggleColorMode(false);
+  }
   const icon = "";
   const anchorJS = new window.AnchorJS();
   anchorJS.options = {

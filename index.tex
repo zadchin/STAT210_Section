@@ -229,7 +229,7 @@
 
 \begin{document}
 \maketitle
-\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[sharp corners, boxrule=0pt, enhanced, borderline west={3pt}{0pt}{shadecolor}, breakable, frame hidden, interior hidden]}{\end{tcolorbox}}\fi
+\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[boxrule=0pt, enhanced, breakable, frame hidden, sharp corners, borderline west={3pt}{0pt}{shadecolor}, interior hidden]}{\end{tcolorbox}}\fi
 
 \renewcommand*\contentsname{Table of contents}
 {
@@ -321,7 +321,7 @@ invaluable.
 
 \markboth{Section 1}{Section 1}
 
-Last Updated: 14 Sept 2023
+Last Updated: 16 Sept 2023
 
 Date: 15 Sept 2023
 
@@ -349,6 +349,8 @@ In this section, we will discuss:
   Independence
 \item
   Uniqueness and \(\pi-\lambda\)
+\item
+  Additional Questions
 \end{itemize}
 
 \hypertarget{sigma-algebras}{%
@@ -391,7 +393,7 @@ intersections, i.e.~if \(A_1, A_2, \cdots\) are in the
 requirement \(\emptyset \in \mathcal{F}\) can be replaced by the
 requirements \(\mathcal{F} \neq \emptyset\).
 
-\begin{tcolorbox}[enhanced jigsaw, leftrule=.75mm, opacityback=0, colframe=quarto-callout-tip-color-frame, left=2mm, colback=white, rightrule=.15mm, arc=.35mm, bottomrule=.15mm, toprule=.15mm, breakable]
+\begin{tcolorbox}[enhanced jigsaw, left=2mm, leftrule=.75mm, colback=white, arc=.35mm, rightrule=.15mm, opacityback=0, bottomrule=.15mm, toprule=.15mm, colframe=quarto-callout-tip-color-frame, breakable]
 \begin{minipage}[t]{5.5mm}
 \textcolor{quarto-callout-tip-color}{\faLightbulb}
 \end{minipage}%
@@ -399,12 +401,19 @@ requirements \(\mathcal{F} \neq \emptyset\).
 
 \textbf{Solution}\vspace{2mm}
 
-Will be added after section. 😛
+If \(A_1, A_2, \cdots \in \mathcal{F}\), by De Morgan's laws,
+\(\bigcap_{j=1}^{\infty} A_j = \left(\bigcup_{j=1}^{\infty} A_j^c \right)^c \in F\)
+since each \(A_j^c \in \mathcal{F}\), which implies that
+\(\bigcup_{j=1}^{\infty} A_j^c \in \mathcal{F}\), which further implies
+that \(\left(\bigcup_{j=1}^{\infty} A_j^c \right)^c \in F\).
+
+Also note that if \(\mathcal{F} \notin \emptyset, \mathcal{F}\) contains
+some element of A. Then \(A \cap A^c = \emptyset \in \mathcal{F}\).
 
 \end{minipage}%
 \end{tcolorbox}
 
-\begin{tcolorbox}[enhanced jigsaw, bottomtitle=1mm, opacityback=0, opacitybacktitle=0.6, titlerule=0mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Tip: De Morgan Laws}, colbacktitle=quarto-callout-note-color!10!white, leftrule=.75mm, colframe=quarto-callout-note-color-frame, left=2mm, bottomrule=.15mm, arc=.35mm, colback=white, rightrule=.15mm, coltitle=black, toptitle=1mm, toprule=.15mm, breakable]
+\begin{tcolorbox}[enhanced jigsaw, left=2mm, titlerule=0mm, colbacktitle=quarto-callout-note-color!10!white, rightrule=.15mm, bottomtitle=1mm, toptitle=1mm, coltitle=black, colframe=quarto-callout-note-color-frame, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Tip: De Morgan Laws}, opacitybacktitle=0.6, colback=white, arc=.35mm, opacityback=0, bottomrule=.15mm, toprule=.15mm, leftrule=.75mm, breakable]
 
 \[\left(\bigcup_{n=1}^{\infty} A_n \right)^c = \bigcap_{n=1}^{\infty} A_n ^c.\]
 
@@ -420,7 +429,7 @@ Check that an intersection of \(\sigma-\)algebras, even uncountably
 many, is \(\sigma\)-algebra. Give a simple example showing that a union
 of \(\sigma\)-algebras may not be a \(\sigma\)-algebra.
 
-\begin{tcolorbox}[enhanced jigsaw, leftrule=.75mm, opacityback=0, colframe=quarto-callout-tip-color-frame, left=2mm, colback=white, rightrule=.15mm, arc=.35mm, bottomrule=.15mm, toprule=.15mm, breakable]
+\begin{tcolorbox}[enhanced jigsaw, left=2mm, leftrule=.75mm, colback=white, arc=.35mm, rightrule=.15mm, opacityback=0, bottomrule=.15mm, toprule=.15mm, colframe=quarto-callout-tip-color-frame, breakable]
 \begin{minipage}[t]{5.5mm}
 \textcolor{quarto-callout-tip-color}{\faLightbulb}
 \end{minipage}%
@@ -428,12 +437,24 @@ of \(\sigma\)-algebras may not be a \(\sigma\)-algebra.
 
 \textbf{Solution}\vspace{2mm}
 
-Will be added after section. 😛
+Let \(\{\mathcal{F}_i\}_{i\in I}\) be \(\sigma\)-algebras, and consider
+\(\mathcal{F}' = \cup_{i\in I} \mathcal{F}_i\). Since each
+\(\mathcal{F}_i contains \emptyset\), \(\emptyset \in \mathcal{F}'\). If
+\(A\in \mathcal{F}'\), \(A\in \mathcal{F}_i \forall i\in I\), which
+implies that \(A^c \in \mathcal{F}_i \forall i \in I\), so is
+\(A^c \in \mathcal{F}'\). If \(A_1, A_2, \cdots, \in \mathcal{F}'\),
+\(\bigcup_{j=1}^{\infty} A_j \in \mathcal{F}_i \forall i\in I\), which
+implies that \(\bigcup_{j=1}^{\infty} A_j \in \mathcal{F}'\).
+
+Let \(\mathcal{F_1} = \{\emptyset, \{a\}, \{b,c\}, \{a, b, c\}\}\) and
+\(\mathcal{F_2} = \{\emptyset, \{a,b\}, \{c\}, \{a, b, c\}\}\), note
+that \(\mathcal{F_1} \cup \mathcal{F_2}\) contains \(\{a,b\}\) and
+\(\{b,c\}\), but not their intersection.
 
 \end{minipage}%
 \end{tcolorbox}
 
-\begin{tcolorbox}[enhanced jigsaw, leftrule=.75mm, opacityback=0, colframe=quarto-callout-important-color-frame, left=2mm, colback=white, rightrule=.15mm, arc=.35mm, bottomrule=.15mm, toprule=.15mm, breakable]
+\begin{tcolorbox}[enhanced jigsaw, left=2mm, leftrule=.75mm, colback=white, arc=.35mm, rightrule=.15mm, opacityback=0, bottomrule=.15mm, toprule=.15mm, colframe=quarto-callout-important-color-frame, breakable]
 \begin{minipage}[t]{5.5mm}
 \textcolor{quarto-callout-important-color}{\faExclamation}
 \end{minipage}%
@@ -475,7 +496,7 @@ intervals \([a,b]\) instead of open intervals to generate it, and that
 it is also the same if we use ``semi-inifinite'' intervals
 \((-\infty,b)\) to generate it.
 
-\begin{tcolorbox}[enhanced jigsaw, leftrule=.75mm, opacityback=0, colframe=quarto-callout-tip-color-frame, left=2mm, colback=white, rightrule=.15mm, arc=.35mm, bottomrule=.15mm, toprule=.15mm, breakable]
+\begin{tcolorbox}[enhanced jigsaw, left=2mm, leftrule=.75mm, colback=white, arc=.35mm, rightrule=.15mm, opacityback=0, bottomrule=.15mm, toprule=.15mm, colframe=quarto-callout-tip-color-frame, breakable]
 \begin{minipage}[t]{5.5mm}
 \textcolor{quarto-callout-tip-color}{\faLightbulb}
 \end{minipage}%
@@ -483,7 +504,12 @@ it is also the same if we use ``semi-inifinite'' intervals
 
 \textbf{Solution}\vspace{2mm}
 
-Will be added after section. 😛
+\([a,b] = ((-\infty, a) \cup (b,\infty))^c\in \mathcal{B}. (-\infty, b]=(b, \infty)^c \in \mathcal{B}\).
+Furhtermore, since \(\mathbb{Q}\) is dense in \(\mathbb{R}\), there
+always exists a sequence of rationals that converge to any real number,
+so \((-\infty, b]\) for \(b\in \mathbb{R}\) can be obtained from the
+union \((-\infty, b_n) \forall b_n \in \mathbb{Q}\), and letting
+\(n \rightarrow \infty\).
 
 \end{minipage}%
 \end{tcolorbox}
@@ -528,7 +554,7 @@ function) \(P\) satisfying the following axioms:
 Show that in the first axiom, the condition \(P(\emptyset) = 0\) can be
 eliminated.
 
-\begin{tcolorbox}[enhanced jigsaw, leftrule=.75mm, opacityback=0, colframe=quarto-callout-tip-color-frame, left=2mm, colback=white, rightrule=.15mm, arc=.35mm, bottomrule=.15mm, toprule=.15mm, breakable]
+\begin{tcolorbox}[enhanced jigsaw, left=2mm, leftrule=.75mm, colback=white, arc=.35mm, rightrule=.15mm, opacityback=0, bottomrule=.15mm, toprule=.15mm, colframe=quarto-callout-tip-color-frame, breakable]
 \begin{minipage}[t]{5.5mm}
 \textcolor{quarto-callout-tip-color}{\faLightbulb}
 \end{minipage}%
@@ -536,7 +562,10 @@ eliminated.
 
 \textbf{Solution}\vspace{2mm}
 
-Will be added after section. 😛
+By the first axiom, \(P(\sigma)=1\), and by the second axiom, we find
+that \(P(\sigma)=P(\sigma \cup \emptyset) = P(\sigma)+ P(\emptyset)\)
+since each \(\sigma\) and \(\emptyset\) are disjoint by definition,
+\(P(\emptyset)=0\) follows.
 
 \end{minipage}%
 \end{tcolorbox}
@@ -549,7 +578,7 @@ Show that \(P\) is subadditive, i.e.~if \(\{A_i\}^{\infty}_{i=1}\) is
 \textit{any} collection of sets in \(\mathcal{F}\), then
 \[P\left( \bigcup_{i=1}^{\infty} A_i\right) \leq  \sum_{i=1}^{\infty} P(A_i).\]
 
-\begin{tcolorbox}[enhanced jigsaw, leftrule=.75mm, opacityback=0, colframe=quarto-callout-tip-color-frame, left=2mm, colback=white, rightrule=.15mm, arc=.35mm, bottomrule=.15mm, toprule=.15mm, breakable]
+\begin{tcolorbox}[enhanced jigsaw, left=2mm, leftrule=.75mm, colback=white, arc=.35mm, rightrule=.15mm, opacityback=0, bottomrule=.15mm, toprule=.15mm, colframe=quarto-callout-tip-color-frame, breakable]
 \begin{minipage}[t]{5.5mm}
 \textcolor{quarto-callout-tip-color}{\faLightbulb}
 \end{minipage}%
@@ -557,7 +586,19 @@ Show that \(P\) is subadditive, i.e.~if \(\{A_i\}^{\infty}_{i=1}\) is
 
 \textbf{Solution}\vspace{2mm}
 
-Will be added after section. 😛
+Let us construct a new collection of subsets of \(\Omega\), denoted by
+\(\{B_i\}_{i=1}^{\infty}\), where
+\[B_1 = A_1 \text{  and  } B_i = A_i \cap \Big (\bigcup_{j=1}^{i-1}A_j  \Big )^c, i \geq 2 \]
+
+We observe that, \(B_i \in \mathcal{F}\), \(\forall i\geq 1\). Moreover,
+\(B_i\)'s are disjoint and satisfies
+\(\bigcup_{i=1}^{\infty} A_i = \bigcup_{i=1}^{\infty} B_i\). This
+technique of constructing disjoint sets that preserve unions from a
+general list of sets is called disjointification. We further note that
+\(B_i \subseteq A_i\), \(\forall i\geq 1\), implying
+\(P(B_i) \leq P(A_i)\), \(\forall i\geq 1\). Using the
+\(\sigma\)-additivity of probability we get
+\[P \left(\bigcup_{i=1}^{\infty} A_i\right) = P\left(\bigcup_{i=1}^{\infty} B_i\right) = \sum_{i=1}^{\infty}P(B_i) \leq \sum_{i=1}^{\infty}P(A_i).\]
 
 \end{minipage}%
 \end{tcolorbox}
@@ -571,7 +612,7 @@ Let \(A_1,A_2,...\) be a sequence of sets in \(\mathcal{F}\) such that
 \(P(A_n) \xrightarrow{n \to \infty} P(A)\). Show that the result also
 holds for \(A_n \downarrow A\). Does the result hold for any measure?
 
-\begin{tcolorbox}[enhanced jigsaw, leftrule=.75mm, opacityback=0, colframe=quarto-callout-tip-color-frame, left=2mm, colback=white, rightrule=.15mm, arc=.35mm, bottomrule=.15mm, toprule=.15mm, breakable]
+\begin{tcolorbox}[enhanced jigsaw, left=2mm, leftrule=.75mm, colback=white, arc=.35mm, rightrule=.15mm, opacityback=0, bottomrule=.15mm, toprule=.15mm, colframe=quarto-callout-tip-color-frame, breakable]
 \begin{minipage}[t]{5.5mm}
 \textcolor{quarto-callout-tip-color}{\faLightbulb}
 \end{minipage}%
@@ -579,7 +620,35 @@ holds for \(A_n \downarrow A\). Does the result hold for any measure?
 
 \textbf{Solution}\vspace{2mm}
 
-Will be added after section. 😛
+The notation \(A_n \uparrow A\) means that we have a list of increasing
+sets \$A\_1 \subseteq A\_2 \subseteq \ldots{} \$ with the limit being
+equal to their union, i.e.~\(A = \bigcup_{i=1}^{\infty}A_i\) \$
+(\in \mathcal{F})\$. Let us construct \(\{B_i\}_{i=1}^{\infty}\) by
+disjointifying \(\{A_i\}_{i=1}^{\infty}\), as part (i). We observe that,
+\[P(A_n) = P(\bigcup_{i=1}^{n} A_i) = P(\bigcup_{i=1}^{n} B_i) = \sum_{i=1}^{n}P(B_i) \xrightarrow{n\to \infty} \sum_{i=1}^{\infty} P(B_i) = P(\bigcup_{i=1}^{\infty} B_i) = P(A)\]
+This property is also known as `continuity from below'.
+
+Analogously, \(A_n \downarrow A\) means we have a list of decreasing
+sets \$A\_1 \supseteq A\_2 \supseteq \ldots{} \$ with the limit being
+equal to their intersection, i.e.~\(A = \bigcap_{i=1}^{\infty}A_i\)
+\((\in \mathcal{F})\). For this case, let \(C_i = A_1 \backslash A_i\),
+\(i \geq 1\). Then
+\(C_n \uparrow A_1 \backslash \bigcap_{i=1}^{\infty}A_i = A_1 \backslash A\).
+Applying the previous result, we get
+\[P(C_n) \xrightarrow{n\to \infty} P(A_1\backslash A) = P(A_1) - P(A) \]
+We complete the proof by noting that \(P(C_n) = P(A_1) - P(A_n)\). This
+property is also known as `continuity from above'. Let \(m\) be a
+general measure. Following similar steps as above, one can prove that
+\(m\) is continuous from below. However, \(m\) is not continuous from
+above, in general. As a counterexample, suppose
+\(\Omega = \mathbb{R}, \mathcal{F}=\mathcal{B}\) (the Borel
+\(\sigma\)-algebra on \(\mathbb{R}\)) and \(m\) is the Lebesgue measure
+on \(\mathbb{R}\). Let \(A_n = [n,\infty)\), \(n\geq 1\). Here
+\(m(A_n) = \infty\), \(\forall n\geq 1\), but
+\(A_n \downarrow \emptyset\) and \(m(\emptyset) = 0\). Notice that, the
+continuity property holds for a sequence of sets \(A_n \downarrow A\)
+and a general measure \(m\) if \(m(A_k)\) is finite for some
+\(k \geq 1\).
 
 \end{minipage}%
 \end{tcolorbox}
@@ -622,7 +691,7 @@ is in \(\mathcal{F}\) for all Borel sets \(\mathcal{B}\) in
 Show that if \(X\) is a random variable, then so is \(g(X)\) for any
 measurable function \(g\).
 
-\begin{tcolorbox}[enhanced jigsaw, leftrule=.75mm, opacityback=0, colframe=quarto-callout-tip-color-frame, left=2mm, colback=white, rightrule=.15mm, arc=.35mm, bottomrule=.15mm, toprule=.15mm, breakable]
+\begin{tcolorbox}[enhanced jigsaw, left=2mm, leftrule=.75mm, colback=white, arc=.35mm, rightrule=.15mm, opacityback=0, bottomrule=.15mm, toprule=.15mm, colframe=quarto-callout-tip-color-frame, breakable]
 \begin{minipage}[t]{5.5mm}
 \textcolor{quarto-callout-tip-color}{\faLightbulb}
 \end{minipage}%
@@ -630,7 +699,11 @@ measurable function \(g\).
 
 \textbf{Solution}\vspace{2mm}
 
-Will be added after section. 😛
+\(X\) is a random variable. By definiton,
+\(X^{-1}(\mathcal{B}) \in \mathcal{F}\). \(g\) is measurable, so
+\(g^{-1}(\mathcal{B})\) is Borel. Thus,
+\((gX)^{-1}(\mathcal{B}) = X^{-1}(g^{-1}(\mathcal{B})) \in \mathcal{F}\),
+so \(g(X)\) is a random variable.
 
 \end{minipage}%
 \end{tcolorbox}
@@ -643,7 +716,7 @@ Let \(F(x,y)\) be a bivariate CDF. Prove that for all \(a_1 \leq b_1\)
 and \(a_2 \leq b_2\),
 \[F(b_1, b_2)-F(a_1, b_2)-F(b_1,a_2)+F(a_1,a_2) \geq 0.\]
 
-\begin{tcolorbox}[enhanced jigsaw, leftrule=.75mm, opacityback=0, colframe=quarto-callout-tip-color-frame, left=2mm, colback=white, rightrule=.15mm, arc=.35mm, bottomrule=.15mm, toprule=.15mm, breakable]
+\begin{tcolorbox}[enhanced jigsaw, left=2mm, leftrule=.75mm, colback=white, arc=.35mm, rightrule=.15mm, opacityback=0, bottomrule=.15mm, toprule=.15mm, colframe=quarto-callout-tip-color-frame, breakable]
 \begin{minipage}[t]{5.5mm}
 \textcolor{quarto-callout-tip-color}{\faLightbulb}
 \end{minipage}%
@@ -651,7 +724,16 @@ and \(a_2 \leq b_2\),
 
 \textbf{Solution}\vspace{2mm}
 
-Will be added after section. 😛
+By the axiom of probability, observe that: \[
+\begin{align*}
+F(&b_1, b_2)-F(a_1, b_2)-F(b_1,a_2)+F(a_1,a_2)  \\
+&= P(X \leq b_1, Y \leq b_2) - P(X \leq a_1, Y\leq b_2)\\
+&-P(X \leq b_1, Y \leq a_2) + P(X \leq a_1, Y\leq a_2)\\
+&= P(a \leq X \leq b_1, Y \leq b_2) - P(a_1 \leq X\leq b_1, Y \leq a_2)\\
+&= P(a_1 \leq X \leq b_1, a_2 \leq Y \leq b_2)\\
+&\geq 0\\
+\end{align*}
+\]
 
 \end{minipage}%
 \end{tcolorbox}
@@ -690,7 +772,7 @@ We call \(B\) and \(C\), \(\limsup\limits_{n \to \infty}A_n\) and
 Show that
 \(B = \{\omega \in \Omega : \omega \in A_n \text{ for infinitely many values of } n\}\).
 
-\begin{tcolorbox}[enhanced jigsaw, leftrule=.75mm, opacityback=0, colframe=quarto-callout-tip-color-frame, left=2mm, colback=white, rightrule=.15mm, arc=.35mm, bottomrule=.15mm, toprule=.15mm, breakable]
+\begin{tcolorbox}[enhanced jigsaw, left=2mm, leftrule=.75mm, colback=white, arc=.35mm, rightrule=.15mm, opacityback=0, bottomrule=.15mm, toprule=.15mm, colframe=quarto-callout-tip-color-frame, breakable]
 \begin{minipage}[t]{5.5mm}
 \textcolor{quarto-callout-tip-color}{\faLightbulb}
 \end{minipage}%
@@ -698,7 +780,16 @@ Show that
 
 \textbf{Solution}\vspace{2mm}
 
-Will be added after section. 😛
+It is useful to think about ``\(\bigcup\)'' as ``there exists''
+(\(\exists\)) and ``\(\bigcap\)'' as ``for all'' (\(\forall\)). So, \[
+\begin{eqnarray*}
+    \omega \in B &\iff& \omega \in \bigcap_{n=1}^{\infty} B_n\\
+    & \iff & \omega \in B_n, \hspace{0.2cm}\forall n\geq 1\\
+    & \iff & \forall n\geq 1, \hspace{0.2cm} \omega \in \bigcup_{m=n}^{\infty} A_m\\
+    & \iff & \forall n\geq 1, \hspace{0.1cm} \exists m_n\geq n \text{ such that } \omega \in A_{m_n}\\
+    & \iff & \omega \in A_n \text{ for infinitely many values of } n
+    \end{eqnarray*}
+\]
 
 \end{minipage}%
 \end{tcolorbox}
@@ -710,7 +801,7 @@ Will be added after section. 😛
 Show that
 \(C = \{\omega \in \Omega: \omega \in A_n \text{ for all but finitely many values of } n\}\).
 
-\begin{tcolorbox}[enhanced jigsaw, leftrule=.75mm, opacityback=0, colframe=quarto-callout-tip-color-frame, left=2mm, colback=white, rightrule=.15mm, arc=.35mm, bottomrule=.15mm, toprule=.15mm, breakable]
+\begin{tcolorbox}[enhanced jigsaw, left=2mm, leftrule=.75mm, colback=white, arc=.35mm, rightrule=.15mm, opacityback=0, bottomrule=.15mm, toprule=.15mm, colframe=quarto-callout-tip-color-frame, breakable]
 \begin{minipage}[t]{5.5mm}
 \textcolor{quarto-callout-tip-color}{\faLightbulb}
 \end{minipage}%
@@ -718,7 +809,19 @@ Show that
 
 \textbf{Solution}\vspace{2mm}
 
-Will be added after section. 😛
+We observe that, \[
+    \begin{eqnarray*}
+    \omega \in C &\iff& \omega \in \bigcup_{n=1}^{\infty} C_n\\
+    & \iff & \exists n\geq 1 \text{ such that } \omega \in C_n \\
+    & \iff & \exists n\geq 1 \text{ such that } \omega \in \bigcap_{m=n}^{\infty} A_m\\
+    & \iff & \exists n\geq 1 \text{ such that } \forall m\geq n,  \omega \in A_m\\
+    & \iff & \omega \in A_n \text{ for all but finitely many values of } n
+    \end{eqnarray*}
+\] We can also prove this result by using part (i). Notice that
+\[ \begin{align*}C^c &= \Big(\bigcup_{n=1}^{\infty} \bigcap_{m=n}^{\infty} A_m \Big)^c \\ &= \bigcap_{n=1}^{\infty} \bigcup_{m=n}^{\infty} A^c_m \\ &= \{\omega \in \Omega : \omega \in A^c_n \text{ for infinitely many values of } n\} \end{align*}\].
+
+Thus,
+\[ \begin{align*} C &= \{\omega \in \Omega: \omega \in A^c_n \text{ for finitely many values of } n\}  \\ &= \{\omega \in \Omega: \omega \in A_n \text{ for all but finitely many values of } n\} \end{align*}\]
 
 \end{minipage}%
 \end{tcolorbox}
@@ -738,7 +841,7 @@ that case, we write \(\lim\limits_{n\to \infty} A_n = A\).
 
 Assume the above is the case. Show that \(A \in \mathcal{F}.\)
 
-\begin{tcolorbox}[enhanced jigsaw, leftrule=.75mm, opacityback=0, colframe=quarto-callout-tip-color-frame, left=2mm, colback=white, rightrule=.15mm, arc=.35mm, bottomrule=.15mm, toprule=.15mm, breakable]
+\begin{tcolorbox}[enhanced jigsaw, left=2mm, leftrule=.75mm, colback=white, arc=.35mm, rightrule=.15mm, opacityback=0, bottomrule=.15mm, toprule=.15mm, colframe=quarto-callout-tip-color-frame, breakable]
 \begin{minipage}[t]{5.5mm}
 \textcolor{quarto-callout-tip-color}{\faLightbulb}
 \end{minipage}%
@@ -746,7 +849,11 @@ Assume the above is the case. Show that \(A \in \mathcal{F}.\)
 
 \textbf{Solution}\vspace{2mm}
 
-Will be added after section. 😛
+Since \(\mathcal{F}\) is closed under countable unions,
+\(B_n \in \mathcal{F}\) \(\forall n \geq 1\). Again, since
+\(\mathcal{F}\) is closed under countable intersections,
+\(\bigcap_{n=1}^{\infty} B_n \in \mathcal{F}\). So,
+\(A=B \in \mathcal{F}\).
 
 \end{minipage}%
 \end{tcolorbox}
@@ -757,13 +864,13 @@ Will be added after section. 😛
 
 Show that \(\lim\limits_{n \to \infty} P(A_n) = P(A)\).
 
-\begin{tcolorbox}[enhanced jigsaw, bottomtitle=1mm, opacityback=0, opacitybacktitle=0.6, titlerule=0mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Tip: A useful inequality}, colbacktitle=quarto-callout-note-color!10!white, leftrule=.75mm, colframe=quarto-callout-note-color-frame, left=2mm, bottomrule=.15mm, arc=.35mm, colback=white, rightrule=.15mm, coltitle=black, toptitle=1mm, toprule=.15mm, breakable]
+\begin{tcolorbox}[enhanced jigsaw, left=2mm, titlerule=0mm, colbacktitle=quarto-callout-note-color!10!white, rightrule=.15mm, bottomtitle=1mm, toptitle=1mm, coltitle=black, colframe=quarto-callout-note-color-frame, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Tip: A useful inequality}, opacitybacktitle=0.6, colback=white, arc=.35mm, opacityback=0, bottomrule=.15mm, toprule=.15mm, leftrule=.75mm, breakable]
 
 \[P(\liminf\limits_{n \to \infty}A_n) \leq \liminf\limits_{n \to \infty}P(A_n) \leq \limsup\limits_{n \to \infty}P(A_n) \leq P(\limsup\limits_{n \to \infty}A_n).\]
 
 \end{tcolorbox}
 
-\begin{tcolorbox}[enhanced jigsaw, leftrule=.75mm, opacityback=0, colframe=quarto-callout-tip-color-frame, left=2mm, colback=white, rightrule=.15mm, arc=.35mm, bottomrule=.15mm, toprule=.15mm, breakable]
+\begin{tcolorbox}[enhanced jigsaw, left=2mm, leftrule=.75mm, colback=white, arc=.35mm, rightrule=.15mm, opacityback=0, bottomrule=.15mm, toprule=.15mm, colframe=quarto-callout-tip-color-frame, breakable]
 \begin{minipage}[t]{5.5mm}
 \textcolor{quarto-callout-tip-color}{\faLightbulb}
 \end{minipage}%
@@ -771,7 +878,21 @@ Show that \(\lim\limits_{n \to \infty} P(A_n) = P(A)\).
 
 \textbf{Solution}\vspace{2mm}
 
-Will be added after section. 😛
+Note that, the result is immediate if we can prove (1). We shall now
+show that (1) holds for a general sequence of events
+\(\{A_n\}_{n=1}^{\infty}\).\textbackslash{} We know that (from Problem
+2)
+\[P(\liminf\limits_{n\to \infty} A_n) =  \lim \limits_{n\to \infty} P(C_n)\]
+Note that \(C_n \subseteq A_n\), \(\forall n \geq 1\), which implies
+\(P(C_n) \leq P(A_n)\). Hence we have,
+\[\lim \limits_{n\to \infty} P(C_n) = \liminf \limits_{n\to \infty} P(C_n) \leq \liminf\limits_{n\to \infty} P(A_n) \]
+Similarly, we have
+\[P(\limsup\limits_{n\to \infty} A_n) =  \lim \limits_{n\to \infty} P(B_n) \]
+Note that \(B_n \supseteq A_n\), \(\forall n \geq 1\), which implies
+\(P(B_n) \geq P(A_n)\). Hence we have,
+\[\lim \limits_{n\to \infty} P(B_n)=\limsup \limits_{n\to \infty} P(B_n) \geq \limsup\limits_{n\to \infty} P(A_n) \]
+Finally, it is always true that
+\[\liminf\limits_{n\to \infty} P(A_n) \leq \limsup\limits_{n\to \infty} P(A_n)\]
 
 \end{minipage}%
 \end{tcolorbox}
@@ -810,13 +931,13 @@ we then have the following convenient properties:
   =(f\textsuperscript{\{-1\}(B\_\alpha))}C
 \end{enumerate}
 
-\hypertarget{pnecil-2.9.13}{%
-\subsection*{✏️ Pnecil 2.9.13}\label{pnecil-2.9.13}}
-\addcontentsline{toc}{subsection}{✏️ Pnecil 2.9.13}
+\hypertarget{pencil-2.9.13}{%
+\subsection*{✏️ Pencil 2.9.13}\label{pencil-2.9.13}}
+\addcontentsline{toc}{subsection}{✏️ Pencil 2.9.13}
 
 Verify the above properties of preimages
 
-\begin{tcolorbox}[enhanced jigsaw, leftrule=.75mm, opacityback=0, colframe=quarto-callout-tip-color-frame, left=2mm, colback=white, rightrule=.15mm, arc=.35mm, bottomrule=.15mm, toprule=.15mm, breakable]
+\begin{tcolorbox}[enhanced jigsaw, left=2mm, leftrule=.75mm, colback=white, arc=.35mm, rightrule=.15mm, opacityback=0, bottomrule=.15mm, toprule=.15mm, colframe=quarto-callout-tip-color-frame, breakable]
 \begin{minipage}[t]{5.5mm}
 \textcolor{quarto-callout-tip-color}{\faLightbulb}
 \end{minipage}%
@@ -824,14 +945,31 @@ Verify the above properties of preimages
 
 \textbf{Solution}\vspace{2mm}
 
-Will be added after section. 😛
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  Suppose \(x\in f^{-1}(\cup_\alpha B_{\alpha})\), then note that
+  \(f(x) \in \cup_\alpha B_\alpha\), which implies that
+  \(f(x) \in B_\alpha\) for some \(\alpha\). Thus, \$x \in f\^{}\{-1\}
+  (B\_\alpha) for some \(\alpha\), which implies
+  \(x \in \cup_\alpha f^{-1} (B_\alpha)\).
+\item
+  Suppose \(x\in f^{-1}(\cap_\alpha B_{\alpha})\). Analogously, by
+  replacing ``some'' with ``all'',
+  \(x\in \cap_\alpha f^{-1} (B_\alpha)\)
+\item
+  Suppose \(x\in f^{-1} (B_\alpha^C)\), then \(f(x) \in B_\alpha^C\),
+  which is equivalent to \(f(x)\notin B_\alpha\). Thus,
+  \(x\notin f^{-1}(B_\alpha)\), which implies that
+  \(x\in (f^{-1}(B_\alpha))^C\)
+\end{enumerate}
 
 \end{minipage}%
 \end{tcolorbox}
 
-\hypertarget{pnecil-2.9.15}{%
-\subsection*{✏️ Pnecil 2.9.15}\label{pnecil-2.9.15}}
-\addcontentsline{toc}{subsection}{✏️ Pnecil 2.9.15}
+\hypertarget{pencil-2.9.15}{%
+\subsection*{✏️ Pencil 2.9.15}\label{pencil-2.9.15}}
+\addcontentsline{toc}{subsection}{✏️ Pencil 2.9.15}
 
 If \(\mathbf{X}_1, \mathbf{X}_2 , \mathbf{X}_3\) are random vectors
 (possibly in different dimensions) with
@@ -839,7 +977,7 @@ If \(\mathbf{X}_1, \mathbf{X}_2 , \mathbf{X}_3\) are random vectors
 \((\mathbf{X}_1 , \mathbf{X}_2) \perp\!\!\!\perp \mathbf{X}_3\), then
 \(\mathbf{X}_1, \mathbf{X}_2 , \mathbf{X}_3\) are independent.
 
-\begin{tcolorbox}[enhanced jigsaw, leftrule=.75mm, opacityback=0, colframe=quarto-callout-tip-color-frame, left=2mm, colback=white, rightrule=.15mm, arc=.35mm, bottomrule=.15mm, toprule=.15mm, breakable]
+\begin{tcolorbox}[enhanced jigsaw, left=2mm, leftrule=.75mm, colback=white, arc=.35mm, rightrule=.15mm, opacityback=0, bottomrule=.15mm, toprule=.15mm, colframe=quarto-callout-tip-color-frame, breakable]
 \begin{minipage}[t]{5.5mm}
 \textcolor{quarto-callout-tip-color}{\faLightbulb}
 \end{minipage}%
@@ -847,7 +985,15 @@ If \(\mathbf{X}_1, \mathbf{X}_2 , \mathbf{X}_3\) are random vectors
 
 \textbf{Solution}\vspace{2mm}
 
-Will be added after section. 😛
+\[
+\begin{align*}
+P(\mathbf{X}_1 \in A, \mathbf{X}_2 \in B, \mathbf{X}_3 \in C) 
+&= P(\mathbf{X}_1, \mathbf{X}_2 \in A \times B, \mathbf{X}_3 \in C)\\
+&= P(\mathbf{X}_1, \mathbf{X}_2 \in A \times B)P(\mathbf{X}_3 \in C)\\
+&= P(\mathbf{X}_1 \in A, \mathbf{X}_2 \in B)P(\mathbf{X}_3 \in C)\\
+&= P(\mathbf{X}_1 \in A)P(\mathbf{X}_2 \in B)P(\mathbf{X}_3 \in C)\\
+\end{align*}
+\]
 
 \end{minipage}%
 \end{tcolorbox}
@@ -883,14 +1029,14 @@ conditions hold:
 
 \end{definition}
 
-\hypertarget{pnecil-2.10.2}{%
-\subsection*{✏️ Pnecil 2.10.2}\label{pnecil-2.10.2}}
-\addcontentsline{toc}{subsection}{✏️ Pnecil 2.10.2}
+\hypertarget{pencil-2.10.2}{%
+\subsection*{✏️ Pencil 2.10.2}\label{pencil-2.10.2}}
+\addcontentsline{toc}{subsection}{✏️ Pencil 2.10.2}
 
 Show that if \(\mathcal{A}\) is both a \(\pi\)-system and a
 \(\lambda\)-system, then it is a \(\sigma\)-algebra.
 
-\begin{tcolorbox}[enhanced jigsaw, leftrule=.75mm, opacityback=0, colframe=quarto-callout-tip-color-frame, left=2mm, colback=white, rightrule=.15mm, arc=.35mm, bottomrule=.15mm, toprule=.15mm, breakable]
+\begin{tcolorbox}[enhanced jigsaw, left=2mm, leftrule=.75mm, colback=white, arc=.35mm, rightrule=.15mm, opacityback=0, bottomrule=.15mm, toprule=.15mm, colframe=quarto-callout-tip-color-frame, breakable]
 \begin{minipage}[t]{5.5mm}
 \textcolor{quarto-callout-tip-color}{\faLightbulb}
 \end{minipage}%
@@ -898,7 +1044,13 @@ Show that if \(\mathcal{A}\) is both a \(\pi\)-system and a
 
 \textbf{Solution}\vspace{2mm}
 
-Will be added after section. 😛
+\(\Omega \in \mathcal{A}\), so for any \(A\in \mathcal{A}\),
+\(A \subseteq \Omega\). This implies that
+\(\Omega-A = A^c \in \mathcal{A}\). Trivially, we also observe that
+\(\mathcal{A}\neq \emptyset\). Finally, if
+\(A_1, A_2, \cdots \in \mathcal{A}\), then
+\(A_1 \cap A_2 \cap \cdots \subseteq \cdots \subseteq A \in \mathcal{A}\),
+so their union \(\bigcup_{i=1}^\infty A_i \in \mathcal{A}\)
 
 \end{minipage}%
 \end{tcolorbox}
