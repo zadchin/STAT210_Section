@@ -1,0 +1,1114 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.2.329">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>STAT 210 Section Notes - Section 2</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./meme.html" rel="next">
+<link href="./01_Section_1.html" rel="prev">
+<link href="./assets/img/stat210-clear_bg.png" rel="icon" type="image/png">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body class="nav-sidebar floating">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+    <div class="container-fluid d-flex justify-content-between">
+      <h1 class="quarto-secondary-nav-title">Section 2</h1>
+      <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
+        <i class="bi bi-chevron-right"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">STAT 210 Section Notes</a> 
+        <div class="sidebar-tools-main tools-wide">
+    <a href="https://github.com/zadchin/STAT210_Section" title="Source Code" class="sidebar-tool px-1"><i class="bi bi-github"></i></a>
+  <a href="" class="quarto-color-scheme-toggle sidebar-tool" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+  <a href="" class="quarto-reader-toggle sidebar-tool" onclick="window.quartoToggleReader(); return false;" title="Toggle reader mode">
+  <div class="quarto-reader-toggle-btn">
+  <i class="bi"></i>
+  </div>
+</a>
+</div>
+    </div>
+      </div>
+      <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+      </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">Preface</a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./01_Section_1.html" class="sidebar-item-text sidebar-link">Section 1</a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./02_Section_2.html" class="sidebar-item-text sidebar-link active">Section 2</a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./meme.html" class="sidebar-item-text sidebar-link">Meme &amp; Quotes</a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a></li>
+  <li><a href="#reasoning-by-representation" id="toc-reasoning-by-representation" class="nav-link" data-scroll-target="#reasoning-by-representation">Reasoning by Representation</a></li>
+  <li><a href="#derivation-path-of-distribution-representations" id="toc-derivation-path-of-distribution-representations" class="nav-link" data-scroll-target="#derivation-path-of-distribution-representations">Derivation path of distribution representations:</a>
+  <ul class="collapse">
+  <li><a href="#pencil-3.3.2" id="toc-pencil-3.3.2" class="nav-link" data-scroll-target="#pencil-3.3.2">✏️ Pencil 3.3.2</a></li>
+  <li><a href="#pencil-3.4.12" id="toc-pencil-3.4.12" class="nav-link" data-scroll-target="#pencil-3.4.12">✏️ Pencil 3.4.12</a></li>
+  <li><a href="#pencil-3.5.10" id="toc-pencil-3.5.10" class="nav-link" data-scroll-target="#pencil-3.5.10">✏️ Pencil 3.5.10</a></li>
+  <li><a href="#pencil-3.6.16" id="toc-pencil-3.6.16" class="nav-link" data-scroll-target="#pencil-3.6.16">✏️ Pencil 3.6.16</a></li>
+  <li><a href="#pencil-3.7.18" id="toc-pencil-3.7.18" class="nav-link" data-scroll-target="#pencil-3.7.18">✏️ Pencil 3.7.18</a></li>
+  <li><a href="#pencil-3.9.5" id="toc-pencil-3.9.5" class="nav-link" data-scroll-target="#pencil-3.9.5">✏️ Pencil 3.9.5</a></li>
+  <li><a href="#pencil-3.11.2" id="toc-pencil-3.11.2" class="nav-link" data-scroll-target="#pencil-3.11.2">✏️ Pencil 3.11.2</a></li>
+  </ul></li>
+  <li><a href="#poisson-process" id="toc-poisson-process" class="nav-link" data-scroll-target="#poisson-process">Poisson Process</a></li>
+  <li><a href="#section-discussion-questions" id="toc-section-discussion-questions" class="nav-link" data-scroll-target="#section-discussion-questions">Section Discussion Questions:</a>
+  <ul class="collapse">
+  <li><a href="#section-problem-1" id="toc-section-problem-1" class="nav-link" data-scroll-target="#section-problem-1">✏️ Section Problem 1</a></li>
+  <li><a href="#section-problem-2" id="toc-section-problem-2" class="nav-link" data-scroll-target="#section-problem-2">✏️ Section Problem 2</a></li>
+  <li><a href="#section-problem-3" id="toc-section-problem-3" class="nav-link" data-scroll-target="#section-problem-3">✏️ Section Problem 3</a></li>
+  <li><a href="#section-problem-4" id="toc-section-problem-4" class="nav-link" data-scroll-target="#section-problem-4">✏️ Section Problem 4</a></li>
+  <li><a href="#section-problem-5" id="toc-section-problem-5" class="nav-link" data-scroll-target="#section-problem-5">✏️ Section Problem 5</a></li>
+  <li><a href="#section-problem-6" id="toc-section-problem-6" class="nav-link" data-scroll-target="#section-problem-6">✏️ Section Problem 6</a></li>
+  <li><a href="#section-problem-7" id="toc-section-problem-7" class="nav-link" data-scroll-target="#section-problem-7">✏️ Section Problem 7</a></li>
+  <li><a href="#section-problem-8" id="toc-section-problem-8" class="nav-link" data-scroll-target="#section-problem-8">✏️ Section Problem 8</a></li>
+  </ul></li>
+  <li><a href="#next-week" id="toc-next-week" class="nav-link" data-scroll-target="#next-week">Next Week</a></li>
+  </ul>
+<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/zadchin/STAT210_Section/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+$$
+\newcommand{\bs}{\boldsymbol}
+\newcommand{\mb}{\mathbf}
+\newcommand{\E}{\mathbb{E}}
+\newcommand{\V}{\mathbb{V}}
+\newcommand{\var}{\text{var}}
+\newcommand{\cov}{\text{cov}}
+\newcommand{\N}{\mathcal{N}}
+\newcommand{\Bern}{\text{Bern}}
+\newcommand{\Bin}{\text{Bin}}
+\newcommand{\Pois}{\text{Pois}}
+\newcommand{\Unif}{\text{Unif}}
+\newcommand{\se}{\textsf{se}}
+\newcommand{\au}{\underline{a}}
+\newcommand{\du}{\underline{d}}
+\newcommand{\Au}{\underline{A}}
+\newcommand{\Du}{\underline{D}}
+\newcommand{\xu}{\underline{x}}
+\newcommand{\Xu}{\underline{X}}
+\newcommand{\Yu}{\underline{Y}}
+\renewcommand{\P}{\mathbb{P}}
+\newcommand{\U}{\mb{U}}
+\newcommand{\Xbar}{\overline{X}}
+\newcommand{\Ybar}{\overline{Y}}
+\newcommand{\real}{\mathbb{R}}
+\newcommand{\bbL}{\mathbb{L}}
+\renewcommand{\u}{\mb{u}}
+\renewcommand{\v}{\mb{v}}
+\newcommand{\M}{\mb{M}}
+\newcommand{\X}{\mb{X}}
+\newcommand{\Xmat}{\mathbb{X}}
+\newcommand{\bfx}{\mb{x}}
+\newcommand{\y}{\mb{y}}
+\renewcommand{\bfbeta}{\bs{\beta}}
+\newcommand{\e}{\bs{\epsilon}}
+\newcommand{\bhat}{\widehat{\bs{\beta}}}
+\newcommand{\XX}{\Xmat'\Xmat}
+\newcommand{\XXinv}{\left(\XX\right)^{-1}}
+\newcommand{\hatsig}{\hat{\sigma}^2}
+\newcommand{\red}[1]{\textcolor{red!60}{#1}}
+\newcommand{\indianred}[1]{\textcolor{indianred}{#1}}
+\newcommand{\blue}[1]{\textcolor{blue!60}{#1}}
+\newcommand{\dblue}[1]{\textcolor{dodgerblue}{#1}}
+\newcommand{\indep}{\perp\!\!\!\perp}
+\newcommand{\inprob}{\overset{p}{\to}}
+\newcommand{\indist}{\overset{d}{\to}}
+\newcommand{\eframe}{\end{frame}}
+\newcommand{\bframe}{\begin{frame}}
+\newcommand{\R}{\textsf{\textbf{R}}}
+\newcommand{\Rst}{\textsf{\textbf{RStudio}}}
+\newcommand{\rfun}[1]{\texttt{\color{magenta}{#1}}}
+\newcommand{\rpack}[1]{\textbf{#1}}
+\newcommand{\rexpr}[1]{\texttt{\color{magenta}{#1}}}
+\newcommand{\filename}[1]{\texttt{\color{blue}{#1}}}
+\DeclareMathOperator*{\argmax}{arg\,max}
+\DeclareMathOperator*{\argmin}{arg\,min}
+$$
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title d-none d-lg-block">Section 2</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+</header>
+
+<p>Last Updated: 21 Sept 2023</p>
+<p>Date: 22 Sept 2023</p>
+<section id="introduction" class="level2">
+<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
+<p>In this section, we will discuss:</p>
+<ul>
+<li>Reasoning by Representation</li>
+<li>Derivation path of distribution representations</li>
+<li>Poisson Processes</li>
+</ul>
+</section>
+<section id="reasoning-by-representation" class="level2">
+<h2 class="anchored" data-anchor-id="reasoning-by-representation">Reasoning by Representation</h2>
+<p>Some of the important terms and definitons of Chapter 3 is as follow:</p>
+<ol type="1">
+<li><p><strong>Bernoulli</strong>: A random variable <span class="math inline">\(Y\)</span> has the <em>Bernoulli distribution</em> with parameter <span class="math inline">\(p\)</span>, denoted <span class="math inline">\(Y\sim Bern(p)\)</span>, if <span class="math inline">\(P(Y=1)=p\)</span> and <span class="math inline">\(P(Y=0)=1-p\)</span></p></li>
+<li><p><strong>Binomial</strong>: sum of <span class="math inline">\(n\)</span> iid Bernoulli random variables</p></li>
+<li><p><strong>Uniform</strong>: <span class="math inline">\(U = \sum_{i=1}^\infty \frac{B_i}{2^i} \sim\)</span> Unif where <span class="math inline">\(B_i\)</span> iid <span class="math inline">\(Bern(0.5)\)</span>.</p></li>
+<li><p><strong>PIT sampling</strong>: Let <span class="math inline">\(F\)</span> be CDF with quantile function <span class="math inline">\(F^{-1}\)</span>, let <span class="math inline">\(U \sim Unif\)</span> then <span class="math inline">\(F^{-1}(U) \sim F.\)</span></p></li>
+<li><p><strong>PIT pivoting</strong>: Let <span class="math inline">\(F\)</span> be a continuous CDF, and <span class="math inline">\(Y \sim F\)</span>, then <span class="math inline">\(F(Y)\sim Unif.\)</span></p></li>
+<li><p><strong>Exponential</strong>: Let <span class="math inline">\(U\sim\)</span> Unif. Then <span class="math inline">\(X = -\log U \sim \textnormal{Expo}.\)</span></p></li>
+<li><p><strong>Gamma</strong>: For a positive integer <span class="math inline">\(n\)</span>, <span class="math inline">\(G_n= X_1+X_2+\cdots + X_n \sim Gamma(n)\)</span>, where <span class="math inline">\(X_i \overset{i.i.d}{\sim}\)</span> Expo.</p></li>
+<li><p><strong>Laplace</strong> : <span class="math inline">\(L \sim \textnormal{Laplace}\)</span> if <span class="math inline">\(L \sim SX\)</span> where <span class="math inline">\(S\)</span> is random sign and <span class="math inline">\(X\sim Expo.\)</span></p></li>
+<li><p><strong>Weibull</strong>: <span class="math inline">\(W = X^\beta \sim\)</span> Wei(<span class="math inline">\(\beta\)</span>) where <span class="math inline">\(X \sim Expo\)</span> and <span class="math inline">\(\beta &gt;0.\)</span></p></li>
+<li><p><strong>Beta</strong>: <span class="math inline">\(B = \frac{G_a}{G_a+G_b} \sim Beta(a,b)\)</span> where $ G_aGamma(a)$, <span class="math inline">\(G_b\sim Gamma(b)\)</span> and <span class="math inline">\(G_a \perp\!\!\!\!\perp G_b\)</span>; note that <span class="math inline">\(U^{1/\alpha} \sim Beta(\alpha,1).\)</span></p></li>
+<li><p><strong>Beta-Gamma</strong>: Let <span class="math inline">\(G_a \sim Gamma(a) \perp\!\!\!\!\perp G_b\sim Gamma(b)\)</span> , <span class="math inline">\(B = \frac{G_a}{G_a+G_b}\)</span> and <span class="math inline">\(T = G_a + G_b \sim Gamma(a+b).\)</span> Then <span class="math inline">\(T \perp\!\!\!\!\perp B.\)</span></p></li>
+<li><p><strong>Chi-squared</strong>: <span class="math inline">\(G \sim \chi_n^2\)</span> if <span class="math inline">\(G\sim 2Gamma\left(\frac{n}{2}\right).\)</span></p></li>
+<li><p><strong>Normal</strong>: <span class="math inline">\(Z = SX \sim \mathcal{N}(0,1)\)</span> where <span class="math inline">\(S\)</span> is random sign and <span class="math inline">\(X\sim \chi_1.\)</span></p></li>
+<li><p><strong>Box-Muller</strong>: <span class="math inline">\(U_1,U_2 \overset{i.i.d}{\sim}\)</span>Unif. Then <span class="math inline">\(\sqrt{-2\ln U_2}\cos{(2\pi U_1)}, \sqrt{-2\ln U_2}\sin{(2\pi U_1)} \overset{i.i.d}{\sim} \mathcal{N}(0,1)\)</span></p></li>
+<li><p><strong>Student <span class="math inline">\(t\)</span>-distribution</strong>: $ T = t_n$ where <span class="math inline">\(Z \sim N(0,1) \perp\!\!\!\!\perp V_n \sim \chi_n^2.\)</span></p></li>
+<li><p><strong>Cauchy</strong>: <span class="math inline">\(C = \frac{Z_1}{Z_2} \sim \textnormal{Cauchy} \sim t_1\)</span> where <span class="math inline">\(Z_1,Z_2 \sim_{i.i.d} \mathcal{N}(0,1)\)</span>.</p></li>
+</ol>
+<p>For ease of referencing, Eric Zhang have summarized how to move from one distribution to next in a figure, in which we will discuss in the next section.</p>
+</section>
+<section id="derivation-path-of-distribution-representations" class="level2">
+<h2 class="anchored" data-anchor-id="derivation-path-of-distribution-representations">Derivation path of distribution representations:</h2>
+<p>Below is a pitcure showing derivation path of distribution representations, kindly created by <a href="https://www.ekzhang.com/assets/pdf/Stat_210_Notes.pdf">Eric Zhang</a>:</p>
+<p><img src="assets/img/derivation.png" class="img-fluid"></p>
+<section id="pencil-3.3.2" class="level3">
+<h3 class="anchored" data-anchor-id="pencil-3.3.2">✏️ Pencil 3.3.2</h3>
+<p>Show that if <span class="math inline">\(U\sim Unif\)</span>, then <span class="math inline">\(1-U \sim Unif\)</span>. Also, show that <span class="math inline">\(2U-1 \sim SU\)</span> for <span class="math inline">\(S\)</span> a random sign independent of <span class="math inline">\(U\)</span> (so <span class="math inline">\(2U-1\)</span> is symmetric about 0, while <span class="math inline">\(U\)</span> is symmetric about <span class="math inline">\(1/2\)</span>; see Section 3.10 for more information.)</p>
+<div class="callout-tip callout callout-style-simple callout-captioned">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Solution
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Will release after section! :) <!--
+If $U\sim Unif$, $1-U=1+(0-1)U$ is Uniform between 1 and 0 so $1-U \sim Unif$ as well. 
+
+$2U-1 = -1 +(1-(-1))U$ is Uniform between $-1$ and 1, and SU is also Uniform between -1 and 1 by definition, so $2U-1 \sim SU$
+--></p>
+</div>
+</div>
+</div>
+</section>
+<section id="pencil-3.4.12" class="level3">
+<h3 class="anchored" data-anchor-id="pencil-3.4.12">✏️ Pencil 3.4.12</h3>
+<p>Let <span class="math inline">\(Y_1\)</span> and <span class="math inline">\(Y_2\)</span> be r.v.s (possibly deifnied on different <span class="math inline">\(\Omega\)</span>’s) with CDFs <span class="math inline">\(F_1\)</span> and <span class="math inline">\(F_2\)</span> respectively. A commonly used partial order on distributions (and thus on r.v.s), <em>stochastic domination</em> is defined by the relation <span class="math inline">\(Y_1 \preceq Y_2\)</span> iff <span class="math inline">\(F_1(y) \geq F_2(y)\)</span> for all <span class="math inline">\(y \in \mathbb{R}\)</span>.</p>
+<p>Find an example of <span class="math inline">\(Y_1\)</span> and <span class="math inline">\(Y_2\)</span> on the same space with <span class="math inline">\(Y_1 \preceq Y_2\)</span> but <span class="math inline">\(P(Y_1 &gt; Y_2) \geq 0.95\)</span></p>
+<div class="callout-tip callout callout-style-simple callout-captioned">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Solution
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-2" class="callout-2-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Will release after section! :) <!--
+As in the previous clock example, we can let $Y_1$ and $Y_2$ be discrete Uniform on a clock with $\lfloor 1/0.95 \rfloor$ numbers, so that $Y_1 \sim Y_2$ when $Y_1 \preceq Y_2$ . Then, $P(Y_1 > Y_2) \geq P(Y_1 = Y_2+1) \geq 0.95$
+--></p>
+</div>
+</div>
+</div>
+</section>
+<section id="pencil-3.5.10" class="level3">
+<h3 class="anchored" data-anchor-id="pencil-3.5.10">✏️ Pencil 3.5.10</h3>
+<p>Let <span class="math inline">\(W_1 \sim Wei(\beta_1), W_2 \sim Wei(\beta_2)\)</span>. Show that <span class="math inline">\((W_1|W_1 \geq 1) \preceq (W_2|W_2 \geq 1)\)</span> iff <span class="math inline">\(\beta_1 \leq \beta_2\)</span>.</p>
+<div class="callout-tip callout callout-style-simple callout-captioned">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Solution
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-3" class="callout-3-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Will release after section! :) <!--
+ $(W_1|W_1 \geq 1) \preceq (W_2|W_2 \geq 1)$ implies that $F_1(w) \geq F_2(w)$, which by definition implies that $1-exp(-w^{1/\beta_1}) \geq 1-exp(-w^{1/\beta_2})$. This further implies that $exp(-w^{1/\beta_2}) \geq exp(-w^{1/\beta_1})$, which implies that $-w^{1/\beta_2} \geq -w^{1/\beta_1}$, whcih is similar to $w^{1/\beta_1} \geq w^{1/\beta_2}$, which further implies than when $w\geq 1$, $\frac{1}{\beta_1} \geq \frac{1}{\beta_2}$, thus we show that $\beta_1 \leq \beta_2$.
+--></p>
+</div>
+</div>
+</div>
+</section>
+<section id="pencil-3.6.16" class="level3">
+<h3 class="anchored" data-anchor-id="pencil-3.6.16">✏️ Pencil 3.6.16</h3>
+<p>Let <span class="math inline">\(C \sim\)</span> Cauchy and <span class="math inline">\(U \sim\)</span> Unif. Show that <span class="math display">\[tan(2 \pi U) \sim C\]</span></p>
+<div class="callout-tip callout callout-style-simple callout-captioned">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Solution
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-4" class="callout-4-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Will release after section! :) <!--
+C= $Z_1 / Z_2 = W sin (2\pi U) /W cos (2\pi U) = tan(\pi U)
+--></p>
+</div>
+</div>
+</div>
+</section>
+<section id="pencil-3.7.18" class="level3">
+<h3 class="anchored" data-anchor-id="pencil-3.7.18">✏️ Pencil 3.7.18</h3>
+<p>Show that if <span class="math inline">\(C\sim\)</span> Cauchy, <span class="math inline">\(S\)</span> is a random sign, and <span class="math inline">\(B\sim\)</span> Beta(1/2, 1/2), then <span class="math display">\[C+\frac{1}{C} \sim 2S\sqrt{1+C^2}\sim \frac{2S}{\sqrt{B}}\]</span></p>
+<div class="callout-tip callout callout-style-simple callout-captioned">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Solution
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-5" class="callout-5-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Will release after section! :) <!--
+$$
+\begin{align*}
+1+C^2
+&= 1+\frac{Z_1^2}{Z_2^2}\\
+&= \frac{Z_1^1+Z_2^2}{Z_2^2}\\
+&= \frac{\chi_1}{\chi_2}\\
+&= \frac{G_1}{G_{1/2}}\\
+&= \frac{G_{1/2}+G_{1/2}}{G_{1/2}}\\
+&= \frac{1/B}
+\end{align*}
+$$
+
+Thus, $2S\sqrt{1+C^2} \sim 2S/\sqrt{B}$ follows.
+
+Next, I am lazy to type so ask in office hour!
+--></p>
+</div>
+</div>
+</div>
+</section>
+<section id="pencil-3.9.5" class="level3">
+<h3 class="anchored" data-anchor-id="pencil-3.9.5">✏️ Pencil 3.9.5</h3>
+<p>Show that NBin<span class="math inline">\((r,p)\)</span> PMF is <span class="math inline">\(P(X=x)=\)</span> <span class="math inline">\(r+x-1 \choose x\)</span> <span class="math inline">\(p^r q^x\)</span>, where <span class="math inline">\(q\equiv 1-p\)</span>.</p>
+<div class="callout-tip callout callout-style-simple callout-captioned">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Solution
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-6" class="callout-6-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Will release after section! :) <!--
+Under convolution, we get that $P(X=x)=q^x p \times cdots \times q^x p (r)$ times, which can be checked to be $r+x-1 \choose x$ $p^r q^x$
+--></p>
+</div>
+</div>
+</div>
+</section>
+<section id="pencil-3.11.2" class="level3">
+<h3 class="anchored" data-anchor-id="pencil-3.11.2">✏️ Pencil 3.11.2</h3>
+<p>Suppose that <span class="math inline">\(Y_1, \cdots, Y_n \sim Expo\)</span> are i.i.d. Show that the minimum is also Exponentially distributed, with <span class="math inline">\(n\)</span> times the rate: <span class="math inline">\(Y_{(1)} \sim \frac{1}{n} Expo\)</span> (the rate parameter is defined to be reciprocal of the scale parameter)</p>
+<div class="callout-tip callout callout-style-simple callout-captioned">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-7-contents" aria-controls="callout-7" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Solution
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-7" class="callout-7-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Will release after section! :) <!--
+$$
+\begin{align*}
+P(min\{Y_1, \cdots, Y_n\}>y) 
+&=P(Y_1 > y, \cdots, Y_n >y)
+&=P(Y_1 > y) \cdots P(Y_n > y)
+&= e^{-y} \cdots e^{-y}
+&= e^{-ny}
+\end{align*}
+$$
+
+So $P(min\{Y_1, \cdots, Y_n\}>y) = 1-e^{-ny} \sim n^{-1}Expo$
+--></p>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="poisson-process" class="level2">
+<h2 class="anchored" data-anchor-id="poisson-process">Poisson Process</h2>
+<p>From Stat 110 textbook on pg 559:</p>
+<div id="def-poisson-process" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 1 </strong></span>A sequence of arrivals in continuous time is a <em>Poisson process</em> with rate <span class="math inline">\(\lambda\)</span> if the following conditions hold:</p>
+<ol type="1">
+<li><p>The number of arrivals in an interval length <span class="math inline">\(t\)</span> is distributed Pois<span class="math inline">\((\lambda t)\)</span></p></li>
+<li><p>The numbers of arrivals in disjoint time intervals are independent.</p></li>
+</ol>
+</div>
+<p>Recall that in STAT 110, we also learn how to generate 1D Poisson Process, detailed in pg 560 of the textbook:</p>
+<div id="thm-poisson-story" class="theorem">
+<p><span class="theorem-title"><strong>Theorem 1 </strong></span>(Generative Story for 1D Poisson process) To generate <span class="math inline">\(n\)</span> arrivals from a Poisson process on <span class="math inline">\((0, \infty)\)</span> with rate <span class="math inline">\(\lambda\)</span>:</p>
+<ol type="1">
+<li><p>Generate <span class="math inline">\(n\)</span> i.i.d. Expo<span class="math inline">\((\lambda)\)</span> r.v.s <span class="math inline">\(X_1, \cdots, X_n\)</span></p></li>
+<li><p>For <span class="math inline">\(j=1, \cdots, n\)</span>, set <span class="math inline">\(T_j = X_1 + \cdots+X_j\)</span></p></li>
+</ol>
+<p>Then we can take <span class="math inline">\(T_1, \cdots, T_n\)</span> to be the arrival times.</p>
+<p><em>Ref: Story 13.1.2 in STAT 110 textbook</em></p>
+</div>
+<p>Also note that on Theorem 13.2.1 in STAT 110 textbook:</p>
+<div id="thm-conditional-counts" class="theorem">
+<p><span class="theorem-title"><strong>Theorem 2 </strong></span>(Conditional Counts) Let <span class="math inline">\((N(t):t&gt;0)\)</span> be a Poisson process with rate <span class="math inline">\(\lambda\)</span>, and <span class="math inline">\(t_1&lt;t_2\)</span>. The conditional distribution of <span class="math inline">\(N(t_1)\)</span> given <span class="math inline">\(N(t_2) = n\)</span> is <span class="math display">\[N(t_1)|N(t_2)=n \sim Bin \left(n, \frac{t_1}{t_2}\right)\]</span></p>
+</div>
+<p>also note that Propositional 13.2.2 in STAT 110 textbook states that In a Poisson process of rate <span class="math inline">\(\lambda\)</span>, conditional on <span class="math inline">\(N(t) =1\)</span>, the first arrival time <span class="math inline">\(T_1\)</span> has the Unif<span class="math inline">\((0,t)\)</span> distribution.</p>
+<p>Some other important concept about Poisson process from STAT 110 textbook include:</p>
+<div id="thm-conditional-time" class="theorem">
+<p><span class="theorem-title"><strong>Theorem 3 </strong></span>(Conditional times) In a process process of rate<span class="math inline">\(\lambda\)</span>, conditional on <span class="math inline">\(N(t)=n\)</span>, the joint distribution of the arrival times <span class="math inline">\(T_1, \cdots, T_n\)</span> is the same as the joint distribution of the order statistics of <span class="math inline">\(n\)</span> i.i.d Unif<span class="math inline">\((0,t)\)</span> r.v.s.</p>
+<p>Also note that we know that the order statistics of Unif(0,1) r.v..s are Betas, so the conditional distributions of the <span class="math inline">\(T_j\)</span> are <em>scaled</em> Betas. To get Beta Distribution, we can just divide the <span class="math inline">\(T_j\)</span> by <span class="math inline">\(t\)</span> so that their support is <span class="math inline">\((0,1)\)</span>: <span class="math display">\[t^{-1}T_j | N(t) = n \sim Beta(j, n-j+1)\]</span></p>
+</div>
+<div id="thm-poisson-story" class="theorem">
+<p><span class="theorem-title"><strong>Theorem 4 </strong></span>(Generative Story for Poisson process) To generate <span class="math inline">\(n\)</span> arrivals from a Poisson process on <span class="math inline">\((0, t]\)</span> with rate <span class="math inline">\(\lambda\)</span>:</p>
+<ol type="1">
+<li><p>Generate the total number of events in the interval, <span class="math inline">\(N(t) \sim Pois(\lambda t)\)</span></p></li>
+<li><p>Given <span class="math inline">\(N(t) = n\)</span>, generate <span class="math inline">\(n\)</span> i.i.d Unif<span class="math inline">\((0,t)\)</span> r.v.s <span class="math inline">\(U_1, \cdots, U_n\)</span></p></li>
+<li><p>For <span class="math inline">\(j=1, \cdots, n\)</span>, set <span class="math inline">\(T_j = U_{(j)}\)</span></p></li>
+</ol>
+<p><em>Ref: Story 13.2.4 in STAT 110 textbook</em></p>
+</div>
+<div id="thm-superposition" class="theorem">
+<p><span class="theorem-title"><strong>Theorem 5 </strong></span>(Superposition). Let <span class="math inline">\((N_1(t): t&gt;0)\)</span> and <span class="math inline">\((N_2(t): t&gt;0)\)</span> be independent Poisson process with rates <span class="math inline">\(\lambda_1\)</span> and <span class="math inline">\(\lambda_2\)</span> respectively. Then the combined process <span class="math inline">\(N(t) = N_1(t) + N_2(t)\)</span> is a Poisson process with rate <span class="math inline">\(\lambda_1+\lambda_2\)</span>.</p>
+</div>
+<div id="thm-poisson-story-superposition" class="theorem">
+<p><span class="theorem-title"><strong>Theorem 6 </strong></span>(Generative Story for superposition) To generate the superposition of two independent Poisson processes, <span class="math inline">\((N_1(t): t&gt;0)\)</span> with rate<span class="math inline">\(\lambda_1\)</span>, and <span class="math inline">\((N_2(t): t&gt;0)\)</span> with rate <span class="math inline">\(\lambda_2\)</span>:</p>
+<ol type="1">
+<li><p>Generate arrivals from the Poisson process <span class="math inline">\((N_1(t): t&gt;0)\)</span></p></li>
+<li><p>Generate arrivals from the Poisson process <span class="math inline">\((N_2(t): t&gt;0)\)</span></p></li>
+<li><p>Superpose the results of steps 1 and 2.</p></li>
+</ol>
+<p><em>Ref: Story 13.2.7 in STAT 110 textbook</em></p>
+</div>
+<p>There is also another generative story for superposition, as highlighted below:</p>
+<div id="thm-poisson-story-superposition-2" class="theorem">
+<p><span class="theorem-title"><strong>Theorem 7 </strong></span>(Generative Story for superposition, take 2) To generate the superposition of two independent Poisson processes, with rate<span class="math inline">\(\lambda_1\)</span> and <span class="math inline">\(\lambda_2\)</span>:</p>
+<ol type="1">
+<li><p>Generate i.i.d Expo<span class="math inline">\((\lambda_1 +\lambda_2)\)</span> r.v.s <span class="math inline">\(X_1, X_2,\cdots\)</span> and let the <span class="math inline">\(j\)</span>th arrival at time <span class="math inline">\(T_j =X_1+\cdots+X_j\)</span></p></li>
+<li><p>Generate i.i.d r.v.s. <span class="math inline">\(I_1, I_2, \cdots Bern(\lambda_1/(\lambda_1+\lambda_2))\)</span>, independent of <span class="math inline">\(X_1, X_2, \cdots\)</span>. Let the <span class="math inline">\(j\)</span>th arrival be type-1 if <span class="math inline">\(I_j=1\)</span>, and type-2 otherwise.</p></li>
+</ol>
+<p><em>Ref: Story 13.2.9 in STAT 110 textbook</em></p>
+</div>
+<p>Following up from the superposition definition and generative story above, the two most important theorem arive from this are</p>
+<div id="thm-superposition-discrete" class="theorem">
+<p><span class="theorem-title"><strong>Theorem 8 </strong></span>(Projection of superposition into discrete time) Consider the superposition <span class="math inline">\((N(t);t&gt;0)\)</span> of two independent Poisson processes with rate <span class="math inline">\(\lambda_1\)</span> and <span class="math inline">\(\lambda_2\)</span>. For <span class="math inline">\(j=1,2,\cdots\)</span>, let <span class="math inline">\(I_j\)</span> be the indicator of the <span class="math inline">\(j\)</span>th event being from the Poisson process with rate <span class="math inline">\(\lambda_1\)</span>. Then the <span class="math inline">\(I_j\)</span> are i.i.d Bern<span class="math inline">\((\lambda_1/(\lambda_1+\lambda_2))\)</span></p>
+<p><em>Ref: Thm 13.2.11 in STAT 110 textbook</em></p>
+</div>
+<p>Using the result above, we can orive wutg a story that a Gamma mixture of Poissons is Negative Binomial:</p>
+<div id="thm-mixture-poisson" class="theorem">
+<p><span class="theorem-title"><strong>Theorem 9 </strong></span>(Exponential mixture of Poissons is Geometric). Suppose that <span class="math inline">\(X \sim Expo(\lambda)\)</span>, and <span class="math inline">\(Y|X=x \sim Pois(\lambda)\)</span>. Then <span class="math inline">\(Y\sim Geom(\lambda/(\lambda+1))\)</span></p>
+<p><em>Ref: Thm 13.2.12 in STAT 110 textbook</em></p>
+</div>
+<div id="thm-mixture-poisson-negative-binomial" class="theorem">
+<p><span class="theorem-title"><strong>Theorem 10 </strong></span>(Gamma mixture of Poissons is Negative Binomial). Suppose that <span class="math inline">\(X \sim Gamma(r, \lambda)\)</span>, and <span class="math inline">\(Y|X=x \sim Pois(x)\)</span>. Then <span class="math inline">\(Y\sim Nbin(r, \lambda/(\lambda+1))\)</span></p>
+<p><em>Ref: Thm 13.2.12 in STAT 110 textbook</em></p>
+</div>
+</section>
+<section id="section-discussion-questions" class="level2">
+<h2 class="anchored" data-anchor-id="section-discussion-questions">Section Discussion Questions:</h2>
+<section id="section-problem-1" class="level3">
+<h3 class="anchored" data-anchor-id="section-problem-1">✏️ Section Problem 1</h3>
+<p>Let <span class="math inline">\(A, B, C\)</span> be i.i.d. Uniform<span class="math inline">\((0,1)\)</span>, which are coefficients of the following ``random’’ quadratic equation: <span class="math display">\[
+A x^2 + 2B x + C = 0.
+\]</span> What is the probability that the above equation has real root?</p>
+<div class="callout-tip callout callout-style-simple callout-captioned">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-8-contents" aria-controls="callout-8" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Solution
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-8" class="callout-8-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Will release after section! :) <!--
+The event that the random quadratic equation has real roots is equivalent to the event that $4B^2 - 4AC \geq 0$ i.e. $B^2 \geq AC.$
+Therefore the probability that the above equation has real roots is:
+$$
+\begin{eqnarray*}
+    P(B^2 \geq AC) &=& P(2\log B \geq \log A + \log C) \\
+    &=& P(-2Y_2 \geq -Y_1 - Y_3) \quad \text{where\quad$Y_1 = -  \log A, Y_2 = -  \log B, Y_3 =  - \log C$ are iid Expo's.}\\
+    &=& P( 3 Y_2 \leq Y_1 + Y_2 + Y_3    )\\
+    &=& P\left(  \frac{Y_2}{Y_1 + Y_2 + Y_3}  \leq \frac{1}{3}   \right) \\
+    &=& P\left( \text{Beta}(1,2) \leq \frac{1}{3} \right)  \quad \text{since}\quad\frac{Y_2}{Y_1 + Y_2 + Y_3} \sim \text{Beta}(1,2)  \\
+    &=& P\left(  \text{Beta}(2,1) \geq \frac{2}{3}   \right) \quad \text{since}\quad\text{Beta}(1,2) \sim 1 -  \text{Beta}(2,1) \\
+    &=& P\left( U^{1/2} \geq \frac{2}{3}  \right)  \quad \text{since}\quad   \text{Beta}(2,1) \sim U^{1/2} \\
+    &=& P\left( U \geq \frac{4}{9}  \right)  \\
+    &=& \frac{5}{9}.
+\end{eqnarray*}
+$$
+Thus, $2S\sqrt{1+C^2} \sim 2S/\sqrt{B}$ follows.
+--></p>
+</div>
+</div>
+</div>
+</section>
+<section id="section-problem-2" class="level3">
+<h3 class="anchored" data-anchor-id="section-problem-2">✏️ Section Problem 2</h3>
+<p>Assume that <span class="math inline">\(U_1, \cdots, U_n \overset{i.i.d}{\sim}\)</span> Unif, <span class="math inline">\(Z_1, \cdots, Z_{2n} \overset{i.i.d}{\sim} \mathcal{N}(0,1)\)</span>, and the <span class="math inline">\(U\)</span>’s and <span class="math inline">\(Z\)</span>’s are independent. Define <span class="math display">\[
+X = \frac{Z_1^2 + \cdots + Z_m^2}{ Z_1^2 + \cdots + Z_{2n}^2},
+\]</span> where <span class="math inline">\(m&lt; 2n\)</span>. Find the distribution of <span class="math inline">\(Y = (U_1 U_2 \cdots U_n)^{-X}\)</span>.</p>
+<div class="callout-tip callout callout-style-simple callout-captioned">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-9-contents" aria-controls="callout-9" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Solution
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-9" class="callout-9-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Will release after section! :) <!--
+Let us first find the distribution of $\log Y$. Now,
+$
+\log Y = - X \log (U_1 U_2 \cdots U_n) = X \sum_{i=1}^n ( - \log U_i)$. Denoting $G^* = \sum_{i=1}^n ( - \log U_i)$, we have $\log Y = XG^*$. \\
+\underline{Step-1:} We note that $G^*\sim \text{Gamma} (n)$ and $X \ci G^*$ (since $U$'s and $Z$'s are independent).\\
+
+Now, $Z_i^2\sim \chi^2_1 \sim 2 \text{Gamma}(\frac{1}{2})$ for all $i \in \{1,2,...,2n\}$ and $Z_i$'s are independent. Thus, we can represent $X$ as
+$$
+X\sim \frac{G_{\frac{m}{2}}}{ G_{\frac{m}{2}} + G_{n-\frac{m}{2}}} 
+$$
+where $ G_{\frac{m}{2}} \sim \text{Gamma}(\frac{m}{2})$,  $G_{n-\frac{m}{2}}\sim \text{Gamma}(n-\frac{m}{2})$ and $G_{\frac{m}{2}} \ci G_{n-\frac{m}{2}}$ . This gives us the following.\\
+\underline{Step-2:} $X \sim \text{Beta}(\frac{m}{2},n-\frac{m}{2})$
+
+
+Now, we know that $G_{\frac{m}{2}} + G_{n-\frac{m}{2}} \sim \text{Gamma}(n)$ and $(G_{\frac{m}{2}} + G_{n-\frac{m}{2}}) \ci \frac{G_{\frac{m}{2}}}{ G_{\frac{m}{2}} + G_{n-\frac{m}{2}}}$. This observation along with Step-1 and Step-2 implies 
+$$(X,G^*) \sim  \Big(\frac{G_{\frac{m}{2}}}{ G_{\frac{m}{2}} + G_{n-\frac{m}{2}}},G_{\frac{m}{2}} + G_{n-\frac{m}{2}} \Big)$$
+%Since $G_n \sim \text{Gamma}(m/2) + \text{Gamma}(n-m/2)$ and the representation preserves the independence between $X$ and $G_n$, we have
+Taking the product of the components of the random vectors on both sides, we get\\
+\underline{Step-3:} $\log Y \sim G_{m/2}$\\
+
+
+Step-3 implies, $Y \sim e^{G_{m/2}}$. Therefore, the distribution of $Y$ is same as the distribution of the exponential of a Gamma$(\frac{m}{2})$ random variable. 
+--></p>
+</div>
+</div>
+</div>
+</section>
+<section id="section-problem-3" class="level3">
+<h3 class="anchored" data-anchor-id="section-problem-3">✏️ Section Problem 3</h3>
+<p>Let <span class="math inline">\(Z_1, Z_2 \overset{i.i.d}{\sim} \mathcal{N}(0,1)\)</span>. Furthermore, let <span class="math inline">\(X_1,X_2 \overset{i.i.d}{\sim} \chi_1^2\)</span>. Show that <span class="math display">\[
+Z_1Z_2\sim \frac{1}{2} (X_1 - X_2).
+\]</span></p>
+<div class="callout-tip callout callout-style-simple callout-captioned">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-10-contents" aria-controls="callout-10" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Solution
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-10" class="callout-10-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Will release after section! :) <!--
+Firstly, $(X_1,X_2) \sim (Z^2_1,Z^2_2)$. Therefore, we have
+$$
+\frac{1}{2} (X_1 - X_2) \sim \frac{1}{2}(Z_1^2 - Z_2^2) = \frac{1}{2} (Z_1 + Z_2) (Z_1 - Z_2) .
+$$
+Since $Z_1 + Z_2\sim N(0, 2)$, $Z_1 - Z_2\sim N(0, 2)$ and $(Z_1 + Z_2)\ci (Z_1 - Z_2)$ (this is one of the many special properties of the Normal distribution), we can jointly represent them as $(Z_1 + Z_2, Z_1-Z_2) \sim (\sqrt{2} Z_1, \sqrt{2} Z_2)$. Consequently, we have
+$$
+\frac{1}{2} (X_1 - X_2) \sim \frac{1}{2} \sqrt{2} Z_1 \sqrt{2} Z_2  = Z_1 Z_2.
+$$
+--></p>
+</div>
+</div>
+</div>
+</section>
+<section id="section-problem-4" class="level3">
+<h3 class="anchored" data-anchor-id="section-problem-4">✏️ Section Problem 4</h3>
+<ol type="a">
+<li><p>Let <span class="math inline">\(X_1, X_2 \overset{i.i.d}{\sim} Expo\)</span>. Show that <span class="math inline">\(X_1 - X_2 \sim \operatorname{Laplace}\)</span>.</p></li>
+<li><p>Let <span class="math inline">\(Z_1,Z_2,Z_3,Z_4 \overset{i.i.d}{\sim} \mathcal{N}(0,1)\)</span>, and <span class="math inline">\(L \sim\)</span> Laplace. Show that <span class="math display">\[
+Z_1 Z_2 - Z_3 Z_4 \sim L.
+\]</span></p></li>
+</ol>
+<div class="callout-tip callout callout-style-simple callout-captioned">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-11-contents" aria-controls="callout-11" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Solution
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-11" class="callout-11-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Will release after section! :) <!--
+Define $X_1,X_2,X_3,X_4$ as \textit{i.i.d} $\chi^2_1$ random variables. This gives us the representation $(X_1,X_2,X_3,X_4) \sim (Z^2_1, Z^2_2, Z^2_3, Z^2_4)$
+. Now, using problem 2.1 of this section, we have
+$$
+Z_1 Z_2 - Z_3 Z_4 \sim \frac{1}{2} \left\{   (X_1 - X_2)  - (X_3 - X_4)    \right\} 
+\sim \frac{1}{2} (Z_1^2 + Z_3^2) - \frac{1}{2} (Z_2^2 + Z_4^2).
+$$
+By additivity of the $\chi^2$ distribution, we have $$\frac{Z_1^2 + Z_3^2}{2} \sim \frac{\chi_2^2}{2}  \sim \text{Gamma}(1) \sim \text{Expo}\sim Y_1 
+;\hspace{0.2cm} \frac{Z_2^2 + Z_4^2}{2} \sim \frac{\chi_2^2}{2}\sim \text{Gamma}(1) \sim \text{Expo} \sim Y_2$$
+, where $Y_1$ and $Y_2$ are independent Expo random variables. Part $(i)$ of Exercise $3.7$ implies
+$$
+Z_1 Z_2 - Z_3 Z_4 \sim  Y_1 - Y_2 \sim L.
+$$
+--></p>
+</div>
+</div>
+</div>
+</section>
+<section id="section-problem-5" class="level3">
+<h3 class="anchored" data-anchor-id="section-problem-5">✏️ Section Problem 5</h3>
+<p>Let <span class="math inline">\(Y\)</span> have a Cauchy distribution centered at <span class="math inline">\(\theta\)</span>, i.e.&nbsp;the density of <span class="math inline">\(Y\)</span> is <span class="math display">\[f(y|\theta) = \frac{1}{\pi} \frac{1}{1+(y-\theta)^2} ,\hspace{0.2cm} y \in \mathbb{R} \]</span> Suppose that <span class="math inline">\(\theta\)</span> has a Cauchy distribution (centered at <span class="math inline">\(0\)</span>). Find the marginal distribution of <span class="math inline">\(Y\)</span>.</p>
+<div class="callout-tip callout callout-style-simple callout-captioned">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-12-contents" aria-controls="callout-12" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Solution
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-12" class="callout-12-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Will release after section! :) <!--
+Let $\mathbb{R}_+ = (0,\infty)$ be the positive half of the real line.
+\begin{eqnarray}
+P(W>a+b|W>a) &=& P(X^\beta>a+b|X^\beta>a) \quad\text{where $X\sim \text{Expo}$}\nonumber\\
+&=& P(X>(a+b)^{1/\beta}|X>a^{1/\beta}) \quad\text{since $x\mapsto x^{1/\beta}$ is strictly increasing on $\mathbb{R}_+$ for $\beta>0$}\nonumber\\
+&=& P(X>(a+b)^{1/\beta}-a^{1/\beta})\quad\text{by memoryless property of Expo}\nonumber\\
+&>& P(X>b^{1/\beta}) \quad\text{since $1/\beta\in (0,1)$ and $(a+b)^r < a^r + b^r$, $\forall a>0$, $b>0$, $r\in (0,1)$} \nonumber\\
+&=& P(W > b) \quad\text{since $x\mapsto x^{\beta}$ is increasing on $\mathbb{R}_+$ for $\beta>0$}\nonumber
+\end{eqnarray}
+
+*Note:* Proof of $(a+b)^r < a^r + b^r$ for all $a>0$,$b>0$, $r\in (0,1)$.\\
+
+We have:
+$$
+\begin{eqnarray}
+(a+b)^r = (a+b)(a+b)^{r-1} = a(a+b)^{r-1} + b(a+b)^{r-1}\nonumber
+\end{eqnarray}
+$$
+By assumption, $r-1<0$ so that $x\mapsto x^{r-1}$ is decreasing on $\mathbb{R}_+$. Therefore, $(a+b)^{r-1} < a^{r-1}$ and $(a+b)^{r-1} < b^{r-1}$.
+
+Thus,
+$$
+\begin{eqnarray}
+(a+b)^r < a^r + b^r\nonumber
+\end{eqnarray}
+$$
+for all $a>0$,$b>0$, $r\in (0,1)$.
+--></p>
+</div>
+</div>
+</div>
+</section>
+<section id="section-problem-6" class="level3">
+<h3 class="anchored" data-anchor-id="section-problem-6">✏️ Section Problem 6</h3>
+<p>The people of Lineland live on the unit interval <span class="math inline">\([0,1]\)</span>. They love coffee. Currently, they have 2 Starbucks stores, at the points 0 and 1. Starbucks decides to open new stores in Lineland, according to a Poisson process of rate <span class="math inline">\(\lambda\)</span> on the interval <span class="math inline">\([0,1]\)</span>. Let <span class="math inline">\(N\)</span> be the number of new Starbucks stores in Lineland (i.e., not including the existing stores at the points 0 and 1 ). Let <span class="math inline">\(W\)</span> be the furthest distance that a Lineland citizen could ever have to walk to get to the nearest Starbucks, after the new stores have opened. Find <span class="math inline">\(E(W \mid N=n)\)</span>, where <span class="math inline">\(n\)</span> is a positive integer. Simplify fully, expressing your answer in terms of a harmonic number <span class="math inline">\(H_m\)</span> for some <span class="math inline">\(m\)</span>, where <span class="math display">\[
+H_m=\sum_{k=1}^m \frac{1}{k} .
+\]</span> Given <span class="math inline">\(N=n\)</span>, the locations of the <span class="math inline">\(n\)</span> new stores are i.i.d. Unif. The furthest distance someone could have to walk is half of the largest spacing between two stores. By the same method in class used on the cutting a rope problem (using the joint representations for the order statistics of Uniforms and of Exponentials), the expected largest spacing between two stores is <span class="math inline">\(\frac{1}{n+1} H_{n+1}\)</span>. Thus, <span class="math display">\[
+E(W \mid N=n)=\frac{1}{2(n+1)} H_{n+1} .
+\]</span></p>
+<div class="callout-tip callout callout-style-simple callout-captioned">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-13-contents" aria-controls="callout-13" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Solution
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-13" class="callout-13-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Will release after section! :)</p>
+</div>
+</div>
+</div>
+</section>
+<section id="section-problem-7" class="level3">
+<h3 class="anchored" data-anchor-id="section-problem-7">✏️ Section Problem 7</h3>
+<p>Consider the following simple model for the growth of a population of bacteria. Any individual bacterium splits into two bacteria at some random time, independently. It takes an Exponential amount of time for any specific bacterium to split (measured from the time of birth of that bacterium, and choosing the units in which time is measured so that the Expo has mean 1). So each individual bacterium has its own Expo waiting time until it splits, and these Expo r.v.s are i.i.d.</p>
+<p>At time 0 , there is one bacterium. Let <span class="math inline">\(T_n\)</span> be the time (on a timeline) of the <span class="math inline">\(n\)</span>th splitting occurrence. So <span class="math inline">\(T_1&lt;T_2&lt;\ldots\)</span>, with <span class="math inline">\(T_1\)</span> the time at which the bacterium that was present at time 0 splits, <span class="math inline">\(T_2\)</span> the time of the next splitting occurrence, etc.</p>
+<ol type="a">
+<li><p>Find the CDF of <span class="math inline">\(T_n\)</span>. Note that the first interarrival time is Expo, the second interarrival is <span class="math inline">\(\frac{1}{2}\)</span> Expo, and in general the <span class="math inline">\(j\)</span> th interarrival time is <span class="math inline">\(\frac{1}{j}\)</span> Expo. By the Rényi representation, <span class="math inline">\(T_n\)</span> is distributed as the maximum of <span class="math inline">\(n\)</span> i.i.d. Expos. Therefore, <span class="math display">\[
+P\left(T_n \leq t\right)=\left(1-e^{-t}\right)^n .
+\]</span></p></li>
+<li><p>Find the distribution of the number of bacteria present at time <span class="math inline">\(t\)</span>, for any <span class="math inline">\(t&gt;0\)</span>. Let <span class="math inline">\(S_t\)</span> be the number of splittings up until time <span class="math inline">\(t\)</span>. By the count-time duality, <span class="math display">\[
+P\left(S_t=n\right)=P\left(S_t&lt;n+1\right)-P\left(S_t&lt;n\right)=P\left(T_{n+1}&gt;t\right)-P\left(T_n&gt;t\right) .
+\]</span> By the result of (a), <span class="math display">\[
+P\left(S_t=n\right)=\left(1-e^{-t}\right)^n-\left(1-e^{-t}\right)^{n+1}=e^{-t}\left(1-e^{-t}\right)^n .
+\]</span> Interestingly, this shows that <span class="math display">\[
+S_t \sim \operatorname{Geom}\left(e^{-t}\right) .
+\]</span> The number of bacteria at time <span class="math inline">\(t\)</span> is <span class="math display">\[
+S_t+1 \sim \mathrm{FS}\left(e^{-t}\right)
+\]</span></p></li>
+</ol>
+<div class="callout-tip callout callout-style-simple callout-captioned">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-14-contents" aria-controls="callout-14" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Solution
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-14" class="callout-14-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Will release after section! :)</p>
+</div>
+</div>
+</div>
+</section>
+<section id="section-problem-8" class="level3">
+<h3 class="anchored" data-anchor-id="section-problem-8">✏️ Section Problem 8</h3>
+<p>In a certain town, each married couple has a Poisson <span class="math inline">\((\lambda)\)</span> number of children, with <span class="math inline">\(\lambda\)</span> unknown. An anthropologist picks a sample of couples and observes <span class="math inline">\(Y_1, \ldots, Y_n\)</span>, where <span class="math inline">\(Y_j\)</span> is the number of children of the <span class="math inline">\(j\)</span> th couple and it is assumed that <span class="math inline">\(Y_j \sim \operatorname{Pois}(\lambda)\)</span> independently. The anthropologist wishes to estimate the probability of a couple being childless, i.e., <span class="math inline">\(p_0 \equiv P\left(Y_j=0\right)\)</span>. Let <span class="math inline">\(\bar{Y}\)</span> be the sample mean of <span class="math inline">\(Y_1, \ldots, Y_n\)</span>.</p>
+<ol type="a">
+<li><p>Find <span class="math inline">\(E\left(Y_1 \mid \bar{Y}\right)\)</span> and the conditional distribution of <span class="math inline">\(Y_1\)</span> given <span class="math inline">\(\bar{Y}\)</span>. Using the result for the conditional distribution of a Poisson given the sum of itself and another Poisson, <span class="math display">\[
+Y_1\left|\bar{Y} \sim Y_1\right|\left(n \bar{Y}=Y_1+\cdots+Y_n\right) \sim \operatorname{Bin}(n \bar{Y}, 1 / n) .
+\]</span> So <span class="math inline">\(E\left(Y_1 \mid \bar{Y}\right)=\bar{Y}\)</span>, which is true in general (not just for the Poisson), by symmetry and linearity as in Example 9.3.6 in the Stat 110 book.</p></li>
+<li><p>The anthropologist proposes estimating <span class="math inline">\(p_0\)</span> using the proportion of couples that are childless, i.e., the number of childless couples divided by <span class="math inline">\(n\)</span>. Call this estimator <span class="math inline">\(T\)</span>. It will be shown later in Stat <span class="math inline">\(210 / 211\)</span> that a better estimator can be obtained by conditioning on <span class="math inline">\(\bar{Y}\)</span>. Find a simple expression for <span class="math inline">\(E(T \mid \bar{Y})\)</span> (this new estimator should be computable without knowing <span class="math inline">\(\lambda\)</span> ).</p></li>
+</ol>
+<p>Let <span class="math inline">\(T=\left(I_1+\cdots+I_n\right) / n\)</span>, where <span class="math inline">\(I_j\)</span> is the indicator for the <span class="math inline">\(j\)</span> th couple being childless. By linearity and symmetry, <span class="math display">\[
+\begin{align*}
+\mathrm{E}(T \mid \bar{Y})
+&amp;=\frac{1}{n} \mathrm{E}\left(I_1+\cdots+I_n \mid \bar{Y}\right) \\
+&amp;=\mathrm{E}\left(I_1 \mid \bar{Y}\right)=P\left(Y_1=0 \mid \bar{Y}\right)
+\\
+&amp;=\left(1-\frac{1}{n}\right)^{n \bar{Y}}
+\end{align*}
+\]</span></p>
+<div class="callout-tip callout callout-style-simple callout-captioned">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-15-contents" aria-controls="callout-15" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Solution
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-15" class="callout-15-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Will release after section! :)</p>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="next-week" class="level2">
+<h2 class="anchored" data-anchor-id="next-week">Next Week</h2>
+<p>Next week, we will discuss:</p>
+<ul>
+<li>On Order Statistics</li>
+<li>Meaning on Mean</li>
+</ul>
+<p>Feel free to upload the pencil problem you wish to be discussed next week <a href="https://forms.gle/RBmMNYJp4u3qD5W79">here</a>.</p>
+<p>Note that a verified email address is needed in the GForm so we don’t get scammy input! :)</p>
+<p><span class="math inline">\(\,\)</span></p>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const disableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'prefetch';
+    }
+  }
+  const enableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'stylesheet';
+    }
+  }
+  const manageTransitions = (selector, allowTransitions) => {
+    const els = window.document.querySelectorAll(selector);
+    for (let i=0; i < els.length; i++) {
+      const el = els[i];
+      if (allowTransitions) {
+        el.classList.remove('notransition');
+      } else {
+        el.classList.add('notransition');
+      }
+    }
+  }
+  const toggleColorMode = (alternate) => {
+    // Switch the stylesheets
+    const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+    manageTransitions('#quarto-margin-sidebar .nav-link', false);
+    if (alternate) {
+      enableStylesheet(alternateStylesheets);
+      for (const sheetNode of alternateStylesheets) {
+        if (sheetNode.id === "quarto-bootstrap") {
+          toggleBodyColorMode(sheetNode);
+        }
+      }
+    } else {
+      disableStylesheet(alternateStylesheets);
+      toggleBodyColorPrimary();
+    }
+    manageTransitions('#quarto-margin-sidebar .nav-link', true);
+    // Switch the toggles
+    const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+    for (let i=0; i < toggles.length; i++) {
+      const toggle = toggles[i];
+      if (toggle) {
+        if (alternate) {
+          toggle.classList.add("alternate");     
+        } else {
+          toggle.classList.remove("alternate");
+        }
+      }
+    }
+    // Hack to workaround the fact that safari doesn't
+    // properly recolor the scrollbar when toggling (#1455)
+    if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+      manageTransitions("body", false);
+      window.scrollTo(0, 1);
+      setTimeout(() => {
+        window.scrollTo(0, 0);
+        manageTransitions("body", true);
+      }, 40);  
+    }
+  }
+  const isFileUrl = () => { 
+    return window.location.protocol === 'file:';
+  }
+  const hasAlternateSentinel = () => {  
+    let styleSentinel = getColorSchemeSentinel();
+    if (styleSentinel !== null) {
+      return styleSentinel === "alternate";
+    } else {
+      return false;
+    }
+  }
+  const setStyleSentinel = (alternate) => {
+    const value = alternate ? "alternate" : "default";
+    if (!isFileUrl()) {
+      window.localStorage.setItem("quarto-color-scheme", value);
+    } else {
+      localAlternateSentinel = value;
+    }
+  }
+  const getColorSchemeSentinel = () => {
+    if (!isFileUrl()) {
+      const storageValue = window.localStorage.getItem("quarto-color-scheme");
+      return storageValue != null ? storageValue : localAlternateSentinel;
+    } else {
+      return localAlternateSentinel;
+    }
+  }
+  let localAlternateSentinel = 'default';
+  // Dark / light mode switch
+  window.quartoToggleColorScheme = () => {
+    // Read the current dark / light value 
+    let toAlternate = !hasAlternateSentinel();
+    toggleColorMode(toAlternate);
+    setStyleSentinel(toAlternate);
+  };
+  // Ensure there is a toggle, if there isn't float one in the top right
+  if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+    const a = window.document.createElement('a');
+    a.classList.add('top-right');
+    a.classList.add('quarto-color-scheme-toggle');
+    a.href = "";
+    a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+    const i = window.document.createElement("i");
+    i.classList.add('bi');
+    a.appendChild(i);
+    window.document.body.appendChild(a);
+  }
+  // Switch to dark mode if need be
+  if (hasAlternateSentinel()) {
+    toggleColorMode(true);
+  } else {
+    toggleColorMode(false);
+  }
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./01_Section_1.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Section 1</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./meme.html" class="pagination-link">
+        <span class="nav-page-text">Meme &amp; Quotes</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+</body></html>

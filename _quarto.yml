@@ -17,6 +17,7 @@ book:
   chapters:
     - index.qmd
     - 01_Section_1.qmd
+    - 02_Section_2.qmd
     - meme.qmd
 
 bibliography: references.bib
