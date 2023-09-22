@@ -45,7 +45,7 @@ Some of the important terms and definitons of Chapter 3 is as follow:
 
 14. **Box-Muller**: $U_1,U_2 \overset{i.i.d}{\sim}$Unif. Then $\sqrt{-2\ln U_2}\cos{(2\pi U_1)}, \sqrt{-2\ln U_2}\sin{(2\pi U_1)} \overset{i.i.d}{\sim} \mathcal{N}(0,1)$
 
-15. **Student $t$-distribution**: $ T = \frac{Z}{\sqrt{V_n/n}} \sim t_n$ where $Z \sim N(0,1) \perp\!\!\!\!\perp V_n \sim \chi_n^2.$
+15. **Student $t$-distribution**: $T = \frac{Z}{\sqrt{V_n/n}} \sim t_n$ where $Z \sim N(0,1) \perp\!\!\!\!\perp V_n \sim \chi_n^2.$
 
 16. **Cauchy**: $C = \frac{Z_1}{Z_2} \sim \textnormal{Cauchy} \sim t_1$ where $Z_1,Z_2 \sim_{i.i.d} \mathcal{N}(0,1)$.
 
@@ -111,15 +111,15 @@ Show that if $C\sim$ Cauchy, $S$ is a random sign, and $B\sim$ Beta(1/2, 1/2), t
 ::: {.callout-tip collapse="true" appearance="simple"}
 
 ## Solution 
+
 $$
 \begin{align*}
-1+C^2
-&= 1+\frac{Z_1^2}{Z_2^2}\\
-&= \frac{Z_1^1+Z_2^2}{Z_2^2}\\
-&= \frac{\chi_1}{\chi_2}\\
-&= \frac{G_1}{G_{1/2}}\\
+1+C^2 &= 1+\frac{Z_1^2}{Z_2^2} \\ 
+&= \frac{Z_1^1+Z_2^2}{Z_2^2} \\
+&= \frac{\chi_1}{\chi_2} \\ 
+&= \frac{G_1}{G_{1/2}} \\
 &= \frac{G_{1/2}+G_{1/2}}{G_{1/2}}\\
-&= \frac{1/B}
+&= \frac{1}{B}
 \end{align*}
 $$
 
@@ -147,11 +147,11 @@ Suppose that $Y_1, \cdots, Y_n \sim Expo$ are i.i.d. Show that the minimum is al
 ## Solution 
 $$
 \begin{align*}
-P(min\{Y_1, \cdots, Y_n\}>y) 
-&=P(Y_1 > y, \cdots, Y_n >y)
-&=P(Y_1 > y) \cdots P(Y_n > y)
-&= e^{-y} \cdots e^{-y}
-&= e^{-ny}
+P(min\{Y_1, \cdots, Y_n\}>y)  
+&=P(Y_1 > y, \cdots, Y_n >y) \\
+&=P(Y_1 > y) \cdots P(Y_n > y) \\
+&= e^{-y} \cdots e^{-y} \\
+&= e^{-ny} 
 \end{align*}
 $$
 
@@ -316,17 +316,17 @@ Find the distribution of $Y = (U_1 U_2 \cdots U_n)^{-X}$.
 Let us first find the distribution of $\log Y$. Now,
 $
 \log Y = - X \log (U_1 U_2 \cdots U_n) = X \sum_{i=1}^n ( - \log U_i)$. Denoting $G^* = \sum_{i=1}^n ( - \log U_i)$, we have $\log Y = XG^*$. \\
-\underline{Step-1:} We note that $G^*\sim \text{Gamma} (n)$ and $X \ci G^*$ (since $U$'s and $Z$'s are independent).\\
+\underline{Step-1:} We note that $G^*\sim \text{Gamma} (n)$ and $X \perp\!\!\!\!\perp G^*$ (since $U$'s and $Z$'s are independent).\\
 
 Now, $Z_i^2\sim \chi^2_1 \sim 2 \text{Gamma}(\frac{1}{2})$ for all $i \in \{1,2,...,2n\}$ and $Z_i$'s are independent. Thus, we can represent $X$ as
 $$
 X\sim \frac{G_{\frac{m}{2}}}{ G_{\frac{m}{2}} + G_{n-\frac{m}{2}}} 
 $$
-where $ G_{\frac{m}{2}} \sim \text{Gamma}(\frac{m}{2})$,  $G_{n-\frac{m}{2}}\sim \text{Gamma}(n-\frac{m}{2})$ and $G_{\frac{m}{2}} \ci G_{n-\frac{m}{2}}$ . This gives us the following.\\
+where $ G_{\frac{m}{2}} \sim \text{Gamma}(\frac{m}{2})$,  $G_{n-\frac{m}{2}}\sim \text{Gamma}(n-\frac{m}{2})$ and $G_{\frac{m}{2}} \perp\!\!\!\!\perp G_{n-\frac{m}{2}}$ . This gives us the following.\\
 \underline{Step-2:} $X \sim \text{Beta}(\frac{m}{2},n-\frac{m}{2})$
 
 
-Now, we know that $G_{\frac{m}{2}} + G_{n-\frac{m}{2}} \sim \text{Gamma}(n)$ and $(G_{\frac{m}{2}} + G_{n-\frac{m}{2}}) \ci \frac{G_{\frac{m}{2}}}{ G_{\frac{m}{2}} + G_{n-\frac{m}{2}}}$. This observation along with Step-1 and Step-2 implies 
+Now, we know that $G_{\frac{m}{2}} + G_{n-\frac{m}{2}} \sim \text{Gamma}(n)$ and $(G_{\frac{m}{2}} + G_{n-\frac{m}{2}}) \perp\!\!\!\!\perp \frac{G_{\frac{m}{2}}}{ G_{\frac{m}{2}} + G_{n-\frac{m}{2}}}$. This observation along with Step-1 and Step-2 implies 
 $$(X,G^*) \sim  \Big(\frac{G_{\frac{m}{2}}}{ G_{\frac{m}{2}} + G_{n-\frac{m}{2}}},G_{\frac{m}{2}} + G_{n-\frac{m}{2}} \Big)$$
 %Since $G_n \sim \text{Gamma}(m/2) + \text{Gamma}(n-m/2)$ and the representation preserves the independence between $X$ and $G_n$, we have
 Taking the product of the components of the random vectors on both sides, we get\\
@@ -352,7 +352,7 @@ Firstly, $(X_1,X_2) \sim (Z^2_1,Z^2_2)$. Therefore, we have
 $$
 \frac{1}{2} (X_1 - X_2) \sim \frac{1}{2}(Z_1^2 - Z_2^2) = \frac{1}{2} (Z_1 + Z_2) (Z_1 - Z_2) .
 $$
-Since $Z_1 + Z_2\sim N(0, 2)$, $Z_1 - Z_2\sim N(0, 2)$ and $(Z_1 + Z_2)\ci (Z_1 - Z_2)$ (this is one of the many special properties of the Normal distribution), we can jointly represent them as $(Z_1 + Z_2, Z_1-Z_2) \sim (\sqrt{2} Z_1, \sqrt{2} Z_2)$. Consequently, we have
+Since $Z_1 + Z_2\sim N(0, 2)$, $Z_1 - Z_2\sim N(0, 2)$ and $(Z_1 + Z_2)\perp\!\!\!\!\perp (Z_1 - Z_2)$ (this is one of the many special properties of the Normal distribution), we can jointly represent them as $(Z_1 + Z_2, Z_1-Z_2) \sim (\sqrt{2} Z_1, \sqrt{2} Z_2)$. Consequently, we have
 $$
 \frac{1}{2} (X_1 - X_2) \sim \frac{1}{2} \sqrt{2} Z_1 \sqrt{2} Z_2  = Z_1 Z_2.
 $$
@@ -396,13 +396,13 @@ Suppose that $\theta$ has a Cauchy distribution (centered at $0$). Find the marg
 ## Solution 
 Let $\mathbb{R}_+ = (0,\infty)$ be the positive half of the real line.
 $$
-\begin{eqnarray}
+\begin{eqnarray*}
 P(W>a+b|W>a) &=& P(X^\beta>a+b|X^\beta>a) \quad\text{where $X\sim \text{Expo}$}\nonumber\\
 &=& P(X>(a+b)^{1/\beta}|X>a^{1/\beta}) \quad\text{since $x\mapsto x^{1/\beta}$ is strictly increasing on $\mathbb{R}_+$ for $\beta>0$}\nonumber\\
 &=& P(X>(a+b)^{1/\beta}-a^{1/\beta})\quad\text{by memoryless property of Expo}\nonumber\\
 &>& P(X>b^{1/\beta}) \quad\text{since $1/\beta\in (0,1)$ and $(a+b)^r < a^r + b^r$, $\forall a>0$, $b>0$, $r\in (0,1)$} \nonumber\\
 &=& P(W > b) \quad\text{since $x\mapsto x^{\beta}$ is increasing on $\mathbb{R}_+$ for $\beta>0$}\nonumber
-\end{eqnarray}
+\end{eqnarray*}
 $$
 
 *Note:* Proof of $(a+b)^r < a^r + b^r$ for all $a>0$,$b>0$, $r\in (0,1)$.\\
