@@ -465,7 +465,7 @@ $$
 
 ::: {.callout-tip collapse="true" appearance="simple"}
 ## Solution 
-Will release after section! :) 
+Will release after section! :) PP
 <!--
 Given $N=n$, the locations of the $n$ new stores are i.i.d. Unif. The furthest distance someone could have to walk is half of the largest spacing between two stores. By
 the same method in class used on the cutting a rope problem (using the joint representations for the order statistics of Uniforms and of Exponentials), the expected largest spacing between two stores is $\frac{1}{n+1} H_{n+1}$. Thus,
@@ -483,7 +483,6 @@ Consider the following simple model for the growth of a population of bacteria. 
 At time 0 , there is one bacterium. Let $T_n$ be the time (on a timeline) of the $n$th splitting occurrence. So $T_1<T_2<\ldots$, with $T_1$ the time at which the bacterium that was present at time 0 splits, $T_2$ the time of the next splitting occurrence, etc.
 
 (a) Find the CDF of $T_n$.
-
 
 (b) Find the distribution of the number of bacteria present at time $t$, for any $t>0$. 
 
