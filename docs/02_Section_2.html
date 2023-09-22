@@ -149,7 +149,7 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#pencil-3.11.2" id="toc-pencil-3.11.2" class="nav-link" data-scroll-target="#pencil-3.11.2">✏️ Pencil 3.11.2</a></li>
   </ul></li>
   <li><a href="#poisson-process" id="toc-poisson-process" class="nav-link" data-scroll-target="#poisson-process">Poisson Process</a></li>
-  <li><a href="#section-discussion-questions" id="toc-section-discussion-questions" class="nav-link" data-scroll-target="#section-discussion-questions">Section Discussion Questions:</a>
+  <li><a href="#section-discussion-questions" id="toc-section-discussion-questions" class="nav-link" data-scroll-target="#section-discussion-questions">Section Discussion Questions</a>
   <ul class="collapse">
   <li><a href="#section-problem-1" id="toc-section-problem-1" class="nav-link" data-scroll-target="#section-problem-1">✏️ Section Problem 1</a></li>
   <li><a href="#section-problem-2" id="toc-section-problem-2" class="nav-link" data-scroll-target="#section-problem-2">✏️ Section Problem 2</a></li>
@@ -537,7 +537,7 @@ So $P(min\{Y_1, \cdots, Y_n\}>y) = 1-e^{-ny} \sim n^{-1}Expo$
 </div>
 </section>
 <section id="section-discussion-questions" class="level2">
-<h2 class="anchored" data-anchor-id="section-discussion-questions">Section Discussion Questions:</h2>
+<h2 class="anchored" data-anchor-id="section-discussion-questions">Section Discussion Questions</h2>
 <section id="section-problem-1" class="level3">
 <h3 class="anchored" data-anchor-id="section-problem-1">✏️ Section Problem 1</h3>
 <p>Let <span class="math inline">\(A, B, C\)</span> be i.i.d. Uniform<span class="math inline">\((0,1)\)</span>, which are coefficients of the following ``random’’ quadratic equation: <span class="math display">\[
@@ -741,8 +741,6 @@ for all $a>0$,$b>0$, $r\in (0,1)$.
 <h3 class="anchored" data-anchor-id="section-problem-6">✏️ Section Problem 6</h3>
 <p>The people of Lineland live on the unit interval <span class="math inline">\([0,1]\)</span>. They love coffee. Currently, they have 2 Starbucks stores, at the points 0 and 1. Starbucks decides to open new stores in Lineland, according to a Poisson process of rate <span class="math inline">\(\lambda\)</span> on the interval <span class="math inline">\([0,1]\)</span>. Let <span class="math inline">\(N\)</span> be the number of new Starbucks stores in Lineland (i.e., not including the existing stores at the points 0 and 1 ). Let <span class="math inline">\(W\)</span> be the furthest distance that a Lineland citizen could ever have to walk to get to the nearest Starbucks, after the new stores have opened. Find <span class="math inline">\(E(W \mid N=n)\)</span>, where <span class="math inline">\(n\)</span> is a positive integer. Simplify fully, expressing your answer in terms of a harmonic number <span class="math inline">\(H_m\)</span> for some <span class="math inline">\(m\)</span>, where <span class="math display">\[
 H_m=\sum_{k=1}^m \frac{1}{k} .
-\]</span> Given <span class="math inline">\(N=n\)</span>, the locations of the <span class="math inline">\(n\)</span> new stores are i.i.d. Unif. The furthest distance someone could have to walk is half of the largest spacing between two stores. By the same method in class used on the cutting a rope problem (using the joint representations for the order statistics of Uniforms and of Exponentials), the expected largest spacing between two stores is <span class="math inline">\(\frac{1}{n+1} H_{n+1}\)</span>. Thus, <span class="math display">\[
-E(W \mid N=n)=\frac{1}{2(n+1)} H_{n+1} .
 \]</span></p>
 <div class="callout-tip callout callout-style-simple callout-captioned">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-13-contents" aria-controls="callout-13" aria-expanded="false" aria-label="Toggle callout">
@@ -756,7 +754,13 @@ Solution
 </div>
 <div id="callout-13" class="callout-13-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>Will release after section! :)</p>
+<p>Will release after section! :) <!--
+Given $N=n$, the locations of the $n$ new stores are i.i.d. Unif. The furthest distance someone could have to walk is half of the largest spacing between two stores. By
+the same method in class used on the cutting a rope problem (using the joint representations for the order statistics of Uniforms and of Exponentials), the expected largest spacing between two stores is $\frac{1}{n+1} H_{n+1}$. Thus,
+$$
+E(W \mid N=n)=\frac{1}{2(n+1)} H_{n+1} .
+$$
+--></p>
 </div>
 </div>
 </div>
@@ -766,18 +770,8 @@ Solution
 <p>Consider the following simple model for the growth of a population of bacteria. Any individual bacterium splits into two bacteria at some random time, independently. It takes an Exponential amount of time for any specific bacterium to split (measured from the time of birth of that bacterium, and choosing the units in which time is measured so that the Expo has mean 1). So each individual bacterium has its own Expo waiting time until it splits, and these Expo r.v.s are i.i.d.</p>
 <p>At time 0 , there is one bacterium. Let <span class="math inline">\(T_n\)</span> be the time (on a timeline) of the <span class="math inline">\(n\)</span>th splitting occurrence. So <span class="math inline">\(T_1&lt;T_2&lt;\ldots\)</span>, with <span class="math inline">\(T_1\)</span> the time at which the bacterium that was present at time 0 splits, <span class="math inline">\(T_2\)</span> the time of the next splitting occurrence, etc.</p>
 <ol type="a">
-<li><p>Find the CDF of <span class="math inline">\(T_n\)</span>. Note that the first interarrival time is Expo, the second interarrival is <span class="math inline">\(\frac{1}{2}\)</span> Expo, and in general the <span class="math inline">\(j\)</span> th interarrival time is <span class="math inline">\(\frac{1}{j}\)</span> Expo. By the Rényi representation, <span class="math inline">\(T_n\)</span> is distributed as the maximum of <span class="math inline">\(n\)</span> i.i.d. Expos. Therefore, <span class="math display">\[
-P\left(T_n \leq t\right)=\left(1-e^{-t}\right)^n .
-\]</span></p></li>
-<li><p>Find the distribution of the number of bacteria present at time <span class="math inline">\(t\)</span>, for any <span class="math inline">\(t&gt;0\)</span>. Let <span class="math inline">\(S_t\)</span> be the number of splittings up until time <span class="math inline">\(t\)</span>. By the count-time duality, <span class="math display">\[
-P\left(S_t=n\right)=P\left(S_t&lt;n+1\right)-P\left(S_t&lt;n\right)=P\left(T_{n+1}&gt;t\right)-P\left(T_n&gt;t\right) .
-\]</span> By the result of (a), <span class="math display">\[
-P\left(S_t=n\right)=\left(1-e^{-t}\right)^n-\left(1-e^{-t}\right)^{n+1}=e^{-t}\left(1-e^{-t}\right)^n .
-\]</span> Interestingly, this shows that <span class="math display">\[
-S_t \sim \operatorname{Geom}\left(e^{-t}\right) .
-\]</span> The number of bacteria at time <span class="math inline">\(t\)</span> is <span class="math display">\[
-S_t+1 \sim \mathrm{FS}\left(e^{-t}\right)
-\]</span></p></li>
+<li><p>Find the CDF of <span class="math inline">\(T_n\)</span>.</p></li>
+<li><p>Find the distribution of the number of bacteria present at time <span class="math inline">\(t\)</span>, for any <span class="math inline">\(t&gt;0\)</span>.</p></li>
 </ol>
 <div class="callout-tip callout callout-style-simple callout-captioned">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-14-contents" aria-controls="callout-14" aria-expanded="false" aria-label="Toggle callout">
@@ -791,7 +785,29 @@ Solution
 </div>
 <div id="callout-14" class="callout-14-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>Will release after section! :)</p>
+<p>Will release after section! :) <!--
+(a) Note that the first interarrival time is Expo, the second interarrival is $\frac{1}{2}$ Expo, and in general the $j$ th interarrival time is $\frac{1}{j}$ Expo. By the Rényi representation, $T_n$ is distributed as the maximum of $n$ i.i.d. Expos. Therefore,
+$$
+P\left(T_n \leq t\right)=\left(1-e^{-t}\right)^n .
+$$
+
+(b) Let $S_t$ be the number of splittings up until time $t$. By the count-time duality,
+$$
+P\left(S_t=n\right)=P\left(S_t<n+1\right)-P\left(S_t<n\right)=P\left(T_{n+1}>t\right)-P\left(T_n>t\right) .
+$$
+By the result of (a),
+$$
+P\left(S_t=n\right)=\left(1-e^{-t}\right)^n-\left(1-e^{-t}\right)^{n+1}=e^{-t}\left(1-e^{-t}\right)^n .
+$$
+Interestingly, this shows that
+$$
+S_t \sim \operatorname{Geom}\left(e^{-t}\right) .
+$$
+The number of bacteria at time $t$ is
+$$
+S_t+1 \sim \mathrm{FS}\left(e^{-t}\right)
+$$
+--></p>
 </div>
 </div>
 </div>
@@ -800,20 +816,9 @@ Solution
 <h3 class="anchored" data-anchor-id="section-problem-8">✏️ Section Problem 8</h3>
 <p>In a certain town, each married couple has a Poisson <span class="math inline">\((\lambda)\)</span> number of children, with <span class="math inline">\(\lambda\)</span> unknown. An anthropologist picks a sample of couples and observes <span class="math inline">\(Y_1, \ldots, Y_n\)</span>, where <span class="math inline">\(Y_j\)</span> is the number of children of the <span class="math inline">\(j\)</span> th couple and it is assumed that <span class="math inline">\(Y_j \sim \operatorname{Pois}(\lambda)\)</span> independently. The anthropologist wishes to estimate the probability of a couple being childless, i.e., <span class="math inline">\(p_0 \equiv P\left(Y_j=0\right)\)</span>. Let <span class="math inline">\(\bar{Y}\)</span> be the sample mean of <span class="math inline">\(Y_1, \ldots, Y_n\)</span>.</p>
 <ol type="a">
-<li><p>Find <span class="math inline">\(E\left(Y_1 \mid \bar{Y}\right)\)</span> and the conditional distribution of <span class="math inline">\(Y_1\)</span> given <span class="math inline">\(\bar{Y}\)</span>. Using the result for the conditional distribution of a Poisson given the sum of itself and another Poisson, <span class="math display">\[
-Y_1\left|\bar{Y} \sim Y_1\right|\left(n \bar{Y}=Y_1+\cdots+Y_n\right) \sim \operatorname{Bin}(n \bar{Y}, 1 / n) .
-\]</span> So <span class="math inline">\(E\left(Y_1 \mid \bar{Y}\right)=\bar{Y}\)</span>, which is true in general (not just for the Poisson), by symmetry and linearity as in Example 9.3.6 in the Stat 110 book.</p></li>
+<li><p>Find <span class="math inline">\(E\left(Y_1 \mid \bar{Y}\right)\)</span> and the conditional distribution of <span class="math inline">\(Y_1\)</span> given <span class="math inline">\(\bar{Y}\)</span>.</p></li>
 <li><p>The anthropologist proposes estimating <span class="math inline">\(p_0\)</span> using the proportion of couples that are childless, i.e., the number of childless couples divided by <span class="math inline">\(n\)</span>. Call this estimator <span class="math inline">\(T\)</span>. It will be shown later in Stat <span class="math inline">\(210 / 211\)</span> that a better estimator can be obtained by conditioning on <span class="math inline">\(\bar{Y}\)</span>. Find a simple expression for <span class="math inline">\(E(T \mid \bar{Y})\)</span> (this new estimator should be computable without knowing <span class="math inline">\(\lambda\)</span> ).</p></li>
 </ol>
-<p>Let <span class="math inline">\(T=\left(I_1+\cdots+I_n\right) / n\)</span>, where <span class="math inline">\(I_j\)</span> is the indicator for the <span class="math inline">\(j\)</span> th couple being childless. By linearity and symmetry, <span class="math display">\[
-\begin{align*}
-\mathrm{E}(T \mid \bar{Y})
-&amp;=\frac{1}{n} \mathrm{E}\left(I_1+\cdots+I_n \mid \bar{Y}\right) \\
-&amp;=\mathrm{E}\left(I_1 \mid \bar{Y}\right)=P\left(Y_1=0 \mid \bar{Y}\right)
-\\
-&amp;=\left(1-\frac{1}{n}\right)^{n \bar{Y}}
-\end{align*}
-\]</span></p>
 <div class="callout-tip callout callout-style-simple callout-captioned">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-15-contents" aria-controls="callout-15" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
@@ -826,7 +831,24 @@ Solution
 </div>
 <div id="callout-15" class="callout-15-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>Will release after section! :)</p>
+<p>Will release after section! :) <!--
+(a) Using the result for the conditional distribution of a Poisson given the sum of itself and another Poisson,
+$$
+Y_1\left|\bar{Y} \sim Y_1\right|\left(n \bar{Y}=Y_1+\cdots+Y_n\right) \sim \operatorname{Bin}(n \bar{Y}, 1 / n) .
+$$
+So $E\left(Y_1 \mid \bar{Y}\right)=\bar{Y}$, which is true in general (not just for the Poisson), by symmetry and linearity as in Example 9.3.6 in the Stat 110 book.
+
+(b) Let $T=\left(I_1+\cdots+I_n\right) / n$, where $I_j$ is the indicator for the $j$ th couple being childless. By linearity and symmetry,
+$$
+\begin{align*}
+\mathrm{E}(T \mid \bar{Y})
+&=\frac{1}{n} \mathrm{E}\left(I_1+\cdots+I_n \mid \bar{Y}\right) \\ 
+&=\mathrm{E}\left(I_1 \mid \bar{Y}\right)=P\left(Y_1=0 \mid \bar{Y}\right)
+\\
+&=\left(1-\frac{1}{n}\right)^{n \bar{Y}}
+\end{align*}
+$$
+--></p>
 </div>
 </div>
 </div>
