@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022) (preloaded format=xelatex 2022.9.17)  22 SEP 2023 12:36
+This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022) (preloaded format=xelatex 2022.9.17)  22 SEP 2023 12:43
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1345,6 +1345,15 @@ ext;!
 Missing character: There is no ️ (U+FE0F) in font [lmsans10-bold]:mapping=tex-t
 ext;!
 
+Package amsmath Warning: Foreign command \atopwithdelims;
+(amsmath)                \frac or \genfrac should be used instead
+(amsmath)                 on input line 381.
+
+Missing character: There is no ✏ (U+270F) in font [lmsans10-bold]:mapping=tex-t
+ext;!
+Missing character: There is no ️ (U+FE0F) in font [lmsans10-bold]:mapping=tex-t
+ext;!
+
 ! Package amsmath Error: Erroneous nesting of equation structures;
 (amsmath)                trying to recover with `aligned'.
 
@@ -1352,13 +1361,13 @@ See the amsmath package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.401 \end{align*}
+l.422 \end{align*}
                    
 Here is how much of TeX's memory you used:
- 38929 strings out of 476179
- 806523 string characters out of 5809544
+ 38934 strings out of 476179
+ 806615 string characters out of 5809544
  1411534 words of memory out of 5000000
- 59107 multiletter control sequences out of 15000+600000
+ 59112 multiletter control sequences out of 15000+600000
  472802 words of font info for 61 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  108i,8n,121p,10607b,914s stack positions out of 10000i,1000n,20000p,200000b,200000s
