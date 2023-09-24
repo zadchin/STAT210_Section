@@ -141,7 +141,6 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#derivation-path-of-distribution-representations" id="toc-derivation-path-of-distribution-representations" class="nav-link" data-scroll-target="#derivation-path-of-distribution-representations">Derivation path of distribution representations:</a>
   <ul class="collapse">
   <li><a href="#pencil-3.3.2" id="toc-pencil-3.3.2" class="nav-link" data-scroll-target="#pencil-3.3.2">✏️ Pencil 3.3.2</a></li>
-  <li><a href="#pencil-3.4.12" id="toc-pencil-3.4.12" class="nav-link" data-scroll-target="#pencil-3.4.12">✏️ Pencil 3.4.12</a></li>
   <li><a href="#pencil-3.5.10" id="toc-pencil-3.5.10" class="nav-link" data-scroll-target="#pencil-3.5.10">✏️ Pencil 3.5.10</a></li>
   <li><a href="#pencil-3.6.16" id="toc-pencil-3.6.16" class="nav-link" data-scroll-target="#pencil-3.6.16">✏️ Pencil 3.6.16</a></li>
   <li><a href="#pencil-3.7.18" id="toc-pencil-3.7.18" class="nav-link" data-scroll-target="#pencil-3.7.18">✏️ Pencil 3.7.18</a></li>
@@ -300,10 +299,9 @@ Solution
 </div>
 </div>
 </section>
-<section id="pencil-3.4.12" class="level3">
-<h3 class="anchored" data-anchor-id="pencil-3.4.12">✏️ Pencil 3.4.12</h3>
-<p>Let <span class="math inline">\(Y_1\)</span> and <span class="math inline">\(Y_2\)</span> be r.v.s (possibly deifnied on different <span class="math inline">\(\Omega\)</span>’s) with CDFs <span class="math inline">\(F_1\)</span> and <span class="math inline">\(F_2\)</span> respectively. A commonly used partial order on distributions (and thus on r.v.s), <em>stochastic domination</em> is defined by the relation <span class="math inline">\(Y_1 \preceq Y_2\)</span> iff <span class="math inline">\(F_1(y) \geq F_2(y)\)</span> for all <span class="math inline">\(y \in \mathbb{R}\)</span>.</p>
-<p>Find an example of <span class="math inline">\(Y_1\)</span> and <span class="math inline">\(Y_2\)</span> on the same space with <span class="math inline">\(Y_1 \preceq Y_2\)</span> but <span class="math inline">\(P(Y_1 &gt; Y_2) \geq 0.95\)</span></p>
+<section id="pencil-3.5.10" class="level3">
+<h3 class="anchored" data-anchor-id="pencil-3.5.10">✏️ Pencil 3.5.10</h3>
+<p>Let <span class="math inline">\(W_1 \sim Wei(\beta_1), W_2 \sim Wei(\beta_2)\)</span>. Show that <span class="math inline">\((W_1|W_1 \geq 1) \preceq (W_2|W_2 \geq 1)\)</span> iff <span class="math inline">\(\beta_1 \leq \beta_2\)</span>.</p>
 <div class="callout-tip callout callout-style-simple callout-captioned">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
@@ -316,14 +314,14 @@ Solution
 </div>
 <div id="callout-2" class="callout-2-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>As in the previous clock example, we can let <span class="math inline">\(Y_1\)</span> and <span class="math inline">\(Y_2\)</span> be discrete Uniform on a clock with <span class="math inline">\(\lfloor 1/0.95 \rfloor\)</span> numbers, so that <span class="math inline">\(Y_1 \sim Y_2\)</span> when <span class="math inline">\(Y_1 \preceq Y_2\)</span> . Then, <span class="math inline">\(P(Y_1 &gt; Y_2) \geq P(Y_1 = Y_2+1) \geq 0.95\)</span></p>
+<p><span class="math inline">\((W_1|W_1 \geq 1) \preceq (W_2|W_2 \geq 1)\)</span> implies that <span class="math inline">\(F_1(w) \geq F_2(w)\)</span>, which by definition implies that <span class="math inline">\(1-exp(-w^{1/\beta_1}) \geq 1-exp(-w^{1/\beta_2})\)</span>. This further implies that <span class="math inline">\(exp(-w^{1/\beta_2}) \geq exp(-w^{1/\beta_1})\)</span>, which implies that <span class="math inline">\(-w^{1/\beta_2} \geq -w^{1/\beta_1}\)</span>, whcih is similar to <span class="math inline">\(w^{1/\beta_1} \geq w^{1/\beta_2}\)</span>, which further implies than when <span class="math inline">\(w\geq 1\)</span>, <span class="math inline">\(\frac{1}{\beta_1} \geq \frac{1}{\beta_2}\)</span>, thus we show that <span class="math inline">\(\beta_1 \leq \beta_2\)</span>.</p>
 </div>
 </div>
 </div>
 </section>
-<section id="pencil-3.5.10" class="level3">
-<h3 class="anchored" data-anchor-id="pencil-3.5.10">✏️ Pencil 3.5.10</h3>
-<p>Let <span class="math inline">\(W_1 \sim Wei(\beta_1), W_2 \sim Wei(\beta_2)\)</span>. Show that <span class="math inline">\((W_1|W_1 \geq 1) \preceq (W_2|W_2 \geq 1)\)</span> iff <span class="math inline">\(\beta_1 \leq \beta_2\)</span>.</p>
+<section id="pencil-3.6.16" class="level3">
+<h3 class="anchored" data-anchor-id="pencil-3.6.16">✏️ Pencil 3.6.16</h3>
+<p>Let <span class="math inline">\(C \sim\)</span> Cauchy and <span class="math inline">\(U \sim\)</span> Unif. Show that <span class="math display">\[tan(2 \pi U) \sim C\]</span></p>
 <div class="callout-tip callout callout-style-simple callout-captioned">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
@@ -336,14 +334,14 @@ Solution
 </div>
 <div id="callout-3" class="callout-3-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p><span class="math inline">\((W_1|W_1 \geq 1) \preceq (W_2|W_2 \geq 1)\)</span> implies that <span class="math inline">\(F_1(w) \geq F_2(w)\)</span>, which by definition implies that <span class="math inline">\(1-exp(-w^{1/\beta_1}) \geq 1-exp(-w^{1/\beta_2})\)</span>. This further implies that <span class="math inline">\(exp(-w^{1/\beta_2}) \geq exp(-w^{1/\beta_1})\)</span>, which implies that <span class="math inline">\(-w^{1/\beta_2} \geq -w^{1/\beta_1}\)</span>, whcih is similar to <span class="math inline">\(w^{1/\beta_1} \geq w^{1/\beta_2}\)</span>, which further implies than when <span class="math inline">\(w\geq 1\)</span>, <span class="math inline">\(\frac{1}{\beta_1} \geq \frac{1}{\beta_2}\)</span>, thus we show that <span class="math inline">\(\beta_1 \leq \beta_2\)</span>.</p>
+<p>C= <span class="math inline">\(Z_1 / Z_2 = W sin (2\pi U) /W cos (2\pi U) = tan(\pi U)\)</span></p>
 </div>
 </div>
 </div>
 </section>
-<section id="pencil-3.6.16" class="level3">
-<h3 class="anchored" data-anchor-id="pencil-3.6.16">✏️ Pencil 3.6.16</h3>
-<p>Let <span class="math inline">\(C \sim\)</span> Cauchy and <span class="math inline">\(U \sim\)</span> Unif. Show that <span class="math display">\[tan(2 \pi U) \sim C\]</span></p>
+<section id="pencil-3.7.18" class="level3">
+<h3 class="anchored" data-anchor-id="pencil-3.7.18">✏️ Pencil 3.7.18</h3>
+<p>Show that if <span class="math inline">\(C\sim\)</span> Cauchy, <span class="math inline">\(S\)</span> is a random sign, and <span class="math inline">\(B\sim\)</span> Beta(1/2, 1/2), then <span class="math display">\[C+\frac{1}{C} \sim 2S\sqrt{1+C^2}\sim \frac{2S}{\sqrt{B}}\]</span></p>
 <div class="callout-tip callout callout-style-simple callout-captioned">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
@@ -355,26 +353,6 @@ Solution
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
 <div id="callout-4" class="callout-4-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<p>C= <span class="math inline">\(Z_1 / Z_2 = W sin (2\pi U) /W cos (2\pi U) = tan(\pi U)\)</span></p>
-</div>
-</div>
-</div>
-</section>
-<section id="pencil-3.7.18" class="level3">
-<h3 class="anchored" data-anchor-id="pencil-3.7.18">✏️ Pencil 3.7.18</h3>
-<p>Show that if <span class="math inline">\(C\sim\)</span> Cauchy, <span class="math inline">\(S\)</span> is a random sign, and <span class="math inline">\(B\sim\)</span> Beta(1/2, 1/2), then <span class="math display">\[C+\frac{1}{C} \sim 2S\sqrt{1+C^2}\sim \frac{2S}{\sqrt{B}}\]</span></p>
-<div class="callout-tip callout callout-style-simple callout-captioned">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-caption-container flex-fill">
-Solution
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-5" class="callout-5-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p><span class="math display">\[
 \begin{align*}
@@ -395,7 +373,7 @@ Solution
 <h3 class="anchored" data-anchor-id="pencil-3.9.5">✏️ Pencil 3.9.5</h3>
 <p>Show that NBin<span class="math inline">\((r,p)\)</span> PMF is <span class="math inline">\(P(X=x)=\)</span> <span class="math inline">\(r+x-1 \choose x\)</span> <span class="math inline">\(p^r q^x\)</span>, where <span class="math inline">\(q\equiv 1-p\)</span>.</p>
 <div class="callout-tip callout callout-style-simple callout-captioned">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -404,7 +382,7 @@ Solution
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-6" class="callout-6-contents callout-collapse collapse">
+<div id="callout-5" class="callout-5-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>Under convolution, we get that <span class="math inline">\(P(X=x)=q^x p \times cdots \times q^x p (r)\)</span> times, which can be checked to be <span class="math inline">\(r+x-1 \choose x\)</span> <span class="math inline">\(p^r q^x\)</span></p>
 </div>
@@ -415,7 +393,7 @@ Solution
 <h3 class="anchored" data-anchor-id="pencil-3.11.2">✏️ Pencil 3.11.2</h3>
 <p>Suppose that <span class="math inline">\(Y_1, \cdots, Y_n \sim Expo\)</span> are i.i.d. Show that the minimum is also Exponentially distributed, with <span class="math inline">\(n\)</span> times the rate: <span class="math inline">\(Y_{(1)} \sim \frac{1}{n} Expo\)</span> (the rate parameter is defined to be reciprocal of the scale parameter)</p>
 <div class="callout-tip callout callout-style-simple callout-captioned">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-7-contents" aria-controls="callout-7" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -424,7 +402,7 @@ Solution
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-7" class="callout-7-contents callout-collapse collapse">
+<div id="callout-6" class="callout-6-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p><span class="math display">\[
 \begin{align*}
@@ -524,7 +502,7 @@ P(min\{Y_1, \cdots, Y_n\}&gt;y)
 A x^2 + 2B x + C = 0.
 \]</span> What is the probability that the above equation has real root?</p>
 <div class="callout-tip callout callout-style-simple callout-captioned">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-8-contents" aria-controls="callout-8" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-7-contents" aria-controls="callout-7" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -533,7 +511,7 @@ Solution
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-8" class="callout-8-contents callout-collapse collapse">
+<div id="callout-7" class="callout-7-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>The event that the random quadratic equation has real roots is equivalent to the event that <span class="math inline">\(4B^2 - 4AC \geq 0\)</span> i.e.&nbsp;<span class="math inline">\(B^2 \geq AC.\)</span> Therefore the probability that the above equation has real roots is: <span class="math display">\[
 \begin{eqnarray*}
@@ -558,7 +536,7 @@ Solution
 X = \frac{Z_1^2 + \cdots + Z_m^2}{ Z_1^2 + \cdots + Z_{2n}^2},
 \]</span> where <span class="math inline">\(m&lt; 2n\)</span>. Find the distribution of <span class="math inline">\(Y = (U_1 U_2 \cdots U_n)^{-X}\)</span>.</p>
 <div class="callout-tip callout callout-style-simple callout-captioned">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-9-contents" aria-controls="callout-9" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-8-contents" aria-controls="callout-8" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -567,7 +545,7 @@ Solution
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-9" class="callout-9-contents callout-collapse collapse">
+<div id="callout-8" class="callout-8-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>Let us first find the distribution of <span class="math inline">\(\log Y\)</span>. Now, $ Y = - X (U_1 U_2 U_n) = X _{i=1}^n ( - U_i)$. Denoting <span class="math inline">\(G^* = \sum_{i=1}^n ( - \log U_i)\)</span>, we have <span class="math inline">\(\log Y = XG^*\)</span>. \ We note that <span class="math inline">\(G^*\sim \text{Gamma} (n)\)</span> and <span class="math inline">\(X \perp\!\!\!\!\perp G^*\)</span> (since <span class="math inline">\(U\)</span>’s and <span class="math inline">\(Z\)</span>’s are independent).\</p>
 <p>Now, <span class="math inline">\(Z_i^2\sim \chi^2_1 \sim 2 \text{Gamma}(\frac{1}{2})\)</span> for all <span class="math inline">\(i \in \{1,2,...,2n\}\)</span> and <span class="math inline">\(Z_i\)</span>’s are independent. Thus, we can represent <span class="math inline">\(X\)</span> as <span class="math display">\[
@@ -585,7 +563,7 @@ X\sim \frac{G_{\frac{m}{2}}}{ G_{\frac{m}{2}} + G_{n-\frac{m}{2}}}
 Z_1Z_2\sim \frac{1}{2} (X_1 - X_2).
 \]</span></p>
 <div class="callout-tip callout callout-style-simple callout-captioned">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-10-contents" aria-controls="callout-10" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-9-contents" aria-controls="callout-9" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -594,7 +572,7 @@ Solution
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-10" class="callout-10-contents callout-collapse collapse">
+<div id="callout-9" class="callout-9-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>Firstly, <span class="math inline">\((X_1,X_2) \sim (Z^2_1,Z^2_2)\)</span>. Therefore, we have <span class="math display">\[
 \frac{1}{2} (X_1 - X_2) \sim \frac{1}{2}(Z_1^2 - Z_2^2) = \frac{1}{2} (Z_1 + Z_2) (Z_1 - Z_2) .
@@ -614,7 +592,7 @@ Z_1 Z_2 - Z_3 Z_4 \sim L.
 \]</span></p></li>
 </ol>
 <div class="callout-tip callout callout-style-simple callout-captioned">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-11-contents" aria-controls="callout-11" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-10-contents" aria-controls="callout-10" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -623,7 +601,7 @@ Solution
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-11" class="callout-11-contents callout-collapse collapse">
+<div id="callout-10" class="callout-10-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>Define <span class="math inline">\(X_1,X_2,X_3,X_4\)</span> as <span class="math inline">\(\chi^2_1\)</span> random variables. This gives us the representation <span class="math inline">\((X_1,X_2,X_3,X_4) \sim (Z^2_1, Z^2_2, Z^2_3, Z^2_4)\)</span> . Now, using problem 2.1 of this section, we have <span class="math display">\[
 Z_1 Z_2 - Z_3 Z_4 \sim \frac{1}{2} \left\{   (X_1 - X_2)  - (X_3 - X_4)    \right\}
@@ -640,7 +618,7 @@ Z_1 Z_2 - Z_3 Z_4 \sim  Y_1 - Y_2 \sim L.
 <h3 class="anchored" data-anchor-id="section-problem-5">✏️ Section Problem 5</h3>
 <p>Let <span class="math inline">\(Y\)</span> have a Cauchy distribution centered at <span class="math inline">\(\theta\)</span>, i.e.&nbsp;the density of <span class="math inline">\(Y\)</span> is <span class="math display">\[f(y|\theta) = \frac{1}{\pi} \frac{1}{1+(y-\theta)^2} ,\hspace{0.2cm} y \in \mathbb{R} \]</span> Suppose that <span class="math inline">\(\theta\)</span> has a Cauchy distribution (centered at <span class="math inline">\(0\)</span>). Find the marginal distribution of <span class="math inline">\(Y\)</span>.</p>
 <div class="callout-tip callout callout-style-simple callout-captioned">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-12-contents" aria-controls="callout-12" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-11-contents" aria-controls="callout-11" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -649,7 +627,7 @@ Solution
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-12" class="callout-12-contents callout-collapse collapse">
+<div id="callout-11" class="callout-11-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>Let <span class="math inline">\(\mathbb{R}_+ = (0,\infty)\)</span> be the positive half of the real line. <span class="math display">\[
 \begin{eqnarray*}
@@ -681,7 +659,7 @@ P(W&gt;a+b|W&gt;a) &amp;=&amp; P(X^\beta&gt;a+b|X^\beta&gt;a) \quad\text{where $
 H_m=\sum_{k=1}^m \frac{1}{k} .
 \]</span></p>
 <div class="callout-tip callout callout-style-simple callout-captioned">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-13-contents" aria-controls="callout-13" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-12-contents" aria-controls="callout-12" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -690,7 +668,7 @@ Solution
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-13" class="callout-13-contents callout-collapse collapse">
+<div id="callout-12" class="callout-12-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>Given <span class="math inline">\(N=n\)</span>, the locations of the <span class="math inline">\(n\)</span> new stores are i.i.d. Unif. The furthest distance someone could have to walk is half of the largest spacing between two stores. By the same method in class used on the cutting a rope problem (using the joint representations for the order statistics of Uniforms and of Exponentials), the expected largest spacing between two stores is <span class="math inline">\(\frac{1}{n+1} H_{n+1}\)</span>. Thus, <span class="math display">\[
 E(W \mid N=n)=\frac{1}{2(n+1)} H_{n+1} .
@@ -708,7 +686,7 @@ E(W \mid N=n)=\frac{1}{2(n+1)} H_{n+1} .
 <li><p>Find the distribution of the number of bacteria present at time <span class="math inline">\(t\)</span>, for any <span class="math inline">\(t&gt;0\)</span>.</p></li>
 </ol>
 <div class="callout-tip callout callout-style-simple callout-captioned">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-14-contents" aria-controls="callout-14" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-13-contents" aria-controls="callout-13" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -717,7 +695,7 @@ Solution
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-14" class="callout-14-contents callout-collapse collapse">
+<div id="callout-13" class="callout-13-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <ol type="a">
 <li><p>Note that the first interarrival time is Expo, the second interarrival is <span class="math inline">\(\frac{1}{2}\)</span> Expo, and in general the <span class="math inline">\(j\)</span> th interarrival time is <span class="math inline">\(\frac{1}{j}\)</span> Expo. By the Rényi representation, <span class="math inline">\(T_n\)</span> is distributed as the maximum of <span class="math inline">\(n\)</span> i.i.d. Expos. Therefore, <span class="math display">\[
@@ -745,7 +723,7 @@ S_t+1 \sim \mathrm{FS}\left(e^{-t}\right)
 <li><p>The anthropologist proposes estimating <span class="math inline">\(p_0\)</span> using the proportion of couples that are childless, i.e., the number of childless couples divided by <span class="math inline">\(n\)</span>. Call this estimator <span class="math inline">\(T\)</span>. It will be shown later in Stat <span class="math inline">\(210 / 211\)</span> that a better estimator can be obtained by conditioning on <span class="math inline">\(\bar{Y}\)</span>. Find a simple expression for <span class="math inline">\(E(T \mid \bar{Y})\)</span> (this new estimator should be computable without knowing <span class="math inline">\(\lambda\)</span> ).</p></li>
 </ol>
 <div class="callout-tip callout callout-style-simple callout-captioned">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-15-contents" aria-controls="callout-15" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-14-contents" aria-controls="callout-14" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -754,7 +732,7 @@ Solution
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-15" class="callout-15-contents callout-collapse collapse">
+<div id="callout-14" class="callout-14-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <ol type="a">
 <li><p>Using the result for the conditional distribution of a Poisson given the sum of itself and another Poisson, <span class="math display">\[

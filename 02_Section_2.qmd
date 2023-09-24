@@ -70,17 +70,6 @@ $2U-1 = -1 +(1-(-1))U$ is Uniform between $-1$ and 1, and SU is also Uniform bet
 
 :::
 
-### ✏️ Pencil 3.4.12
-
-Let $Y_1$ and $Y_2$ be r.v.s (possibly deifnied on different $\Omega$'s) with CDFs $F_1$ and $F_2$ respectively. A commonly used partial order on distributions (and thus on r.v.s), *stochastic domination* is defined by the relation $Y_1 \preceq Y_2$ iff $F_1(y) \geq F_2(y)$ for all $y \in \mathbb{R}$.
-
-Find an example of $Y_1$ and $Y_2$ on the same space with $Y_1 \preceq Y_2$ but $P(Y_1 > Y_2) \geq 0.95$
-
-::: {.callout-tip collapse="true" appearance="simple"}
-
-## Solution 
-As in the previous clock example, we can let $Y_1$ and $Y_2$ be discrete Uniform on a clock with $\lfloor 1/0.95 \rfloor$ numbers, so that $Y_1 \sim Y_2$ when $Y_1 \preceq Y_2$ . Then, $P(Y_1 > Y_2) \geq P(Y_1 = Y_2+1) \geq 0.95$
-:::
 
 ### ✏️ Pencil 3.5.10
 
