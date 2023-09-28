@@ -499,6 +499,8 @@ Next week, we will discuss:
 - On Order Statistics
 - Meaning on Mean
 
+![](assets/img/renyi.jpeg)
+
 Feel free to upload the pencil problem you wish to be discussed next week [here](https://forms.gle/RBmMNYJp4u3qD5W79).
 
 Note that a verified email address is needed in the GForm so we don't get scammy input! :) 
