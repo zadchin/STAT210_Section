@@ -1,6 +1,6 @@
 # Section 3 {.unnumbered}
 
-Last Updated: 28 Sept 2023
+Last Updated: 30 Sept 2023
 
 Date: 29 Sept 2023
 
@@ -46,7 +46,7 @@ There is a restaurant with only one seat, and between 1pm to 3pm inclusive, exac
 ::: {.callout-tip collapse="true" appearance="simple"}
 
 ## Solution 
-Will be released after section!
+Scale the problem so that the two restaurateurs arrive on [0, 1]. Then, the problem basically asks for P(U_(1) + 1/6 < U_(2)), where U_1 and U_2 are iid Unif. By the resny representation, if we have X_1,...,X_3 iid Expo, we want P(X_2 / (X_1 + X_2 + X_3 > 1/6), i.e. P(B > 1/6) for B following Beta(1,2). We know that B = 1 - U^{1/2} for U Unif, so substituting this in and doing easy manipulations yields the answer 25/36.
 :::
 
 
@@ -67,8 +67,6 @@ Let $L_j$ be the length of the $j$th subinterval from the above list, and $R=L_3
 ::: {.callout-tip collapse="true" appearance="simple"}
 
 ## Solution 
-Will be released after section!
-<!--
 Let $X_1, \ldots, X_n$ be i.i.d. Expo, and $T=X_1+\cdots+X_n$. By the representation for the Uniform order statistics,
 $$
 U_{(j)} \sim \frac{X_1+\cdots+X_j}{T},
@@ -115,7 +113,6 @@ $$
 \end{align*}
 $$
 where the $Y_j$ are i.i.d. Expo. (For the denominator, note that the term $\frac{1}{n-j+1} Y_j$ appears in exactly $n-j+1$ of the representations for the individual order statistics, resulting in $Y_j$ when all the order statistics get added up.)
--->
 :::
 
 
@@ -131,8 +128,6 @@ $$
 ::: {.callout-tip collapse="true" appearance="simple"}
 
 ## Solution 
-Will be released after section!
-<!--
 (a) As given in class and on the homework, we can jointly represent
 $$
 \left(U_{(1)}, U_{(2)}, \ldots, U_{(n)}\right) \sim\left(\frac{S_1}{S_{n+1}}, \ldots, \frac{S_n}{S_{n+1}}\right),
@@ -156,7 +151,6 @@ $$
 \operatorname{Cov}\left(X_{(n-i+1)}, X_{(n-j+1)}\right)=\sum_{k=1}^{n-j+1} \frac{1}{(n-k+1)^2}=\sum_{k=j}^n \frac{1}{k^2} .
 $$
 Interestingly, this depends on $j$ but the $i$ disappeared!
--->
 :::
 
 
@@ -171,9 +165,6 @@ Find the distribution of $T$. Simplify fully; you can give the name and paramete
 ::: {.callout-tip collapse="true" appearance="simple"}
 
 ## Solution 
-
-Will be released after section!
-<!--
 By the Rényi representation, we can represent $\left(X_{(1)}, \ldots, X_{(n)}\right)$ jointly as
 $$
 X_{(k)} \sim \sum_{j=1}^k \frac{1}{n-j+1} Y_j
@@ -187,7 +178,7 @@ $$
 T\left|\left(X_{(1)}=a\right) \sim \sum_{k=1}^n\left(X_k-a\right)\right|\left(X_{(1)}=a\right) \sim \operatorname{Gamma}(n-1) .
 $$
 This conditional distribution doesn't depend on $a$, so we also have $T \sim \operatorname{Gamma}(n-1)$ unconditionally
--->
+
 :::
 
 
@@ -206,8 +197,6 @@ the sum $W_1+\cdots+W_{n+1}$ has variance 0 .
 ::: {.callout-tip collapse="true" appearance="simple"}
 
 ## Solution 
-Will be released after section!
-<!--
 Let $X_1, X_2, \ldots, X_{n+1}$ be i.i.d. Expo and $W_k$ be as in the hint. Recall the joint representation
 $$
 \left(U_{(1)}, U_{(2)}, \ldots, U_{(n)}\right) \sim\left(W_1, W_1+W_2, \ldots, W_1+W_2+\cdots+W_n\right) .
@@ -236,7 +225,6 @@ Hence,
 $$
 \operatorname{Cov}\left(U_{(i)}, U_{(j)}\right)=\left(i-\frac{i(j-1)}{n}\right) \operatorname{Var}\left(W_1\right)=\frac{i(n-j+1)}{(n+1)^2(n+2)}
 $$.
--->
 :::
 
 
@@ -260,8 +248,6 @@ $$\left( \frac{U_{(1)}}{U_{(2)}}, \left(\frac{U_{(2)}}{U_{(3)}}\right)^2,\cdots.
 ::: {.callout-tip collapse="true" appearance="simple"}
 
 ## Solution 
-Will be released after section!
-<!--
 (a) Let $X_1,\ldots,X_{n+1}$ be i.i.d. Exponential r.v.s. Using the representation of Uniform order statistics, we can jointly represent $\left( \frac{U_{(j)}}{U_{(k)}}, \frac{U_{(k)}}{U_{(l)}}, \frac{U_{(l)}}{U_{(m)}}\right)$ with $
 \left( \frac{S_j}{S_k}, \frac{S_k}{S_l},\frac{S_l}{S_m}
 \right) $ where $S_j = \sum_{i=1}^j X_i$ are the partial sums.
@@ -322,7 +308,6 @@ U_{(i)}|\left(U_{(i+1)},\ldots,U_{(n)}\right)
 &\sim U_{(i+1)} \mathrm{Beta}(i,1).
 \end{align*}$$ The independence $\frac{U_{(i)}}{U_{(i+1)}}\perp\!\!\!\perp \left(U_{(i+1)},\cdots,U_{(n)}\right)$ is because
 $$ \frac{U_{(i)}}{U_{(i+1)}}\perp\!\!\!\perp \left(\frac{U_{(i+1)}}{U_{i+2}},\cdots,\frac{U_{(n-1)}}{U_{(n)}},U_{(n)}\right)$$ and $ \left(U_{(i+1)},\cdots,U_{(n)}\right) $ is a function of $ \left(\frac{U_{(i+1)}}{U_{i+2}},\cdots,\frac{U_{(n-1)}}{U_{(n)}},U_{(n)}\right)$.
--->
 :::
 
 

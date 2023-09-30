@@ -234,7 +234,7 @@ $$
 
 </header>
 
-<p>Last Updated: 28 Sept 2023</p>
+<p>Last Updated: 30 Sept 2023</p>
 <p>Date: 29 Sept 2023</p>
 <section id="introduction" class="level2">
 <h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
@@ -282,7 +282,7 @@ Solution
 </div>
 <div id="callout-1" class="callout-1-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>Will be released after section!</p>
+<p>Scale the problem so that the two restaurateurs arrive on [0, 1]. Then, the problem basically asks for P(U_(1) + 1/6 &lt; U_(2)), where U_1 and U_2 are iid Unif. By the resny representation, if we have X_1,…,X_3 iid Expo, we want P(X_2 / (X_1 + X_2 + X_3 &gt; 1/6), i.e.&nbsp;P(B &gt; 1/6) for B following Beta(1,2). We know that B = 1 - U^{1/2} for U Unif, so substituting this in and doing easy manipulations yields the answer 25/36.</p>
 </div>
 </div>
 </div>
@@ -309,54 +309,34 @@ Solution
 </div>
 <div id="callout-2" class="callout-2-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>Will be released after section! <!--
-Let $X_1, \ldots, X_n$ be i.i.d. Expo, and $T=X_1+\cdots+X_n$. By the representation for the Uniform order statistics,
-$$
+<p>Let <span class="math inline">\(X_1, \ldots, X_n\)</span> be i.i.d. Expo, and <span class="math inline">\(T=X_1+\cdots+X_n\)</span>. By the representation for the Uniform order statistics, <span class="math display">\[
 U_{(j)} \sim \frac{X_1+\cdots+X_j}{T},
-$$
-where this is a representation for the joint distribution of $\left(U_{(1)}, \ldots, U_{(n-1)}\right)$. Then
-$$
+\]</span> where this is a representation for the joint distribution of <span class="math inline">\(\left(U_{(1)}, \ldots, U_{(n-1)}\right)\)</span>. Then <span class="math display">\[
 R=\frac{U_{(3)}-U_{(2)}}{U_{(2)}-U_{(1)}} \sim \frac{X_3}{X_2} .
-$$
-
-(a) We have
-$$
+\]</span></p>
+<ol type="a">
+<li><p>We have <span class="math display">\[
 R \sim \frac{X_3}{X_2}=\frac{X_3 /\left(X_2+X_3\right)}{X_2 /\left(X_2+X_3\right)} \sim \frac{U}{1-U}
-$$
-where $U \sim$ Unif.
-
-(b) The expectation of $R$ is infinite since
-$$
+\]</span> where <span class="math inline">\(U \sim\)</span> Unif.</p></li>
+<li><p>The expectation of <span class="math inline">\(R\)</span> is infinite since <span class="math display">\[
 E\left(\frac{X_3}{X_2}\right)=E\left(X_3\right) E\left(\frac{1}{X_2}\right)=E\left(\frac{1}{X_2}\right)=\int_0^{\infty} x^{-1} e^{-x} d x=\infty .
-$$
-The integral diverges to $\infty$ (which is why $\Gamma(0)$ is undefined) since $\int_0^1 x^{-1} e^{-x} d x$ diverges to $\infty$, because $\int_0^1 x^{-1} d x$ diverges to $\infty$ and $x^{-1} e^{-x} \geq x^{-1} e^{-1}$ for $0<x<1$.
-
-(c) Using the result from the book for Gamma moments,
-$$
+\]</span> The integral diverges to <span class="math inline">\(\infty\)</span> (which is why <span class="math inline">\(\Gamma(0)\)</span> is undefined) since <span class="math inline">\(\int_0^1 x^{-1} e^{-x} d x\)</span> diverges to <span class="math inline">\(\infty\)</span>, because <span class="math inline">\(\int_0^1 x^{-1} d x\)</span> diverges to <span class="math inline">\(\infty\)</span> and <span class="math inline">\(x^{-1} e^{-x} \geq x^{-1} e^{-1}\)</span> for <span class="math inline">\(0&lt;x&lt;1\)</span>.</p></li>
+<li><p>Using the result from the book for Gamma moments, <span class="math display">\[
 E(\sqrt{R})=E\left(X_3^{1 / 2}\right) E\left(X_2^{-1 / 2}\right)=\Gamma(1+0.5) \Gamma(1-0.5)=\frac{\pi}{2},
-$$
-since
-$$
+\]</span> since <span class="math display">\[
 \Gamma(0.5)=\sqrt{\pi}, \Gamma(1.5)=0.5 \cdot \Gamma(0.5) .
-$$
-
-(d) The joint distribution of $L_1, L_2, \ldots, L_n$ is the same as the joint distribution of
-$$
+\]</span></p></li>
+<li><p>The joint distribution of <span class="math inline">\(L_1, L_2, \ldots, L_n\)</span> is the same as the joint distribution of <span class="math display">\[
 \frac{X_1}{T}, \frac{X_2}{T}, \ldots, \frac{X_n}{T} .
-$$
-Conveniently, these all have the same denominator $T$. We need the distribution of
-$$
+\]</span> Conveniently, these all have the same denominator <span class="math inline">\(T\)</span>. We need the distribution of <span class="math display">\[
 \frac{X_{(n)}-X_{(n-1)}}{T}=\frac{X_{(n)}-X_{(n-1)}}{X_{(1)}+\cdots+X_{(n)}} .
-$$
-By the Rényi representation, the desired distribution is
-$$
+\]</span> By the Rényi representation, the desired distribution is <span class="math display">\[
 \begin{align*}
-\frac{\left(\frac{1}{n} Y_1+\frac{1}{n-1} Y_2+\cdots+Y_n\right)-\left(\frac{1}{n} Y_1+\frac{1}{n-1} Y_2+\cdots+\frac{1}{2} Y_{n-1}\right)}{Y_1+Y_2+\cdots+Y_n}  &=\frac{Y_n}{Y_1+Y_2+\cdots+Y_n} \\
-&\sim \operatorname{Beta}(1, n-1),
+\frac{\left(\frac{1}{n} Y_1+\frac{1}{n-1} Y_2+\cdots+Y_n\right)-\left(\frac{1}{n} Y_1+\frac{1}{n-1} Y_2+\cdots+\frac{1}{2} Y_{n-1}\right)}{Y_1+Y_2+\cdots+Y_n}  &amp;=\frac{Y_n}{Y_1+Y_2+\cdots+Y_n} \\
+&amp;\sim \operatorname{Beta}(1, n-1),
 \end{align*}
-$$
-where the $Y_j$ are i.i.d. Expo. (For the denominator, note that the term $\frac{1}{n-j+1} Y_j$ appears in exactly $n-j+1$ of the representations for the individual order statistics, resulting in $Y_j$ when all the order statistics get added up.)
---></p>
+\]</span> where the <span class="math inline">\(Y_j\)</span> are i.i.d. Expo. (For the denominator, note that the term <span class="math inline">\(\frac{1}{n-j+1} Y_j\)</span> appears in exactly <span class="math inline">\(n-j+1\)</span> of the representations for the individual order statistics, resulting in <span class="math inline">\(Y_j\)</span> when all the order statistics get added up.)</p></li>
+</ol>
 </div>
 </div>
 </div>
@@ -384,31 +364,20 @@ Solution
 </div>
 <div id="callout-3" class="callout-3-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>Will be released after section! <!--
-(a) As given in class and on the homework, we can jointly represent
-$$
+<ol type="a">
+<li><p>As given in class and on the homework, we can jointly represent <span class="math display">\[
 \left(U_{(1)}, U_{(2)}, \ldots, U_{(n)}\right) \sim\left(\frac{S_1}{S_{n+1}}, \ldots, \frac{S_n}{S_{n+1}}\right),
-$$
-where $S_j \equiv X_1+\cdots+X_j$ and $X_1, \ldots, X_{n+1}$ are i.i.d. Expo. Then
-$$
+\]</span> where <span class="math inline">\(S_j \equiv X_1+\cdots+X_j\)</span> and <span class="math inline">\(X_1, \ldots, X_{n+1}\)</span> are i.i.d. Expo. Then <span class="math display">\[
 \left(\frac{U_{(j)}}{U_{(k)}}, \frac{U_{(k)}}{U_{(l)}}, \frac{U_{(l)}}{U_{(m)}}\right) \sim\left(\frac{S_j}{S_k}, \frac{S_k}{S_l}, \frac{S_l}{S_m}\right) .
-$$
-So $\frac{S_j}{S_k} \sim \operatorname{Beta}(j, k-j), \frac{S_k}{S_l} \sim \operatorname{Beta}(k, l-k), \frac{S_l}{S_m} \sim \operatorname{Beta}(l, m-l)$ by Gamma-Beta representations. By the Gamma-Beta independence result in Proposition 3.7.8, $\frac{S_j}{S_k}, \frac{S_k}{S_l}, S_l$ are independent. Write $S_m=S_l+T$ with $T \equiv X_{l+1}+\cdots+X_m$ independent of $\left(S_j, S_k, S_l\right)$. Then $\left(T, S_l\right)$ is independent of $\left(\frac{S_j}{S_k}, \frac{S_k}{S_l}\right)$, so $\frac{S_j}{S_k}, \frac{S_k}{S_l}, \frac{S_l}{S_m}$ are independent. 
-
-(b) We have
-$$
+\]</span> So <span class="math inline">\(\frac{S_j}{S_k} \sim \operatorname{Beta}(j, k-j), \frac{S_k}{S_l} \sim \operatorname{Beta}(k, l-k), \frac{S_l}{S_m} \sim \operatorname{Beta}(l, m-l)\)</span> by Gamma-Beta representations. By the Gamma-Beta independence result in Proposition 3.7.8, <span class="math inline">\(\frac{S_j}{S_k}, \frac{S_k}{S_l}, S_l\)</span> are independent. Write <span class="math inline">\(S_m=S_l+T\)</span> with <span class="math inline">\(T \equiv X_{l+1}+\cdots+X_m\)</span> independent of <span class="math inline">\(\left(S_j, S_k, S_l\right)\)</span>. Then <span class="math inline">\(\left(T, S_l\right)\)</span> is independent of <span class="math inline">\(\left(\frac{S_j}{S_k}, \frac{S_k}{S_l}\right)\)</span>, so <span class="math inline">\(\frac{S_j}{S_k}, \frac{S_k}{S_l}, \frac{S_l}{S_m}\)</span> are independent.</p></li>
+<li><p>We have <span class="math display">\[
 \operatorname{Cov}\left(\log U_{(i)}, \log U_{(j)}\right)=\operatorname{Cov}\left(-\log U_{(i)},-\log U_{(j)}\right)=\operatorname{Cov}\left(X_{(n-i+1)}, X_{(n-j+1)}\right),
-$$
-where $X_1, \ldots, X_n$ are i.i.d. Expo (the order of the order statistics is reversed since $-\log$ is decreasing). The Rényi representation yields the joint representation
-$$
+\]</span> where <span class="math inline">\(X_1, \ldots, X_n\)</span> are i.i.d. Expo (the order of the order statistics is reversed since <span class="math inline">\(-\log\)</span> is decreasing). The Rényi representation yields the joint representation <span class="math display">\[
 \left(X_{(n-i+1)}, X_{(n-j+1)}\right) \sim\left(\sum_{k=1}^{n-i+1} \frac{1}{n-k+1} X_k, \sum_{k=1}^{n-j+1} \frac{1}{n-k+1} X_k\right) .
-$$
-So
-$$
+\]</span> So <span class="math display">\[
 \operatorname{Cov}\left(X_{(n-i+1)}, X_{(n-j+1)}\right)=\sum_{k=1}^{n-j+1} \frac{1}{(n-k+1)^2}=\sum_{k=j}^n \frac{1}{k^2} .
-$$
-Interestingly, this depends on $j$ but the $i$ disappeared!
---></p>
+\]</span> Interestingly, this depends on <span class="math inline">\(j\)</span> but the <span class="math inline">\(i\)</span> disappeared!</p></li>
+</ol>
 </div>
 </div>
 </div>
@@ -430,21 +399,13 @@ Solution
 </div>
 <div id="callout-4" class="callout-4-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>Will be released after section! <!--
-By the Rényi representation, we can represent $\left(X_{(1)}, \ldots, X_{(n)}\right)$ jointly as
-$$
+<p>By the Rényi representation, we can represent <span class="math inline">\(\left(X_{(1)}, \ldots, X_{(n)}\right)\)</span> jointly as <span class="math display">\[
 X_{(k)} \sim \sum_{j=1}^k \frac{1}{n-j+1} Y_j
-$$
-where the $Y_j$ 's are also i.i.d. Expo. Then
-$$
+\]</span> where the <span class="math inline">\(Y_j\)</span> ’s are also i.i.d. Expo. Then <span class="math display">\[
 T=\sum_{k=1}^n X_k-n X_{(1)}=\sum_{k=1}^n X_{(k)}-n X_{(1)} \sim \sum_{k=1}^n Y_j-Y_1=\sum_{k=2}^n Y_j \sim \operatorname{Gamma}(n-1) \text {. }
-$$
-Method 2: Consider $n$ independent Poisson processes, each with rate 1 . Let $X_j$ be the time of the first arrival in the $j$ th of these processes. Given that $X_{(1)}=a$, one of the differences $X_1-a, X_2-a, \ldots, X_n-a$ is 0 , and by the memoryless property the rest are i.i.d. Expo r.v.s. Thus,
-$$
+\]</span> Method 2: Consider <span class="math inline">\(n\)</span> independent Poisson processes, each with rate 1 . Let <span class="math inline">\(X_j\)</span> be the time of the first arrival in the <span class="math inline">\(j\)</span> th of these processes. Given that <span class="math inline">\(X_{(1)}=a\)</span>, one of the differences <span class="math inline">\(X_1-a, X_2-a, \ldots, X_n-a\)</span> is 0 , and by the memoryless property the rest are i.i.d. Expo r.v.s. Thus, <span class="math display">\[
 T\left|\left(X_{(1)}=a\right) \sim \sum_{k=1}^n\left(X_k-a\right)\right|\left(X_{(1)}=a\right) \sim \operatorname{Gamma}(n-1) .
-$$
-This conditional distribution doesn't depend on $a$, so we also have $T \sim \operatorname{Gamma}(n-1)$ unconditionally
---></p>
+\]</span> This conditional distribution doesn’t depend on <span class="math inline">\(a\)</span>, so we also have <span class="math inline">\(T \sim \operatorname{Gamma}(n-1)\)</span> unconditionally</p>
 </div>
 </div>
 </div>
@@ -468,36 +429,21 @@ Solution
 </div>
 <div id="callout-5" class="callout-5-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>Will be released after section! <!--
-Let $X_1, X_2, \ldots, X_{n+1}$ be i.i.d. Expo and $W_k$ be as in the hint. Recall the joint representation
-$$
+<p>Let <span class="math inline">\(X_1, X_2, \ldots, X_{n+1}\)</span> be i.i.d. Expo and <span class="math inline">\(W_k\)</span> be as in the hint. Recall the joint representation <span class="math display">\[
 \left(U_{(1)}, U_{(2)}, \ldots, U_{(n)}\right) \sim\left(W_1, W_1+W_2, \ldots, W_1+W_2+\cdots+W_n\right) .
-$$
-By bilinearity,
-$$
+\]</span> By bilinearity, <span class="math display">\[
 \operatorname{Cov}\left(U_{(i)}, U_{(j)}\right)=\operatorname{Cov}\left(W_1+\cdots+W_i, W_1+\cdots+W_j\right)=i \operatorname{Var}\left(W_1\right)+i(j-1) \operatorname{Cov}\left(W_1, W_2\right) .
-$$
-By the Beta-Gamma algebra,
-$$
+\]</span> By the Beta-Gamma algebra, <span class="math display">\[
 W_1 \sim \operatorname{Beta}(1, n)
-$$
-so
-$$
+\]</span> so <span class="math display">\[
 E\left(W_1\right)=\frac{1}{n+1}, \operatorname{Var}\left(W_1\right)=\frac{n}{(n+1)^2(n+2)} .
-$$
-To find $\operatorname{Cov}\left(W_1, W_2\right)$, we will use the hint. Note that $W_1+\cdots+W_{n+1}$ is the constant 1 , so it has variance 0 . Therefore,
-$$
+\]</span> To find <span class="math inline">\(\operatorname{Cov}\left(W_1, W_2\right)\)</span>, we will use the hint. Note that <span class="math inline">\(W_1+\cdots+W_{n+1}\)</span> is the constant 1 , so it has variance 0 . Therefore, <span class="math display">\[
 0=\operatorname{Var}\left(W_1+\cdots+W_{n+1}\right)=(n+1) \operatorname{Var}\left(W_1\right)+(n+1) n \operatorname{Cov}\left(W_1, W_2\right),
-$$
-which gives
-$$
+\]</span> which gives <span class="math display">\[
 \operatorname{Cov}\left(W_1, W_2\right)=-\frac{1}{n} \operatorname{Var}\left(W_1\right)
-$$
-Hence,
-$$
+\]</span> Hence, <span class="math display">\[
 \operatorname{Cov}\left(U_{(i)}, U_{(j)}\right)=\left(i-\frac{i(j-1)}{n}\right) \operatorname{Var}\left(W_1\right)=\frac{i(n-j+1)}{(n+1)^2(n+2)}
-$$.
---></p>
+\]</span>.</p>
 </div>
 </div>
 </div>
@@ -525,68 +471,49 @@ Solution
 </div>
 <div id="callout-6" class="callout-6-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>Will be released after section! <!--
-(a) Let $X_1,\ldots,X_{n+1}$ be i.i.d. Exponential r.v.s. Using the representation of Uniform order statistics, we can jointly represent $\left( \frac{U_{(j)}}{U_{(k)}}, \frac{U_{(k)}}{U_{(l)}}, \frac{U_{(l)}}{U_{(m)}}\right)$ with $
-\left( \frac{S_j}{S_k}, \frac{S_k}{S_l},\frac{S_l}{S_m}
-\right) $ where $S_j = \sum_{i=1}^j X_i$ are the partial sums.
-Proposition 3.7.9 says that $\left( \frac{S_j}{S_k}, \frac{S_k}{S_l},S_l \right)$ fully independent. Because $X_i$'s are i.i.d., we must have $$\left( \frac{S_j}{S_k}, \frac{S_k}{S_l},S_l \right) \perp\!\!\!\perp X_{l+1} + \cdots X_m = S_m - S_l .$$ This implies
-$$ \left( \frac{S_j}{S_k}, \frac{S_k}{S_l} \right) \perp\!\!\!\perp \left( S_l, S_m - S_l\right).$$ Since $\frac{S_l}{S_m}$ is a function of $\left( S_l, S_m - S_l\right)$, we have $ \left( \frac{S_j}{S_k}, \frac{S_k}{S_l} \right) \perp\!\!\!\perp \frac{S_l}{S_m}$ and since the left-hand side consists of independent random variables we must have $\left( \frac{S_j}{S_k}, \frac{S_k}{S_l},\frac{S_l}{S_m}\right)$  fully independent by Problem 2 from HW1.
-
-
-(b) First we show that the r.v.s. are Uniform. Let $X_i \sim_{iid} \textnormal{Expo}.$ For each $1 \leq i \leq n-1$ we have
-$$ \left(\frac{U_{(i)}}{U_{(i+1)}}\right)^i  = \left(\frac{X_1 + X_2 + \cdots + X_i}{X_1+\cdots+X_{i+1}} \right)^i  \sim \textnormal{Beta}(i,1)^i
-,$$ through representation of Uniform order statistics and of Beta distribution. Because $\textnormal{Beta}(\alpha,1) \sim \textnormal{Unif}^{1/\alpha}$ for all $\alpha >1$ we have $\left(\frac{U_{(i)}}{U_{(i+1)}}\right)^i \sim \textnormal{Unif}.$ 
-To establish independence, we will use induction. It suffice to show that if $X_i \overset{iid}{\sim} \textnormal{Expo}$ and $S_j = \sum_{i=1}^j X_i$ denote the partial sums, then
-$$
+<ol type="a">
+<li><p>Let <span class="math inline">\(X_1,\ldots,X_{n+1}\)</span> be i.i.d. Exponential r.v.s. Using the representation of Uniform order statistics, we can jointly represent <span class="math inline">\(\left( \frac{U_{(j)}}{U_{(k)}}, \frac{U_{(k)}}{U_{(l)}}, \frac{U_{(l)}}{U_{(m)}}\right)\)</span> with $ ( , , ) $ where <span class="math inline">\(S_j = \sum_{i=1}^j X_i\)</span> are the partial sums. Proposition 3.7.9 says that <span class="math inline">\(\left( \frac{S_j}{S_k}, \frac{S_k}{S_l},S_l \right)\)</span> fully independent. Because <span class="math inline">\(X_i\)</span>’s are i.i.d., we must have <span class="math display">\[\left( \frac{S_j}{S_k}, \frac{S_k}{S_l},S_l \right) \perp\!\!\!\perp X_{l+1} + \cdots X_m = S_m - S_l .\]</span> This implies <span class="math display">\[ \left( \frac{S_j}{S_k}, \frac{S_k}{S_l} \right) \perp\!\!\!\perp \left( S_l, S_m - S_l\right).\]</span> Since <span class="math inline">\(\frac{S_l}{S_m}\)</span> is a function of <span class="math inline">\(\left( S_l, S_m - S_l\right)\)</span>, we have $ ( , ) !!!$ and since the left-hand side consists of independent random variables we must have <span class="math inline">\(\left( \frac{S_j}{S_k}, \frac{S_k}{S_l},\frac{S_l}{S_m}\right)\)</span> fully independent by Problem 2 from HW1.</p></li>
+<li><p>First we show that the r.v.s. are Uniform. Let <span class="math inline">\(X_i \sim_{iid} \textnormal{Expo}.\)</span> For each <span class="math inline">\(1 \leq i \leq n-1\)</span> we have <span class="math display">\[ \left(\frac{U_{(i)}}{U_{(i+1)}}\right)^i  = \left(\frac{X_1 + X_2 + \cdots + X_i}{X_1+\cdots+X_{i+1}} \right)^i  \sim \textnormal{Beta}(i,1)^i
+,\]</span> through representation of Uniform order statistics and of Beta distribution. Because <span class="math inline">\(\textnormal{Beta}(\alpha,1) \sim \textnormal{Unif}^{1/\alpha}\)</span> for all <span class="math inline">\(\alpha &gt;1\)</span> we have <span class="math inline">\(\left(\frac{U_{(i)}}{U_{(i+1)}}\right)^i \sim \textnormal{Unif}.\)</span> To establish independence, we will use induction. It suffice to show that if <span class="math inline">\(X_i \overset{iid}{\sim} \textnormal{Expo}\)</span> and <span class="math inline">\(S_j = \sum_{i=1}^j X_i\)</span> denote the partial sums, then <span class="math display">\[
 \begin{equation}
 \left(\frac{S_1}{S_{2}}, \frac{S_2}{S_3},\cdots,\frac{S_n}{S_{n+1}},  S_{n+1}\right)
 \end{equation}
-$$
-is fully independent. Note that our induction is the exponential r.v.s. instead of on the order statistics. The base case $n = 3$ is a direct consequence of part (1). For the induction step assume equation above is true for $n = k$. Using independence of the Expo r.v.s.,we have
-$$ \left(\frac{S_1}{S_{2}}, \frac{S_2}{S_3},\cdots,\frac{S_k}{S_{k+1}}, S_{k+1}\right) \perp\!\!\!\perp X_{k+2}.$$ Using similar arguments in part (1) we will have $  \left(\frac{S_1}{S_{2}}, \frac{S_2}{S_3},\cdots,\frac{S_k}{S_{k+1}} \right) \perp\!\!\!\perp \left(S_{k+1}, X_{k+2}\right)$ and therefore $$ \left(\frac{S_1}{S_{2}}, \frac{S_2}{S_3},\cdots,\frac{S_k}{S_{k+1}} \right) \perp\!\!\!\perp \left( \frac{S_{k+1}}{S_{k+2}}, S_{k+2} \right).$$ Notice that the left and right hand sides are both fully independent by induction hypothesis and Beta-Gamma respectively. By definition of independence of r.v.s., we must have Equation above valid for $n = k+1.$
-
-
-(c) Let $W_i = U_{(i)}^i \overset{iid}{\sim} \textnormal{Unif}$ by part 2).
-Then $\left(W_i\right)^{\beta} \sim \textnormal{Unif}^\beta \sim \textnormal{Beta}(1/\beta, 1)$ for any $\beta >0$, and the expectation is $\mathbb{E}[W_i^{\beta}] = \frac{1/\beta}{1/\beta +1} = \frac{1}{1+\beta}.$ We can re-express the product as product of independent r.v.s using Part 2) because
-$$
+\]</span> is fully independent. Note that our induction is the exponential r.v.s. instead of on the order statistics. The base case <span class="math inline">\(n = 3\)</span> is a direct consequence of part (1). For the induction step assume equation above is true for <span class="math inline">\(n = k\)</span>. Using independence of the Expo r.v.s.,we have <span class="math display">\[ \left(\frac{S_1}{S_{2}}, \frac{S_2}{S_3},\cdots,\frac{S_k}{S_{k+1}}, S_{k+1}\right) \perp\!\!\!\perp X_{k+2}.\]</span> Using similar arguments in part (1) we will have $ (, ,, ) !!!(S_{k+1}, X_{k+2})$ and therefore <span class="math display">\[ \left(\frac{S_1}{S_{2}}, \frac{S_2}{S_3},\cdots,\frac{S_k}{S_{k+1}} \right) \perp\!\!\!\perp \left( \frac{S_{k+1}}{S_{k+2}}, S_{k+2} \right).\]</span> Notice that the left and right hand sides are both fully independent by induction hypothesis and Beta-Gamma respectively. By definition of independence of r.v.s., we must have Equation above valid for <span class="math inline">\(n = k+1.\)</span></p></li>
+<li><p>Let <span class="math inline">\(W_i = U_{(i)}^i \overset{iid}{\sim} \textnormal{Unif}\)</span> by part 2). Then <span class="math inline">\(\left(W_i\right)^{\beta} \sim \textnormal{Unif}^\beta \sim \textnormal{Beta}(1/\beta, 1)\)</span> for any <span class="math inline">\(\beta &gt;0\)</span>, and the expectation is <span class="math inline">\(\mathbb{E}[W_i^{\beta}] = \frac{1/\beta}{1/\beta +1} = \frac{1}{1+\beta}.\)</span> We can re-express the product as product of independent r.v.s using Part 2) because <span class="math display">\[
 \begin{align*}
-\prod_{i=1}^n U_{(i)}^{\alpha_i}  &= U_{(1)}^{\alpha_1} \cdot U_{(2)}^{\alpha_2}\cdots U_{(n)}^{\alpha_n} \\
-&= \left(\frac{U_{(1)}}{U_{(2)}}\right)^{\alpha_1}\left(\frac{U_{(2)}}{U_{(3)}}\right)^{\alpha_1 + \alpha_2} \cdots U_{(n)}^{\alpha_1+\cdots + \alpha_n}\\
-&= W_1^{\alpha_1} W_2^{(\alpha_1+\alpha_2)/2} \cdots W_n^{(\alpha_1 + \ldots + \alpha_n)/n}
+\prod_{i=1}^n U_{(i)}^{\alpha_i}  &amp;= U_{(1)}^{\alpha_1} \cdot U_{(2)}^{\alpha_2}\cdots U_{(n)}^{\alpha_n} \\
+&amp;= \left(\frac{U_{(1)}}{U_{(2)}}\right)^{\alpha_1}\left(\frac{U_{(2)}}{U_{(3)}}\right)^{\alpha_1 + \alpha_2} \cdots U_{(n)}^{\alpha_1+\cdots + \alpha_n}\\
+&amp;= W_1^{\alpha_1} W_2^{(\alpha_1+\alpha_2)/2} \cdots W_n^{(\alpha_1 + \ldots + \alpha_n)/n}
 = \prod_{i=1}^n W_i^{\beta_i}
 \end{align*}
-$$ where $\beta_i = \frac{\alpha_1 +\cdots +\alpha_i}{i}.$ The expectation is then
-$$
+\]</span> where <span class="math inline">\(\beta_i = \frac{\alpha_1 +\cdots +\alpha_i}{i}.\)</span> The expectation is then <span class="math display">\[
 \mathbb{E}\left[\prod_{i=1}^n U_{(i)}^{\alpha_i}\right] = \prod_{i=1}^n \mathbb{E}\left[W_i^{\beta_i}\right] = \prod_{i=1}^n (1+\beta_i)^{-1}.
-$$\
-
-(d) 
-$$\begin{align*}
-\mathrm{Cov}\left(\log U_{(i)}, \log U_{(j)}\right) &= \mathrm{Cov}\left(-\log U_{(i)}, -\log U_{(j)}\right)\\
-&= \mathrm{Cov}\left(Y_{(n-i+1)},Y_{n-j+1}\right)\\
-&= \mathrm{Cov}\left( \sum_{k=1}^{n-i+1} \frac{1}{n-k+1}X_k, \sum_{k=1}^{n-j+1} \frac{1}{n-k+1} X_k\right)\\
-&= \sum_{k=1}^{n-j+1} \left(\frac{1}{n-k+1}\right)^2 \mathrm{Var}(X_k)\\
-&=  \sum_{k=1}^{n-j+1} \left(\frac{1}{n-k+1}\right)^2 = \sum_{k=j}^n \frac{1}{k^2}.
-\end{align*}$$
-
-
-(e)$$\begin{align*}
-U_{(i)}|U_{(j)} &\sim \frac{S_i}{S_{n+1}}\left| \frac{S_j}{S_{n+1}}\right.\\
-&= \underbrace{\frac{S_j}{S_{n+1}}}_{\text{constant}} \cdot  \frac{S_i}{S_j} \left\arrowvert \frac{S_j}{S_{n+1}}\right.\\
-&=  \underbrace{\frac{S_j}{S_{n+1}}}_{\text{constant}}  \cdot \left( \frac{S_i}{S_j} \left\arrowvert \frac{S_j}{S_{n+1}}\right.\right)\\
-&\sim   \underbrace{\frac{S_j}{S_{n+1}}}_{\text{constant}} \cdot \left(\frac{U_{(i)}}{U_{(j)}} \left\arrowvert \frac{U_{j}}{U_{n}} \right.\right) \\
-&\sim  \underbrace{\frac{S_j}{S_{n+1}}}_{\text{constant}}  \cdot \mathrm{Beta}(i,j-i).
-\end{align*}$$
-
-(f) $$\begin{align*}
+\]</span><br>
+</p></li>
+<li><p><span class="math display">\[\begin{align*}
+\mathrm{Cov}\left(\log U_{(i)}, \log U_{(j)}\right) &amp;= \mathrm{Cov}\left(-\log U_{(i)}, -\log U_{(j)}\right)\\
+&amp;= \mathrm{Cov}\left(Y_{(n-i+1)},Y_{n-j+1}\right)\\
+&amp;= \mathrm{Cov}\left( \sum_{k=1}^{n-i+1} \frac{1}{n-k+1}X_k, \sum_{k=1}^{n-j+1} \frac{1}{n-k+1} X_k\right)\\
+&amp;= \sum_{k=1}^{n-j+1} \left(\frac{1}{n-k+1}\right)^2 \mathrm{Var}(X_k)\\
+&amp;=  \sum_{k=1}^{n-j+1} \left(\frac{1}{n-k+1}\right)^2 = \sum_{k=j}^n \frac{1}{k^2}.
+\end{align*}\]</span></p></li>
+</ol>
+<p>(e)<span class="math display">\[\begin{align*}
+U_{(i)}|U_{(j)} &amp;\sim \frac{S_i}{S_{n+1}}\left| \frac{S_j}{S_{n+1}}\right.\\
+&amp;= \underbrace{\frac{S_j}{S_{n+1}}}_{\text{constant}} \cdot  \frac{S_i}{S_j} \left\arrowvert \frac{S_j}{S_{n+1}}\right.\\
+&amp;=  \underbrace{\frac{S_j}{S_{n+1}}}_{\text{constant}}  \cdot \left( \frac{S_i}{S_j} \left\arrowvert \frac{S_j}{S_{n+1}}\right.\right)\\
+&amp;\sim   \underbrace{\frac{S_j}{S_{n+1}}}_{\text{constant}} \cdot \left(\frac{U_{(i)}}{U_{(j)}} \left\arrowvert \frac{U_{j}}{U_{n}} \right.\right) \\
+&amp;\sim  \underbrace{\frac{S_j}{S_{n+1}}}_{\text{constant}}  \cdot \mathrm{Beta}(i,j-i).
+\end{align*}\]</span></p>
+<ol start="6" type="a">
+<li><span class="math display">\[\begin{align*}
 U_{(i)}|\left(U_{(i+1)},\ldots,U_{(n)}\right)
-&\sim U_{(i+1)}\frac{U_{(i)}}{U_{(i+1)}}\left|\left(U_{(i+1)},\ldots,U_{(n)}\right)\right. \\
-&= U_{(i+1)} \left(\frac{U_{(i)}}{U_{(i+1)}}|\left(U_{(i+1)},\ldots,U_{(n)}\right) \right)\\
-&\sim  U_{(i+1)}   \left(\frac{U_{(i)}}{U_{(i+1)}}\right) \\
-&\sim U_{(i+1)} \mathrm{Beta}(i,1).
-\end{align*}$$ The independence $\frac{U_{(i)}}{U_{(i+1)}}\perp\!\!\!\perp \left(U_{(i+1)},\cdots,U_{(n)}\right)$ is because
-$$ \frac{U_{(i)}}{U_{(i+1)}}\perp\!\!\!\perp \left(\frac{U_{(i+1)}}{U_{i+2}},\cdots,\frac{U_{(n-1)}}{U_{(n)}},U_{(n)}\right)$$ and $ \left(U_{(i+1)},\cdots,U_{(n)}\right) $ is a function of $ \left(\frac{U_{(i+1)}}{U_{i+2}},\cdots,\frac{U_{(n-1)}}{U_{(n)}},U_{(n)}\right)$.
---></p>
+&amp;\sim U_{(i+1)}\frac{U_{(i)}}{U_{(i+1)}}\left|\left(U_{(i+1)},\ldots,U_{(n)}\right)\right. \\
+&amp;= U_{(i+1)} \left(\frac{U_{(i)}}{U_{(i+1)}}|\left(U_{(i+1)},\ldots,U_{(n)}\right) \right)\\
+&amp;\sim  U_{(i+1)}   \left(\frac{U_{(i)}}{U_{(i+1)}}\right) \\
+&amp;\sim U_{(i+1)} \mathrm{Beta}(i,1).
+\end{align*}\]</span> The independence <span class="math inline">\(\frac{U_{(i)}}{U_{(i+1)}}\perp\!\!\!\perp \left(U_{(i+1)},\cdots,U_{(n)}\right)\)</span> is because <span class="math display">\[ \frac{U_{(i)}}{U_{(i+1)}}\perp\!\!\!\perp \left(\frac{U_{(i+1)}}{U_{i+2}},\cdots,\frac{U_{(n-1)}}{U_{(n)}},U_{(n)}\right)\]</span> and $ (U_{(i+1)},,U_{(n)}) $ is a function of $ (,,,U_{(n)})$.</li>
+</ol>
 </div>
 </div>
 </div>
