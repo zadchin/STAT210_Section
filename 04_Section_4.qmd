@@ -1,0 +1,218 @@
+# Section 4 {.unnumbered}
+
+Last Updated: 06 Oct 2023
+
+Date: 06 Oct 2023
+
+
+## Introduction
+In this section, we will discuss:
+
+- Lebesgue Integral
+- Convergence Theorems
+
+
+## Lebesgue Integral
+
+::: {#def-Riemann-Stieltjes-integral}
+
+(Riemann-Stieltjes integrals) $E(X) = \int_{-\infty}^{\infty} x dF(x)$, easier to compute.
+:::
+
+::: {#def-Lebesgue-integral}
+
+(Lebesgue integral) $E(X) = \int_{\Omega} X(\omega) P(d\omega)$, easier for proofs.
+:::
+
+
+To have a unified definition of expected values, and for proving results about expected
+values, it is helpful to define $E$ in stages for increasingly more general r.v.s. This parallels the construction of the Lebesgue integral. 
+
+::: {#def-InSiPoD}
+(InSiPoD) Let $(\Omega, \mathcal{F}, P)$ be a probability space, and let $X: \Omega \rightarrow \mathbb{R}$ be a random variable. Then the expected value of $X$, denoted $\mathbf{E}[X]$ is defined by the following three-step construction: ${ }^{14}$
+
+1. For indicator random variables, which are simply 1 on a bounded measurable set $S \in \mathcal{F}$ and 0 otherwise. Their expectation is the measure $P(S)$.
+
+2. Extending to non-negative weighted sums of indicator random variables, called simple random variables. We do this by linearity of expectation.
+
+3. Defining for non-negative random variables by taking the supremum over all dominated simple random variables $X^*$,
+$$
+\mathbf{E}[X]=\sup _{X^* \leq X} \mathbf{E}\left[X^*\right] .
+$$
+
+4. Extending to general signed random variables by taking a partition $X=X^{+}-X^{-}$into positive and negative parts, and computing the integral for each separately.
+:::
+
+## Convergence Theorems
+
+::: {#def-Almost-sure-convergence}
+
+(Almost sure convergence): $X_n \xrightarrow{a.s.}X$ if $P(\{\omega: X_n(\omega) \xrightarrow{n\to \infty} X(\omega)\}) = 1$
+:::
+
+::: {#thm-Monotone-Convergence-Theorem}
+
+(Monotone Convergence Theorem): Let $0 \leq X_1 \leq X_2 \leq ...$ be an \textit{increasing sequence of non-negative} random variables such that $X_n \xrightarrow{a.s.} X$ as $n\to \infty$. Then $\lim\limits_{n\to \infty}E(X_n) = E(X)$.
+:::
+
+::: {#def-Fatou-Lemma}
+
+(Fatou's Lemma): Let $X_1,X_2,...$ be a sequence of \textit{non-negative} random variables. Then 
+		$$E\Big(  \liminf_{n\to \infty} X_n \Big) \leq \liminf_{n\to \infty} E(X_n)$$
+:::
+
+::: {#thm-Dominated-Convergence-Theorem}
+
+(Dominated Convergence Theorem): Let $X_1,X_2,...$ be a sequence of random variables such that $X_n \xrightarrow{a.s.} X$ as $n\to \infty$. If there exists some r.v $W\geq 0$ with $E(W)<\infty$ such that $|X_n|\leq W$ for all $n\geq 1$, then $\lim\limits_{n\to \infty}E(X_n) = E(X)$.
+:::
+
+::: {#thm-Bounded-Convergence-Theorem}
+
+(Bounded Convergence Theorem): It's a special case of DCT. If $X_n \xrightarrow{a.s.} X$ as $n\to \infty$ and $|X_n|\leq c$ for all $n\geq 1$ (for a constant $c$), then $\lim\limits_{n\to \infty}E(X_n) = E(X)$.
+:::
+
+Monotone Convergence Theorem, Dominated Convergence Theorem (and hence Bounded Convergence Theorem) also hold when $X_n \to X$ \textit{in probability} as $n$ goes to infinity.
+
+## Section Discussion Questions
+
+### ✏️ Section Problem 1
+
+Let $X$ and $Y$ be r.v.s with finite variances, on the same probability space.
+
+(a) Suppose (for this part only) that $E(Y \mid X)=g(X)$, with $g: \mathbb{R} \rightarrow \mathbb{R}$ an increasing function. Show that $\operatorname{Cov}(X, Y) \geq 0$.
+
+(b) Suppose that $E(Y \mid X)=X$ and $E(X \mid Y)=Y$. Show that $P(X=Y)=1$.
+
+::: {.callout-tip collapse="true" appearance="simple"}
+
+## Solution 
+(a) By $\mathrm{ECCE}, \operatorname{Cov}(X, Y)=E \operatorname{Cov}(X, Y \mid X)+\operatorname{Cov}(E(X \mid X), E(Y \mid X))=\operatorname{Cov}(X, g(X))$. By the covariance inequality (proven in class), this is nonnegative.
+
+(b) We will show $(X-Y)^2=0$ a.s. by showing that $E(X-Y)^2=0$. By Adam's Law,
+$$
+E(X-Y)^2=E\left(E\left(X^2 \mid X\right)-2 E(X Y \mid X)+E\left(Y^2 \mid X\right)\right)=E\left(Y^2\right)-E\left(X^2\right),
+$$
+since $E(X Y \mid X)=X E(Y \mid X)=X^2$. By Adam's Law (now conditioning on $Y$ ),
+$$
+E(X-Y)^2=E\left(X^2\right)-E\left(Y^2\right) \text {. }
+$$
+So $E(X-Y)^2$ is its own negative, which implies $E(X-Y)^2=0$. Thus, $X=Y$ a.s.
+:::
+
+
+### ✏️ Section Problem 2
+
+Show that for any r.v.s $X$ and $Y$ with Var$(Y)$ finite, we have $$E(Y|E(Y|X))=E(Y|X)$$
+
+::: {.callout-tip collapse="true" appearance="simple"}
+
+## Solution 
+Let $g(X)=E(Y|X)$. By Adam's law, 
+$$
+\begin{align*}
+E(Y|g(X)) &= E(E(Y|X, g(X))|g(X))\\
+&= E(E(Y|X)|g(X))\\
+&= E(g(X)|g(X))\\
+&= g(X)
+\end{align*}
+$$
+:::
+
+
+### ✏️ Section Problem 3
+Let $X_1, X_2$ and $Y$ be random variable, $E(Y^2)$ finite. Let $$A=E(Y|X_1) \text{ and } B=E(Y|X_1,X_2)$$
+Show that $$Var(A) \leq Var(B)$$
+
+::: {.callout-tip collapse="true" appearance="simple"}
+
+## Solution 
+
+By Eve's Law, $$Var(B) \geq Var(E(B|X_1))$$
+
+By Adam's Law, $$E(B|X_1)=E(E(Y|X_1, X_2)|X_1)=E(Y|X_1)=A$$
+
+Thus, $$Var(B)\geq Var(E(B|X_1))=Var(A).$$
+:::
+
+
+### ✏️ Section Problem 4
+
+Let $Y$ be a nonnegative $r.v.$ with $E(Y)< \infty$.
+
+(a) Prove that $E(Y) =\int_0^\infty  P(Y > y)dy$,using the Lebesgue definition of $E(Y)$ (keeping in mind that $Y$ may not be purely discrete or purely absolutely continuous).  Feel free to use the fact that Monotone Convergence, which is shown in the book for expectation, also holds for integration over $(0,\infty)$
+
+(b) Prove  the  same  result  using  the  Riemann-Stieltjes  definition  of $E(Y)$.   Feel  free  to assume that you can swap the order of integration in a double integral you may encounter (formal justification of such swaps is usually done using theorems of Fubini and Tonelli).
+
+::: {.callout-tip collapse="true" appearance="simple"}
+
+## Solution 
+
+(a) We will use InSiPoD (actually  InSiPo since $Y$ is nonnegative). If $Y=I_A$ is an indicator r.v., then $ \int_0^\infty P(Y>y)dy =  \int_0^1 P(Y=1)dy = P(A)=E(Y).$ Let $Y=\sum_{j=1}^n a_j I_{A_j}$, with the $a_j$'s distinct and the $A_j$'s a partition of $\Omega$. Then
+$$
+		\begin{align*} 
+		\int_0^\infty P(Y>y)dy  &= \int_0^\infty \sum_{j=1}^n P(Y>y|A_j)P(A_j) dy \\
+		&= \int_0^\infty \sum_{j=1}^n P(a_j>y|A_j)P(A_j)dy  \\
+		&=      \sum_{j=1}^n \int_0^\infty P(a_j>y|A_j)P(A_j) dy \\
+		&=    \sum_{j=1}^n a_j P(A_j)  = E(Y).
+		\end{align*} 
+$$
+Now let $Y$ be a nonnegative r.v., and write $Y = \lim_{n \to \infty} Y_n$, with the $Y_n$  simple r.v.s and $0 \leq Y_1 \leq Y_2 \leq \dots.$ By Monotone Convergence and continuity of probability,
+		$$E(Y) = \lim_{n \to \infty} E(Y_n) = \lim_{n \to \infty} \int_0^\infty P(Y_n>y)dy
+		= \int_0^\infty \lim_{n \to \infty} P(Y_n>y)dy
+		=  \int_0^\infty  P(Y>y)dy.$$
+		
+(b) Let $F$ be the CDF of $Y$. Then $$ \int_0^\infty P(Y>y)dy = \int_0^\infty \int_y^\infty  dF(x) dy = \int_0^\infty \int_0^x  dy dF(x) = \int_0^\infty x dF(x) = E(Y).$$
+:::
+
+
+### ✏️ Section Problem 5
+
+Let $X$ be a positive valued random variable with finite expectation. Show that:
+$$\frac{d}{dt}E(e^{-tX}) = - E(Xe^{-tX}) ; \hspace{0.2cm}t>0$$
+
+::: {.callout-tip collapse="true" appearance="simple"}
+
+## Solution 
+
+By the sequential definition of derivative, we have:
+$$
+	\begin{align*}
+	\frac{d}{dt}E(e^{-tX}) & = \lim\limits_{n\to \infty} \frac{E(e^{-(t+\epsilon_n)X}) - E(e^{-tX})}{\epsilon_n} \hspace{0.2cm} \text{(where $\epsilon_n \xrightarrow{n\to \infty} 0$)}\\
+	& = \lim\limits_{n\to \infty} E\Big( \frac{e^{-(t+\epsilon_n)X} - e^{-tX}}{\epsilon_n} \Big) = \lim\limits_{n\to \infty} E(Y_n)
+	\end{align*}
+$$
+	, where $Y_n = \frac{e^{-(t+\epsilon_n)X} - e^{-tX}}{\epsilon_n}$ for $n\geq 1$.\\
+	Firstly, let $(\Omega, \mathcal{F}, \mathbb{P})$ be the underlying probability space. Now, for any $\omega \in \Omega$, using the sequential definition of derivative once again we get:
+	$$\lim\limits_{n\to \infty} Y_n(\omega) = \frac{d}{dt} e^{-tX(\omega)} = -X(\omega)e^{-tX(\omega)}$$
+	Thus, $Y_n$ converges to $-Xe^{-tX}$ point-wise and hence almost surely, as $n\to \infty$.
+	
+Next we will try to uniformly bound the $Y_n$s. We notice that, for any $n\geq 1$
+$$
+	\begin{align*}
+	|Y_n| &= \Big |\frac{e^{-(t+\epsilon_n)X} - e^{-tX}}{\epsilon_n}\Big | \\
+	& = |e^{-tX}| \Big |\frac{e^{-\epsilon_n X} - 1}{\epsilon_n X}\Big | |X|\\
+	& \leq \Big |\frac{e^{-\epsilon_n X} - 1}{\epsilon_n X}\Big | |X| \hspace{0.3cm} \text{($\because$ $X$ is positive valued and $t>0$)}\\
+	& = \Big| \frac{f(\epsilon_n X) - f(0)}{\epsilon_n X - 0}  \Big| |X| \hspace{0.3cm} \text{(where $f(u) = e^{-u}$, $u\geq0$})\\
+	& = |f'(Z_n)||X| \hspace{0.3cm} \text{(using mean value theorem, where $0<Z_n<\epsilon_n X$)}\\
+	& = |-e^{-Z_n}||X| \leq 1 \times |X| = X
+	\end{align*}
+$$
+
+Furthermore $E(X)<\infty$. Using Dominated Convergence Theorem, we get $\lim\limits_{n\to \infty}E(Y_n) = E(-Xe^{-tX})$. Therefore,
+	$$ \frac{d}{dt}E(e^{-tX}) = - E(Xe^{-tX}) = E(\frac{d}{dt}e^{-tX})$$
+:::
+
+
+## Next Week
+Next week, we will discuss:
+
+- Conditional Expectation
+- Moment Generating Function
+
+![](assets/img/mgf.jpeg)
+
+Feel free to upload the pencil problem you wish to be discussed next week [here](https://forms.gle/RBmMNYJp4u3qD5W79).
+
+Note that a verified email address is needed in the GForm so we don't get scammy input! :) 
+
+$\,$
