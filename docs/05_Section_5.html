@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>STAT 210 Section Notes - Section 4</title>
+<title>STAT 210 Section Notes - Section 5</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,8 +30,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./05_Section_5.html" rel="next">
-<link href="./03_Section_3.html" rel="prev">
+<link href="./meme.html" rel="next">
+<link href="./04_Section_4.html" rel="prev">
 <link href="./assets/img/stat210-clear_bg.png" rel="icon" type="image/png">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -75,7 +75,7 @@ ul.task-list li input[type="checkbox"] {
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
     <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title">Section 4</h1>
+      <h1 class="quarto-secondary-nav-title">Section 5</h1>
       <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
         <i class="bi bi-chevron-right"></i>
       </button>
@@ -129,12 +129,12 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./04_Section_4.html" class="sidebar-item-text sidebar-link active">Section 4</a>
+  <a href="./04_Section_4.html" class="sidebar-item-text sidebar-link">Section 4</a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./05_Section_5.html" class="sidebar-item-text sidebar-link">Section 5</a>
+  <a href="./05_Section_5.html" class="sidebar-item-text sidebar-link active">Section 5</a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -152,8 +152,9 @@ ul.task-list li input[type="checkbox"] {
    
   <ul>
   <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a></li>
-  <li><a href="#lebesgue-integral" id="toc-lebesgue-integral" class="nav-link" data-scroll-target="#lebesgue-integral">Lebesgue Integral</a></li>
-  <li><a href="#convergence-theorems" id="toc-convergence-theorems" class="nav-link" data-scroll-target="#convergence-theorems">Convergence Theorems</a></li>
+  <li><a href="#expectation" id="toc-expectation" class="nav-link" data-scroll-target="#expectation">Expectation</a></li>
+  <li><a href="#variance-covariance-and-correlation" id="toc-variance-covariance-and-correlation" class="nav-link" data-scroll-target="#variance-covariance-and-correlation">Variance, Covariance, and Correlation</a></li>
+  <li><a href="#adam-eve-and-eece" id="toc-adam-eve-and-eece" class="nav-link" data-scroll-target="#adam-eve-and-eece">Adam, Eve and EECE</a></li>
   <li><a href="#section-discussion-questions" id="toc-section-discussion-questions" class="nav-link" data-scroll-target="#section-discussion-questions">Section Discussion Questions</a>
   <ul class="collapse">
   <li><a href="#section-problem-1" id="toc-section-problem-1" class="nav-link" data-scroll-target="#section-problem-1">✏️ Section Problem 1</a></li>
@@ -228,7 +229,7 @@ $$
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block">Section 4</h1>
+<h1 class="title d-none d-lg-block">Section 5</h1>
 </div>
 
 
@@ -243,27 +244,23 @@ $$
 
 </header>
 
-<p>Last Updated: 06 Oct 2023</p>
-<p>Date: 06 Oct 2023</p>
+<p>Last Updated: 13 Oct 2023</p>
+<p>Date: 12 Oct 2023</p>
 <section id="introduction" class="level2">
 <h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
 <p>In this section, we will discuss:</p>
 <ul>
-<li>Lebesgue Integral</li>
-<li>Convergence Theorems</li>
+<li>All about Expectation</li>
 </ul>
 </section>
-<section id="lebesgue-integral" class="level2">
-<h2 class="anchored" data-anchor-id="lebesgue-integral">Lebesgue Integral</h2>
-<div id="def-Riemann-Stieltjes-integral" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 1 </strong></span>(Riemann-Stieltjes integrals) <span class="math inline">\(E(X) = \int_{-\infty}^{\infty} x dF(x)\)</span>, easier to compute.</p>
-</div>
-<div id="def-Lebesgue-integral" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 2 </strong></span>(Lebesgue integral) <span class="math inline">\(E(X) = \int_{\Omega} X(\omega) P(d\omega)\)</span>, easier for proofs.</p>
+<section id="expectation" class="level2">
+<h2 class="anchored" data-anchor-id="expectation">Expectation</h2>
+<div id="def-expectation" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 1 </strong></span>(Expectation) For a discrete random variable <span class="math inline">\(X\)</span> taking on values <span class="math inline">\(x_1, x_2, \cdots\)</span>, <span class="math display">\[E(X)=\sum_{j=1}^{\infty} x_i P(X=x_i).\]</span> For a continuous random variable, the expectation <span class="math inline">\(E(X)\)</span> is given by the Riemann Intergral <span class="math display">\[E(X)= \int_{-\infty}^{\infty} xf(x) dx\]</span></p>
 </div>
 <p>To have a unified definition of expected values, and for proving results about expected values, it is helpful to define <span class="math inline">\(E\)</span> in stages for increasingly more general r.v.s. This parallels the construction of the Lebesgue integral.</p>
 <div id="def-InSiPoD" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 3 </strong></span>(InSiPoD) Let <span class="math inline">\((\Omega, \mathcal{F}, P)\)</span> be a probability space, and let <span class="math inline">\(X: \Omega \rightarrow \mathbb{R}\)</span> be a random variable. Then the expected value of <span class="math inline">\(X\)</span>, denoted <span class="math inline">\(\mathbf{E}[X]\)</span> is defined by the following three-step construction: <span class="math inline">\({ }^{14}\)</span></p>
+<p><span class="theorem-title"><strong>Definition 2 </strong></span>(InSiPoD) Let <span class="math inline">\((\Omega, \mathcal{F}, P)\)</span> be a probability space, and let <span class="math inline">\(X: \Omega \rightarrow \mathbb{R}\)</span> be a random variable. Then the expected value of <span class="math inline">\(X\)</span>, denoted <span class="math inline">\(\mathbf{E}[X]\)</span> is defined by the following three-step construction: <span class="math inline">\({ }^{14}\)</span></p>
 <ol type="1">
 <li><p>For indicator random variables, which are simply 1 on a bounded measurable set <span class="math inline">\(S \in \mathcal{F}\)</span> and 0 otherwise. Their expectation is the measure <span class="math inline">\(P(S)\)</span>.</p></li>
 <li><p>Extending to non-negative weighted sums of indicator random variables, called simple random variables. We do this by linearity of expectation.</p></li>
@@ -273,35 +270,42 @@ $$
 <li><p>Extending to general signed random variables by taking a partition <span class="math inline">\(X=X^{+}-X^{-}\)</span>into positive and negative parts, and computing the integral for each separately.</p></li>
 </ol>
 </div>
+<div id="def-linearity" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 3 </strong></span>(Linearity of Expectation) Expectation <span class="math inline">\(E\)</span> is linear: for any r.v.s <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span>, <span class="math display">\[E(X+Y)=E(X)+E(Y).\]</span></p>
+</div>
+<div id="def-fatou-lemma" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 4 </strong></span>(Fatou’s Lemma) Let <span class="math inline">\(X_1, X_2, \cdots\)</span> ve nonnegative r.v.s. Then <span class="math display">\[E(\lim \inf_{n\rightarrow\infty}X_n) \leq \lim \inf_{n\rightarrow\infty}EX_n\]</span></p>
+</div>
 </section>
-<section id="convergence-theorems" class="level2">
-<h2 class="anchored" data-anchor-id="convergence-theorems">Convergence Theorems</h2>
-<div id="def-Almost-sure-convergence" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 4 </strong></span>(Almost sure convergence): <span class="math inline">\(X_n \xrightarrow{a.s.}X\)</span> if <span class="math inline">\(P(\{\omega: X_n(\omega) \xrightarrow{n\to \infty} X(\omega)\}) = 1\)</span></p>
+<section id="variance-covariance-and-correlation" class="level2">
+<h2 class="anchored" data-anchor-id="variance-covariance-and-correlation">Variance, Covariance, and Correlation</h2>
+<div id="def-variance-std" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 5 </strong></span>(Variance and Standard deviation). The <em>variance</em> of <span class="math inline">\(X\)</span> is <span class="math display">\[Var(X)\equiv E((X-E(X))^2),\]</span> and the <em>standard deviation</em> is simply denoted as <span class="math inline">\(SD(X)=\sqrt(Var(X))\)</span>.</p>
 </div>
-<div id="thm-Monotone-Convergence-Theorem" class="theorem">
-<p><span class="theorem-title"><strong>Theorem 1 </strong></span>(Monotone Convergence Theorem): Let <span class="math inline">\(0 \leq X_1 \leq X_2 \leq ...\)</span> be an random variables such that <span class="math inline">\(X_n \xrightarrow{a.s.} X\)</span> as <span class="math inline">\(n\to \infty\)</span>. Then <span class="math inline">\(\lim\limits_{n\to \infty}E(X_n) = E(X)\)</span>.</p>
+<div id="def-cov-corr" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 6 </strong></span>(Covariance and Correlation). The <em>covariance</em> of <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span> is <span class="math display">\[Cov(X,Y)\equiv E((X-E(X))(Y-E(Y))).\]</span> and <em>correlation</em> is defined as <span class="math display">\[Cor(X,Y)\equiv Cov \left( \frac{X-EX}{SD(X)},\frac{Y-EY}{SD(Y)} \right)\]</span></p>
 </div>
-<div id="def-Fatou-Lemma" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 5 </strong></span>(Fatou’s Lemma): Let <span class="math inline">\(X_1,X_2,...\)</span> be a sequence of random variables. Then <span class="math display">\[E\Big(  \liminf_{n\to \infty} X_n \Big) \leq \liminf_{n\to \infty} E(X_n)\]</span></p>
+</section>
+<section id="adam-eve-and-eece" class="level2">
+<h2 class="anchored" data-anchor-id="adam-eve-and-eece">Adam, Eve and EECE</h2>
+<div id="def-adam" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 7 </strong></span>(Adam’s Law) We denote Adam’s law in Stat 110 and Stat 210 as <span class="math display">\[E(E(Y|X))=E(Y)\]</span></p>
 </div>
-<div id="thm-Dominated-Convergence-Theorem" class="theorem">
-<p><span class="theorem-title"><strong>Theorem 2 </strong></span>(Dominated Convergence Theorem): Let <span class="math inline">\(X_1,X_2,...\)</span> be a sequence of random variables such that <span class="math inline">\(X_n \xrightarrow{a.s.} X\)</span> as <span class="math inline">\(n\to \infty\)</span>. If there exists some r.v <span class="math inline">\(W\geq 0\)</span> with <span class="math inline">\(E(W)&lt;\infty\)</span> such that <span class="math inline">\(|X_n|\leq W\)</span> for all <span class="math inline">\(n\geq 1\)</span>, then <span class="math inline">\(\lim\limits_{n\to \infty}E(X_n) = E(X)\)</span>.</p>
+<div id="def-conditional-variance" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 8 </strong></span>(Conditional Variance) Conditional Variance can be defined as <span class="math display">\[Var(Y|X)=E((Y-E(Y|X))^2|X)=E(Y^2|X)-E^2(Y|X)\]</span></p>
 </div>
-<div id="thm-Bounded-Convergence-Theorem" class="theorem">
-<p><span class="theorem-title"><strong>Theorem 3 </strong></span>(Bounded Convergence Theorem): It’s a special case of DCT. If <span class="math inline">\(X_n \xrightarrow{a.s.} X\)</span> as <span class="math inline">\(n\to \infty\)</span> and <span class="math inline">\(|X_n|\leq c\)</span> for all <span class="math inline">\(n\geq 1\)</span> (for a constant <span class="math inline">\(c\)</span>), then <span class="math inline">\(\lim\limits_{n\to \infty}E(X_n) = E(X)\)</span>.</p>
+<div id="def-eve" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 9 </strong></span>(Eve’s Law) We denote Eve’s law in Stat 110 and Stat 210 as <span class="math display">\[Var(Y)=E(Var(Y|X))+Var(E(Y|X)).\]</span></p>
 </div>
-<p>Monotone Convergence Theorem, Dominated Convergence Theorem (and hence Bounded Convergence Theorem) also hold when <span class="math inline">\(X_n \to X\)</span> as <span class="math inline">\(n\)</span> goes to infinity.</p>
+<div id="def-ecce" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 10 </strong></span>(ECCE) ECCE is a common term that describe <span class="math display">\[Cov(Y_1, Y_2)=E(Cov(Y_1,Y_2|X))+Cov(E(Y_1|X, E(Y_2|X))\]</span></p>
+</div>
 </section>
 <section id="section-discussion-questions" class="level2">
 <h2 class="anchored" data-anchor-id="section-discussion-questions">Section Discussion Questions</h2>
 <section id="section-problem-1" class="level3">
 <h3 class="anchored" data-anchor-id="section-problem-1">✏️ Section Problem 1</h3>
-<p>Let <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span> be r.v.s with finite variances, on the same probability space.</p>
-<ol type="a">
-<li><p>Suppose (for this part only) that <span class="math inline">\(E(Y \mid X)=g(X)\)</span>, with <span class="math inline">\(g: \mathbb{R} \rightarrow \mathbb{R}\)</span> an increasing function. Show that <span class="math inline">\(\operatorname{Cov}(X, Y) \geq 0\)</span>.</p></li>
-<li><p>Suppose that <span class="math inline">\(E(Y \mid X)=X\)</span> and <span class="math inline">\(E(X \mid Y)=Y\)</span>. Show that <span class="math inline">\(P(X=Y)=1\)</span>.</p></li>
-</ol>
+<p>Let <span class="math inline">\(X_1, X_2\)</span> and <span class="math inline">\(Y\)</span> be random variable, <span class="math inline">\(E(Y^2)\)</span> finite. Let <span class="math display">\[A=E(Y|X_1) \text{ and } B=E(Y|X_1,X_2)\]</span> Show that <span class="math display">\[Var(A) \leq Var(B)\]</span></p>
 <div class="callout-tip callout callout-style-simple callout-captioned">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
@@ -314,21 +318,25 @@ Solution
 </div>
 <div id="callout-1" class="callout-1-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<ol type="a">
-<li><p>By <span class="math inline">\(\mathrm{ECCE}, \operatorname{Cov}(X, Y)=E \operatorname{Cov}(X, Y \mid X)+\operatorname{Cov}(E(X \mid X), E(Y \mid X))=\operatorname{Cov}(X, g(X))\)</span>. By the covariance inequality (proven in class), this is nonnegative.</p></li>
-<li><p>We will show <span class="math inline">\((X-Y)^2=0\)</span> a.s. by showing that <span class="math inline">\(E(X-Y)^2=0\)</span>. By Adam’s Law, <span class="math display">\[
-E(X-Y)^2=E\left(E\left(X^2 \mid X\right)-2 E(X Y \mid X)+E\left(Y^2 \mid X\right)\right)=E\left(Y^2\right)-E\left(X^2\right),
-\]</span> since <span class="math inline">\(E(X Y \mid X)=X E(Y \mid X)=X^2\)</span>. By Adam’s Law (now conditioning on <span class="math inline">\(Y\)</span> ), <span class="math display">\[
-E(X-Y)^2=E\left(X^2\right)-E\left(Y^2\right) \text {. }
-\]</span> So <span class="math inline">\(E(X-Y)^2\)</span> is its own negative, which implies <span class="math inline">\(E(X-Y)^2=0\)</span>. Thus, <span class="math inline">\(X=Y\)</span> a.s.</p></li>
-</ol>
+<p>Solution will be posted after section! :P <!--
+By Eve's Law, $$Var(B) \geq Var(E(B|X_1))$$
+
+By Adam's Law, $$E(B|X_1)=E(E(Y|X_1, X_2)|X_1)=E(Y|X_1)=A$$
+
+Thus, $$Var(B)\geq Var(E(B|X_1))=Var(A).$$ --></p>
 </div>
 </div>
 </div>
 </section>
 <section id="section-problem-2" class="level3">
 <h3 class="anchored" data-anchor-id="section-problem-2">✏️ Section Problem 2</h3>
-<p>Show that for any r.v.s <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span> with Var<span class="math inline">\((Y)\)</span> finite, we have <span class="math display">\[E(Y|E(Y|X))=E(Y|X)\]</span></p>
+<p>Let <span class="math inline">\(X, Y, Z\)</span> be random variables with finite variances, such that <span class="math display">\[
+E(Y \mid X, Z)=\beta_0+\beta_1 X+\beta_2 Z, E(Z \mid X)=\alpha_0+\alpha_1 X .
+\]</span></p>
+<ol type="a">
+<li><p>Find a fully simplified expression for <span class="math inline">\(E(Y \mid X)\)</span>.</p></li>
+<li><p>Assuming for this part only that <span class="math inline">\(X\)</span> and <span class="math inline">\(Z\)</span> are independent, exhibit the equality of variances: <span class="math inline">\(\operatorname{Var}(E(Y \mid X, Z))=\operatorname{Var}(E(Y \mid X))+\operatorname{Var}(E(Y \mid Z))\)</span>.</p></li>
+</ol>
 <div class="callout-tip callout callout-style-simple callout-captioned">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
@@ -341,21 +349,66 @@ Solution
 </div>
 <div id="callout-2" class="callout-2-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>Let <span class="math inline">\(g(X)=E(Y|X)\)</span>. By Adam’s law, <span class="math display">\[
-\begin{align*}
-E(Y|g(X)) &amp;= E(E(Y|X, g(X))|g(X))\\
-&amp;= E(E(Y|X)|g(X))\\
-&amp;= E(g(X)|g(X))\\
-&amp;= g(X)
-\end{align*}
-\]</span></p>
+<p>Solution will be posted after section! :P <!--
+(a) By Proposition 5.7.1 and taking out what's known, we can compute
+$$
+\begin{aligned}
+E(Y \mid X) & =E(E(Y \mid X, Z) \mid X) \\
+& =E\left(\beta_0+\beta_1 X+\beta_2 Z \mid X\right) \\
+& =\beta_0+\beta_1 X+\beta_2 E(Z \mid X) \\
+& =\beta_0+\beta_1 X+\beta_2\left(\alpha_0+\alpha_1 X\right) \\
+& =\left(\beta_0+\beta_2 \alpha_0\right)+\left(\beta_1+\beta_2 \alpha_1\right) X .
+\end{aligned}
+$$
+
+(b)
+(b) By Proposition 5.7.1 and taking out what's known, we can similarly compute
+$$
+\begin{aligned}
+E(Y \mid Z) & =E(E(Y \mid X, Z) \mid Z) \\
+& =E\left(\beta_0+\beta_1 X+\beta_2 Z \mid Z\right) \\
+& =\beta_0+\beta_1 E(X \mid Z)+\beta_2 Z \\
+& =\beta_0+\beta_1 E(X)+\beta_2 Z,
+\end{aligned}
+$$
+where the last line follows from $X \Perp Z$. Then, since $\beta_0+\beta_1 E(X)$ is a constant,
+$$
+\begin{aligned}
+\operatorname{Var}(E(Y \mid Z)) & =\operatorname{Var}\left(\beta_0+\beta_1 E(X)+\beta_2 Z\right) \\
+& =\operatorname{Var}\left(\beta_2 Z\right) \\
+& =\beta_2^2 \operatorname{Var}(Z) .
+\end{aligned}
+$$
+
+Now, given $X, \beta_0+\beta_1 X$ is constant, and this very fact, along with $X \Perp Z$, yields
+$$
+\begin{aligned}
+\operatorname{Var}(E(Y \mid X, Z) \mid X) & =\operatorname{Var}\left(\beta_0+\beta_1 X+\beta_2 Z \mid X\right) \\
+& =\operatorname{Var}\left(\beta_2 Z \mid X\right) \\
+& =\beta_2^2 \operatorname{Var}(Z)
+\end{aligned}
+$$
+
+With the totality of the results above, we can then use Eve's law to conclude that
+$$
+\begin{aligned}
+\operatorname{Var}(E(Y \mid X, Z)) & =\operatorname{Var}(E(E(Y \mid X, Z) \mid X))+E(\operatorname{Var}(E(Y \mid X, Z) \mid X)) \\
+& =\operatorname{Var}(E(Y \mid X))+E\left(\beta_2^2 \operatorname{Var}(Z)\right) \\
+& =\operatorname{Var}(E(Y \mid X))+\beta_2^2 \operatorname{Var}(Z) \\
+& =\operatorname{Var}(E(Y \mid X))+\operatorname{Var}(E(Y \mid Z))
+\end{aligned}
+$$
+where we recall that $E(E(Y \mid X, Z) \mid X)=E(Y \mid X)$ by Proposition 5.7.1. This is precisely the identity of variances that we needed to exhibit, so we are done.s
+--></p>
 </div>
 </div>
 </div>
 </section>
 <section id="section-problem-3" class="level3">
 <h3 class="anchored" data-anchor-id="section-problem-3">✏️ Section Problem 3</h3>
-<p>Let <span class="math inline">\(X_1, X_2\)</span> and <span class="math inline">\(Y\)</span> be random variable, <span class="math inline">\(E(Y^2)\)</span> finite. Let <span class="math display">\[A=E(Y|X_1) \text{ and } B=E(Y|X_1,X_2)\]</span> Show that <span class="math display">\[Var(A) \leq Var(B)\]</span></p>
+<p>Consider a linear model <span class="math inline">\(Y=\beta_0+\beta_1 X_1+\beta_2 X_2+\epsilon\)</span>, where <span class="math inline">\(E\left(\epsilon \mid X_1, X_2\right)=0\)</span>. As background: a method known as “partial regression” studies how <span class="math inline">\(X_1\)</span> and <span class="math inline">\(Y\)</span> are related by plotting the residuals <span class="math inline">\(Y-E\left(Y \mid X_2\right)\)</span> against the residuals <span class="math inline">\(X_1-E\left(X_1 \mid X_2\right)\)</span>; understanding the plot requires knowing how the covariance of these relates to <span class="math inline">\(\beta_1\)</span>. Show that <span class="math display">\[
+\operatorname{Cov}\left(Y-E\left(Y \mid X_2\right), X_1-E\left(X_1 \mid X_2\right)\right)=\beta_1 E \operatorname{Var}\left(X_1 \mid X_2\right)
+\]</span></p>
 <div class="callout-tip callout callout-style-simple callout-captioned">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
@@ -368,9 +421,29 @@ Solution
 </div>
 <div id="callout-3" class="callout-3-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>By Eve’s Law, <span class="math display">\[Var(B) \geq Var(E(B|X_1))\]</span></p>
-<p>By Adam’s Law, <span class="math display">\[E(B|X_1)=E(E(Y|X_1, X_2)|X_1)=E(Y|X_1)=A\]</span></p>
-<p>Thus, <span class="math display">\[Var(B)\geq Var(E(B|X_1))=Var(A).\]</span></p>
+<p>Solution will be posted after section! :P <!--
+ We want to find $\operatorname{Cov}\left(W_1, W_2\right)$, where $W_1=Y-E\left(Y \mid X_2\right)$ and $W_2=X_1-$ $E\left(X_1 \mid X_2\right)$. Note that
+$$
+\begin{gathered}
+E\left(W_2 \mid X_2\right)=E\left(X_1 \mid X_2\right)-E\left(X_1 \mid X_2\right)=0 \\
+E\left(\epsilon \mid X_2\right)=E\left(E\left(\epsilon \mid X_1, X_2\right) \mid X_2\right)=E\left(0 \mid X_2\right)=0 .
+\end{gathered}
+$$
+We will use ECCE and repeatedly use the fact that $\operatorname{Cov}(Z+c, W)=\operatorname{Cov}(Z, W)$ for any constant $c$.
+$$
+\begin{aligned}
+\operatorname{Cov}\left(W_1, W_2\right) & =E \operatorname{Cov}\left(W_1, W_2 \mid X_2\right)+\operatorname{Cov}\left(E\left(W_1 \mid X_2\right), E\left(W_2 \mid X_2\right)\right) \\
+& =E \operatorname{Cov}\left(W_1, W_2 \mid X_2\right) \\
+& =E \operatorname{Cov}\left(Y, X_1 \mid X_2\right) \\
+& =E\left(\operatorname{Cov}\left(\beta_1 X_1, X_1 \mid X_2\right)+\operatorname{Cov}\left(\epsilon, X_1 \mid X_2\right)\right) \\
+& =\beta_1 E\left(\operatorname{Var}\left(X_1 \mid X_2\right)\right)
+\end{aligned}
+$$
+since
+$$
+\operatorname{Cov}\left(\epsilon, X_1 \mid X_2\right)=E\left(\epsilon X_1 \mid X_2\right)=E\left(E\left(\epsilon X_1 \mid X_1, X_2\right) \mid X_2\right)=E\left(X_1 E\left(\epsilon \mid X_1, X_2\right) \mid X_2\right)=0
+$$
+ --></p>
 </div>
 </div>
 </div>
@@ -394,26 +467,46 @@ Solution
 </div>
 <div id="callout-4" class="callout-4-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<ol type="a">
-<li><p>We will use InSiPoD (actually InSiPo since <span class="math inline">\(Y\)</span> is nonnegative). If <span class="math inline">\(Y=I_A\)</span> is an indicator r.v., then $ _0^P(Y&gt;y)dy = _0^1 P(Y=1)dy = P(A)=E(Y).$ Let <span class="math inline">\(Y=\sum_{j=1}^n a_j I_{A_j}\)</span>, with the <span class="math inline">\(a_j\)</span>’s distinct and the <span class="math inline">\(A_j\)</span>’s a partition of <span class="math inline">\(\Omega\)</span>. Then <span class="math display">\[
-    \begin{align*}
-    \int_0^\infty P(Y&gt;y)dy  &amp;= \int_0^\infty \sum_{j=1}^n P(Y&gt;y|A_j)P(A_j) dy \\
-    &amp;= \int_0^\infty \sum_{j=1}^n P(a_j&gt;y|A_j)P(A_j)dy  \\
-    &amp;=      \sum_{j=1}^n \int_0^\infty P(a_j&gt;y|A_j)P(A_j) dy \\
-    &amp;=    \sum_{j=1}^n a_j P(A_j)  = E(Y).
-    \end{align*}
-\]</span> Now let <span class="math inline">\(Y\)</span> be a nonnegative r.v., and write <span class="math inline">\(Y = \lim_{n \to \infty} Y_n\)</span>, with the <span class="math inline">\(Y_n\)</span> simple r.v.s and <span class="math inline">\(0 \leq Y_1 \leq Y_2 \leq \dots.\)</span> By Monotone Convergence and continuity of probability, <span class="math display">\[E(Y) = \lim_{n \to \infty} E(Y_n) = \lim_{n \to \infty} \int_0^\infty P(Y_n&gt;y)dy
-    = \int_0^\infty \lim_{n \to \infty} P(Y_n&gt;y)dy
-    =  \int_0^\infty  P(Y&gt;y)dy.\]</span></p></li>
-<li><p>Let <span class="math inline">\(F\)</span> be the CDF of <span class="math inline">\(Y\)</span>. Then <span class="math display">\[ \int_0^\infty P(Y&gt;y)dy = \int_0^\infty \int_y^\infty  dF(x) dy = \int_0^\infty \int_0^x  dy dF(x) = \int_0^\infty x dF(x) = E(Y).\]</span></p></li>
-</ol>
+<p>Solution will be posted after section! :P <!--
+(a) We will use InSiPoD (actually  InSiPo since $Y$ is nonnegative). If $Y=I_A$ is an indicator r.v., then $ \int_0^\infty P(Y>y)dy =  \int_0^1 P(Y=1)dy = P(A)=E(Y).$ Let $Y=\sum_{j=1}^n a_j I_{A_j}$, with the $a_j$'s distinct and the $A_j$'s a partition of $\Omega$. Then
+$$
+        \begin{align*} 
+        \int_0^\infty P(Y>y)dy  &= \int_0^\infty \sum_{j=1}^n P(Y>y|A_j)P(A_j) dy \\
+        &= \int_0^\infty \sum_{j=1}^n P(a_j>y|A_j)P(A_j)dy  \\
+        &=      \sum_{j=1}^n \int_0^\infty P(a_j>y|A_j)P(A_j) dy \\
+        &=    \sum_{j=1}^n a_j P(A_j)  = E(Y).
+        \end{align*} 
+$$
+Now let $Y$ be a nonnegative r.v., and write $Y = \lim_{n \to \infty} Y_n$, with the $Y_n$  simple r.v.s and $0 \leq Y_1 \leq Y_2 \leq \dots.$ By Monotone Convergence and continuity of probability,
+        $$E(Y) = \lim_{n \to \infty} E(Y_n) = \lim_{n \to \infty} \int_0^\infty P(Y_n>y)dy
+        = \int_0^\infty \lim_{n \to \infty} P(Y_n>y)dy
+        =  \int_0^\infty  P(Y>y)dy.$$
+        
+(b) Let $F$ be the CDF of $Y$. Then $$ \int_0^\infty P(Y>y)dy = \int_0^\infty \int_y^\infty  dF(x) dy = \int_0^\infty \int_0^x  dy dF(x) = \int_0^\infty x dF(x) = E(Y).$$
+--></p>
 </div>
 </div>
 </div>
 </section>
 <section id="section-problem-5" class="level3">
 <h3 class="anchored" data-anchor-id="section-problem-5">✏️ Section Problem 5</h3>
-<p>Let <span class="math inline">\(X\)</span> be a positive valued random variable with finite expectation. Show that: <span class="math display">\[\frac{d}{dt}E(e^{-tX}) = - E(Xe^{-tX}) ; \hspace{0.2cm}t&gt;0\]</span></p>
+<ol start="3" type="1">
+<li>Let <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span> be random variables with <span class="math inline">\(\operatorname{Var}(Y)&lt;\infty\)</span>.</li>
+</ol>
+<ol type="a">
+<li><p>For this part, suppose that <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span> are discrete. Let <span class="math inline">\(A=\{x: P(X=x)&gt;0\}\)</span> and <span class="math inline">\(B=\{y: P(Y=y)&gt;0\}\)</span>. Define the function <span class="math inline">\(g: A \rightarrow \mathbb{R}\)</span> by <span class="math display">\[
+g(x)=\sum_{y \in B} y P(Y=y \mid X=x) .
+\]</span> The Stat 110 definition of the conditional expectation <span class="math inline">\(E(Y \mid X)\)</span> is the r.v. <span class="math inline">\(g(X)\)</span>. Show that <span class="math inline">\(g(X)\)</span> satisfies the Stat 210 definition of <span class="math inline">\(E(Y \mid X)\)</span>.</p></li>
+<li><p>Let <span class="math inline">\(\mathcal{G}\)</span> be the <span class="math inline">\(\sigma\)</span>-algebra generated by <span class="math inline">\(X\)</span>, i.e., the set of all events of the form <span class="math inline">\(X^{-1}(A)\)</span>, with <span class="math inline">\(A\)</span> Borel. The most common measure-theoretic definition of <span class="math inline">\(E(Y \mid X)\)</span> is that it is an r.v. <span class="math inline">\(T\)</span> such that the following two conditions hold:</p></li>
+</ol>
+<ol type="i">
+<li><p><span class="math inline">\(T\)</span> is <span class="math inline">\(\mathcal{G}\)</span>-measurable, i.e., <span class="math inline">\(T^{-1}(B) \in \mathcal{G}\)</span> for all Borel <span class="math inline">\(B\)</span>;</p></li>
+<li><p>For all <span class="math inline">\(G \in \mathcal{G}\)</span>,</p></li>
+</ol>
+<p><span class="math display">\[
+\int_{\Omega} I_G(\omega) Y(\omega) P(d \omega)=\int_{\Omega} I_G(\omega) T(\omega) P(d \omega) .
+\]</span></p>
+<p>Let <span class="math inline">\(g(X)\)</span> satisfy the Stat 210 definition of <span class="math inline">\(E(Y \mid X)\)</span>, with <span class="math inline">\(g: \mathbb{R} \rightarrow \mathbb{R}\)</span> a measurable function (i.e., <span class="math inline">\(g^{-1}(B)\)</span> is Borel for all Borel <span class="math inline">\(B\)</span> ). Show that <span class="math inline">\(g(X)\)</span> satisfies conditions (i) and (ii).</p>
 <div class="callout-tip callout callout-style-simple callout-captioned">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
@@ -426,23 +519,60 @@ Solution
 </div>
 <div id="callout-5" class="callout-5-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>By the sequential definition of derivative, we have: <span class="math display">\[
-    \begin{align*}
-    \frac{d}{dt}E(e^{-tX}) &amp; = \lim\limits_{n\to \infty} \frac{E(e^{-(t+\epsilon_n)X}) - E(e^{-tX})}{\epsilon_n} \hspace{0.2cm} \text{(where $\epsilon_n \xrightarrow{n\to \infty} 0$)}\\
-    &amp; = \lim\limits_{n\to \infty} E\Big( \frac{e^{-(t+\epsilon_n)X} - e^{-tX}}{\epsilon_n} \Big) = \lim\limits_{n\to \infty} E(Y_n)
-    \end{align*}
-\]</span> , where <span class="math inline">\(Y_n = \frac{e^{-(t+\epsilon_n)X} - e^{-tX}}{\epsilon_n}\)</span> for <span class="math inline">\(n\geq 1\)</span>.\ Firstly, let <span class="math inline">\((\Omega, \mathcal{F}, \mathbb{P})\)</span> be the underlying probability space. Now, for any <span class="math inline">\(\omega \in \Omega\)</span>, using the sequential definition of derivative once again we get: <span class="math display">\[\lim\limits_{n\to \infty} Y_n(\omega) = \frac{d}{dt} e^{-tX(\omega)} = -X(\omega)e^{-tX(\omega)}\]</span> Thus, <span class="math inline">\(Y_n\)</span> converges to <span class="math inline">\(-Xe^{-tX}\)</span> point-wise and hence almost surely, as <span class="math inline">\(n\to \infty\)</span>.</p>
-<p>Next we will try to uniformly bound the <span class="math inline">\(Y_n\)</span>s. We notice that, for any <span class="math inline">\(n\geq 1\)</span> <span class="math display">\[
-    \begin{align*}
-    |Y_n| &amp;= \Big |\frac{e^{-(t+\epsilon_n)X} - e^{-tX}}{\epsilon_n}\Big | \\
-    &amp; = |e^{-tX}| \Big |\frac{e^{-\epsilon_n X} - 1}{\epsilon_n X}\Big | |X|\\
-    &amp; \leq \Big |\frac{e^{-\epsilon_n X} - 1}{\epsilon_n X}\Big | |X| \hspace{0.3cm} \text{($\because$ $X$ is positive valued and $t&gt;0$)}\\
-    &amp; = \Big| \frac{f(\epsilon_n X) - f(0)}{\epsilon_n X - 0}  \Big| |X| \hspace{0.3cm} \text{(where $f(u) = e^{-u}$, $u\geq0$})\\
-    &amp; = |f'(Z_n)||X| \hspace{0.3cm} \text{(using mean value theorem, where $0&lt;Z_n&lt;\epsilon_n X$)}\\
-    &amp; = |-e^{-Z_n}||X| \leq 1 \times |X| = X
-    \end{align*}
-\]</span></p>
-<p>Furthermore <span class="math inline">\(E(X)&lt;\infty\)</span>. Using Dominated Convergence Theorem, we get <span class="math inline">\(\lim\limits_{n\to \infty}E(Y_n) = E(-Xe^{-tX})\)</span>. Therefore, <span class="math display">\[ \frac{d}{dt}E(e^{-tX}) = - E(Xe^{-tX}) = E(\frac{d}{dt}e^{-tX})\]</span></p>
+<p>Solution will be posted after section! :P <!--
+(a) Let $h$ be a bounded, measurable function. We need to show that
+$$ 
+E((Y-g(X)) h(X))=0 .
+$$
+By linearity, it is equivalent to show that
+$$
+E(Y h(X))=E(g(X) h(X)) .
+$$
+By LOTUS, the left-hand side is
+$$
+\sum_{x \in A} \sum_{y \in B} y h(x) P(X=x, Y=y)
+$$
+and the right-hand side is
+$$
+\sum_{x \in A} g(x) h(x) P(X=x) .
+$$
+Plugging in the formula for $g(x)$, the right-hand side is
+$$
+\sum_{x \in A}\left(\sum_{y \in B} y P(Y=y \mid X=x)\right) h(x) P(X=x)=\sum_{x \in A} \sum_{y \in B} y h(x) P(X=x, Y=y),
+$$
+since we can bring $h(x) P(X=x)$ inside the sum over $y$ and then use the fact that
+$$
+P(X=x, Y=y)=P(X=x) P(Y=y \mid X=x) .
+$$
+
+(b) Let $T=g(X)$. Recall that, formally, $T$ is a composition of functions: first do $X$, then do $g$. For any Borel set $B$,
+$$
+T^{-1}(B)=X^{-1}\left(g^{-1}(B)\right) .
+$$
+Let $A=g^{-1}(B)$. Then $A$ is Borel (since $B$ is Borel and $g$ is a measurable function), so $T^{-1}(B) \in \mathcal{G}$ (since it is of the form $X^{-1}(A)$ with $A$ Borel).
+
+Now fix $G=X^{-1}(C) \in \mathcal{G}$, where $C$ is Borel. In expectation notation, we need to verify that
+$$
+E\left(I_G Y\right)=E\left(I_G T\right) .
+$$
+Equivalently, we can show
+$$
+E\left((Y-T) I_G\right)=0 .
+$$
+If we can show that $I_G$ is of the form $h(X)$ where $h$ is a bounded, measurable function, then we know from the Stat 210 definition of conditional expectation that the above equation holds. Let
+$$
+h(x)=I(x \in C) .
+$$
+Then $h$ is bounded (since $h(x) \in\{0,1\}$ for all $x$ ) and measurable (since the preimage of any Borel set is either $\emptyset, C, C^c$, or $\mathbb{R}$ ), and, since $G$ is the event $X \in C$,
+$$
+h(X)=I(X \in C)=I_G .
+$$
+Hence,
+$$
+E\left((Y-T) I_G\right)=0
+$$
+as desired.
+--></p>
 </div>
 </div>
 </div>
@@ -452,10 +582,10 @@ Solution
 <h2 class="anchored" data-anchor-id="next-week">Next Week</h2>
 <p>Next week, we will discuss:</p>
 <ul>
-<li>Conditional Expectation</li>
 <li>Moment Generating Function</li>
+<li>Midterm Review</li>
 </ul>
-<p><img src="assets/img/mgf.jpeg" class="img-fluid"></p>
+<p><img src="assets/img/midterm.jpeg" class="img-fluid"></p>
 <p>Feel free to upload the pencil problem you wish to be discussed next week <a href="https://forms.gle/RBmMNYJp4u3qD5W79">here</a>.</p>
 <p>Note that a verified email address is needed in the GForm so we don’t get scammy input! :)</p>
 <p><span class="math inline">\(\,\)</span></p>
@@ -714,13 +844,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./03_Section_3.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Section 3</span>
+      <a href="./04_Section_4.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Section 4</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./05_Section_5.html" class="pagination-link">
-        <span class="nav-page-text">Section 5</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./meme.html" class="pagination-link">
+        <span class="nav-page-text">Quotes</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
