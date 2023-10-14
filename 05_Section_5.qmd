@@ -89,13 +89,11 @@ Show that $$Var(A) \leq Var(B)$$
 ::: {.callout-tip collapse="true" appearance="simple"}
 
 ## Solution 
-Solution will be posted after section! :P
-<!--
 By Eve's Law, $$Var(B) \geq Var(E(B|X_1))$$
 
 By Adam's Law, $$E(B|X_1)=E(E(Y|X_1, X_2)|X_1)=E(Y|X_1)=A$$
 
-Thus, $$Var(B)\geq Var(E(B|X_1))=Var(A).$$ -->
+Thus, $$Var(B)\geq Var(E(B|X_1))=Var(A).$$
 :::
 
 ### ✏️ Section Problem 2
@@ -111,8 +109,6 @@ $$
 ::: {.callout-tip collapse="true" appearance="simple"}
 
 ## Solution 
-Solution will be posted after section! :P
-<!--
 (a) By Proposition 5.7.1 and taking out what's known, we can compute
 $$
 \begin{aligned}
@@ -134,7 +130,7 @@ E(Y \mid Z) & =E(E(Y \mid X, Z) \mid Z) \\
 & =\beta_0+\beta_1 E(X)+\beta_2 Z,
 \end{aligned}
 $$
-where the last line follows from $X \Perp Z$. Then, since $\beta_0+\beta_1 E(X)$ is a constant,
+where the last line follows from $X \perp\!\!\!\!\perp Z$. Then, since $\beta_0+\beta_1 E(X)$ is a constant,
 $$
 \begin{aligned}
 \operatorname{Var}(E(Y \mid Z)) & =\operatorname{Var}\left(\beta_0+\beta_1 E(X)+\beta_2 Z\right) \\
@@ -143,7 +139,7 @@ $$
 \end{aligned}
 $$
 
-Now, given $X, \beta_0+\beta_1 X$ is constant, and this very fact, along with $X \Perp Z$, yields
+Now, given $X, \beta_0+\beta_1 X$ is constant, and this very fact, along with $X \perp\!\!\!\!\perp Z$, yields
 $$
 \begin{aligned}
 \operatorname{Var}(E(Y \mid X, Z) \mid X) & =\operatorname{Var}\left(\beta_0+\beta_1 X+\beta_2 Z \mid X\right) \\
@@ -161,8 +157,7 @@ $$
 & =\operatorname{Var}(E(Y \mid X))+\operatorname{Var}(E(Y \mid Z))
 \end{aligned}
 $$
-where we recall that $E(E(Y \mid X, Z) \mid X)=E(Y \mid X)$ by Proposition 5.7.1. This is precisely the identity of variances that we needed to exhibit, so we are done.s
--->
+where we recall that $E(E(Y \mid X, Z) \mid X)=E(Y \mid X)$ by Proposition 5.7.1. This is precisely the identity of variances that we needed to exhibit, so we are done.
 :::
 
 ### ✏️ Section Problem 3
@@ -176,9 +171,7 @@ $$
 ::: {.callout-tip collapse="true" appearance="simple"}
 
 ## Solution 
-Solution will be posted after section! :P
-<!--
- We want to find $\operatorname{Cov}\left(W_1, W_2\right)$, where $W_1=Y-E\left(Y \mid X_2\right)$ and $W_2=X_1-$ $E\left(X_1 \mid X_2\right)$. Note that
+We want to find $\operatorname{Cov}\left(W_1, W_2\right)$, where $W_1=Y-E\left(Y \mid X_2\right)$ and $W_2=X_1-$ $E\left(X_1 \mid X_2\right)$. Note that
 $$
 \begin{gathered}
 E\left(W_2 \mid X_2\right)=E\left(X_1 \mid X_2\right)-E\left(X_1 \mid X_2\right)=0 \\
@@ -199,7 +192,6 @@ since
 $$
 \operatorname{Cov}\left(\epsilon, X_1 \mid X_2\right)=E\left(\epsilon X_1 \mid X_2\right)=E\left(E\left(\epsilon X_1 \mid X_1, X_2\right) \mid X_2\right)=E\left(X_1 E\left(\epsilon \mid X_1, X_2\right) \mid X_2\right)=0
 $$
- -->
 :::
 
 ### ✏️ Section Problem 4
@@ -213,8 +205,6 @@ Let $Y$ be a nonnegative $r.v.$ with $E(Y)< \infty$.
 ::: {.callout-tip collapse="true" appearance="simple"}
 
 ## Solution 
-Solution will be posted after section! :P
-<!--
 (a) We will use InSiPoD (actually  InSiPo since $Y$ is nonnegative). If $Y=I_A$ is an indicator r.v., then $ \int_0^\infty P(Y>y)dy =  \int_0^1 P(Y=1)dy = P(A)=E(Y).$ Let $Y=\sum_{j=1}^n a_j I_{A_j}$, with the $a_j$'s distinct and the $A_j$'s a partition of $\Omega$. Then
 $$
 		\begin{align*} 
@@ -230,11 +220,10 @@ Now let $Y$ be a nonnegative r.v., and write $Y = \lim_{n \to \infty} Y_n$, with
 		=  \int_0^\infty  P(Y>y)dy.$$
 		
 (b) Let $F$ be the CDF of $Y$. Then $$ \int_0^\infty P(Y>y)dy = \int_0^\infty \int_y^\infty  dF(x) dy = \int_0^\infty \int_0^x  dy dF(x) = \int_0^\infty x dF(x) = E(Y).$$
--->
 :::
 
 ### ✏️ Section Problem 5
-3. Let $X$ and $Y$ be random variables with $\operatorname{Var}(Y)<\infty$.
+Let $X$ and $Y$ be random variables with $\operatorname{Var}(Y)<\infty$.
 
 (a) For this part, suppose that $X$ and $Y$ are discrete. Let $A=\{x: P(X=x)>0\}$ and $B=\{y: P(Y=y)>0\}$. Define the function $g: A \rightarrow \mathbb{R}$ by
 $$
@@ -257,8 +246,6 @@ Let $g(X)$ satisfy the Stat 210 definition of $E(Y \mid X)$, with $g: \mathbb{R}
 ::: {.callout-tip collapse="true" appearance="simple"}
 
 ## Solution 
-Solution will be posted after section! :P
-<!--
 (a) Let $h$ be a bounded, measurable function. We need to show that
 $$ 
 E((Y-g(X)) h(X))=0 .
@@ -311,7 +298,6 @@ $$
 E\left((Y-T) I_G\right)=0
 $$
 as desired.
--->
 :::
 
 ## Next Week

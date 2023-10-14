@@ -147,7 +147,7 @@ Let $Y$ be a nonnegative $r.v.$ with $E(Y)< \infty$.
 
 ## Solution 
 
-(a) We will use InSiPoD (actually  InSiPo since $Y$ is nonnegative). If $Y=I_A$ is an indicator r.v., then $ \int_0^\infty P(Y>y)dy =  \int_0^1 P(Y=1)dy = P(A)=E(Y).$ Let $Y=\sum_{j=1}^n a_j I_{A_j}$, with the $a_j$'s distinct and the $A_j$'s a partition of $\Omega$. Then
+(a) We will use InSiPoD (actually  InSiPo since $Y$ is nonnegative). If $Y=I_A$ is an indicator r.v., then $\int_0^\infty P(Y>y)dy = \int_0^1 P(Y=1)dy = P(A)=E(Y).$ Let $Y=\sum_{j=1}^n a_j I_{A_j}$, with the $a_j$'s distinct and the $A_j$'s a partition of $\Omega$. Then
 $$
 		\begin{align*} 
 		\int_0^\infty P(Y>y)dy  &= \int_0^\infty \sum_{j=1}^n P(Y>y|A_j)P(A_j) dy \\

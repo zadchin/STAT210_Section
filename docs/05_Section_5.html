@@ -318,12 +318,9 @@ Solution
 </div>
 <div id="callout-1" class="callout-1-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>Solution will be posted after section! :P <!--
-By Eve's Law, $$Var(B) \geq Var(E(B|X_1))$$
-
-By Adam's Law, $$E(B|X_1)=E(E(Y|X_1, X_2)|X_1)=E(Y|X_1)=A$$
-
-Thus, $$Var(B)\geq Var(E(B|X_1))=Var(A).$$ --></p>
+<p>By Eve’s Law, <span class="math display">\[Var(B) \geq Var(E(B|X_1))\]</span></p>
+<p>By Adam’s Law, <span class="math display">\[E(B|X_1)=E(E(Y|X_1, X_2)|X_1)=E(Y|X_1)=A\]</span></p>
+<p>Thus, <span class="math display">\[Var(B)\geq Var(E(B|X_1))=Var(A).\]</span></p>
 </div>
 </div>
 </div>
@@ -349,57 +346,47 @@ Solution
 </div>
 <div id="callout-2" class="callout-2-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>Solution will be posted after section! :P <!--
-(a) By Proposition 5.7.1 and taking out what's known, we can compute
-$$
+<ol type="a">
+<li><p>By Proposition 5.7.1 and taking out what’s known, we can compute <span class="math display">\[
 \begin{aligned}
-E(Y \mid X) & =E(E(Y \mid X, Z) \mid X) \\
-& =E\left(\beta_0+\beta_1 X+\beta_2 Z \mid X\right) \\
-& =\beta_0+\beta_1 X+\beta_2 E(Z \mid X) \\
-& =\beta_0+\beta_1 X+\beta_2\left(\alpha_0+\alpha_1 X\right) \\
-& =\left(\beta_0+\beta_2 \alpha_0\right)+\left(\beta_1+\beta_2 \alpha_1\right) X .
+E(Y \mid X) &amp; =E(E(Y \mid X, Z) \mid X) \\
+&amp; =E\left(\beta_0+\beta_1 X+\beta_2 Z \mid X\right) \\
+&amp; =\beta_0+\beta_1 X+\beta_2 E(Z \mid X) \\
+&amp; =\beta_0+\beta_1 X+\beta_2\left(\alpha_0+\alpha_1 X\right) \\
+&amp; =\left(\beta_0+\beta_2 \alpha_0\right)+\left(\beta_1+\beta_2 \alpha_1\right) X .
 \end{aligned}
-$$
-
-(b)
-(b) By Proposition 5.7.1 and taking out what's known, we can similarly compute
-$$
+\]</span></p></li>
+<li></li>
+<li><p>By Proposition 5.7.1 and taking out what’s known, we can similarly compute <span class="math display">\[
 \begin{aligned}
-E(Y \mid Z) & =E(E(Y \mid X, Z) \mid Z) \\
-& =E\left(\beta_0+\beta_1 X+\beta_2 Z \mid Z\right) \\
-& =\beta_0+\beta_1 E(X \mid Z)+\beta_2 Z \\
-& =\beta_0+\beta_1 E(X)+\beta_2 Z,
+E(Y \mid Z) &amp; =E(E(Y \mid X, Z) \mid Z) \\
+&amp; =E\left(\beta_0+\beta_1 X+\beta_2 Z \mid Z\right) \\
+&amp; =\beta_0+\beta_1 E(X \mid Z)+\beta_2 Z \\
+&amp; =\beta_0+\beta_1 E(X)+\beta_2 Z,
 \end{aligned}
-$$
-where the last line follows from $X \Perp Z$. Then, since $\beta_0+\beta_1 E(X)$ is a constant,
-$$
+\]</span> where the last line follows from <span class="math inline">\(X \perp\!\!\!\!\perp Z\)</span>. Then, since <span class="math inline">\(\beta_0+\beta_1 E(X)\)</span> is a constant, <span class="math display">\[
 \begin{aligned}
-\operatorname{Var}(E(Y \mid Z)) & =\operatorname{Var}\left(\beta_0+\beta_1 E(X)+\beta_2 Z\right) \\
-& =\operatorname{Var}\left(\beta_2 Z\right) \\
-& =\beta_2^2 \operatorname{Var}(Z) .
+\operatorname{Var}(E(Y \mid Z)) &amp; =\operatorname{Var}\left(\beta_0+\beta_1 E(X)+\beta_2 Z\right) \\
+&amp; =\operatorname{Var}\left(\beta_2 Z\right) \\
+&amp; =\beta_2^2 \operatorname{Var}(Z) .
 \end{aligned}
-$$
-
-Now, given $X, \beta_0+\beta_1 X$ is constant, and this very fact, along with $X \Perp Z$, yields
-$$
+\]</span></p></li>
+</ol>
+<p>Now, given <span class="math inline">\(X, \beta_0+\beta_1 X\)</span> is constant, and this very fact, along with <span class="math inline">\(X \perp\!\!\!\!\perp Z\)</span>, yields <span class="math display">\[
 \begin{aligned}
-\operatorname{Var}(E(Y \mid X, Z) \mid X) & =\operatorname{Var}\left(\beta_0+\beta_1 X+\beta_2 Z \mid X\right) \\
-& =\operatorname{Var}\left(\beta_2 Z \mid X\right) \\
-& =\beta_2^2 \operatorname{Var}(Z)
+\operatorname{Var}(E(Y \mid X, Z) \mid X) &amp; =\operatorname{Var}\left(\beta_0+\beta_1 X+\beta_2 Z \mid X\right) \\
+&amp; =\operatorname{Var}\left(\beta_2 Z \mid X\right) \\
+&amp; =\beta_2^2 \operatorname{Var}(Z)
 \end{aligned}
-$$
-
-With the totality of the results above, we can then use Eve's law to conclude that
-$$
+\]</span></p>
+<p>With the totality of the results above, we can then use Eve’s law to conclude that <span class="math display">\[
 \begin{aligned}
-\operatorname{Var}(E(Y \mid X, Z)) & =\operatorname{Var}(E(E(Y \mid X, Z) \mid X))+E(\operatorname{Var}(E(Y \mid X, Z) \mid X)) \\
-& =\operatorname{Var}(E(Y \mid X))+E\left(\beta_2^2 \operatorname{Var}(Z)\right) \\
-& =\operatorname{Var}(E(Y \mid X))+\beta_2^2 \operatorname{Var}(Z) \\
-& =\operatorname{Var}(E(Y \mid X))+\operatorname{Var}(E(Y \mid Z))
+\operatorname{Var}(E(Y \mid X, Z)) &amp; =\operatorname{Var}(E(E(Y \mid X, Z) \mid X))+E(\operatorname{Var}(E(Y \mid X, Z) \mid X)) \\
+&amp; =\operatorname{Var}(E(Y \mid X))+E\left(\beta_2^2 \operatorname{Var}(Z)\right) \\
+&amp; =\operatorname{Var}(E(Y \mid X))+\beta_2^2 \operatorname{Var}(Z) \\
+&amp; =\operatorname{Var}(E(Y \mid X))+\operatorname{Var}(E(Y \mid Z))
 \end{aligned}
-$$
-where we recall that $E(E(Y \mid X, Z) \mid X)=E(Y \mid X)$ by Proposition 5.7.1. This is precisely the identity of variances that we needed to exhibit, so we are done.s
---></p>
+\]</span> where we recall that <span class="math inline">\(E(E(Y \mid X, Z) \mid X)=E(Y \mid X)\)</span> by Proposition 5.7.1. This is precisely the identity of variances that we needed to exhibit, so we are done.</p>
 </div>
 </div>
 </div>
@@ -421,29 +408,22 @@ Solution
 </div>
 <div id="callout-3" class="callout-3-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>Solution will be posted after section! :P <!--
- We want to find $\operatorname{Cov}\left(W_1, W_2\right)$, where $W_1=Y-E\left(Y \mid X_2\right)$ and $W_2=X_1-$ $E\left(X_1 \mid X_2\right)$. Note that
-$$
+<p>We want to find <span class="math inline">\(\operatorname{Cov}\left(W_1, W_2\right)\)</span>, where <span class="math inline">\(W_1=Y-E\left(Y \mid X_2\right)\)</span> and <span class="math inline">\(W_2=X_1-\)</span> <span class="math inline">\(E\left(X_1 \mid X_2\right)\)</span>. Note that <span class="math display">\[
 \begin{gathered}
 E\left(W_2 \mid X_2\right)=E\left(X_1 \mid X_2\right)-E\left(X_1 \mid X_2\right)=0 \\
 E\left(\epsilon \mid X_2\right)=E\left(E\left(\epsilon \mid X_1, X_2\right) \mid X_2\right)=E\left(0 \mid X_2\right)=0 .
 \end{gathered}
-$$
-We will use ECCE and repeatedly use the fact that $\operatorname{Cov}(Z+c, W)=\operatorname{Cov}(Z, W)$ for any constant $c$.
-$$
+\]</span> We will use ECCE and repeatedly use the fact that <span class="math inline">\(\operatorname{Cov}(Z+c, W)=\operatorname{Cov}(Z, W)\)</span> for any constant <span class="math inline">\(c\)</span>. <span class="math display">\[
 \begin{aligned}
-\operatorname{Cov}\left(W_1, W_2\right) & =E \operatorname{Cov}\left(W_1, W_2 \mid X_2\right)+\operatorname{Cov}\left(E\left(W_1 \mid X_2\right), E\left(W_2 \mid X_2\right)\right) \\
-& =E \operatorname{Cov}\left(W_1, W_2 \mid X_2\right) \\
-& =E \operatorname{Cov}\left(Y, X_1 \mid X_2\right) \\
-& =E\left(\operatorname{Cov}\left(\beta_1 X_1, X_1 \mid X_2\right)+\operatorname{Cov}\left(\epsilon, X_1 \mid X_2\right)\right) \\
-& =\beta_1 E\left(\operatorname{Var}\left(X_1 \mid X_2\right)\right)
+\operatorname{Cov}\left(W_1, W_2\right) &amp; =E \operatorname{Cov}\left(W_1, W_2 \mid X_2\right)+\operatorname{Cov}\left(E\left(W_1 \mid X_2\right), E\left(W_2 \mid X_2\right)\right) \\
+&amp; =E \operatorname{Cov}\left(W_1, W_2 \mid X_2\right) \\
+&amp; =E \operatorname{Cov}\left(Y, X_1 \mid X_2\right) \\
+&amp; =E\left(\operatorname{Cov}\left(\beta_1 X_1, X_1 \mid X_2\right)+\operatorname{Cov}\left(\epsilon, X_1 \mid X_2\right)\right) \\
+&amp; =\beta_1 E\left(\operatorname{Var}\left(X_1 \mid X_2\right)\right)
 \end{aligned}
-$$
-since
-$$
+\]</span> since <span class="math display">\[
 \operatorname{Cov}\left(\epsilon, X_1 \mid X_2\right)=E\left(\epsilon X_1 \mid X_2\right)=E\left(E\left(\epsilon X_1 \mid X_1, X_2\right) \mid X_2\right)=E\left(X_1 E\left(\epsilon \mid X_1, X_2\right) \mid X_2\right)=0
-$$
- --></p>
+\]</span></p>
 </div>
 </div>
 </div>
@@ -467,32 +447,26 @@ Solution
 </div>
 <div id="callout-4" class="callout-4-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>Solution will be posted after section! :P <!--
-(a) We will use InSiPoD (actually  InSiPo since $Y$ is nonnegative). If $Y=I_A$ is an indicator r.v., then $ \int_0^\infty P(Y>y)dy =  \int_0^1 P(Y=1)dy = P(A)=E(Y).$ Let $Y=\sum_{j=1}^n a_j I_{A_j}$, with the $a_j$'s distinct and the $A_j$'s a partition of $\Omega$. Then
-$$
-        \begin{align*} 
-        \int_0^\infty P(Y>y)dy  &= \int_0^\infty \sum_{j=1}^n P(Y>y|A_j)P(A_j) dy \\
-        &= \int_0^\infty \sum_{j=1}^n P(a_j>y|A_j)P(A_j)dy  \\
-        &=      \sum_{j=1}^n \int_0^\infty P(a_j>y|A_j)P(A_j) dy \\
-        &=    \sum_{j=1}^n a_j P(A_j)  = E(Y).
-        \end{align*} 
-$$
-Now let $Y$ be a nonnegative r.v., and write $Y = \lim_{n \to \infty} Y_n$, with the $Y_n$  simple r.v.s and $0 \leq Y_1 \leq Y_2 \leq \dots.$ By Monotone Convergence and continuity of probability,
-        $$E(Y) = \lim_{n \to \infty} E(Y_n) = \lim_{n \to \infty} \int_0^\infty P(Y_n>y)dy
-        = \int_0^\infty \lim_{n \to \infty} P(Y_n>y)dy
-        =  \int_0^\infty  P(Y>y)dy.$$
-        
-(b) Let $F$ be the CDF of $Y$. Then $$ \int_0^\infty P(Y>y)dy = \int_0^\infty \int_y^\infty  dF(x) dy = \int_0^\infty \int_0^x  dy dF(x) = \int_0^\infty x dF(x) = E(Y).$$
---></p>
+<ol type="a">
+<li><p>We will use InSiPoD (actually InSiPo since <span class="math inline">\(Y\)</span> is nonnegative). If <span class="math inline">\(Y=I_A\)</span> is an indicator r.v., then $ _0^P(Y&gt;y)dy = _0^1 P(Y=1)dy = P(A)=E(Y).$ Let <span class="math inline">\(Y=\sum_{j=1}^n a_j I_{A_j}\)</span>, with the <span class="math inline">\(a_j\)</span>’s distinct and the <span class="math inline">\(A_j\)</span>’s a partition of <span class="math inline">\(\Omega\)</span>. Then <span class="math display">\[
+    \begin{align*}
+    \int_0^\infty P(Y&gt;y)dy  &amp;= \int_0^\infty \sum_{j=1}^n P(Y&gt;y|A_j)P(A_j) dy \\
+    &amp;= \int_0^\infty \sum_{j=1}^n P(a_j&gt;y|A_j)P(A_j)dy  \\
+    &amp;=      \sum_{j=1}^n \int_0^\infty P(a_j&gt;y|A_j)P(A_j) dy \\
+    &amp;=    \sum_{j=1}^n a_j P(A_j)  = E(Y).
+    \end{align*}
+\]</span> Now let <span class="math inline">\(Y\)</span> be a nonnegative r.v., and write <span class="math inline">\(Y = \lim_{n \to \infty} Y_n\)</span>, with the <span class="math inline">\(Y_n\)</span> simple r.v.s and <span class="math inline">\(0 \leq Y_1 \leq Y_2 \leq \dots.\)</span> By Monotone Convergence and continuity of probability, <span class="math display">\[E(Y) = \lim_{n \to \infty} E(Y_n) = \lim_{n \to \infty} \int_0^\infty P(Y_n&gt;y)dy
+    = \int_0^\infty \lim_{n \to \infty} P(Y_n&gt;y)dy
+    =  \int_0^\infty  P(Y&gt;y)dy.\]</span></p></li>
+<li><p>Let <span class="math inline">\(F\)</span> be the CDF of <span class="math inline">\(Y\)</span>. Then <span class="math display">\[ \int_0^\infty P(Y&gt;y)dy = \int_0^\infty \int_y^\infty  dF(x) dy = \int_0^\infty \int_0^x  dy dF(x) = \int_0^\infty x dF(x) = E(Y).\]</span></p></li>
+</ol>
 </div>
 </div>
 </div>
 </section>
 <section id="section-problem-5" class="level3">
 <h3 class="anchored" data-anchor-id="section-problem-5">✏️ Section Problem 5</h3>
-<ol start="3" type="1">
-<li>Let <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span> be random variables with <span class="math inline">\(\operatorname{Var}(Y)&lt;\infty\)</span>.</li>
-</ol>
+<p>Let <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span> be random variables with <span class="math inline">\(\operatorname{Var}(Y)&lt;\infty\)</span>.</p>
 <ol type="a">
 <li><p>For this part, suppose that <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span> are discrete. Let <span class="math inline">\(A=\{x: P(X=x)&gt;0\}\)</span> and <span class="math inline">\(B=\{y: P(Y=y)&gt;0\}\)</span>. Define the function <span class="math inline">\(g: A \rightarrow \mathbb{R}\)</span> by <span class="math display">\[
 g(x)=\sum_{y \in B} y P(Y=y \mid X=x) .
@@ -519,60 +493,35 @@ Solution
 </div>
 <div id="callout-5" class="callout-5-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>Solution will be posted after section! :P <!--
-(a) Let $h$ be a bounded, measurable function. We need to show that
-$$ 
+<ol type="a">
+<li><p>Let <span class="math inline">\(h\)</span> be a bounded, measurable function. We need to show that <span class="math display">\[
 E((Y-g(X)) h(X))=0 .
-$$
-By linearity, it is equivalent to show that
-$$
+\]</span> By linearity, it is equivalent to show that <span class="math display">\[
 E(Y h(X))=E(g(X) h(X)) .
-$$
-By LOTUS, the left-hand side is
-$$
+\]</span> By LOTUS, the left-hand side is <span class="math display">\[
 \sum_{x \in A} \sum_{y \in B} y h(x) P(X=x, Y=y)
-$$
-and the right-hand side is
-$$
+\]</span> and the right-hand side is <span class="math display">\[
 \sum_{x \in A} g(x) h(x) P(X=x) .
-$$
-Plugging in the formula for $g(x)$, the right-hand side is
-$$
+\]</span> Plugging in the formula for <span class="math inline">\(g(x)\)</span>, the right-hand side is <span class="math display">\[
 \sum_{x \in A}\left(\sum_{y \in B} y P(Y=y \mid X=x)\right) h(x) P(X=x)=\sum_{x \in A} \sum_{y \in B} y h(x) P(X=x, Y=y),
-$$
-since we can bring $h(x) P(X=x)$ inside the sum over $y$ and then use the fact that
-$$
+\]</span> since we can bring <span class="math inline">\(h(x) P(X=x)\)</span> inside the sum over <span class="math inline">\(y\)</span> and then use the fact that <span class="math display">\[
 P(X=x, Y=y)=P(X=x) P(Y=y \mid X=x) .
-$$
-
-(b) Let $T=g(X)$. Recall that, formally, $T$ is a composition of functions: first do $X$, then do $g$. For any Borel set $B$,
-$$
+\]</span></p></li>
+<li><p>Let <span class="math inline">\(T=g(X)\)</span>. Recall that, formally, <span class="math inline">\(T\)</span> is a composition of functions: first do <span class="math inline">\(X\)</span>, then do <span class="math inline">\(g\)</span>. For any Borel set <span class="math inline">\(B\)</span>, <span class="math display">\[
 T^{-1}(B)=X^{-1}\left(g^{-1}(B)\right) .
-$$
-Let $A=g^{-1}(B)$. Then $A$ is Borel (since $B$ is Borel and $g$ is a measurable function), so $T^{-1}(B) \in \mathcal{G}$ (since it is of the form $X^{-1}(A)$ with $A$ Borel).
-
-Now fix $G=X^{-1}(C) \in \mathcal{G}$, where $C$ is Borel. In expectation notation, we need to verify that
-$$
+\]</span> Let <span class="math inline">\(A=g^{-1}(B)\)</span>. Then <span class="math inline">\(A\)</span> is Borel (since <span class="math inline">\(B\)</span> is Borel and <span class="math inline">\(g\)</span> is a measurable function), so <span class="math inline">\(T^{-1}(B) \in \mathcal{G}\)</span> (since it is of the form <span class="math inline">\(X^{-1}(A)\)</span> with <span class="math inline">\(A\)</span> Borel).</p></li>
+</ol>
+<p>Now fix <span class="math inline">\(G=X^{-1}(C) \in \mathcal{G}\)</span>, where <span class="math inline">\(C\)</span> is Borel. In expectation notation, we need to verify that <span class="math display">\[
 E\left(I_G Y\right)=E\left(I_G T\right) .
-$$
-Equivalently, we can show
-$$
+\]</span> Equivalently, we can show <span class="math display">\[
 E\left((Y-T) I_G\right)=0 .
-$$
-If we can show that $I_G$ is of the form $h(X)$ where $h$ is a bounded, measurable function, then we know from the Stat 210 definition of conditional expectation that the above equation holds. Let
-$$
+\]</span> If we can show that <span class="math inline">\(I_G\)</span> is of the form <span class="math inline">\(h(X)\)</span> where <span class="math inline">\(h\)</span> is a bounded, measurable function, then we know from the Stat 210 definition of conditional expectation that the above equation holds. Let <span class="math display">\[
 h(x)=I(x \in C) .
-$$
-Then $h$ is bounded (since $h(x) \in\{0,1\}$ for all $x$ ) and measurable (since the preimage of any Borel set is either $\emptyset, C, C^c$, or $\mathbb{R}$ ), and, since $G$ is the event $X \in C$,
-$$
+\]</span> Then <span class="math inline">\(h\)</span> is bounded (since <span class="math inline">\(h(x) \in\{0,1\}\)</span> for all <span class="math inline">\(x\)</span> ) and measurable (since the preimage of any Borel set is either <span class="math inline">\(\emptyset, C, C^c\)</span>, or <span class="math inline">\(\mathbb{R}\)</span> ), and, since <span class="math inline">\(G\)</span> is the event <span class="math inline">\(X \in C\)</span>, <span class="math display">\[
 h(X)=I(X \in C)=I_G .
-$$
-Hence,
-$$
+\]</span> Hence, <span class="math display">\[
 E\left((Y-T) I_G\right)=0
-$$
-as desired.
---></p>
+\]</span> as desired.</p>
 </div>
 </div>
 </div>
