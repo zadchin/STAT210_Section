@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>STAT 210 Section Notes - Section 4</title>
+<title>STAT 210 Section Notes - Section 6</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,8 +30,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./05_Section_5.html" rel="next">
-<link href="./03_Section_3.html" rel="prev">
+<link href="./meme.html" rel="next">
+<link href="./05_Section_5.html" rel="prev">
 <link href="./assets/img/stat210-clear_bg.png" rel="icon" type="image/png">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -75,7 +75,7 @@ ul.task-list li input[type="checkbox"] {
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
     <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title">Section 4</h1>
+      <h1 class="quarto-secondary-nav-title">Section 6</h1>
       <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
         <i class="bi bi-chevron-right"></i>
       </button>
@@ -129,7 +129,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./04_Section_4.html" class="sidebar-item-text sidebar-link active">Section 4</a>
+  <a href="./04_Section_4.html" class="sidebar-item-text sidebar-link">Section 4</a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -139,7 +139,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./06_Section_6.html" class="sidebar-item-text sidebar-link">Section 6</a>
+  <a href="./06_Section_6.html" class="sidebar-item-text sidebar-link active">Section 6</a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -157,15 +157,13 @@ ul.task-list li input[type="checkbox"] {
    
   <ul>
   <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a></li>
-  <li><a href="#lebesgue-integral" id="toc-lebesgue-integral" class="nav-link" data-scroll-target="#lebesgue-integral">Lebesgue Integral</a></li>
-  <li><a href="#convergence-theorems" id="toc-convergence-theorems" class="nav-link" data-scroll-target="#convergence-theorems">Convergence Theorems</a></li>
+  <li><a href="#moment-generating-function" id="toc-moment-generating-function" class="nav-link" data-scroll-target="#moment-generating-function">Moment Generating Function</a></li>
+  <li><a href="#midterm-concepts" id="toc-midterm-concepts" class="nav-link" data-scroll-target="#midterm-concepts">Midterm Concepts</a></li>
   <li><a href="#section-discussion-questions" id="toc-section-discussion-questions" class="nav-link" data-scroll-target="#section-discussion-questions">Section Discussion Questions</a>
   <ul class="collapse">
-  <li><a href="#section-problem-1" id="toc-section-problem-1" class="nav-link" data-scroll-target="#section-problem-1">✏️ Section Problem 1</a></li>
-  <li><a href="#section-problem-2" id="toc-section-problem-2" class="nav-link" data-scroll-target="#section-problem-2">✏️ Section Problem 2</a></li>
-  <li><a href="#section-problem-3" id="toc-section-problem-3" class="nav-link" data-scroll-target="#section-problem-3">✏️ Section Problem 3</a></li>
-  <li><a href="#section-problem-4" id="toc-section-problem-4" class="nav-link" data-scroll-target="#section-problem-4">✏️ Section Problem 4</a></li>
-  <li><a href="#section-problem-5" id="toc-section-problem-5" class="nav-link" data-scroll-target="#section-problem-5">✏️ Section Problem 5</a></li>
+  <li><a href="#section-problem-1-q1-2022" id="toc-section-problem-1-q1-2022" class="nav-link" data-scroll-target="#section-problem-1-q1-2022">✏️ Section Problem 1 (Q1, 2022)</a></li>
+  <li><a href="#section-problem-2-q2-2010" id="toc-section-problem-2-q2-2010" class="nav-link" data-scroll-target="#section-problem-2-q2-2010">✏️ Section Problem 2 (Q2, 2010)</a></li>
+  <li><a href="#section-problem-3-q3-2022" id="toc-section-problem-3-q3-2022" class="nav-link" data-scroll-target="#section-problem-3-q3-2022">✏️ Section Problem 3 (Q3, 2022)</a></li>
   </ul></li>
   <li><a href="#next-week" id="toc-next-week" class="nav-link" data-scroll-target="#next-week">Next Week</a></li>
   </ul>
@@ -233,7 +231,7 @@ $$
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block">Section 4</h1>
+<h1 class="title d-none d-lg-block">Section 6</h1>
 </div>
 
 
@@ -248,65 +246,73 @@ $$
 
 </header>
 
-<p>Last Updated: 06 Oct 2023</p>
-<p>Date: 06 Oct 2023</p>
+<p>Last Updated: 19 Oct 2023</p>
+<p>Date: 20 Oct 2023</p>
 <section id="introduction" class="level2">
 <h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
 <p>In this section, we will discuss:</p>
 <ul>
-<li>Lebesgue Integral</li>
-<li>Convergence Theorems</li>
+<li>Moment Generating Functions</li>
+<li>Midterm</li>
 </ul>
 </section>
-<section id="lebesgue-integral" class="level2">
-<h2 class="anchored" data-anchor-id="lebesgue-integral">Lebesgue Integral</h2>
-<div id="def-Riemann-Stieltjes-integral" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 1 </strong></span>(Riemann-Stieltjes integrals) <span class="math inline">\(E(X) = \int_{-\infty}^{\infty} x dF(x)\)</span>, easier to compute.</p>
+<section id="moment-generating-function" class="level2">
+<h2 class="anchored" data-anchor-id="moment-generating-function">Moment Generating Function</h2>
+<p>MGFs are powerful because: (1) Determining distirbutions (2) Powerful tool for convolution (Theorem 5.4.1) and (3) obtain moments.</p>
+<div id="def-Moment-Generating-Function" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 1 </strong></span>(Moment Generating Function) We say that a r.v. <span class="math inline">\(\displaystyle X\)</span> has a moment generaing function (MGF) if the function <span class="math inline">\(\displaystyle M( t) \equiv E\left( e^{tX}\right)\)</span> is finite in an open interval containing 0.</p>
 </div>
-<div id="def-Lebesgue-integral" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 2 </strong></span>(Lebesgue integral) <span class="math inline">\(E(X) = \int_{\Omega} X(\omega) P(d\omega)\)</span>, easier for proofs.</p>
+<p>If the MGF of <span class="math inline">\(\displaystyle X\)</span> exists, then all the moments <span class="math inline">\(\displaystyle E\left( X^{r}\right)\)</span> exists, but the converse is not true.</p>
+<p>💌 Tips from example 6.1.6 (Normal MGF): If -container{Y} is normal, then -container{E(e)} is the exponential of the mean of -container{Y} plus half the variance of -container{Y.}</p>
+<div id="def-n-th-moment" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 2 </strong></span>Let <span class="math inline">\(\displaystyle X\)</span> have an MGF <span class="math inline">\(\displaystyle M( t)\)</span>. Then the <span class="math inline">\(\displaystyle n\)</span>th moment of <span class="math inline">\(\displaystyle X\)</span> is given by <span class="math inline">\(\displaystyle E\left( X^{n}\right) =M^{( n)}( 0)\)</span>, the <span class="math inline">\(\displaystyle n\)</span>th derivative of <span class="math inline">\(\displaystyle M\)</span> at <span class="math inline">\(\displaystyle 0\)</span>. Furthermore, in some neighborhood of <span class="math inline">\(\displaystyle 0\)</span> the Taylor expansion of <span class="math inline">\(\displaystyle M\)</span> is <span class="math display">\[\begin{equation*}
+M( t) =\sum _{n=0}^{\infty }\frac{E\left( X^{n}\right)}{n!} t^{n}
+\end{equation*}\]</span></p>
 </div>
-<p>To have a unified definition of expected values, and for proving results about expected values, it is helpful to define <span class="math inline">\(E\)</span> in stages for increasingly more general r.v.s. This parallels the construction of the Lebesgue integral.</p>
-<div id="def-InSiPoD" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 3 </strong></span>(InSiPoD) Let <span class="math inline">\((\Omega, \mathcal{F}, P)\)</span> be a probability space, and let <span class="math inline">\(X: \Omega \rightarrow \mathbb{R}\)</span> be a random variable. Then the expected value of <span class="math inline">\(X\)</span>, denoted <span class="math inline">\(\mathbf{E}[X]\)</span> is defined by the following three-step construction: <span class="math inline">\({ }^{14}\)</span></p>
-<ol type="1">
-<li><p>For indicator random variables, which are simply 1 on a bounded measurable set <span class="math inline">\(S \in \mathcal{F}\)</span> and 0 otherwise. Their expectation is the measure <span class="math inline">\(P(S)\)</span>.</p></li>
-<li><p>Extending to non-negative weighted sums of indicator random variables, called simple random variables. We do this by linearity of expectation.</p></li>
-<li><p>Defining for non-negative random variables by taking the supremum over all dominated simple random variables <span class="math inline">\(X^*\)</span>, <span class="math display">\[
-\mathbf{E}[X]=\sup _{X^* \leq X} \mathbf{E}\left[X^*\right] .
-\]</span></p></li>
-<li><p>Extending to general signed random variables by taking a partition <span class="math inline">\(X=X^{+}-X^{-}\)</span>into positive and negative parts, and computing the integral for each separately.</p></li>
-</ol>
+<p>Remark 6.1.10 The expression <span class="math inline">\(\displaystyle M^{n}( t) =E\left( X^{2} e^{tX}\right)\)</span> immediately implies that MGFs are convex.</p>
+<p>💌 Tips: If the MGF does not exist, replace <span class="math inline">\(\displaystyle t\)</span> by <span class="math inline">\(\displaystyle it\)</span> where <span class="math inline">\(\displaystyle i=\sqrt{-1}\)</span>, this will yields the characterisitic function (which exists for any r.v). If the MGF does exist, it determine the distribution.</p>
+<div id="thm-linearity" class="theorem">
+<p><span class="theorem-title"><strong>Theorem 1 </strong></span>(Uniqueness and MGF) Let <span class="math inline">\(\displaystyle X_{1}\)</span> and <span class="math inline">\(\displaystyle X_{2}\)</span> have the same MGF <span class="math inline">\(\displaystyle M( t)\)</span> in some neighborhood of 0, i.e., <span class="math inline">\(\displaystyle E\left( e^{tX_{1}}\right) =M( t) =E\left( e^{tX_{2}}\right)\)</span> for <span class="math inline">\(\displaystyle |t|&lt; c\)</span>, where <span class="math inline">\(\displaystyle c &gt;0\)</span>. Then <span class="math inline">\(\displaystyle X_{1} \sim X_{2}\)</span>.</p>
+</div>
+<p>A moment generating function uniquely determines a distribution, but this does not imply that if <span class="math inline">\(\displaystyle X_{1}\)</span> and <span class="math inline">\(\displaystyle X_{2}\)</span> have exactly the same <span class="math inline">\(\displaystyle n\)</span>th moments for all <span class="math inline">\(\displaystyle n\)</span><span class="math inline">\(\displaystyle \in \{1,2,3,\ \cdots \}\)</span>, then <span class="math inline">\(\displaystyle X_{1} \sim X_{2} .\)</span></p>
+<p>💌 Tips from Proposition 6.1.14: Let <span class="math inline">\(\displaystyle X_{1}\)</span>, <span class="math inline">\(\displaystyle X_{2}\)</span> be independent MGFs with <span class="math inline">\(\displaystyle M_{1}( t) ,\ M_{2}( t)\)</span>. Then <span class="math inline">\(\displaystyle X_{1} +X_{2}\)</span> has MGF <span class="math inline">\(\displaystyle M_{1}( t) M_{2}( t)\)</span>.</p>
+<div id="def-kurtosis" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 3 </strong></span>(Kurtosis) Suppose that <span class="math inline">\(\displaystyle X\)</span> has a MGF <span class="math inline">\(\displaystyle M( t)\)</span>. Then the cumulant generating function (CGF) is <span class="math inline">\(\displaystyle K( t) \equiv \log M( t)\)</span>. Expanding <span class="math inline">\(\displaystyle K( t) =\sum _{r=1}^{\infty } \kappa _{r}\frac{t^{r}}{r!} ,\)</span>the coefficient <span class="math inline">\(\displaystyle \kappa _{r}\)</span> is called the <span class="math inline">\(\displaystyle r\)</span>th cumulant of <span class="math inline">\(\displaystyle X\)</span>, and is also denoted by <span class="math inline">\(\displaystyle K_{r}( X)\)</span>.</p>
+<p>Cumulatns have many useful properties. Assume that each of <span class="math inline">\(\displaystyle X\)</span>, <span class="math inline">\(\displaystyle X_{1} ,\ X_{2}\)</span> has an MGF. Let <span class="math inline">\(\displaystyle c\)</span> be any constant. Then,</p>
+<ul>
+<li><p><span class="math inline">\(\displaystyle K_{1}( X+c) =K_{1}( X) +c\)</span> and <span class="math inline">\(\displaystyle K_{r}( X+c) =K_{r}( X)\)</span> for all <span class="math inline">\(\displaystyle r\geqslant 2\)</span>.</p></li>
+<li><p><span class="math inline">\(\displaystyle K_{r}( cX) =c^{r} K_{r}( X)\)</span></p></li>
+<li><p><span class="math inline">\(\displaystyle K_{r}( X_{1} +X_{2}) =K_{r}( X_{1}) +K_{r}( X_{2})\)</span> for <span class="math inline">\(\displaystyle X_{1} \perp\!\!\!\!\perp X_{2}\)</span>.</p></li>
+<li><p><span class="math inline">\(\displaystyle K_{1}( X)\)</span> is the mean of <span class="math inline">\(\displaystyle X\)</span>, <span class="math inline">\(\displaystyle K_{2}( X)\)</span> is the variance, and <span class="math inline">\(\displaystyle K_{3}( X) =E( E-EX)^{3}\)</span> is the third central moment. Standardizing this by dividing by <span class="math inline">\(\displaystyle Var^{3/2}( X)\)</span> yields the skewness of <span class="math inline">\(\displaystyle X\)</span>.</p></li>
+<li><p><span class="math inline">\(\displaystyle K_{4}( X) =E( X-EX)^{4} -3Var( X))^{2}\)</span>. Standardizing this by dividing by <span class="math inline">\(\displaystyle Var^{2}( X)\)</span> yields the kurtosis, denoted by Kurt(X).</p></li>
+</ul>
 </div>
 </section>
-<section id="convergence-theorems" class="level2">
-<h2 class="anchored" data-anchor-id="convergence-theorems">Convergence Theorems</h2>
-<div id="def-Almost-sure-convergence" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 4 </strong></span>(Almost sure convergence): <span class="math inline">\(X_n \xrightarrow{a.s.}X\)</span> if <span class="math inline">\(P(\{\omega: X_n(\omega) \xrightarrow{n\to \infty} X(\omega)\}) = 1\)</span></p>
-</div>
-<div id="thm-Monotone-Convergence-Theorem" class="theorem">
-<p><span class="theorem-title"><strong>Theorem 1 </strong></span>(Monotone Convergence Theorem): Let <span class="math inline">\(0 \leq X_1 \leq X_2 \leq ...\)</span> be an random variables such that <span class="math inline">\(X_n \xrightarrow{a.s.} X\)</span> as <span class="math inline">\(n\to \infty\)</span>. Then <span class="math inline">\(\lim\limits_{n\to \infty}E(X_n) = E(X)\)</span>.</p>
-</div>
-<div id="def-Fatou-Lemma" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 5 </strong></span>(Fatou’s Lemma): Let <span class="math inline">\(X_1,X_2,...\)</span> be a sequence of random variables. Then <span class="math display">\[E\Big(  \liminf_{n\to \infty} X_n \Big) \leq \liminf_{n\to \infty} E(X_n)\]</span></p>
-</div>
-<div id="thm-Dominated-Convergence-Theorem" class="theorem">
-<p><span class="theorem-title"><strong>Theorem 2 </strong></span>(Dominated Convergence Theorem): Let <span class="math inline">\(X_1,X_2,...\)</span> be a sequence of random variables such that <span class="math inline">\(X_n \xrightarrow{a.s.} X\)</span> as <span class="math inline">\(n\to \infty\)</span>. If there exists some r.v <span class="math inline">\(W\geq 0\)</span> with <span class="math inline">\(E(W)&lt;\infty\)</span> such that <span class="math inline">\(|X_n|\leq W\)</span> for all <span class="math inline">\(n\geq 1\)</span>, then <span class="math inline">\(\lim\limits_{n\to \infty}E(X_n) = E(X)\)</span>.</p>
-</div>
-<div id="thm-Bounded-Convergence-Theorem" class="theorem">
-<p><span class="theorem-title"><strong>Theorem 3 </strong></span>(Bounded Convergence Theorem): It’s a special case of DCT. If <span class="math inline">\(X_n \xrightarrow{a.s.} X\)</span> as <span class="math inline">\(n\to \infty\)</span> and <span class="math inline">\(|X_n|\leq c\)</span> for all <span class="math inline">\(n\geq 1\)</span> (for a constant <span class="math inline">\(c\)</span>), then <span class="math inline">\(\lim\limits_{n\to \infty}E(X_n) = E(X)\)</span>.</p>
-</div>
-<p>Monotone Convergence Theorem, Dominated Convergence Theorem (and hence Bounded Convergence Theorem) also hold when <span class="math inline">\(X_n \to X\)</span> as <span class="math inline">\(n\)</span> goes to infinity.</p>
+<section id="midterm-concepts" class="level2">
+<h2 class="anchored" data-anchor-id="midterm-concepts">Midterm Concepts</h2>
+<p>It is redundant to retype all the concepts The following are the highlighted midterm topics:</p>
+<ul>
+<li><p><strong>Meaning of measure</strong> [Section 1]: axioms of probability, random variables and their distributions, continuity of probability, preimages, independence, <span class="math inline">\(\pi-\lambda\)</span> Theorem</p></li>
+<li><p><strong>Reasoning by representation</strong> [Section 2 + 3]: stories and representations for the most fundamental distributions, Probability Integral Transform, Count-Time Duality, Poisson process (on the line or in n dimensions), order statistics</p></li>
+<li><p><strong>Meaning of means</strong> [Section 4 + 5]: expected value via the Lebesgue integral and via the Riemann–Stieltjes integral, InSiPoD, LOTUS, linearity, variance, covariance, Monotone Convergence Theorem, Dominated Convergence Theorem, Bounded Convergence Theorem, Darth Vader Rule</p></li>
+<li><p><strong>Conditioning</strong> [Section 4 + 5]: conditional distributions, conditional expectation, Adam’s Law (Law of Total Expectation), Eve’s Law (Law of Total Variance), ECCE (Law of Total Covariance).</p></li>
+<li><p><strong>Generating functions</strong> [Section 6]: moments and moment generating functions (MGFs), characteristic functions, cumulants and cumulant generating functions (CGFs)</p></li>
+</ul>
 </section>
 <section id="section-discussion-questions" class="level2">
 <h2 class="anchored" data-anchor-id="section-discussion-questions">Section Discussion Questions</h2>
-<section id="section-problem-1" class="level3">
-<h3 class="anchored" data-anchor-id="section-problem-1">✏️ Section Problem 1</h3>
-<p>Let <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span> be r.v.s with finite variances, on the same probability space.</p>
-<ol type="a">
-<li><p>Suppose (for this part only) that <span class="math inline">\(E(Y \mid X)=g(X)\)</span>, with <span class="math inline">\(g: \mathbb{R} \rightarrow \mathbb{R}\)</span> an increasing function. Show that <span class="math inline">\(\operatorname{Cov}(X, Y) \geq 0\)</span>.</p></li>
-<li><p>Suppose that <span class="math inline">\(E(Y \mid X)=X\)</span> and <span class="math inline">\(E(X \mid Y)=Y\)</span>. Show that <span class="math inline">\(P(X=Y)=1\)</span>.</p></li>
+<p>This week, as midterm is near, we will discuss fully Midterm 2022 &amp; 2010, to give a sense on how to approach and think about problems!</p>
+<section id="section-problem-1-q1-2022" class="level3">
+<h3 class="anchored" data-anchor-id="section-problem-1-q1-2022">✏️ Section Problem 1 (Q1, 2022)</h3>
+<p>Let <span class="math inline">\((\Omega, \mathcal{F}, P)\)</span> be a probability space and <span class="math inline">\(\mathcal{S}\)</span> be a <span class="math inline">\(\pi\)</span>-system such that <span class="math inline">\(\Omega \in \mathcal{S}\)</span> and <span class="math inline">\(\sigma(\mathcal{S})=\mathcal{F}\)</span>. As usual, for any event <span class="math inline">\(A\)</span>, let <span class="math inline">\(I(A)\)</span> be the indicator random variable for <span class="math inline">\(A\)</span>. Let <span class="math inline">\(\mathcal{V}\)</span> be a collection of random variables on <span class="math inline">\((\Omega, \mathcal{F}, P)\)</span> such that:</p>
+<ol type="i">
+<li><p>If <span class="math inline">\(X \in \mathcal{V}\)</span> and <span class="math inline">\(c \in \mathbb{R}\)</span>, then <span class="math inline">\(c X \in \mathcal{V}\)</span>.</p></li>
+<li><p>If <span class="math inline">\(X, Y \in \mathcal{V}\)</span>, then <span class="math inline">\(X+Y \in \mathcal{V}\)</span>.</p></li>
+<li><p>If <span class="math inline">\(X_{1}, X_{2}, \cdots \in \mathcal{V}\)</span> and <span class="math inline">\(\sup _{n} X_{n}(\omega)\)</span> is finite for all <span class="math inline">\(\omega \in \Omega\)</span>, then <span class="math inline">\(\sup _{n} X_{n} \in \mathcal{V}\)</span>.</p></li>
+<li><p>If <span class="math inline">\(A \in \mathcal{S}\)</span>, then <span class="math inline">\(I(A) \in \mathcal{V}\)</span>.</p></li>
 </ol>
+<p>Show that <span class="math inline">\(\mathcal{V}\)</span> contains every random variable on <span class="math inline">\((\Omega, \mathcal{F}, P)\)</span>.</p>
+<p>Hint: First consider the set <span class="math inline">\(\{A \in \mathcal{F}: I(A) \in \mathcal{V}\}\)</span>.</p>
 <div class="callout-tip callout callout-style-simple callout-captioned">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
@@ -319,21 +325,66 @@ Solution
 </div>
 <div id="callout-1" class="callout-1-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<ol type="a">
-<li><p>By <span class="math inline">\(\mathrm{ECCE}, \operatorname{Cov}(X, Y)=E \operatorname{Cov}(X, Y \mid X)+\operatorname{Cov}(E(X \mid X), E(Y \mid X))=\operatorname{Cov}(X, g(X))\)</span>. By the covariance inequality (proven in class), this is nonnegative.</p></li>
-<li><p>We will show <span class="math inline">\((X-Y)^2=0\)</span> a.s. by showing that <span class="math inline">\(E(X-Y)^2=0\)</span>. By Adam’s Law, <span class="math display">\[
-E(X-Y)^2=E\left(E\left(X^2 \mid X\right)-2 E(X Y \mid X)+E\left(Y^2 \mid X\right)\right)=E\left(Y^2\right)-E\left(X^2\right),
-\]</span> since <span class="math inline">\(E(X Y \mid X)=X E(Y \mid X)=X^2\)</span>. By Adam’s Law (now conditioning on <span class="math inline">\(Y\)</span> ), <span class="math display">\[
-E(X-Y)^2=E\left(X^2\right)-E\left(Y^2\right) \text {. }
-\]</span> So <span class="math inline">\(E(X-Y)^2\)</span> is its own negative, which implies <span class="math inline">\(E(X-Y)^2=0\)</span>. Thus, <span class="math inline">\(X=Y\)</span> a.s.</p></li>
-</ol>
+<p>Will be released after section! <!--
+By (i) and (ii), $\mathcal{V}$ is closed under linear combinations, i.e., if $X_{1}, \ldots, X_{n} \in \mathcal{L}$ and $c_{1}, \ldots, c_{n} \in \mathbb{R}$, then $c_{1} X_{1}+\cdots+c_{n} X_{n} \in \mathcal{L}$. In the spirit of InSiPoD, we will show that every indicator r.v. is in $\mathcal{V}$, then that every simple r.v. is in $\mathcal{V}$, then that every nonnegative r.v. is in $\mathcal{V}$, and lastly that every r.v. is in $\mathcal{V}$. Let
+
+$$
+\mathcal{L}=\{A \in \mathcal{F}: I(A) \in \mathcal{V}\} .
+$$
+
+Then $\mathcal{L}$ is a $\lambda$-system since:
+
+(a) We have $\Omega \in \mathcal{L}$ since $\Omega \in \mathcal{S}$ so by (iv), $I(\Omega) \in \mathcal{V}$.
+
+(b) If $A, B \in \mathcal{L}$ with $A \subseteq B$, then, by closure under linear combinations,
+
+$$
+I(B \backslash A)=I(B)-I(A) \in \mathcal{V}
+$$
+
+(c) If $A_{1}, A_{2}, \cdots \in \mathcal{L}$ with $A_{1} \subseteq A_{2} \subseteq \ldots$, then $A=\bigcup_{n=1}^{\infty} A_{n} \in \mathcal{L}$ by (iii), since
+
+$$
+I(A)=\sup _{n} I\left(A_{n}\right)
+$$
+
+To check the above equation in more detail, note that if $\omega \notin A$ then $I(A)(\omega)=0$ and $I\left(A_{n}\right)(\omega)=0$ for all $n$, whereas if $\omega \in A$, then $I(A)(\omega)=1, I\left(A_{n}\right)(\omega) \in\{0,1\}$ for all $n$, and $I\left(A_{n}\right)(\omega)=1$ for all sufficiently large $n$.
+
+By (iv), $\mathcal{S} \subseteq \mathcal{L}$. So by the $\pi-\lambda$ theorem, $\sigma(\mathcal{S}) \subseteq \mathcal{L}$. But $\sigma(\mathcal{S})=\mathcal{F}$, so
+
+$$
+\mathcal{L}=\mathcal{F}
+$$
+
+Thus, all indicator r.v.s are in $\mathcal{V}$. Every simple r.v. is a linear combination of indicator r.v.s, so all simple r.v.s are in $\mathcal{V}$.
+
+Now let $X$ be a nonnegative r.v. Write
+
+$$
+X=\lim _{n \rightarrow \infty} X_{n}
+$$
+
+with the $X_{n}$ nonnegative simple r.v.s and $X_{1} \leq X_{2} \leq \cdots \leq X$. Then $X=\sup _{n} X_{n}$ (to check that for each $\omega, X(\omega)$ is the least upper bound of $\left\{X_{1}(\omega), X_{2}(\omega), \ldots\right\}$, note that $X_{n}(\omega) \leq X(\omega)$ for all $n$, and if $X_{n}(\omega) \leq c$ for all $n$, then $\lim _{n \rightarrow \infty} X_{n}(\omega) \leq$ $\lim _{n \rightarrow \infty} c$, which gives $\left.X(\omega) \leq c\right)$.
+
+Thus, by (iii) we have $X \in \mathcal{V}$. Now let $X$ be an arbitrary r.v., and (as usual) let $X^{+}=\max (X, 0)$ and $X^{-}=\max (-X, 0)$. Then $X^{+}$and $X^{-}$are in $\mathcal{V}$ since they are nonnegative r.v.s, so
+
+$$
+X=X^{+}-X^{-} \in \mathcal{V}
+$$
+--></p>
 </div>
 </div>
 </div>
 </section>
-<section id="section-problem-2" class="level3">
-<h3 class="anchored" data-anchor-id="section-problem-2">✏️ Section Problem 2</h3>
-<p>Show that for any r.v.s <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span> with Var<span class="math inline">\((Y)\)</span> finite, we have <span class="math display">\[E(Y|E(Y|X))=E(Y|X)\]</span></p>
+<section id="section-problem-2-q2-2010" class="level3">
+<h3 class="anchored" data-anchor-id="section-problem-2-q2-2010">✏️ Section Problem 2 (Q2, 2010)</h3>
+<ol type="a">
+<li><p>Let <span class="math inline">\(Y \sim \mathcal{N}\left(\mu, \sigma^2\right)\)</span>, with <span class="math inline">\(\mu \sim \mathcal{N}\left(\mu_0, \sigma^2 / r\right)\)</span>. Show by representation that <span class="math display">\[
+Y \sim \mathcal{N}\left(\mu_0, \sigma^2 \cdot(1+1 / r)\right)
+\]</span></p></li>
+<li><p>Now suppose <span class="math inline">\(\mu=0\)</span> is known, but <span class="math inline">\(\sigma^2 \sim t\)</span>. Expo. Given only one Uniform <span class="math inline">\(U \sim\)</span> Unif and one independent Normal <span class="math inline">\(Z \sim \mathcal{N}(0,1)\)</span>, show how one can easily simulate one draw from the marginal distribution of <span class="math inline">\(Y\)</span>. What is the marginal variance of <span class="math inline">\(Y\)</span> ?</p></li>
+</ol>
+<p>Note: avoid using density functions and integrals here; instead, think through why the results above are “obvious” from a representation perspective. Be careful to justify independence, wherever used.</p>
 <div class="callout-tip callout callout-style-simple callout-captioned">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
@@ -346,21 +397,59 @@ Solution
 </div>
 <div id="callout-2" class="callout-2-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>Let <span class="math inline">\(g(X)=E(Y|X)\)</span>. By Adam’s law, <span class="math display">\[
-\begin{align*}
-E(Y|g(X)) &amp;= E(E(Y|X, g(X))|g(X))\\
-&amp;= E(E(Y|X)|g(X))\\
-&amp;= E(g(X)|g(X))\\
-&amp;= g(X)
-\end{align*}
-\]</span></p>
+<p>Will be released after section! <!--
+(a) Let $Y \sim \mathcal{N}\left(\mu, \sigma^{2}\right)$, with $\mu \sim \mathcal{N}\left(\mu_{0}, \sigma^{2} / r\right)$. Show by representation that
+
+$$
+Y \sim \mathcal{N}\left(\mu_{0}, \sigma^{2} \cdot(1+1 / r)\right)
+$$
+
+By the properties of MVN,
+
+$$
+\begin{aligned}
+Y \mid \mu & \sim \mathcal{N}\left(\mu, \sigma^{2}\right), \mu \sim \mathcal{N}\left(\mu_{0}, \sigma^{2} / r\right) \\
+(Y, \mu) & \sim \mathcal{N}\left(\left(\begin{array}{c}
+\mu_{0} \\
+\mu_{0}
+\end{array}\right),\left(\begin{array}{cc}
+\sigma^{2}+\sigma^{2} / r & \sigma^{2} / r \\
+\sigma^{2} / r & \sigma^{2} / r
+\end{array}\right)\right) \\
+Y & \sim \mathcal{N}\left(\mu_{0}, \sigma^{2}(1+1 / r)\right)
+\end{aligned}
+$$
+
+
+(b) Now suppose $\mu=0$ is known, but $\sigma^{2} \sim t$. Expo. Given only one Uniform $U \sim$ Unif and one independent Normal $Z \sim \mathcal{N}(0,1)$, show how one can easily simulate one draw from the marginal distribution of $Y$. What is the marginal variance of $Y$ ?
+
+Note: avoid using density functions and integrals here; instead, think through why the results above are "obvious" from a representation perspective. Be careful to justify independence, wherever used.
+
+We want to simulate a draw from $Y \mid \sigma^{2} \sim \mathcal{N}\left(0, \sigma^{2}\right), \sigma^{2} \sim t$ Expo. First, we can pick $\sigma^{2}$ from the distribution $-t \log U$, as we are given the Uniform. Second, wecan pick $Y$ from $Y \mid \sigma^{2}$, as we already picked the $\sigma^{2}$ according to the Exponential distribution. Then
+
+$$
+Y \mid \sigma^{2} \sim \mathcal{N}\left(0, \sigma^{2}\right)
+$$
+
+Write $Y=\sigma Z$. Then $Z$ is independent of $\sigma$ since the conditional distribution of $Z=Y / \sigma$ is $\mathcal{N}(0,1)$, which does not depend on $\sigma$.
+
+The variance of $Y$ is
+
+$$
+\operatorname{Var}(Y)=\operatorname{Var}\left(E\left(Y \mid \sigma^{2}\right)\right)+E\left(\operatorname{Var}\left(Y \mid \sigma^{2}\right)\right)=E\left(\sigma^{2}\right)=t
+$$
+--></p>
 </div>
 </div>
 </div>
 </section>
-<section id="section-problem-3" class="level3">
-<h3 class="anchored" data-anchor-id="section-problem-3">✏️ Section Problem 3</h3>
-<p>Let <span class="math inline">\(X_1, X_2\)</span> and <span class="math inline">\(Y\)</span> be random variable, <span class="math inline">\(E(Y^2)\)</span> finite. Let <span class="math display">\[A=E(Y|X_1) \text{ and } B=E(Y|X_1,X_2)\]</span> Show that <span class="math display">\[Var(A) \leq Var(B)\]</span></p>
+<section id="section-problem-3-q3-2022" class="level3">
+<h3 class="anchored" data-anchor-id="section-problem-3-q3-2022">✏️ Section Problem 3 (Q3, 2022)</h3>
+<p>Let <span class="math inline">\(X_{1}, X_{2}, \ldots\)</span> be i.i.d., with an MGF that exists. Let <span class="math inline">\(m_{n}=E\left(X_{1}^{n}\right)\)</span>. Let <span class="math inline">\(N \sim \operatorname{Pois}(1)\)</span>, with <span class="math inline">\(N\)</span> independent of <span class="math inline">\(X_{1}, X_{2}, \ldots\)</span> Let</p>
+<p><span class="math display">\[
+T=\sum_{j=1}^{N} X_{j}
+\]</span></p>
+<p>Find the <span class="math inline">\(r\)</span> th cumulant of <span class="math inline">\(T\)</span>, for <span class="math inline">\(r\)</span> a positive integer (in terms of <span class="math inline">\(m_{1}, m_{2}, \ldots\)</span> ).</p>
 <div class="callout-tip callout callout-style-simple callout-captioned">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
@@ -373,81 +462,27 @@ Solution
 </div>
 <div id="callout-3" class="callout-3-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>By Eve’s Law, <span class="math display">\[Var(B) \geq Var(E(B|X_1))\]</span></p>
-<p>By Adam’s Law, <span class="math display">\[E(B|X_1)=E(E(Y|X_1, X_2)|X_1)=E(Y|X_1)=A\]</span></p>
-<p>Thus, <span class="math display">\[Var(B)\geq Var(E(B|X_1))=Var(A).\]</span></p>
-</div>
-</div>
-</div>
-</section>
-<section id="section-problem-4" class="level3">
-<h3 class="anchored" data-anchor-id="section-problem-4">✏️ Section Problem 4</h3>
-<p>Let <span class="math inline">\(Y\)</span> be a nonnegative <span class="math inline">\(r.v.\)</span> with <span class="math inline">\(E(Y)&lt; \infty\)</span>.</p>
-<ol type="a">
-<li><p>Prove that <span class="math inline">\(E(Y) =\int_0^\infty P(Y &gt; y)dy\)</span>,using the Lebesgue definition of <span class="math inline">\(E(Y)\)</span> (keeping in mind that <span class="math inline">\(Y\)</span> may not be purely discrete or purely absolutely continuous). Feel free to use the fact that Monotone Convergence, which is shown in the book for expectation, also holds for integration over <span class="math inline">\((0,\infty)\)</span></p></li>
-<li><p>Prove the same result using the Riemann-Stieltjes definition of <span class="math inline">\(E(Y)\)</span>. Feel free to assume that you can swap the order of integration in a double integral you may encounter (formal justification of such swaps is usually done using theorems of Fubini and Tonelli).</p></li>
-</ol>
-<div class="callout-tip callout callout-style-simple callout-captioned">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-caption-container flex-fill">
-Solution
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-4" class="callout-4-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<ol type="a">
-<li><p>We will use InSiPoD (actually InSiPo since <span class="math inline">\(Y\)</span> is nonnegative). If <span class="math inline">\(Y=I_A\)</span> is an indicator r.v., then <span class="math inline">\(\int_0^\infty P(Y&gt;y)dy = \int_0^1 P(Y=1)dy = P(A)=E(Y).\)</span> Let <span class="math inline">\(Y=\sum_{j=1}^n a_j I_{A_j}\)</span>, with the <span class="math inline">\(a_j\)</span>’s distinct and the <span class="math inline">\(A_j\)</span>’s a partition of <span class="math inline">\(\Omega\)</span>. Then <span class="math display">\[
-    \begin{align*}
-    \int_0^\infty P(Y&gt;y)dy  &amp;= \int_0^\infty \sum_{j=1}^n P(Y&gt;y|A_j)P(A_j) dy \\
-    &amp;= \int_0^\infty \sum_{j=1}^n P(a_j&gt;y|A_j)P(A_j)dy  \\
-    &amp;=      \sum_{j=1}^n \int_0^\infty P(a_j&gt;y|A_j)P(A_j) dy \\
-    &amp;=    \sum_{j=1}^n a_j P(A_j)  = E(Y).
-    \end{align*}
-\]</span> Now let <span class="math inline">\(Y\)</span> be a nonnegative r.v., and write <span class="math inline">\(Y = \lim_{n \to \infty} Y_n\)</span>, with the <span class="math inline">\(Y_n\)</span> simple r.v.s and <span class="math inline">\(0 \leq Y_1 \leq Y_2 \leq \dots.\)</span> By Monotone Convergence and continuity of probability, <span class="math display">\[E(Y) = \lim_{n \to \infty} E(Y_n) = \lim_{n \to \infty} \int_0^\infty P(Y_n&gt;y)dy
-    = \int_0^\infty \lim_{n \to \infty} P(Y_n&gt;y)dy
-    =  \int_0^\infty  P(Y&gt;y)dy.\]</span></p></li>
-<li><p>Let <span class="math inline">\(F\)</span> be the CDF of <span class="math inline">\(Y\)</span>. Then <span class="math display">\[ \int_0^\infty P(Y&gt;y)dy = \int_0^\infty \int_y^\infty  dF(x) dy = \int_0^\infty \int_0^x  dy dF(x) = \int_0^\infty x dF(x) = E(Y).\]</span></p></li>
-</ol>
-</div>
-</div>
-</div>
-</section>
-<section id="section-problem-5" class="level3">
-<h3 class="anchored" data-anchor-id="section-problem-5">✏️ Section Problem 5</h3>
-<p>Let <span class="math inline">\(X\)</span> be a positive valued random variable with finite expectation. Show that: <span class="math display">\[\frac{d}{dt}E(e^{-tX}) = - E(Xe^{-tX}) ; \hspace{0.2cm}t&gt;0\]</span></p>
-<div class="callout-tip callout callout-style-simple callout-captioned">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-caption-container flex-fill">
-Solution
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-5" class="callout-5-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<p>By the sequential definition of derivative, we have: <span class="math display">\[
-    \begin{align*}
-    \frac{d}{dt}E(e^{-tX}) &amp; = \lim\limits_{n\to \infty} \frac{E(e^{-(t+\epsilon_n)X}) - E(e^{-tX})}{\epsilon_n} \hspace{0.2cm} \text{(where $\epsilon_n \xrightarrow{n\to \infty} 0$)}\\
-    &amp; = \lim\limits_{n\to \infty} E\Big( \frac{e^{-(t+\epsilon_n)X} - e^{-tX}}{\epsilon_n} \Big) = \lim\limits_{n\to \infty} E(Y_n)
-    \end{align*}
-\]</span> , where <span class="math inline">\(Y_n = \frac{e^{-(t+\epsilon_n)X} - e^{-tX}}{\epsilon_n}\)</span> for <span class="math inline">\(n\geq 1\)</span>.\ Firstly, let <span class="math inline">\((\Omega, \mathcal{F}, \mathbb{P})\)</span> be the underlying probability space. Now, for any <span class="math inline">\(\omega \in \Omega\)</span>, using the sequential definition of derivative once again we get: <span class="math display">\[\lim\limits_{n\to \infty} Y_n(\omega) = \frac{d}{dt} e^{-tX(\omega)} = -X(\omega)e^{-tX(\omega)}\]</span> Thus, <span class="math inline">\(Y_n\)</span> converges to <span class="math inline">\(-Xe^{-tX}\)</span> point-wise and hence almost surely, as <span class="math inline">\(n\to \infty\)</span>.</p>
-<p>Next we will try to uniformly bound the <span class="math inline">\(Y_n\)</span>s. We notice that, for any <span class="math inline">\(n\geq 1\)</span> <span class="math display">\[
-    \begin{align*}
-    |Y_n| &amp;= \Big |\frac{e^{-(t+\epsilon_n)X} - e^{-tX}}{\epsilon_n}\Big | \\
-    &amp; = |e^{-tX}| \Big |\frac{e^{-\epsilon_n X} - 1}{\epsilon_n X}\Big | |X|\\
-    &amp; \leq \Big |\frac{e^{-\epsilon_n X} - 1}{\epsilon_n X}\Big | |X| \hspace{0.3cm} \text{($\because$ $X$ is positive valued and $t&gt;0$)}\\
-    &amp; = \Big| \frac{f(\epsilon_n X) - f(0)}{\epsilon_n X - 0}  \Big| |X| \hspace{0.3cm} \text{(where $f(u) = e^{-u}$, $u\geq0$})\\
-    &amp; = |f'(Z_n)||X| \hspace{0.3cm} \text{(using mean value theorem, where $0&lt;Z_n&lt;\epsilon_n X$)}\\
-    &amp; = |-e^{-Z_n}||X| \leq 1 \times |X| = X
-    \end{align*}
-\]</span></p>
-<p>Furthermore <span class="math inline">\(E(X)&lt;\infty\)</span>. Using Dominated Convergence Theorem, we get <span class="math inline">\(\lim\limits_{n\to \infty}E(Y_n) = E(-Xe^{-tX})\)</span>. Therefore, <span class="math display">\[ \frac{d}{dt}E(e^{-tX}) = - E(Xe^{-tX}) = E(\frac{d}{dt}e^{-tX})\]</span></p>
+<p>Will be released after section! <!--
+Let $M$ be the MGF of $X_{1}$, with $M(t)<\infty$ for all $t \in(-a, a)$. For the rest of this solution, suppose that $t \in(-a, a)$. Then
+
+$$
+M(t)=\sum_{n=0}^{\infty} \frac{m_{n} t^{n}}{n !}
+$$
+
+By Adam's law and LOTUS, the MGF of $T$ is given by
+
+$$
+E\left(E\left(e^{t \sum_{j=1}^{N} X_{j}} \mid N\right)\right)=E\left(M(t)^{N}\right)=e^{-1} \sum_{n=0}^{\infty} \frac{M(t)^{n}}{n !}=e^{M(t)-1}
+$$
+
+So the CGF of $T$ is
+
+$$
+M(t)-1=\sum_{n=1}^{\infty} \frac{m_{n} t^{n}}{n !}
+$$
+
+The $r$ th cumulant of $T$ is the coefficient of $t^{r} / r$ ! in the Taylor expansion of the CGF of $T$ about 0 . Hence, the $r$ th cumulant of $T$ is $m_{r}$.
+--></p>
 </div>
 </div>
 </div>
@@ -457,10 +492,9 @@ Solution
 <h2 class="anchored" data-anchor-id="next-week">Next Week</h2>
 <p>Next week, we will discuss:</p>
 <ul>
-<li>Conditional Expectation</li>
-<li>Moment Generating Function</li>
+<li>No section since it crashes with midterm. Good luck with your midterm</li>
 </ul>
-<p><img src="assets/img/mgf.jpeg" class="img-fluid"></p>
+<p><img src="assets/img/gluck.jpeg" class="img-fluid"></p>
 <p>Feel free to upload the pencil problem you wish to be discussed next week <a href="https://forms.gle/RBmMNYJp4u3qD5W79">here</a>.</p>
 <p>Note that a verified email address is needed in the GForm so we don’t get scammy input! :)</p>
 <p><span class="math inline">\(\,\)</span></p>
@@ -719,13 +753,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./03_Section_3.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Section 3</span>
+      <a href="./05_Section_5.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Section 5</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./05_Section_5.html" class="pagination-link">
-        <span class="nav-page-text">Section 5</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./meme.html" class="pagination-link">
+        <span class="nav-page-text">Quotes</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

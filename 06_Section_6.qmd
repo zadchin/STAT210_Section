@@ -1,0 +1,266 @@
+# Section 6 {.unnumbered}
+
+Last Updated: 19 Oct 2023
+
+Date: 20 Oct 2023
+
+
+## Introduction
+In this section, we will discuss:
+
+- Moment Generating Functions
+- Midterm
+
+
+## Moment Generating Function
+
+MGFs are powerful because: (1) Determining distirbutions (2) Powerful tool for convolution (Theorem 5.4.1) and (3) obtain moments.
+
+::: {#def-Moment-Generating-Function}
+(Moment Generating Function) We say that a r.v. $\displaystyle X$ has a moment generaing function (MGF) if the function $\displaystyle M( t) \equiv E\left( e^{tX}\right)$ is finite in an open interval containing 0.
+:::
+
+If the MGF of $\displaystyle X$ exists, then all the moments $\displaystyle E\left( X^{r}\right)$ exists, but the converse is not true. 
+
+💌 Tips from example 6.1.6 (Normal MGF): If \math-container{Y} is normal, then \math-container{E(e\power{Y})} is the exponential of the mean of \math-container{Y} plus half the variance of \math-container{Y.}
+
+::: {#def-n-th-moment}
+Let $\displaystyle X$ have an MGF $\displaystyle M( t)$. Then the $\displaystyle n$th moment of $\displaystyle X$ is given by $\displaystyle E\left( X^{n}\right) =M^{( n)}( 0)$, the $\displaystyle n$th derivative of $\displaystyle M$ at $\displaystyle 0$. Furthermore, in some neighborhood of $\displaystyle 0$ the Taylor expansion of $\displaystyle M$ is 
+\begin{equation*}
+M( t) =\sum _{n=0}^{\infty }\frac{E\left( X^{n}\right)}{n!} t^{n}
+\end{equation*}
+:::
+
+Remark 6.1.10 The expression $\displaystyle M^{n}( t) =E\left( X^{2} e^{tX}\right)$ immediately implies that MGFs are convex.
+
+💌 Tips: If the MGF does not exist, replace $\displaystyle t$ by $\displaystyle it$ where $\displaystyle i=\sqrt{-1}$, this will yields the characterisitic function (which exists for any r.v). If the MGF does exist, it determine the distribution.
+
+::: {#thm-linearity}
+(Uniqueness and MGF) Let $\displaystyle X_{1}$ and $\displaystyle X_{2}$ have the same MGF $\displaystyle M( t)$ in some neighborhood of 0, i.e., $\displaystyle E\left( e^{tX_{1}}\right) =M( t) =E\left( e^{tX_{2}}\right)$ for $\displaystyle |t|< c$, where $\displaystyle c >0$. Then $\displaystyle X_{1} \sim X_{2}$.
+:::
+
+A moment generating function uniquely determines a distribution, but this does not imply that if $\displaystyle X_{1}$ and $\displaystyle X_{2}$ have exactly the same $\displaystyle n$th moments for all $\displaystyle n$$\displaystyle \in \{1,2,3,\ \cdots \}$, then $\displaystyle X_{1} \sim X_{2} .$
+
+
+💌 Tips from Proposition 6.1.14: Let $\displaystyle X_{1}$, $\displaystyle X_{2}$ be independent MGFs with $\displaystyle M_{1}( t) ,\ M_{2}( t)$. Then $\displaystyle X_{1} +X_{2}$ has MGF $\displaystyle M_{1}( t) M_{2}( t)$.
+
+
+::: {#def-kurtosis}
+
+(Kurtosis) Suppose that $\displaystyle X$ has a MGF $\displaystyle M( t)$. Then the cumulant generating function (CGF) is $\displaystyle K( t) \equiv \log M( t)$. Expanding $\displaystyle K( t) =\sum _{r=1}^{\infty } \kappa _{r}\frac{t^{r}}{r!} ,$the coefficient $\displaystyle \kappa _{r}$ is called the $\displaystyle r$th cumulant of $\displaystyle X$, and is also denoted by $\displaystyle K_{r}( X)$.
+
+Cumulatns have many useful properties. Assume that each of $\displaystyle X$, $\displaystyle X_{1} ,\ X_{2}$ has an MGF. Let $\displaystyle c$ be any constant. Then,
+
+- $\displaystyle K_{1}( X+c) =K_{1}( X) +c$ and $\displaystyle K_{r}( X+c) =K_{r}( X)$ for all $\displaystyle r\geqslant 2$.
+
+- $\displaystyle K_{r}( cX) =c^{r} K_{r}( X)$
+
+- $\displaystyle K_{r}( X_{1} +X_{2}) =K_{r}( X_{1}) +K_{r}( X_{2})$ for $\displaystyle X_{1} \perp\!\!\!\!\perp X_{2}$.
+
+- $\displaystyle K_{1}( X)$ is the mean of $\displaystyle X$, $\displaystyle K_{2}( X)$ is the variance, and $\displaystyle K_{3}( X) =E( E-EX)^{3}$ is the third central moment. Standardizing this by dividing by $\displaystyle Var^{3/2}( X)$ yields the skewness of $\displaystyle X$.
+
+- $\displaystyle K_{4}( X) =E( X-EX)^{4} -3Var( X))^{2}$. Standardizing this by dividing by $\displaystyle Var^{2}( X)$ yields the kurtosis, denoted by Kurt(X).
+:::
+
+## Midterm Concepts
+
+It is redundant to retype all the concepts The following are the highlighted midterm topics:
+
+- **Meaning of measure** [Section 1]: axioms of probability, random variables and their distributions, continuity of probability, preimages, independence, $\pi-\lambda$ Theorem
+
+-  **Reasoning by representation** [Section 2 + 3]: stories and representations for the most fundamental distributions, Probability Integral Transform, Count-Time Duality, Poisson process (on the line or in n dimensions), order statistics 
+
+-  **Meaning of means** [Section 4 + 5]: expected value via the Lebesgue integral and via the
+Riemann–Stieltjes integral, InSiPoD, LOTUS, linearity, variance, covariance,
+Monotone Convergence Theorem, Dominated Convergence Theorem, Bounded
+Convergence Theorem, Darth Vader Rule
+
+- **Conditioning** [Section 4 + 5]: conditional distributions, conditional expectation, Adam’s Law
+(Law of Total Expectation), Eve’s Law (Law of Total Variance), ECCE (Law
+of Total Covariance).
+
+- **Generating functions** [Section 6]: moments and moment generating functions (MGFs),
+characteristic functions, cumulants and cumulant generating functions (CGFs) 
+
+
+## Section Discussion Questions
+
+This week, as midterm is near, we will discuss fully Midterm 2022 & 2010, to give a sense on how to approach and think about problems!
+
+### ✏️ Section Problem 1 (Q1, 2022)
+Let $(\Omega, \mathcal{F}, P)$ be a probability space and $\mathcal{S}$ be a $\pi$-system such that $\Omega \in \mathcal{S}$ and $\sigma(\mathcal{S})=\mathcal{F}$. As usual, for any event $A$, let $I(A)$ be the indicator random variable for $A$. Let $\mathcal{V}$ be a collection of random variables on $(\Omega, \mathcal{F}, P)$ such that:
+
+(i) If $X \in \mathcal{V}$ and $c \in \mathbb{R}$, then $c X \in \mathcal{V}$.
+
+(ii) If $X, Y \in \mathcal{V}$, then $X+Y \in \mathcal{V}$.
+
+(iii) If $X_{1}, X_{2}, \cdots \in \mathcal{V}$ and $\sup _{n} X_{n}(\omega)$ is finite for all $\omega \in \Omega$, then $\sup _{n} X_{n} \in \mathcal{V}$.
+
+(iv) If $A \in \mathcal{S}$, then $I(A) \in \mathcal{V}$.
+
+Show that $\mathcal{V}$ contains every random variable on $(\Omega, \mathcal{F}, P)$.
+
+Hint: First consider the set $\{A \in \mathcal{F}: I(A) \in \mathcal{V}\}$.
+
+::: {.callout-tip collapse="true" appearance="simple"}
+
+## Solution 
+Will be released after section!
+<!--
+By (i) and (ii), $\mathcal{V}$ is closed under linear combinations, i.e., if $X_{1}, \ldots, X_{n} \in \mathcal{L}$ and $c_{1}, \ldots, c_{n} \in \mathbb{R}$, then $c_{1} X_{1}+\cdots+c_{n} X_{n} \in \mathcal{L}$. In the spirit of InSiPoD, we will show that every indicator r.v. is in $\mathcal{V}$, then that every simple r.v. is in $\mathcal{V}$, then that every nonnegative r.v. is in $\mathcal{V}$, and lastly that every r.v. is in $\mathcal{V}$. Let
+
+$$
+\mathcal{L}=\{A \in \mathcal{F}: I(A) \in \mathcal{V}\} .
+$$
+
+Then $\mathcal{L}$ is a $\lambda$-system since:
+
+(a) We have $\Omega \in \mathcal{L}$ since $\Omega \in \mathcal{S}$ so by (iv), $I(\Omega) \in \mathcal{V}$.
+
+(b) If $A, B \in \mathcal{L}$ with $A \subseteq B$, then, by closure under linear combinations,
+
+$$
+I(B \backslash A)=I(B)-I(A) \in \mathcal{V}
+$$
+
+(c) If $A_{1}, A_{2}, \cdots \in \mathcal{L}$ with $A_{1} \subseteq A_{2} \subseteq \ldots$, then $A=\bigcup_{n=1}^{\infty} A_{n} \in \mathcal{L}$ by (iii), since
+
+$$
+I(A)=\sup _{n} I\left(A_{n}\right)
+$$
+
+To check the above equation in more detail, note that if $\omega \notin A$ then $I(A)(\omega)=0$ and $I\left(A_{n}\right)(\omega)=0$ for all $n$, whereas if $\omega \in A$, then $I(A)(\omega)=1, I\left(A_{n}\right)(\omega) \in\{0,1\}$ for all $n$, and $I\left(A_{n}\right)(\omega)=1$ for all sufficiently large $n$.
+
+By (iv), $\mathcal{S} \subseteq \mathcal{L}$. So by the $\pi-\lambda$ theorem, $\sigma(\mathcal{S}) \subseteq \mathcal{L}$. But $\sigma(\mathcal{S})=\mathcal{F}$, so
+
+$$
+\mathcal{L}=\mathcal{F}
+$$
+
+Thus, all indicator r.v.s are in $\mathcal{V}$. Every simple r.v. is a linear combination of indicator r.v.s, so all simple r.v.s are in $\mathcal{V}$.
+
+Now let $X$ be a nonnegative r.v. Write
+
+$$
+X=\lim _{n \rightarrow \infty} X_{n}
+$$
+
+with the $X_{n}$ nonnegative simple r.v.s and $X_{1} \leq X_{2} \leq \cdots \leq X$. Then $X=\sup _{n} X_{n}$ (to check that for each $\omega, X(\omega)$ is the least upper bound of $\left\{X_{1}(\omega), X_{2}(\omega), \ldots\right\}$, note that $X_{n}(\omega) \leq X(\omega)$ for all $n$, and if $X_{n}(\omega) \leq c$ for all $n$, then $\lim _{n \rightarrow \infty} X_{n}(\omega) \leq$ $\lim _{n \rightarrow \infty} c$, which gives $\left.X(\omega) \leq c\right)$.
+
+Thus, by (iii) we have $X \in \mathcal{V}$. Now let $X$ be an arbitrary r.v., and (as usual) let $X^{+}=\max (X, 0)$ and $X^{-}=\max (-X, 0)$. Then $X^{+}$and $X^{-}$are in $\mathcal{V}$ since they are nonnegative r.v.s, so
+
+$$
+X=X^{+}-X^{-} \in \mathcal{V}
+$$
+-->
+:::
+
+### ✏️ Section Problem 2 (Q2, 2010)
+
+(a) Let $Y \sim \mathcal{N}\left(\mu, \sigma^2\right)$, with $\mu \sim \mathcal{N}\left(\mu_0, \sigma^2 / r\right)$. Show by representation that
+$$
+Y \sim \mathcal{N}\left(\mu_0, \sigma^2 \cdot(1+1 / r)\right)
+$$
+
+(b) Now suppose $\mu=0$ is known, but $\sigma^2 \sim t$. Expo. Given only one Uniform $U \sim$ Unif and one independent Normal $Z \sim \mathcal{N}(0,1)$, show how one can easily simulate one draw from the marginal distribution of $Y$. What is the marginal variance of $Y$ ?
+
+Note: avoid using density functions and integrals here; instead, think through why the results above are "obvious" from a representation perspective. Be careful to justify independence, wherever used.
+
+::: {.callout-tip collapse="true" appearance="simple"}
+
+## Solution
+Will be released after section! 
+<!--
+(a) Let $Y \sim \mathcal{N}\left(\mu, \sigma^{2}\right)$, with $\mu \sim \mathcal{N}\left(\mu_{0}, \sigma^{2} / r\right)$. Show by representation that
+
+$$
+Y \sim \mathcal{N}\left(\mu_{0}, \sigma^{2} \cdot(1+1 / r)\right)
+$$
+
+By the properties of MVN,
+
+$$
+\begin{aligned}
+Y \mid \mu & \sim \mathcal{N}\left(\mu, \sigma^{2}\right), \mu \sim \mathcal{N}\left(\mu_{0}, \sigma^{2} / r\right) \\
+(Y, \mu) & \sim \mathcal{N}\left(\left(\begin{array}{c}
+\mu_{0} \\
+\mu_{0}
+\end{array}\right),\left(\begin{array}{cc}
+\sigma^{2}+\sigma^{2} / r & \sigma^{2} / r \\
+\sigma^{2} / r & \sigma^{2} / r
+\end{array}\right)\right) \\
+Y & \sim \mathcal{N}\left(\mu_{0}, \sigma^{2}(1+1 / r)\right)
+\end{aligned}
+$$
+
+
+(b) Now suppose $\mu=0$ is known, but $\sigma^{2} \sim t$. Expo. Given only one Uniform $U \sim$ Unif and one independent Normal $Z \sim \mathcal{N}(0,1)$, show how one can easily simulate one draw from the marginal distribution of $Y$. What is the marginal variance of $Y$ ?
+
+Note: avoid using density functions and integrals here; instead, think through why the results above are "obvious" from a representation perspective. Be careful to justify independence, wherever used.
+
+We want to simulate a draw from $Y \mid \sigma^{2} \sim \mathcal{N}\left(0, \sigma^{2}\right), \sigma^{2} \sim t$ Expo. First, we can pick $\sigma^{2}$ from the distribution $-t \log U$, as we are given the Uniform. Second, wecan pick $Y$ from $Y \mid \sigma^{2}$, as we already picked the $\sigma^{2}$ according to the Exponential distribution. Then
+
+$$
+Y \mid \sigma^{2} \sim \mathcal{N}\left(0, \sigma^{2}\right)
+$$
+
+Write $Y=\sigma Z$. Then $Z$ is independent of $\sigma$ since the conditional distribution of $Z=Y / \sigma$ is $\mathcal{N}(0,1)$, which does not depend on $\sigma$.
+
+The variance of $Y$ is
+
+$$
+\operatorname{Var}(Y)=\operatorname{Var}\left(E\left(Y \mid \sigma^{2}\right)\right)+E\left(\operatorname{Var}\left(Y \mid \sigma^{2}\right)\right)=E\left(\sigma^{2}\right)=t
+$$
+-->
+:::
+
+### ✏️ Section Problem 3 (Q3, 2022)
+Let $X_{1}, X_{2}, \ldots$ be i.i.d., with an MGF that exists. Let $m_{n}=E\left(X_{1}^{n}\right)$. Let $N \sim \operatorname{Pois}(1)$, with $N$ independent of $X_{1}, X_{2}, \ldots$ Let
+
+$$
+T=\sum_{j=1}^{N} X_{j}
+$$
+
+Find the $r$ th cumulant of $T$, for $r$ a positive integer (in terms of $m_{1}, m_{2}, \ldots$ ).
+
+
+::: {.callout-tip collapse="true" appearance="simple"}
+
+## Solution 
+Will be released after section!
+<!--
+Let $M$ be the MGF of $X_{1}$, with $M(t)<\infty$ for all $t \in(-a, a)$. For the rest of this solution, suppose that $t \in(-a, a)$. Then
+
+$$
+M(t)=\sum_{n=0}^{\infty} \frac{m_{n} t^{n}}{n !}
+$$
+
+By Adam's law and LOTUS, the MGF of $T$ is given by
+
+$$
+E\left(E\left(e^{t \sum_{j=1}^{N} X_{j}} \mid N\right)\right)=E\left(M(t)^{N}\right)=e^{-1} \sum_{n=0}^{\infty} \frac{M(t)^{n}}{n !}=e^{M(t)-1}
+$$
+
+So the CGF of $T$ is
+
+$$
+M(t)-1=\sum_{n=1}^{\infty} \frac{m_{n} t^{n}}{n !}
+$$
+
+The $r$ th cumulant of $T$ is the coefficient of $t^{r} / r$ ! in the Taylor expansion of the CGF of $T$ about 0 . Hence, the $r$ th cumulant of $T$ is $m_{r}$.
+-->
+:::
+
+
+## Next Week
+Next week, we will discuss:
+
+- No section since it crashes with midterm. Good luck with your midterm
+
+![](assets/img/gluck.jpeg)
+
+Feel free to upload the pencil problem you wish to be discussed next week [here](https://forms.gle/RBmMNYJp4u3qD5W79).
+
+Note that a verified email address is needed in the GForm so we don't get scammy input! :) 
+
+$\,$
