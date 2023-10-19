@@ -22,7 +22,7 @@ MGFs are powerful because: (1) Determining distirbutions (2) Powerful tool for c
 
 If the MGF of $\displaystyle X$ exists, then all the moments $\displaystyle E\left( X^{r}\right)$ exists, but the converse is not true. 
 
-💌 Tips from example 6.1.6 (Normal MGF): If \math-container{Y} is normal, then \math-container{E(e\power{Y})} is the exponential of the mean of \math-container{Y} plus half the variance of \math-container{Y.}
+💌 Tips from example 6.1.6 (Normal MGF): If $Y$ is normal, then $E(e^Y)$ is the exponential of the mean of $Y$  plus half the variance of $Y$.
 
 ::: {#def-n-th-moment}
 Let $\displaystyle X$ have an MGF $\displaystyle M( t)$. Then the $\displaystyle n$th moment of $\displaystyle X$ is given by $\displaystyle E\left( X^{n}\right) =M^{( n)}( 0)$, the $\displaystyle n$th derivative of $\displaystyle M$ at $\displaystyle 0$. Furthermore, in some neighborhood of $\displaystyle 0$ the Taylor expansion of $\displaystyle M$ is 
