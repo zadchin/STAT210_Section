@@ -1,0 +1,333 @@
+# Section 7 {.unnumbered}
+
+Last Updated: 2 Nov 2023
+
+Date: 3 Nov 2023
+
+
+## Welcome Back
+In this section, we will discuss:
+
+- How was Midterm?
+- Multivariate Normal
+
+
+## Definition by Representation
+
+Let's define what is MVN, building from i.i.d of univariate Normals.
+
+::: {#def-MVN}
+(Multivariate Normal) The random vector $\mathbf{Y} = (Y_1, Y_2, \cdots, Y_k)$ has the *Multivariate Normal Distribution* if it is the form $$\mathbf{Y} = A \mathbf{Z} + \mathbf{\mu}, $$ where $Z_1, Z_2, \cdots, Z_m$ are i.i.d $N(0,1)$ random variable, $A$ is a $k$ by $m$ matrix, and $\mathbf{\mu} \in \mathbb{R}^k$. We write $\mathbf{Y} \sim N_k(\mathbf{\mu}, V)$ if $\mathbf{Y}$ is a Multivariate Normal of dimension $k$ with mean $\mathbf{\mu}$ and covariance matrix $V$.
+:::
+
+::: {#def-MVN-2}
+(Multivariate Normal by Projections).A random vector $\mathbf{Y}$ is multivariate normal if and only if every non zero linear combination of its components,$\mathbf{b}^T\mathbf{Y}$ where $\mathbf{b}=0$,is distributed according to a univariate normal.
+:::
+
+## Properties about Multivariate Normal
+
+
+::: {#thm-moment-MVN}
+(Cramér-Wold device).Given a finite-dimensional random vector $\mathbf{X}$, the joint distribution of $\mathbf{X}$ is uniquely determined by its projections onto 1-dimensional spaces. In other words, knowing the marginal distribution of $\mathbf{t}^T \mathbf{X}$, for every fixed $\mathbf{t}$, is enough.
+:::
+
+The above proposition follows from the fact that joint characteristic functions determine multivariate distributions (a hard but standard fact from analysis). This is because the joint characteristic function is just
+$$
+\varphi_{\mathbf{X}}(\mathbf{t})=\mathbf{E}\left[e^{i \mathbf{t}^T \mathbf{X}}\right] .
+$$
+
+In particular, $\mathbf{t}^T \mathbf{X}$ occurs in the exponent, so values of the characteristic function are completely determined from marginal distributions of projections of $\mathbf{X}$.
+
+::: {#def-mgf-mvn}
+(MGF of multivariate normal). Recall that the moment generating function of a univariate $\mathcal{N}\left(\mu, \sigma^2\right)$ normal distribution is
+$$
+e^{t \mu+\sigma^2 t^2 / 2}
+$$
+
+The joint moment generating function of a multivariate normal $\mathcal{N}(\mu, \Sigma)$ is analogously
+$$
+e^{\mathbf{t}^T\left(\mu+\frac{1}{2} \Sigma \mathbf{t}\right)} .
+$$
+
+This is because if we let $\mathbf{W} \sim \mathcal{N}(\mu, \Sigma)$ and consider the projection $\mathbf{t}^T \mathbf{W}$, we get $\mathbf{E}\left[\mathbf{t}^T \mathbf{W}\right]=\mathbf{t}^T \mu$ and $\operatorname{Var}\left[\mathbf{t}^T \mathbf{W}\right]=\operatorname{Var}\left[\mathbf{t}^T\left(\Sigma^{1 / 2} \mathbf{W}+\mu\right)\right]=\operatorname{Var}\left[\mathbf{t}^T \Sigma^{1 / 2} \mathbf{Z}\right]=\mathbf{t}^T \Sigma \mathbf{t}$. Therefore, the distribution of each projection of a multivariate normal is also normal, so we can compute the joint MGF from the univariate MGF.
+:::
+
+::: {#def-closure}
+(Closure properties of MVN). The multivariate normal distribution has many nice closure properties, such as:
+
+- If you take a linear combination or shift of multivariate normals, it is also multivariate normal.
+
+- Any vector of projections (i.e., projection matrix) is also multivariate normal.
+
+- The conditional distribution of a multivariate normal is also multivariate normal.
+
+:::
+
+## Some useful linear algebra results
+
+1. The trace of a matrix is a linear function.
+
+2. If $A$ is $n\times k$ and $B$ is $k\times n$, $\mbox{tr}(AB)=\mbox{tr}(BA)$.
+
+3. **Spectral decomposition**: Suppose $A_{n\times n}$ is a real valued and symmetric with rank $k$. Then there exists a matrix $\Gamma_{n\times k}=(\gamma_{1},\dots,\gamma_{k})$ with orthogonal columns and $\Lambda_{k \times k}=\mbox{{diag}}(\lambda_{1},\dots,\lambda_{k})$ with $\lambda_{i}\neq0$ such that $A=\Gamma\Lambda\Gamma^{\top}$. The $\gamma_{i}$s are the eigenvectors of $A$, with $\lambda_{i}$s being the corresponding nonzero eigenvalues.
+
+4. If $A$ is non-negative definite it has nonnegative eigenvalues.
+
+
+## Section Discussion Questions
+
+### ✏️ Section Problem 1
+Suppose $\mathbf{Y}_{n\times 1}\sim \mathcal{N}_n(\mathbf{\mu},\Sigma)$, and define $Q=\mathbf{Y}^{\top}A\mathbf{Y}$, where $A$ is a $n \times n$ symmetric matrix.
+
+(a) Find the expectation of $Q$.
+
+(b) Find the variance of $Q$.
+
+(c)  For symmetric matrices $A_{1}$ and $A_{2}$ and corresponding quadratic forms $Q_{i}=\mathbf{Y}^{\top}A_{i}\mathbf{Y}$, find the covariance of $Q_{1}$ and $Q_{2}$.
+
+(d) How could we have solved this problem if $A$ was not symmetric?
+
+
+::: {.callout-tip collapse="true" appearance="simple"}
+
+## Solution 
+
+Will be posted after section 
+<!--
+(a) By the linearity and the cyclical properties of the trace
+$$
+\begin{align*}
+\mathbb{E}[Q] &= \mathbb{E}[\text{tr}(\mathbf{\mu}{Y}^{\top}A\mathbf{\mu}{Y})] =  \mathbb{E}[\text{tr}(A\mathbf{\mu}{Y}\mathbf{\mu}{Y}^{\top})] = \text{tr}[A\mathbb{E}(\mathbf{\mu}{Y}\mathbf{\mu}{Y}^{\top})] \\
+&=  \text{tr}[A(\Sigma + \mathbf{\mu}{\mu}\mathbf{\mu}{\mu}^{\top})] = \text{tr}(A\Sigma) +  \text{tr}(A\mathbf{\mu}{\mu}\mathbf{\mu}{\mu}^{\top}) = \text{tr}(A\Sigma) +  \mathbf{\mu}{\mu}^{\top}A\mathbf{\mu}{\mu}.
+\end{align*}
+$$
+
+(b) Since $\Sigma$ is symmetric, we can find a spectral decomposition $\Sigma=\Gamma^{\star} \Lambda \Gamma^{\star \top}$. Since $\Sigma$ is non-negative definite, its non-zero eigenvectors are positive. Let us denote $\Sigma^{1 / 2}:=\Gamma^{\star} \Lambda^{1 / 2} \Gamma^{\star \top}$ (which is well defined). Note that $\Sigma^{1 / 2}$ is symmetric and $\Sigma^{1 / 2} \Sigma^{1 / 2}=\Sigma$. Hence, we can represent $\mathbf{Y}=\mu+\Sigma^{1 / 2} \mathbf{Z}$, with $\mathbf{Z} \sim \mathcal{N}_n(0, I)$. Now, $Q=\left(\mu+\Sigma^{1 / 2} \mathbf{Z}\right)^{\top} A\left(\mu+\Sigma^{1 / 2} \mathbf{Z}\right)=\mu^{\top} A \mu+2 \mu^{\top} A \Sigma^{1 / 2} \mathbf{Z}+\mathbf{Z}^{\top} \Sigma^{1 / 2} A \Sigma^{1 / 2} \mathbf{Z}$.
+$$
+\begin{aligned}
+\operatorname{Var}(Q) & =\operatorname{Var}\left(2 \mu^{\top} A \Sigma^{1 / 2} \mathbf{Z}+\mathbf{Z}^{\top} \Sigma^{1 / 2} A \Sigma^{1 / 2} \mathbf{Z}\right) \\
+& =4 \underbrace{\operatorname{Var}\left(\mu^{\top} A \Sigma^{1 / 2} \mathbf{Z}\right)}_{(1)}+\underbrace{\operatorname{Var}\left(\mathbf{Z}^{\top} \Sigma^{1 / 2} A \Sigma^{1 / 2} \mathbf{Z}\right)}_{(2)}+4 \underbrace{\operatorname{Cov}\left(\mu^{\top} A \Sigma^{1 / 2} \mathbf{Z}, \mathbf{Z}^{\top} \Sigma^{1 / 2} A \Sigma^{1 / 2} \mathbf{Z}\right)}_{(3)} .
+\end{aligned}
+$$
+
+For term (1), we have
+$$
+\operatorname{Var}\left(\mu^{\top} A \Sigma^{1 / 2} \mathbf{Z}\right)=\mu^{\top} A \Sigma^{1 / 2} \operatorname{Var}(\mathbf{Z}) \Sigma^{1 / 2} A \mu=\mu^{\top} A \Sigma A \mu .
+$$
+
+For term (2), we use spectral decomposition $\Sigma^{1 / 2} A \Sigma^{1 / 2}=\Gamma D \Gamma^{\top}$. Since $\Gamma$ is orthogonal, we know $\Gamma^{\top} \Gamma=I$ and have $\tilde{\mathbf{Z}}=\Gamma^{\top} \mathbf{Z} \sim \mathcal{N}(0, I)$. Since $D$ is diagonal, we can write $\mathbf{Z}^{\top} \Sigma^{1 / 2} A \Sigma^{1 / 2} \mathbf{Z}=$ $\sum_{i=1}^p d_{i i} \tilde{Z}_i^2$. Using independence, properties of orthogonal matrices, the cyclical properties of the trace, and the fact that $\operatorname{Var}\left(\tilde{Z}_i^2\right)=2$, term $(2)$ reduces to
+$$
+\begin{aligned}
+\operatorname{Var}\left(\sum d_{i i} \tilde{Z}_i^2\right) & =2 \sum d_{i i}^2=2 \operatorname{tr}\left(D^2\right)=2 \operatorname{tr}\left(D^2 \Gamma^{\top} \Gamma\right) \\
+& =2 \operatorname{tr}\left(\Gamma D^2 \Gamma^{\top}\right)=2 \operatorname{tr}\left(\left(\Gamma D \Gamma^{\top}\right)^2\right) \\
+& =2 \operatorname{tr}\left(\left(\Sigma^{1 / 2} A \Sigma^{1 / 2}\right)^2\right)=2 \operatorname{tr}\left((A \Sigma)^2\right) .
+\end{aligned}
+$$
+
+For term (3), since $\mathbf{Z} \sim-\mathbf{Z}$, we can write
+$$
+\begin{aligned}
+\operatorname{Cov}\left(\mu^{\top} A \Sigma^{1 / 2} \mathbf{Z}, \mathbf{Z}^{\top} \Sigma^{1 / 2} A \Sigma^{1 / 2} \mathbf{Z}\right) & =\operatorname{Cov}\left(\mu^{\top} A \Sigma^{1 / 2}(-\mathbf{Z}),\left(-\mathbf{Z}^{\top}\right) \Sigma^{1 / 2} A \Sigma^{1 / 2}(-\mathbf{Z})\right) \\
+& =-\operatorname{Cov}\left(\mu^{\top} A \Sigma^{1 / 2} \mathbf{Z}, \mathbf{Z}^{\top} \Sigma^{1 / 2} A \Sigma^{1 / 2} \mathbf{Z}\right),
+\end{aligned}
+$$
+which gives us $\operatorname{Cov}\left(\mu^{\top} A \Sigma^{1 / 2} \mathbf{Z}, \mathbf{Z}^{\top} \Sigma^{1 / 2} A \Sigma^{1 / 2} \mathbf{Z}\right)=0$.
+The final result is therefore
+$$
+\operatorname{Var}\{Q\}=4 \mu^{\top} A \Sigma A \mu+2 \operatorname{tr}\left((A \Sigma)^2\right)
+$$
+
+(c) Firstly, note that
+$$\operatorname{Cov}(Q_1,Q_2) = \frac{\operatorname{Var}(Q_1+Q_2) - \operatorname{Var}(Q_1-Q_2)}{4}.$$
+Moreover, $Q_1+Q_2 = \mathbf{Y}^\top(A_1+A_2)\mathbf{Y}$, $Q_1-Q_2 = \mathbf{Y}^\top(A_1-A_2)\mathbf{Y}$, and $A_1+A_2$, $A_1-A_2$ are symmetric matrices.
+We could therefore apply (b) to find the covariance.
+
+(d) The symmetry of $A$ was not required to find $\mathbb{E}(Q)$. However, we used the symmetry of $A$ to find $\operatorname{Var}(Q)$. Since $Q$ is a scalar, we have
+$$Q =  \mathbf{Y}^\top A\mathbf{Y} = (\mathbf{Y}^\top A\mathbf{Y})^\top =  \mathbf{Y}^\top A^\top\mathbf{Y} = \mathbf{Y}^\top\frac{(A+A^\top)}{2}\mathbf{Y}.$$
+Note that $\frac{(A+A^\top)}{2}$ is symmetric. We can now apply the result in (b) to find out $\operatorname{Var}(Q)$.
+-->
+:::
+
+
+### ✏️ Section Problem 2 (8.17)
+(Interclass correlation model) Let $\mathbf{X}=(X_1, \cdots, X_k)$ be Multivariate Normal with mean vector $\mu(1,1,\cdots, 1)$ and covariance matrix $\sigma^2 C$, where $C_{ii}=1$ for all $i$ and $C_{ij}=\rho$ for all $i\neq j$, for some $\rho \in (-1,1)$. This is known as the *interclass correlation model* (and is based on an exchangeability assumption)
+
+(a) Assume $k=3$ for this part. Why do we require that $rho \geq -1/2$?
+
+(b) Find the joint distribution (with means and covariance) of the vector $(\bar{X}, X_1-\bar{X}, X_1-X_2)$.
+
+(c) Show that $\sigma^2 C$ has only two distinct eigenvalues (for $\rho \neq 0$), namely $\lambda_1 \equiv \sigma^2(1+(k-1)\rho)$ and $\lambda_2 \equiv \sigma^2(1-\rho)$, with multiplicities 1 and $k-1$ respectively.
+
+Hint: Write $C = (1-\rho)I + \rho J$ in terms of the projection matrices $J/k$ and $I-J/k$, where $J$ is the matrix of all 1's.
+
+::: {.callout-tip collapse="true" appearance="simple"}
+
+## Solution 
+Will be posted after section 
+<!--
+(a) Since $\operatorname{var}\left(X_1+X_2+X_2\right)=\sigma^2(1+1+1+2 \rho+2 \rho+2 \rho) \geq 0$, we have $\rho \geq-1 / 2$.
+
+(b) Since $\left(\bar{X}, X_1-\bar{X}, X_1-X_2\right)$ is a linear transformation of $\mathbf{X}$, it follows multivariate normal distribution, and we only need to determine its mean vector and covariance matrix. By linearity, we have $E\left(\bar{X}, X_1-\bar{X}, X_1-X_2\right)=(\mu, 0,0)$. The variances and covariances are
+$$
+\begin{aligned}
+\operatorname{var}(\bar{X}) & =\sigma^2 / k^2\left[k \sigma^2+k(k-1) \rho\right]=\sigma^2[1+(k-1) \rho] / k \\
+\operatorname{var}\left(X_1-\bar{X}\right) & =\sigma^2 / k[k+1+(k-1) \rho-2\{1+(k-1) \rho\}]=(k-1)(1-\rho) \sigma^2 / k \\
+\operatorname{var}\left(X_1-X_2\right) & =\sigma^2(1+1+2 \rho)=2 \sigma^2(1-\rho) \\
+\operatorname{cov}\left(\bar{X}, X_1-\bar{X}\right) & =\sigma^2(1 / k-1 / k)=0 \\
+\operatorname{cov}\left(\bar{X}, X_1-X_2\right) & =0 \\
+\operatorname{cov}\left(X_1-\bar{X}, X_1-X_2\right) & =\sigma^2(1-\rho)
+\end{aligned}
+$$
+
+Therefore,
+$$
+\left(\begin{array}{c}
+\bar{X} \\
+X_1-\bar{X} \\
+X_1-X_2
+\end{array}\right) \sim \mathcal{N}_3\left[\left(\begin{array}{c}
+\mu \\
+0 \\
+0
+\end{array}\right), \sigma^2\left(\begin{array}{ccc}
+{[1+(k-1) \rho] / k} & 0 & 0 \\
+0 & (k-1)(1-\rho) / k & 1-\rho \\
+0 & 1-\rho & 2(1-\rho)
+\end{array}\right)\right]
+$$
+
+(c) The equation $C \alpha=\lambda \alpha$ is equivalent to
+$$
+(1-\rho) \alpha+\rho J \alpha=\left(\lambda / \sigma^2\right) \alpha
+$$
+which can be rewritten as
+$$
+J \alpha=\frac{\frac{\lambda}{\sigma^2}+\rho-1}{\rho} \alpha
+$$
+
+Since $J \mathbf{1}_k=k \mathbf{1}_k$ and $\operatorname{rank}(J)=\operatorname{rank}\left(\mathbf{1}_k \mathbf{1}_k^{\prime}\right)=\operatorname{rank}\left(\mathbf{1}_k\right)=1$, the matrix $J$ has only one non-zero eigenvalue equal to $k$, and $(k-1)$ zero eigenvalues. From $\lambda / \sigma^2+\rho-1=k \rho$, we have $\lambda=[1+(k-1) \rho] \sigma^2$; and from $\lambda / \sigma^2+\rho-1=0$, we have $\lambda=\sigma^2(1-\rho)$.
+-->
+:::
+
+### ✏️ Section Problem 3 (8.11)
+
+(Matrix times a MVN vector) Let $Y \sim N_k(\mu, V)$ be Multivariate Normal and $X=B Y$, where $B$ is an $m$ by $k$ matrix of constants, such that $B V B^{\top}$ is invertible.
+
+(a) Is $(X, Y)$ Multivariate Normal? Explain.
+
+(b) Find the conditional distribution of $Y$ given $X$.
+
+(c) What does your answer reduce to when $m=k$ and $B$ is invertible? Does this make sense intuitively?
+
+
+::: {.callout-tip collapse="true" appearance="simple"}
+
+## Solution
+
+Will be posted after section 
+<!--
+(a) Yes. Note that
+$$
+\begin{aligned}
+\left(\begin{array}{c}
+X \\
+Y
+\end{array}\right) & =\left(\begin{array}{c}
+B \\
+I
+\end{array}\right) Y \\
+& \sim N\left(\left(\begin{array}{c}
+B \\
+I
+\end{array}\right) \mu,\left(\begin{array}{c}
+B \\
+I
+\end{array}\right) V\left(\begin{array}{ll}
+B^{\top} & I
+\end{array}\right)\right) \\
+& =N\left(\left(\begin{array}{c}
+B \mu \\
+\mu
+\end{array}\right),\left(\begin{array}{cc}
+B V B^{\top} & B V \\
+V B^{\top} & V
+\end{array}\right)\right) .
+\end{aligned}
+$$
+- $X$ and $Y$ are marginally multivariate normal doesn't imply that $(X, Y)$ is multivariate normal.
+- Any linear transformation of any multivariate normal is still a multivariate normal (you don't have to start with i.i.d. normals).
+
+(b)  By Proposition 8.5.1,
+$$
+Y \mid X \sim N\left(\mu+V B^{\top}\left(B V B^{\top}\right)^{-1}(X-B \mu), V-V B^{\top}\left(B V B^{\top}\right)^{-1} B V\right)
+$$
+
+(c)  If $B$ is invertible and $B V B^{\top}$ is invertible, then $V$ is invertible. Now
+$$
+\begin{aligned}
+\mu+V B^{\top}\left(B V B^{\top}\right)^{-1}(X-B \mu) & =\mu+V B^{\top}\left(B^{\top}\right)^{-1} V^{-1} B^{-1}(X-B \mu) \\
+& =\mu+B^{-1}(X-B \mu) \\
+& =B^{-1} X . \\
+V-V B^{\top}\left(B V B^{\top}\right)^{-1} B V & =V-V B^{\top}\left(B^{\top}\right)^{-1} V^{-1} B^{-1} B V \\
+& =V-V V^{-1} V=O .
+\end{aligned}
+$$
+
+Hence $Y \mid X \sim N\left(B^{-1} X, O\right)$. This means that given $X, Y$ is a constant. This sure makes sense because if $B$ is invertible then $Y=B^{-1} X$ is a function of $X$, so knowing $X$ is knowing $Y$.
+-->
+:::
+
+
+
+
+### ✏️ Section Problem 4 (Final 2011, Q2)
+
+(a) Show that within a Multivariate Normal, conditioning on more information reduces variance: $\operatorname{Var}\left(Y \mid \mathbf{X}_1\right) \leq \operatorname{Var}\left(Y \mid \mathbf{X}_{\mathbf{2}}\right)$ if $Y, \mathbf{X}_1, \mathbf{X}_{\mathbf{2}}$ are subvectors of a MVN random vector, with $Y$ onedimensional and $\mathbf{X}_{\mathbf{2}}$ a subvector of $\mathbf{X}_{\mathbf{1}}$.
+
+(b) Give a counterexample to the above if the distribution is not MVN. On the other hand, show that on average conditioning on more information reduces variance: $E\left(\operatorname{Var}\left(Y \mid \mathbf{X}_1\right)\right) \leq$ $E\left(\operatorname{Var}\left(Y \mid \mathbf{X}_{\mathbf{2}}\right)\right)$.
+
+
+::: {.callout-tip collapse="true" appearance="simple"}
+
+## Solution
+Will be posted after section 
+<!--
+(a) SNoTE and Method 1: First show that within a MVN, conditioning reduces variance; this is the case where $\mathbf{X}_{\mathbf{2}}$ is an empty vector. For this case,
+$$
+\operatorname{Var}\left(Y \mid \mathbf{X}_1\right)=V_{22}-V_{21} V_{11}^{-1} V_{12} \leq V_{22}=\operatorname{Var}(Y),
+$$
+since $V_{11}$ is positive definite (which implies that $V_{11}^{-1}$ is positive definite). Remarkably, this SNoTE solves the general case too, since conditional distributions in a MVN are MVN: the conditional distribution of $Y \mid \mathbf{X}_{\mathbf{2}}$ is MVN, and conditioning on any additional components in $\mathbf{X}_1$ reduces the variance.
+
+Method 2: Using the uncorrelation trick, we can write $Y=\tilde{Y}+B \mathbf{X}_1$, with $B$ a constant matrix (a row vector here) and with $\tilde{Y}$ independent of $\mathbf{X}_1$. Note that $\tilde{Y}$ and $\mathbf{X}_1$ are also conditionally independent given $\mathbf{X}_2$. So $\operatorname{Var}\left(Y \mid \mathbf{X}_1\right)=\operatorname{Var}(\tilde{Y})$ and
+$$
+\operatorname{Var}\left(Y \mid \mathbf{X}_2\right)=\operatorname{Var}(\tilde{Y})+\operatorname{Var}\left(B \mathbf{X}_{\mathbf{1}} \mid \mathbf{X}_{\mathbf{2}}\right) \geq \operatorname{Var}\left(Y \mid \mathbf{X}_{\mathbf{1}}\right)
+$$
+
+(b) For a counterexample, we can choose an example where learning something new increases our uncertainty about something else, e.g., if you get into your top choice of school then you may have little uncertainty about where to go, whereas if you don't get in then you may be very uncertain about what to do next. For a simple, precise example, let $Y=W X_1$ where $X_1 \sim \operatorname{Bern}(1 / 2)$ is independent of $W \sim[0,1000]$. Then $\operatorname{Var}(Y)=E\left(W^2\right) E\left(X_1\right)=500$, but $\operatorname{Var}\left(Y \mid X_1=1\right)=1000$.
+
+Returning to the general case, Eve's Law gives
+$$
+\operatorname{Var}\left(Y \mid \mathbf{X}_{\mathbf{2}}\right)=E\left(\operatorname{Var}\left(Y \mid \mathbf{X}_1\right) \mid \mathbf{X}_{\mathbf{2}}\right)+\operatorname{Var}\left(E\left(Y \mid \mathbf{X}_{\mathbf{1}}\right) \mid \mathbf{X}_{\mathbf{2}}\right) \geq E\left(\operatorname{Var}\left(Y \mid \mathbf{X}_1\right) \mid \mathbf{X}_{\mathbf{2}}\right) .
+$$
+
+Taking expectations of both sides, we have
+$$
+E\left(\operatorname{Var}\left(Y \mid \mathbf{X}_2\right)\right) \geq E\left(\operatorname{Var}\left(Y \mid \mathbf{X}_1\right)\right) .
+$$
+
+This also gives a third proof of the result from (a), since in an MVN conditional variances are constant.
+-->
+:::
+
+## Next Week
+Next week, we will discuss:
+
+- Inequalities
+
+![](assets/img/markov.jpeg)
+
+Feel free to upload the pencil problem you wish to be discussed next week [here](https://forms.gle/RBmMNYJp4u3qD5W79).
+
+Note that a verified email address is needed in the GForm so we don't get scammy input! :) 
+
+$\,$

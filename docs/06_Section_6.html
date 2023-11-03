@@ -30,7 +30,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./meme.html" rel="next">
+<link href="./07_Section_7.html" rel="next">
 <link href="./05_Section_5.html" rel="prev">
 <link href="./assets/img/stat210-clear_bg.png" rel="icon" type="image/png">
 <script src="site_libs/quarto-html/quarto.js"></script>
@@ -144,6 +144,11 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="./07_Section_7.html" class="sidebar-item-text sidebar-link">Section 7</a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="./meme.html" class="sidebar-item-text sidebar-link">Quotes</a>
   </div>
 </li>
@@ -246,7 +251,7 @@ $$
 
 </header>
 
-<p>Last Updated: 19 Oct 2023</p>
+<p>Last Updated: 20 Oct 2023</p>
 <p>Date: 20 Oct 2023</p>
 <section id="introduction" class="level2">
 <h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
@@ -325,53 +330,39 @@ Solution
 </div>
 <div id="callout-1" class="callout-1-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>Will be released after section! <!--
-By (i) and (ii), $\mathcal{V}$ is closed under linear combinations, i.e., if $X_{1}, \ldots, X_{n} \in \mathcal{L}$ and $c_{1}, \ldots, c_{n} \in \mathbb{R}$, then $c_{1} X_{1}+\cdots+c_{n} X_{n} \in \mathcal{L}$. In the spirit of InSiPoD, we will show that every indicator r.v. is in $\mathcal{V}$, then that every simple r.v. is in $\mathcal{V}$, then that every nonnegative r.v. is in $\mathcal{V}$, and lastly that every r.v. is in $\mathcal{V}$. Let
-
-$$
+<p>By (i) and (ii), <span class="math inline">\(\mathcal{V}\)</span> is closed under linear combinations, i.e., if <span class="math inline">\(X_{1}, \ldots, X_{n} \in \mathcal{L}\)</span> and <span class="math inline">\(c_{1}, \ldots, c_{n} \in \mathbb{R}\)</span>, then <span class="math inline">\(c_{1} X_{1}+\cdots+c_{n} X_{n} \in \mathcal{L}\)</span>. In the spirit of InSiPoD, we will show that every indicator r.v. is in <span class="math inline">\(\mathcal{V}\)</span>, then that every simple r.v. is in <span class="math inline">\(\mathcal{V}\)</span>, then that every nonnegative r.v. is in <span class="math inline">\(\mathcal{V}\)</span>, and lastly that every r.v. is in <span class="math inline">\(\mathcal{V}\)</span>. Let</p>
+<p><span class="math display">\[
 \mathcal{L}=\{A \in \mathcal{F}: I(A) \in \mathcal{V}\} .
-$$
-
-Then $\mathcal{L}$ is a $\lambda$-system since:
-
-(a) We have $\Omega \in \mathcal{L}$ since $\Omega \in \mathcal{S}$ so by (iv), $I(\Omega) \in \mathcal{V}$.
-
-(b) If $A, B \in \mathcal{L}$ with $A \subseteq B$, then, by closure under linear combinations,
-
-$$
+\]</span></p>
+<p>Then <span class="math inline">\(\mathcal{L}\)</span> is a <span class="math inline">\(\lambda\)</span>-system since:</p>
+<ol type="a">
+<li><p>We have <span class="math inline">\(\Omega \in \mathcal{L}\)</span> since <span class="math inline">\(\Omega \in \mathcal{S}\)</span> so by (iv), <span class="math inline">\(I(\Omega) \in \mathcal{V}\)</span>.</p></li>
+<li><p>If <span class="math inline">\(A, B \in \mathcal{L}\)</span> with <span class="math inline">\(A \subseteq B\)</span>, then, by closure under linear combinations,</p></li>
+</ol>
+<p><span class="math display">\[
 I(B \backslash A)=I(B)-I(A) \in \mathcal{V}
-$$
-
-(c) If $A_{1}, A_{2}, \cdots \in \mathcal{L}$ with $A_{1} \subseteq A_{2} \subseteq \ldots$, then $A=\bigcup_{n=1}^{\infty} A_{n} \in \mathcal{L}$ by (iii), since
-
-$$
+\]</span></p>
+<ol start="3" type="a">
+<li>If <span class="math inline">\(A_{1}, A_{2}, \cdots \in \mathcal{L}\)</span> with <span class="math inline">\(A_{1} \subseteq A_{2} \subseteq \ldots\)</span>, then <span class="math inline">\(A=\bigcup_{n=1}^{\infty} A_{n} \in \mathcal{L}\)</span> by (iii), since</li>
+</ol>
+<p><span class="math display">\[
 I(A)=\sup _{n} I\left(A_{n}\right)
-$$
-
-To check the above equation in more detail, note that if $\omega \notin A$ then $I(A)(\omega)=0$ and $I\left(A_{n}\right)(\omega)=0$ for all $n$, whereas if $\omega \in A$, then $I(A)(\omega)=1, I\left(A_{n}\right)(\omega) \in\{0,1\}$ for all $n$, and $I\left(A_{n}\right)(\omega)=1$ for all sufficiently large $n$.
-
-By (iv), $\mathcal{S} \subseteq \mathcal{L}$. So by the $\pi-\lambda$ theorem, $\sigma(\mathcal{S}) \subseteq \mathcal{L}$. But $\sigma(\mathcal{S})=\mathcal{F}$, so
-
-$$
+\]</span></p>
+<p>To check the above equation in more detail, note that if <span class="math inline">\(\omega \notin A\)</span> then <span class="math inline">\(I(A)(\omega)=0\)</span> and <span class="math inline">\(I\left(A_{n}\right)(\omega)=0\)</span> for all <span class="math inline">\(n\)</span>, whereas if <span class="math inline">\(\omega \in A\)</span>, then <span class="math inline">\(I(A)(\omega)=1, I\left(A_{n}\right)(\omega) \in\{0,1\}\)</span> for all <span class="math inline">\(n\)</span>, and <span class="math inline">\(I\left(A_{n}\right)(\omega)=1\)</span> for all sufficiently large <span class="math inline">\(n\)</span>.</p>
+<p>By (iv), <span class="math inline">\(\mathcal{S} \subseteq \mathcal{L}\)</span>. So by the <span class="math inline">\(\pi-\lambda\)</span> theorem, <span class="math inline">\(\sigma(\mathcal{S}) \subseteq \mathcal{L}\)</span>. But <span class="math inline">\(\sigma(\mathcal{S})=\mathcal{F}\)</span>, so</p>
+<p><span class="math display">\[
 \mathcal{L}=\mathcal{F}
-$$
-
-Thus, all indicator r.v.s are in $\mathcal{V}$. Every simple r.v. is a linear combination of indicator r.v.s, so all simple r.v.s are in $\mathcal{V}$.
-
-Now let $X$ be a nonnegative r.v. Write
-
-$$
+\]</span></p>
+<p>Thus, all indicator r.v.s are in <span class="math inline">\(\mathcal{V}\)</span>. Every simple r.v. is a linear combination of indicator r.v.s, so all simple r.v.s are in <span class="math inline">\(\mathcal{V}\)</span>.</p>
+<p>Now let <span class="math inline">\(X\)</span> be a nonnegative r.v. Write</p>
+<p><span class="math display">\[
 X=\lim _{n \rightarrow \infty} X_{n}
-$$
-
-with the $X_{n}$ nonnegative simple r.v.s and $X_{1} \leq X_{2} \leq \cdots \leq X$. Then $X=\sup _{n} X_{n}$ (to check that for each $\omega, X(\omega)$ is the least upper bound of $\left\{X_{1}(\omega), X_{2}(\omega), \ldots\right\}$, note that $X_{n}(\omega) \leq X(\omega)$ for all $n$, and if $X_{n}(\omega) \leq c$ for all $n$, then $\lim _{n \rightarrow \infty} X_{n}(\omega) \leq$ $\lim _{n \rightarrow \infty} c$, which gives $\left.X(\omega) \leq c\right)$.
-
-Thus, by (iii) we have $X \in \mathcal{V}$. Now let $X$ be an arbitrary r.v., and (as usual) let $X^{+}=\max (X, 0)$ and $X^{-}=\max (-X, 0)$. Then $X^{+}$and $X^{-}$are in $\mathcal{V}$ since they are nonnegative r.v.s, so
-
-$$
+\]</span></p>
+<p>with the <span class="math inline">\(X_{n}\)</span> nonnegative simple r.v.s and <span class="math inline">\(X_{1} \leq X_{2} \leq \cdots \leq X\)</span>. Then <span class="math inline">\(X=\sup _{n} X_{n}\)</span> (to check that for each <span class="math inline">\(\omega, X(\omega)\)</span> is the least upper bound of <span class="math inline">\(\left\{X_{1}(\omega), X_{2}(\omega), \ldots\right\}\)</span>, note that <span class="math inline">\(X_{n}(\omega) \leq X(\omega)\)</span> for all <span class="math inline">\(n\)</span>, and if <span class="math inline">\(X_{n}(\omega) \leq c\)</span> for all <span class="math inline">\(n\)</span>, then <span class="math inline">\(\lim _{n \rightarrow \infty} X_{n}(\omega) \leq\)</span> <span class="math inline">\(\lim _{n \rightarrow \infty} c\)</span>, which gives <span class="math inline">\(\left.X(\omega) \leq c\right)\)</span>.</p>
+<p>Thus, by (iii) we have <span class="math inline">\(X \in \mathcal{V}\)</span>. Now let <span class="math inline">\(X\)</span> be an arbitrary r.v., and (as usual) let <span class="math inline">\(X^{+}=\max (X, 0)\)</span> and <span class="math inline">\(X^{-}=\max (-X, 0)\)</span>. Then <span class="math inline">\(X^{+}\)</span>and <span class="math inline">\(X^{-}\)</span>are in <span class="math inline">\(\mathcal{V}\)</span> since they are nonnegative r.v.s, so</p>
+<p><span class="math display">\[
 X=X^{+}-X^{-} \in \mathcal{V}
-$$
---></p>
+\]</span></p>
 </div>
 </div>
 </div>
@@ -397,48 +388,39 @@ Solution
 </div>
 <div id="callout-2" class="callout-2-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>Will be released after section! <!--
-(a) Let $Y \sim \mathcal{N}\left(\mu, \sigma^{2}\right)$, with $\mu \sim \mathcal{N}\left(\mu_{0}, \sigma^{2} / r\right)$. Show by representation that
-
-$$
+<ol type="a">
+<li>Let <span class="math inline">\(Y \sim \mathcal{N}\left(\mu, \sigma^{2}\right)\)</span>, with <span class="math inline">\(\mu \sim \mathcal{N}\left(\mu_{0}, \sigma^{2} / r\right)\)</span>. Show by representation that</li>
+</ol>
+<p><span class="math display">\[
 Y \sim \mathcal{N}\left(\mu_{0}, \sigma^{2} \cdot(1+1 / r)\right)
-$$
-
-By the properties of MVN,
-
-$$
+\]</span></p>
+<p>By the properties of MVN,</p>
+<p><span class="math display">\[
 \begin{aligned}
-Y \mid \mu & \sim \mathcal{N}\left(\mu, \sigma^{2}\right), \mu \sim \mathcal{N}\left(\mu_{0}, \sigma^{2} / r\right) \\
-(Y, \mu) & \sim \mathcal{N}\left(\left(\begin{array}{c}
+Y \mid \mu &amp; \sim \mathcal{N}\left(\mu, \sigma^{2}\right), \mu \sim \mathcal{N}\left(\mu_{0}, \sigma^{2} / r\right) \\
+(Y, \mu) &amp; \sim \mathcal{N}\left(\left(\begin{array}{c}
 \mu_{0} \\
 \mu_{0}
 \end{array}\right),\left(\begin{array}{cc}
-\sigma^{2}+\sigma^{2} / r & \sigma^{2} / r \\
-\sigma^{2} / r & \sigma^{2} / r
+\sigma^{2}+\sigma^{2} / r &amp; \sigma^{2} / r \\
+\sigma^{2} / r &amp; \sigma^{2} / r
 \end{array}\right)\right) \\
-Y & \sim \mathcal{N}\left(\mu_{0}, \sigma^{2}(1+1 / r)\right)
+Y &amp; \sim \mathcal{N}\left(\mu_{0}, \sigma^{2}(1+1 / r)\right)
 \end{aligned}
-$$
-
-
-(b) Now suppose $\mu=0$ is known, but $\sigma^{2} \sim t$. Expo. Given only one Uniform $U \sim$ Unif and one independent Normal $Z \sim \mathcal{N}(0,1)$, show how one can easily simulate one draw from the marginal distribution of $Y$. What is the marginal variance of $Y$ ?
-
-Note: avoid using density functions and integrals here; instead, think through why the results above are "obvious" from a representation perspective. Be careful to justify independence, wherever used.
-
-We want to simulate a draw from $Y \mid \sigma^{2} \sim \mathcal{N}\left(0, \sigma^{2}\right), \sigma^{2} \sim t$ Expo. First, we can pick $\sigma^{2}$ from the distribution $-t \log U$, as we are given the Uniform. Second, wecan pick $Y$ from $Y \mid \sigma^{2}$, as we already picked the $\sigma^{2}$ according to the Exponential distribution. Then
-
-$$
+\]</span></p>
+<ol start="2" type="a">
+<li>Now suppose <span class="math inline">\(\mu=0\)</span> is known, but <span class="math inline">\(\sigma^{2} \sim t\)</span>. Expo. Given only one Uniform <span class="math inline">\(U \sim\)</span> Unif and one independent Normal <span class="math inline">\(Z \sim \mathcal{N}(0,1)\)</span>, show how one can easily simulate one draw from the marginal distribution of <span class="math inline">\(Y\)</span>. What is the marginal variance of <span class="math inline">\(Y\)</span> ?</li>
+</ol>
+<p>Note: avoid using density functions and integrals here; instead, think through why the results above are “obvious” from a representation perspective. Be careful to justify independence, wherever used.</p>
+<p>We want to simulate a draw from <span class="math inline">\(Y \mid \sigma^{2} \sim \mathcal{N}\left(0, \sigma^{2}\right), \sigma^{2} \sim t\)</span> Expo. First, we can pick <span class="math inline">\(\sigma^{2}\)</span> from the distribution <span class="math inline">\(-t \log U\)</span>, as we are given the Uniform. Second, wecan pick <span class="math inline">\(Y\)</span> from <span class="math inline">\(Y \mid \sigma^{2}\)</span>, as we already picked the <span class="math inline">\(\sigma^{2}\)</span> according to the Exponential distribution. Then</p>
+<p><span class="math display">\[
 Y \mid \sigma^{2} \sim \mathcal{N}\left(0, \sigma^{2}\right)
-$$
-
-Write $Y=\sigma Z$. Then $Z$ is independent of $\sigma$ since the conditional distribution of $Z=Y / \sigma$ is $\mathcal{N}(0,1)$, which does not depend on $\sigma$.
-
-The variance of $Y$ is
-
-$$
+\]</span></p>
+<p>Write <span class="math inline">\(Y=\sigma Z\)</span>. Then <span class="math inline">\(Z\)</span> is independent of <span class="math inline">\(\sigma\)</span> since the conditional distribution of <span class="math inline">\(Z=Y / \sigma\)</span> is <span class="math inline">\(\mathcal{N}(0,1)\)</span>, which does not depend on <span class="math inline">\(\sigma\)</span>.</p>
+<p>The variance of <span class="math inline">\(Y\)</span> is</p>
+<p><span class="math display">\[
 \operatorname{Var}(Y)=\operatorname{Var}\left(E\left(Y \mid \sigma^{2}\right)\right)+E\left(\operatorname{Var}\left(Y \mid \sigma^{2}\right)\right)=E\left(\sigma^{2}\right)=t
-$$
---></p>
+\]</span></p>
 </div>
 </div>
 </div>
@@ -462,27 +444,19 @@ Solution
 </div>
 <div id="callout-3" class="callout-3-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>Will be released after section! <!--
-Let $M$ be the MGF of $X_{1}$, with $M(t)<\infty$ for all $t \in(-a, a)$. For the rest of this solution, suppose that $t \in(-a, a)$. Then
-
-$$
+<p>Let <span class="math inline">\(M\)</span> be the MGF of <span class="math inline">\(X_{1}\)</span>, with <span class="math inline">\(M(t)&lt;\infty\)</span> for all <span class="math inline">\(t \in(-a, a)\)</span>. For the rest of this solution, suppose that <span class="math inline">\(t \in(-a, a)\)</span>. Then</p>
+<p><span class="math display">\[
 M(t)=\sum_{n=0}^{\infty} \frac{m_{n} t^{n}}{n !}
-$$
-
-By Adam's law and LOTUS, the MGF of $T$ is given by
-
-$$
+\]</span></p>
+<p>By Adam’s law and LOTUS, the MGF of <span class="math inline">\(T\)</span> is given by</p>
+<p><span class="math display">\[
 E\left(E\left(e^{t \sum_{j=1}^{N} X_{j}} \mid N\right)\right)=E\left(M(t)^{N}\right)=e^{-1} \sum_{n=0}^{\infty} \frac{M(t)^{n}}{n !}=e^{M(t)-1}
-$$
-
-So the CGF of $T$ is
-
-$$
+\]</span></p>
+<p>So the CGF of <span class="math inline">\(T\)</span> is</p>
+<p><span class="math display">\[
 M(t)-1=\sum_{n=1}^{\infty} \frac{m_{n} t^{n}}{n !}
-$$
-
-The $r$ th cumulant of $T$ is the coefficient of $t^{r} / r$ ! in the Taylor expansion of the CGF of $T$ about 0 . Hence, the $r$ th cumulant of $T$ is $m_{r}$.
---></p>
+\]</span></p>
+<p>The <span class="math inline">\(r\)</span> th cumulant of <span class="math inline">\(T\)</span> is the coefficient of <span class="math inline">\(t^{r} / r\)</span> ! in the Taylor expansion of the CGF of <span class="math inline">\(T\)</span> about 0 . Hence, the <span class="math inline">\(r\)</span> th cumulant of <span class="math inline">\(T\)</span> is <span class="math inline">\(m_{r}\)</span>.</p>
 </div>
 </div>
 </div>
@@ -758,8 +732,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./meme.html" class="pagination-link">
-        <span class="nav-page-text">Quotes</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./07_Section_7.html" class="pagination-link">
+        <span class="nav-page-text">Section 7</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

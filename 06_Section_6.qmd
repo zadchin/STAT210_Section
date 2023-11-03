@@ -1,6 +1,6 @@
 # Section 6 {.unnumbered}
 
-Last Updated: 19 Oct 2023
+Last Updated: 20 Oct 2023
 
 Date: 20 Oct 2023
 
@@ -105,8 +105,6 @@ Hint: First consider the set $\{A \in \mathcal{F}: I(A) \in \mathcal{V}\}$.
 ::: {.callout-tip collapse="true" appearance="simple"}
 
 ## Solution 
-Will be released after section!
-<!--
 By (i) and (ii), $\mathcal{V}$ is closed under linear combinations, i.e., if $X_{1}, \ldots, X_{n} \in \mathcal{L}$ and $c_{1}, \ldots, c_{n} \in \mathbb{R}$, then $c_{1} X_{1}+\cdots+c_{n} X_{n} \in \mathcal{L}$. In the spirit of InSiPoD, we will show that every indicator r.v. is in $\mathcal{V}$, then that every simple r.v. is in $\mathcal{V}$, then that every nonnegative r.v. is in $\mathcal{V}$, and lastly that every r.v. is in $\mathcal{V}$. Let
 
 $$
@@ -152,7 +150,6 @@ Thus, by (iii) we have $X \in \mathcal{V}$. Now let $X$ be an arbitrary r.v., an
 $$
 X=X^{+}-X^{-} \in \mathcal{V}
 $$
--->
 :::
 
 ### ✏️ Section Problem 2 (Q2, 2010)
@@ -169,8 +166,7 @@ Note: avoid using density functions and integrals here; instead, think through w
 ::: {.callout-tip collapse="true" appearance="simple"}
 
 ## Solution
-Will be released after section! 
-<!--
+
 (a) Let $Y \sim \mathcal{N}\left(\mu, \sigma^{2}\right)$, with $\mu \sim \mathcal{N}\left(\mu_{0}, \sigma^{2} / r\right)$. Show by representation that
 
 $$
@@ -211,7 +207,6 @@ The variance of $Y$ is
 $$
 \operatorname{Var}(Y)=\operatorname{Var}\left(E\left(Y \mid \sigma^{2}\right)\right)+E\left(\operatorname{Var}\left(Y \mid \sigma^{2}\right)\right)=E\left(\sigma^{2}\right)=t
 $$
--->
 :::
 
 ### ✏️ Section Problem 3 (Q3, 2022)
@@ -227,8 +222,6 @@ Find the $r$ th cumulant of $T$, for $r$ a positive integer (in terms of $m_{1},
 ::: {.callout-tip collapse="true" appearance="simple"}
 
 ## Solution 
-Will be released after section!
-<!--
 Let $M$ be the MGF of $X_{1}$, with $M(t)<\infty$ for all $t \in(-a, a)$. For the rest of this solution, suppose that $t \in(-a, a)$. Then
 
 $$
@@ -248,7 +241,6 @@ M(t)-1=\sum_{n=1}^{\infty} \frac{m_{n} t^{n}}{n !}
 $$
 
 The $r$ th cumulant of $T$ is the coefficient of $t^{r} / r$ ! in the Taylor expansion of the CGF of $T$ about 0 . Hence, the $r$ th cumulant of $T$ is $m_{r}$.
--->
 :::
 
 

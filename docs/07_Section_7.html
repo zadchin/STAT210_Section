@@ -1,0 +1,862 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.2.329">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>STAT 210 Section Notes - Section 7</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./meme.html" rel="next">
+<link href="./06_Section_6.html" rel="prev">
+<link href="./assets/img/stat210-clear_bg.png" rel="icon" type="image/png">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body class="nav-sidebar floating">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+    <div class="container-fluid d-flex justify-content-between">
+      <h1 class="quarto-secondary-nav-title">Section 7</h1>
+      <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
+        <i class="bi bi-chevron-right"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">STAT 210 Section Notes</a> 
+        <div class="sidebar-tools-main tools-wide">
+    <a href="https://github.com/zadchin/STAT210_Section" title="Source Code" class="sidebar-tool px-1"><i class="bi bi-github"></i></a>
+  <a href="" class="quarto-color-scheme-toggle sidebar-tool" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+  <a href="" class="quarto-reader-toggle sidebar-tool" onclick="window.quartoToggleReader(); return false;" title="Toggle reader mode">
+  <div class="quarto-reader-toggle-btn">
+  <i class="bi"></i>
+  </div>
+</a>
+</div>
+    </div>
+      </div>
+      <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+      </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">Preface</a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./01_Section_1.html" class="sidebar-item-text sidebar-link">Section 1</a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./02_Section_2.html" class="sidebar-item-text sidebar-link">Section 2</a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./03_Section_3.html" class="sidebar-item-text sidebar-link">Section 3</a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./04_Section_4.html" class="sidebar-item-text sidebar-link">Section 4</a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./05_Section_5.html" class="sidebar-item-text sidebar-link">Section 5</a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./06_Section_6.html" class="sidebar-item-text sidebar-link">Section 6</a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./07_Section_7.html" class="sidebar-item-text sidebar-link active">Section 7</a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./meme.html" class="sidebar-item-text sidebar-link">Quotes</a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#welcome-back" id="toc-welcome-back" class="nav-link active" data-scroll-target="#welcome-back">Welcome Back</a></li>
+  <li><a href="#definition-by-representation" id="toc-definition-by-representation" class="nav-link" data-scroll-target="#definition-by-representation">Definition by Representation</a></li>
+  <li><a href="#properties-about-multivariate-normal" id="toc-properties-about-multivariate-normal" class="nav-link" data-scroll-target="#properties-about-multivariate-normal">Properties about Multivariate Normal</a></li>
+  <li><a href="#some-useful-linear-algebra-results" id="toc-some-useful-linear-algebra-results" class="nav-link" data-scroll-target="#some-useful-linear-algebra-results">Some useful linear algebra results</a></li>
+  <li><a href="#section-discussion-questions" id="toc-section-discussion-questions" class="nav-link" data-scroll-target="#section-discussion-questions">Section Discussion Questions</a>
+  <ul class="collapse">
+  <li><a href="#section-problem-1" id="toc-section-problem-1" class="nav-link" data-scroll-target="#section-problem-1">✏️ Section Problem 1</a></li>
+  <li><a href="#section-problem-2-8.17" id="toc-section-problem-2-8.17" class="nav-link" data-scroll-target="#section-problem-2-8.17">✏️ Section Problem 2 (8.17)</a></li>
+  <li><a href="#section-problem-3-8.11" id="toc-section-problem-3-8.11" class="nav-link" data-scroll-target="#section-problem-3-8.11">✏️ Section Problem 3 (8.11)</a></li>
+  <li><a href="#section-problem-4-final-2011-q2" id="toc-section-problem-4-final-2011-q2" class="nav-link" data-scroll-target="#section-problem-4-final-2011-q2">✏️ Section Problem 4 (Final 2011, Q2)</a></li>
+  </ul></li>
+  <li><a href="#next-week" id="toc-next-week" class="nav-link" data-scroll-target="#next-week">Next Week</a></li>
+  </ul>
+<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/zadchin/STAT210_Section/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+$$
+\newcommand{\bs}{\boldsymbol}
+\newcommand{\mb}{\mathbf}
+\newcommand{\E}{\mathbb{E}}
+\newcommand{\V}{\mathbb{V}}
+\newcommand{\var}{\text{var}}
+\newcommand{\cov}{\text{cov}}
+\newcommand{\N}{\mathcal{N}}
+\newcommand{\Bern}{\text{Bern}}
+\newcommand{\Bin}{\text{Bin}}
+\newcommand{\Pois}{\text{Pois}}
+\newcommand{\Unif}{\text{Unif}}
+\newcommand{\se}{\textsf{se}}
+\newcommand{\au}{\underline{a}}
+\newcommand{\du}{\underline{d}}
+\newcommand{\Au}{\underline{A}}
+\newcommand{\Du}{\underline{D}}
+\newcommand{\xu}{\underline{x}}
+\newcommand{\Xu}{\underline{X}}
+\newcommand{\Yu}{\underline{Y}}
+\renewcommand{\P}{\mathbb{P}}
+\newcommand{\U}{\mb{U}}
+\newcommand{\Xbar}{\overline{X}}
+\newcommand{\Ybar}{\overline{Y}}
+\newcommand{\real}{\mathbb{R}}
+\newcommand{\bbL}{\mathbb{L}}
+\renewcommand{\u}{\mb{u}}
+\renewcommand{\v}{\mb{v}}
+\newcommand{\M}{\mb{M}}
+\newcommand{\X}{\mb{X}}
+\newcommand{\Xmat}{\mathbb{X}}
+\newcommand{\bfx}{\mb{x}}
+\newcommand{\y}{\mb{y}}
+\renewcommand{\bfbeta}{\bs{\beta}}
+\newcommand{\e}{\bs{\epsilon}}
+\newcommand{\bhat}{\widehat{\bs{\beta}}}
+\newcommand{\XX}{\Xmat'\Xmat}
+\newcommand{\XXinv}{\left(\XX\right)^{-1}}
+\newcommand{\hatsig}{\hat{\sigma}^2}
+\newcommand{\red}[1]{\textcolor{red!60}{#1}}
+\newcommand{\indianred}[1]{\textcolor{indianred}{#1}}
+\newcommand{\blue}[1]{\textcolor{blue!60}{#1}}
+\newcommand{\dblue}[1]{\textcolor{dodgerblue}{#1}}
+\newcommand{\indep}{\perp\!\!\!\perp}
+\newcommand{\inprob}{\overset{p}{\to}}
+\newcommand{\indist}{\overset{d}{\to}}
+\newcommand{\eframe}{\end{frame}}
+\newcommand{\bframe}{\begin{frame}}
+\newcommand{\R}{\textsf{\textbf{R}}}
+\newcommand{\Rst}{\textsf{\textbf{RStudio}}}
+\newcommand{\rfun}[1]{\texttt{\color{magenta}{#1}}}
+\newcommand{\rpack}[1]{\textbf{#1}}
+\newcommand{\rexpr}[1]{\texttt{\color{magenta}{#1}}}
+\newcommand{\filename}[1]{\texttt{\color{blue}{#1}}}
+\DeclareMathOperator*{\argmax}{arg\,max}
+\DeclareMathOperator*{\argmin}{arg\,min}
+$$
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title d-none d-lg-block">Section 7</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+</header>
+
+<p>Last Updated: 2 Nov 2023</p>
+<p>Date: 3 Nov 2023</p>
+<section id="welcome-back" class="level2">
+<h2 class="anchored" data-anchor-id="welcome-back">Welcome Back</h2>
+<p>In this section, we will discuss:</p>
+<ul>
+<li>How was Midterm?</li>
+<li>Multivariate Normal</li>
+</ul>
+</section>
+<section id="definition-by-representation" class="level2">
+<h2 class="anchored" data-anchor-id="definition-by-representation">Definition by Representation</h2>
+<p>Let’s define what is MVN, building from i.i.d of univariate Normals.</p>
+<div id="def-MVN" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 1 </strong></span>(Multivariate Normal) The random vector <span class="math inline">\(\mathbf{Y} = (Y_1, Y_2, \cdots, Y_k)\)</span> has the <em>Multivariate Normal Distribution</em> if it is the form <span class="math display">\[\mathbf{Y} = A \mathbf{Z} + \mathbf{\mu}, \]</span> where <span class="math inline">\(Z_1, Z_2, \cdots, Z_m\)</span> are i.i.d <span class="math inline">\(N(0,1)\)</span> random variable, <span class="math inline">\(A\)</span> is a <span class="math inline">\(k\)</span> by <span class="math inline">\(m\)</span> matrix, and <span class="math inline">\(\mathbf{\mu} \in \mathbb{R}^k\)</span>. We write <span class="math inline">\(\mathbf{Y} \sim N_k(\mathbf{\mu}, V)\)</span> if <span class="math inline">\(\mathbf{Y}\)</span> is a Multivariate Normal of dimension <span class="math inline">\(k\)</span> with mean <span class="math inline">\(\mathbf{\mu}\)</span> and covariance matrix <span class="math inline">\(V\)</span>.</p>
+</div>
+<div id="def-MVN-2" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 2 </strong></span>(Multivariate Normal by Projections).A random vector <span class="math inline">\(\mathbf{Y}\)</span> is multivariate normal if and only if every non zero linear combination of its components,<span class="math inline">\(\mathbf{b}^T\mathbf{Y}\)</span> where <span class="math inline">\(\mathbf{b}=0\)</span>,is distributed according to a univariate normal.</p>
+</div>
+</section>
+<section id="properties-about-multivariate-normal" class="level2">
+<h2 class="anchored" data-anchor-id="properties-about-multivariate-normal">Properties about Multivariate Normal</h2>
+<div id="thm-moment-MVN" class="theorem">
+<p><span class="theorem-title"><strong>Theorem 1 </strong></span>(Cramér-Wold device).Given a finite-dimensional random vector <span class="math inline">\(\mathbf{X}\)</span>, the joint distribution of <span class="math inline">\(\mathbf{X}\)</span> is uniquely determined by its projections onto 1-dimensional spaces. In other words, knowing the marginal distribution of <span class="math inline">\(\mathbf{t}^T \mathbf{X}\)</span>, for every fixed <span class="math inline">\(\mathbf{t}\)</span>, is enough.</p>
+</div>
+<p>The above proposition follows from the fact that joint characteristic functions determine multivariate distributions (a hard but standard fact from analysis). This is because the joint characteristic function is just <span class="math display">\[
+\varphi_{\mathbf{X}}(\mathbf{t})=\mathbf{E}\left[e^{i \mathbf{t}^T \mathbf{X}}\right] .
+\]</span></p>
+<p>In particular, <span class="math inline">\(\mathbf{t}^T \mathbf{X}\)</span> occurs in the exponent, so values of the characteristic function are completely determined from marginal distributions of projections of <span class="math inline">\(\mathbf{X}\)</span>.</p>
+<div id="def-mgf-mvn" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 3 </strong></span>(MGF of multivariate normal). Recall that the moment generating function of a univariate <span class="math inline">\(\mathcal{N}\left(\mu, \sigma^2\right)\)</span> normal distribution is <span class="math display">\[
+e^{t \mu+\sigma^2 t^2 / 2}
+\]</span></p>
+<p>The joint moment generating function of a multivariate normal <span class="math inline">\(\mathcal{N}(\mu, \Sigma)\)</span> is analogously <span class="math display">\[
+e^{\mathbf{t}^T\left(\mu+\frac{1}{2} \Sigma \mathbf{t}\right)} .
+\]</span></p>
+<p>This is because if we let <span class="math inline">\(\mathbf{W} \sim \mathcal{N}(\mu, \Sigma)\)</span> and consider the projection <span class="math inline">\(\mathbf{t}^T \mathbf{W}\)</span>, we get <span class="math inline">\(\mathbf{E}\left[\mathbf{t}^T \mathbf{W}\right]=\mathbf{t}^T \mu\)</span> and <span class="math inline">\(\operatorname{Var}\left[\mathbf{t}^T \mathbf{W}\right]=\operatorname{Var}\left[\mathbf{t}^T\left(\Sigma^{1 / 2} \mathbf{W}+\mu\right)\right]=\operatorname{Var}\left[\mathbf{t}^T \Sigma^{1 / 2} \mathbf{Z}\right]=\mathbf{t}^T \Sigma \mathbf{t}\)</span>. Therefore, the distribution of each projection of a multivariate normal is also normal, so we can compute the joint MGF from the univariate MGF.</p>
+</div>
+<div id="def-closure" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 4 </strong></span>(Closure properties of MVN). The multivariate normal distribution has many nice closure properties, such as:</p>
+<ul>
+<li><p>If you take a linear combination or shift of multivariate normals, it is also multivariate normal.</p></li>
+<li><p>Any vector of projections (i.e., projection matrix) is also multivariate normal.</p></li>
+<li><p>The conditional distribution of a multivariate normal is also multivariate normal.</p></li>
+</ul>
+</div>
+</section>
+<section id="some-useful-linear-algebra-results" class="level2">
+<h2 class="anchored" data-anchor-id="some-useful-linear-algebra-results">Some useful linear algebra results</h2>
+<ol type="1">
+<li><p>The trace of a matrix is a linear function.</p></li>
+<li><p>If <span class="math inline">\(A\)</span> is <span class="math inline">\(n\times k\)</span> and <span class="math inline">\(B\)</span> is <span class="math inline">\(k\times n\)</span>, <span class="math inline">\(\mbox{tr}(AB)=\mbox{tr}(BA)\)</span>.</p></li>
+<li><p><strong>Spectral decomposition</strong>: Suppose <span class="math inline">\(A_{n\times n}\)</span> is a real valued and symmetric with rank <span class="math inline">\(k\)</span>. Then there exists a matrix <span class="math inline">\(\Gamma_{n\times k}=(\gamma_{1},\dots,\gamma_{k})\)</span> with orthogonal columns and <span class="math inline">\(\Lambda_{k \times k}=\mbox{{diag}}(\lambda_{1},\dots,\lambda_{k})\)</span> with <span class="math inline">\(\lambda_{i}\neq0\)</span> such that <span class="math inline">\(A=\Gamma\Lambda\Gamma^{\top}\)</span>. The <span class="math inline">\(\gamma_{i}\)</span>s are the eigenvectors of <span class="math inline">\(A\)</span>, with <span class="math inline">\(\lambda_{i}\)</span>s being the corresponding nonzero eigenvalues.</p></li>
+<li><p>If <span class="math inline">\(A\)</span> is non-negative definite it has nonnegative eigenvalues.</p></li>
+</ol>
+</section>
+<section id="section-discussion-questions" class="level2">
+<h2 class="anchored" data-anchor-id="section-discussion-questions">Section Discussion Questions</h2>
+<section id="section-problem-1" class="level3">
+<h3 class="anchored" data-anchor-id="section-problem-1">✏️ Section Problem 1</h3>
+<p>Suppose <span class="math inline">\(\mathbf{Y}_{n\times 1}\sim \mathcal{N}_n(\mathbf{\mu},\Sigma)\)</span>, and define <span class="math inline">\(Q=\mathbf{Y}^{\top}A\mathbf{Y}\)</span>, where <span class="math inline">\(A\)</span> is a <span class="math inline">\(n \times n\)</span> symmetric matrix.</p>
+<ol type="a">
+<li><p>Find the expectation of <span class="math inline">\(Q\)</span>.</p></li>
+<li><p>Find the variance of <span class="math inline">\(Q\)</span>.</p></li>
+<li><p>For symmetric matrices <span class="math inline">\(A_{1}\)</span> and <span class="math inline">\(A_{2}\)</span> and corresponding quadratic forms <span class="math inline">\(Q_{i}=\mathbf{Y}^{\top}A_{i}\mathbf{Y}\)</span>, find the covariance of <span class="math inline">\(Q_{1}\)</span> and <span class="math inline">\(Q_{2}\)</span>.</p></li>
+<li><p>How could we have solved this problem if <span class="math inline">\(A\)</span> was not symmetric?</p></li>
+</ol>
+<div class="callout-tip callout callout-style-simple callout-captioned">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Solution
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Will be posted after section <!--
+(a) By the linearity and the cyclical properties of the trace
+$$
+\begin{align*}
+\mathbb{E}[Q] &= \mathbb{E}[\text{tr}(\mathbf{\mu}{Y}^{\top}A\mathbf{\mu}{Y})] =  \mathbb{E}[\text{tr}(A\mathbf{\mu}{Y}\mathbf{\mu}{Y}^{\top})] = \text{tr}[A\mathbb{E}(\mathbf{\mu}{Y}\mathbf{\mu}{Y}^{\top})] \\
+&=  \text{tr}[A(\Sigma + \mathbf{\mu}{\mu}\mathbf{\mu}{\mu}^{\top})] = \text{tr}(A\Sigma) +  \text{tr}(A\mathbf{\mu}{\mu}\mathbf{\mu}{\mu}^{\top}) = \text{tr}(A\Sigma) +  \mathbf{\mu}{\mu}^{\top}A\mathbf{\mu}{\mu}.
+\end{align*}
+$$
+
+(b) Since $\Sigma$ is symmetric, we can find a spectral decomposition $\Sigma=\Gamma^{\star} \Lambda \Gamma^{\star \top}$. Since $\Sigma$ is non-negative definite, its non-zero eigenvectors are positive. Let us denote $\Sigma^{1 / 2}:=\Gamma^{\star} \Lambda^{1 / 2} \Gamma^{\star \top}$ (which is well defined). Note that $\Sigma^{1 / 2}$ is symmetric and $\Sigma^{1 / 2} \Sigma^{1 / 2}=\Sigma$. Hence, we can represent $\mathbf{Y}=\mu+\Sigma^{1 / 2} \mathbf{Z}$, with $\mathbf{Z} \sim \mathcal{N}_n(0, I)$. Now, $Q=\left(\mu+\Sigma^{1 / 2} \mathbf{Z}\right)^{\top} A\left(\mu+\Sigma^{1 / 2} \mathbf{Z}\right)=\mu^{\top} A \mu+2 \mu^{\top} A \Sigma^{1 / 2} \mathbf{Z}+\mathbf{Z}^{\top} \Sigma^{1 / 2} A \Sigma^{1 / 2} \mathbf{Z}$.
+$$
+\begin{aligned}
+\operatorname{Var}(Q) & =\operatorname{Var}\left(2 \mu^{\top} A \Sigma^{1 / 2} \mathbf{Z}+\mathbf{Z}^{\top} \Sigma^{1 / 2} A \Sigma^{1 / 2} \mathbf{Z}\right) \\
+& =4 \underbrace{\operatorname{Var}\left(\mu^{\top} A \Sigma^{1 / 2} \mathbf{Z}\right)}_{(1)}+\underbrace{\operatorname{Var}\left(\mathbf{Z}^{\top} \Sigma^{1 / 2} A \Sigma^{1 / 2} \mathbf{Z}\right)}_{(2)}+4 \underbrace{\operatorname{Cov}\left(\mu^{\top} A \Sigma^{1 / 2} \mathbf{Z}, \mathbf{Z}^{\top} \Sigma^{1 / 2} A \Sigma^{1 / 2} \mathbf{Z}\right)}_{(3)} .
+\end{aligned}
+$$
+
+For term (1), we have
+$$
+\operatorname{Var}\left(\mu^{\top} A \Sigma^{1 / 2} \mathbf{Z}\right)=\mu^{\top} A \Sigma^{1 / 2} \operatorname{Var}(\mathbf{Z}) \Sigma^{1 / 2} A \mu=\mu^{\top} A \Sigma A \mu .
+$$
+
+For term (2), we use spectral decomposition $\Sigma^{1 / 2} A \Sigma^{1 / 2}=\Gamma D \Gamma^{\top}$. Since $\Gamma$ is orthogonal, we know $\Gamma^{\top} \Gamma=I$ and have $\tilde{\mathbf{Z}}=\Gamma^{\top} \mathbf{Z} \sim \mathcal{N}(0, I)$. Since $D$ is diagonal, we can write $\mathbf{Z}^{\top} \Sigma^{1 / 2} A \Sigma^{1 / 2} \mathbf{Z}=$ $\sum_{i=1}^p d_{i i} \tilde{Z}_i^2$. Using independence, properties of orthogonal matrices, the cyclical properties of the trace, and the fact that $\operatorname{Var}\left(\tilde{Z}_i^2\right)=2$, term $(2)$ reduces to
+$$
+\begin{aligned}
+\operatorname{Var}\left(\sum d_{i i} \tilde{Z}_i^2\right) & =2 \sum d_{i i}^2=2 \operatorname{tr}\left(D^2\right)=2 \operatorname{tr}\left(D^2 \Gamma^{\top} \Gamma\right) \\
+& =2 \operatorname{tr}\left(\Gamma D^2 \Gamma^{\top}\right)=2 \operatorname{tr}\left(\left(\Gamma D \Gamma^{\top}\right)^2\right) \\
+& =2 \operatorname{tr}\left(\left(\Sigma^{1 / 2} A \Sigma^{1 / 2}\right)^2\right)=2 \operatorname{tr}\left((A \Sigma)^2\right) .
+\end{aligned}
+$$
+
+For term (3), since $\mathbf{Z} \sim-\mathbf{Z}$, we can write
+$$
+\begin{aligned}
+\operatorname{Cov}\left(\mu^{\top} A \Sigma^{1 / 2} \mathbf{Z}, \mathbf{Z}^{\top} \Sigma^{1 / 2} A \Sigma^{1 / 2} \mathbf{Z}\right) & =\operatorname{Cov}\left(\mu^{\top} A \Sigma^{1 / 2}(-\mathbf{Z}),\left(-\mathbf{Z}^{\top}\right) \Sigma^{1 / 2} A \Sigma^{1 / 2}(-\mathbf{Z})\right) \\
+& =-\operatorname{Cov}\left(\mu^{\top} A \Sigma^{1 / 2} \mathbf{Z}, \mathbf{Z}^{\top} \Sigma^{1 / 2} A \Sigma^{1 / 2} \mathbf{Z}\right),
+\end{aligned}
+$$
+which gives us $\operatorname{Cov}\left(\mu^{\top} A \Sigma^{1 / 2} \mathbf{Z}, \mathbf{Z}^{\top} \Sigma^{1 / 2} A \Sigma^{1 / 2} \mathbf{Z}\right)=0$.
+The final result is therefore
+$$
+\operatorname{Var}\{Q\}=4 \mu^{\top} A \Sigma A \mu+2 \operatorname{tr}\left((A \Sigma)^2\right)
+$$
+
+(c) Firstly, note that
+$$\operatorname{Cov}(Q_1,Q_2) = \frac{\operatorname{Var}(Q_1+Q_2) - \operatorname{Var}(Q_1-Q_2)}{4}.$$
+Moreover, $Q_1+Q_2 = \mathbf{Y}^\top(A_1+A_2)\mathbf{Y}$, $Q_1-Q_2 = \mathbf{Y}^\top(A_1-A_2)\mathbf{Y}$, and $A_1+A_2$, $A_1-A_2$ are symmetric matrices.
+We could therefore apply (b) to find the covariance.
+
+(d) The symmetry of $A$ was not required to find $\mathbb{E}(Q)$. However, we used the symmetry of $A$ to find $\operatorname{Var}(Q)$. Since $Q$ is a scalar, we have
+$$Q =  \mathbf{Y}^\top A\mathbf{Y} = (\mathbf{Y}^\top A\mathbf{Y})^\top =  \mathbf{Y}^\top A^\top\mathbf{Y} = \mathbf{Y}^\top\frac{(A+A^\top)}{2}\mathbf{Y}.$$
+Note that $\frac{(A+A^\top)}{2}$ is symmetric. We can now apply the result in (b) to find out $\operatorname{Var}(Q)$.
+--></p>
+</div>
+</div>
+</div>
+</section>
+<section id="section-problem-2-8.17" class="level3">
+<h3 class="anchored" data-anchor-id="section-problem-2-8.17">✏️ Section Problem 2 (8.17)</h3>
+<p>(Interclass correlation model) Let <span class="math inline">\(\mathbf{X}=(X_1, \cdots, X_k)\)</span> be Multivariate Normal with mean vector <span class="math inline">\(\mu(1,1,\cdots, 1)\)</span> and covariance matrix <span class="math inline">\(\sigma^2 C\)</span>, where <span class="math inline">\(C_{ii}=1\)</span> for all <span class="math inline">\(i\)</span> and <span class="math inline">\(C_{ij}=\rho\)</span> for all <span class="math inline">\(i\neq j\)</span>, for some <span class="math inline">\(\rho \in (-1,1)\)</span>. This is known as the <em>interclass correlation model</em> (and is based on an exchangeability assumption)</p>
+<ol type="a">
+<li><p>Assume <span class="math inline">\(k=3\)</span> for this part. Why do we require that <span class="math inline">\(rho \geq -1/2\)</span>?</p></li>
+<li><p>Find the joint distribution (with means and covariance) of the vector <span class="math inline">\((\bar{X}, X_1-\bar{X}, X_1-X_2)\)</span>.</p></li>
+<li><p>Show that <span class="math inline">\(\sigma^2 C\)</span> has only two distinct eigenvalues (for <span class="math inline">\(\rho \neq 0\)</span>), namely <span class="math inline">\(\lambda_1 \equiv \sigma^2(1+(k-1)\rho)\)</span> and <span class="math inline">\(\lambda_2 \equiv \sigma^2(1-\rho)\)</span>, with multiplicities 1 and <span class="math inline">\(k-1\)</span> respectively.</p></li>
+</ol>
+<p>Hint: Write <span class="math inline">\(C = (1-\rho)I + \rho J\)</span> in terms of the projection matrices <span class="math inline">\(J/k\)</span> and <span class="math inline">\(I-J/k\)</span>, where <span class="math inline">\(J\)</span> is the matrix of all 1’s.</p>
+<div class="callout-tip callout callout-style-simple callout-captioned">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Solution
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-2" class="callout-2-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Will be posted after section <!--
+(a) Since $\operatorname{var}\left(X_1+X_2+X_2\right)=\sigma^2(1+1+1+2 \rho+2 \rho+2 \rho) \geq 0$, we have $\rho \geq-1 / 2$.
+
+(b) Since $\left(\bar{X}, X_1-\bar{X}, X_1-X_2\right)$ is a linear transformation of $\mathbf{X}$, it follows multivariate normal distribution, and we only need to determine its mean vector and covariance matrix. By linearity, we have $E\left(\bar{X}, X_1-\bar{X}, X_1-X_2\right)=(\mu, 0,0)$. The variances and covariances are
+$$
+\begin{aligned}
+\operatorname{var}(\bar{X}) & =\sigma^2 / k^2\left[k \sigma^2+k(k-1) \rho\right]=\sigma^2[1+(k-1) \rho] / k \\
+\operatorname{var}\left(X_1-\bar{X}\right) & =\sigma^2 / k[k+1+(k-1) \rho-2\{1+(k-1) \rho\}]=(k-1)(1-\rho) \sigma^2 / k \\
+\operatorname{var}\left(X_1-X_2\right) & =\sigma^2(1+1+2 \rho)=2 \sigma^2(1-\rho) \\
+\operatorname{cov}\left(\bar{X}, X_1-\bar{X}\right) & =\sigma^2(1 / k-1 / k)=0 \\
+\operatorname{cov}\left(\bar{X}, X_1-X_2\right) & =0 \\
+\operatorname{cov}\left(X_1-\bar{X}, X_1-X_2\right) & =\sigma^2(1-\rho)
+\end{aligned}
+$$
+
+Therefore,
+$$
+\left(\begin{array}{c}
+\bar{X} \\
+X_1-\bar{X} \\
+X_1-X_2
+\end{array}\right) \sim \mathcal{N}_3\left[\left(\begin{array}{c}
+\mu \\
+0 \\
+0
+\end{array}\right), \sigma^2\left(\begin{array}{ccc}
+{[1+(k-1) \rho] / k} & 0 & 0 \\
+0 & (k-1)(1-\rho) / k & 1-\rho \\
+0 & 1-\rho & 2(1-\rho)
+\end{array}\right)\right]
+$$
+
+(c) The equation $C \alpha=\lambda \alpha$ is equivalent to
+$$
+(1-\rho) \alpha+\rho J \alpha=\left(\lambda / \sigma^2\right) \alpha
+$$
+which can be rewritten as
+$$
+J \alpha=\frac{\frac{\lambda}{\sigma^2}+\rho-1}{\rho} \alpha
+$$
+
+Since $J \mathbf{1}_k=k \mathbf{1}_k$ and $\operatorname{rank}(J)=\operatorname{rank}\left(\mathbf{1}_k \mathbf{1}_k^{\prime}\right)=\operatorname{rank}\left(\mathbf{1}_k\right)=1$, the matrix $J$ has only one non-zero eigenvalue equal to $k$, and $(k-1)$ zero eigenvalues. From $\lambda / \sigma^2+\rho-1=k \rho$, we have $\lambda=[1+(k-1) \rho] \sigma^2$; and from $\lambda / \sigma^2+\rho-1=0$, we have $\lambda=\sigma^2(1-\rho)$.
+--></p>
+</div>
+</div>
+</div>
+</section>
+<section id="section-problem-3-8.11" class="level3">
+<h3 class="anchored" data-anchor-id="section-problem-3-8.11">✏️ Section Problem 3 (8.11)</h3>
+<p>(Matrix times a MVN vector) Let <span class="math inline">\(Y \sim N_k(\mu, V)\)</span> be Multivariate Normal and <span class="math inline">\(X=B Y\)</span>, where <span class="math inline">\(B\)</span> is an <span class="math inline">\(m\)</span> by <span class="math inline">\(k\)</span> matrix of constants, such that <span class="math inline">\(B V B^{\top}\)</span> is invertible.</p>
+<ol type="a">
+<li><p>Is <span class="math inline">\((X, Y)\)</span> Multivariate Normal? Explain.</p></li>
+<li><p>Find the conditional distribution of <span class="math inline">\(Y\)</span> given <span class="math inline">\(X\)</span>.</p></li>
+<li><p>What does your answer reduce to when <span class="math inline">\(m=k\)</span> and <span class="math inline">\(B\)</span> is invertible? Does this make sense intuitively?</p></li>
+</ol>
+<div class="callout-tip callout callout-style-simple callout-captioned">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Solution
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-3" class="callout-3-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Will be posted after section <!--
+(a) Yes. Note that
+$$
+\begin{aligned}
+\left(\begin{array}{c}
+X \\
+Y
+\end{array}\right) & =\left(\begin{array}{c}
+B \\
+I
+\end{array}\right) Y \\
+& \sim N\left(\left(\begin{array}{c}
+B \\
+I
+\end{array}\right) \mu,\left(\begin{array}{c}
+B \\
+I
+\end{array}\right) V\left(\begin{array}{ll}
+B^{\top} & I
+\end{array}\right)\right) \\
+& =N\left(\left(\begin{array}{c}
+B \mu \\
+\mu
+\end{array}\right),\left(\begin{array}{cc}
+B V B^{\top} & B V \\
+V B^{\top} & V
+\end{array}\right)\right) .
+\end{aligned}
+$$
+- $X$ and $Y$ are marginally multivariate normal doesn't imply that $(X, Y)$ is multivariate normal.
+- Any linear transformation of any multivariate normal is still a multivariate normal (you don't have to start with i.i.d. normals).
+
+(b)  By Proposition 8.5.1,
+$$
+Y \mid X \sim N\left(\mu+V B^{\top}\left(B V B^{\top}\right)^{-1}(X-B \mu), V-V B^{\top}\left(B V B^{\top}\right)^{-1} B V\right)
+$$
+
+(c)  If $B$ is invertible and $B V B^{\top}$ is invertible, then $V$ is invertible. Now
+$$
+\begin{aligned}
+\mu+V B^{\top}\left(B V B^{\top}\right)^{-1}(X-B \mu) & =\mu+V B^{\top}\left(B^{\top}\right)^{-1} V^{-1} B^{-1}(X-B \mu) \\
+& =\mu+B^{-1}(X-B \mu) \\
+& =B^{-1} X . \\
+V-V B^{\top}\left(B V B^{\top}\right)^{-1} B V & =V-V B^{\top}\left(B^{\top}\right)^{-1} V^{-1} B^{-1} B V \\
+& =V-V V^{-1} V=O .
+\end{aligned}
+$$
+
+Hence $Y \mid X \sim N\left(B^{-1} X, O\right)$. This means that given $X, Y$ is a constant. This sure makes sense because if $B$ is invertible then $Y=B^{-1} X$ is a function of $X$, so knowing $X$ is knowing $Y$.
+--></p>
+</div>
+</div>
+</div>
+</section>
+<section id="section-problem-4-final-2011-q2" class="level3">
+<h3 class="anchored" data-anchor-id="section-problem-4-final-2011-q2">✏️ Section Problem 4 (Final 2011, Q2)</h3>
+<ol type="a">
+<li><p>Show that within a Multivariate Normal, conditioning on more information reduces variance: <span class="math inline">\(\operatorname{Var}\left(Y \mid \mathbf{X}_1\right) \leq \operatorname{Var}\left(Y \mid \mathbf{X}_{\mathbf{2}}\right)\)</span> if <span class="math inline">\(Y, \mathbf{X}_1, \mathbf{X}_{\mathbf{2}}\)</span> are subvectors of a MVN random vector, with <span class="math inline">\(Y\)</span> onedimensional and <span class="math inline">\(\mathbf{X}_{\mathbf{2}}\)</span> a subvector of <span class="math inline">\(\mathbf{X}_{\mathbf{1}}\)</span>.</p></li>
+<li><p>Give a counterexample to the above if the distribution is not MVN. On the other hand, show that on average conditioning on more information reduces variance: <span class="math inline">\(E\left(\operatorname{Var}\left(Y \mid \mathbf{X}_1\right)\right) \leq\)</span> <span class="math inline">\(E\left(\operatorname{Var}\left(Y \mid \mathbf{X}_{\mathbf{2}}\right)\right)\)</span>.</p></li>
+</ol>
+<div class="callout-tip callout callout-style-simple callout-captioned">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Solution
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-4" class="callout-4-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Will be posted after section <!--
+(a) SNoTE and Method 1: First show that within a MVN, conditioning reduces variance; this is the case where $\mathbf{X}_{\mathbf{2}}$ is an empty vector. For this case,
+$$
+\operatorname{Var}\left(Y \mid \mathbf{X}_1\right)=V_{22}-V_{21} V_{11}^{-1} V_{12} \leq V_{22}=\operatorname{Var}(Y),
+$$
+since $V_{11}$ is positive definite (which implies that $V_{11}^{-1}$ is positive definite). Remarkably, this SNoTE solves the general case too, since conditional distributions in a MVN are MVN: the conditional distribution of $Y \mid \mathbf{X}_{\mathbf{2}}$ is MVN, and conditioning on any additional components in $\mathbf{X}_1$ reduces the variance.
+
+Method 2: Using the uncorrelation trick, we can write $Y=\tilde{Y}+B \mathbf{X}_1$, with $B$ a constant matrix (a row vector here) and with $\tilde{Y}$ independent of $\mathbf{X}_1$. Note that $\tilde{Y}$ and $\mathbf{X}_1$ are also conditionally independent given $\mathbf{X}_2$. So $\operatorname{Var}\left(Y \mid \mathbf{X}_1\right)=\operatorname{Var}(\tilde{Y})$ and
+$$
+\operatorname{Var}\left(Y \mid \mathbf{X}_2\right)=\operatorname{Var}(\tilde{Y})+\operatorname{Var}\left(B \mathbf{X}_{\mathbf{1}} \mid \mathbf{X}_{\mathbf{2}}\right) \geq \operatorname{Var}\left(Y \mid \mathbf{X}_{\mathbf{1}}\right)
+$$
+
+(b) For a counterexample, we can choose an example where learning something new increases our uncertainty about something else, e.g., if you get into your top choice of school then you may have little uncertainty about where to go, whereas if you don't get in then you may be very uncertain about what to do next. For a simple, precise example, let $Y=W X_1$ where $X_1 \sim \operatorname{Bern}(1 / 2)$ is independent of $W \sim[0,1000]$. Then $\operatorname{Var}(Y)=E\left(W^2\right) E\left(X_1\right)=500$, but $\operatorname{Var}\left(Y \mid X_1=1\right)=1000$.
+
+Returning to the general case, Eve's Law gives
+$$
+\operatorname{Var}\left(Y \mid \mathbf{X}_{\mathbf{2}}\right)=E\left(\operatorname{Var}\left(Y \mid \mathbf{X}_1\right) \mid \mathbf{X}_{\mathbf{2}}\right)+\operatorname{Var}\left(E\left(Y \mid \mathbf{X}_{\mathbf{1}}\right) \mid \mathbf{X}_{\mathbf{2}}\right) \geq E\left(\operatorname{Var}\left(Y \mid \mathbf{X}_1\right) \mid \mathbf{X}_{\mathbf{2}}\right) .
+$$
+
+Taking expectations of both sides, we have
+$$
+E\left(\operatorname{Var}\left(Y \mid \mathbf{X}_2\right)\right) \geq E\left(\operatorname{Var}\left(Y \mid \mathbf{X}_1\right)\right) .
+$$
+
+This also gives a third proof of the result from (a), since in an MVN conditional variances are constant.
+--></p>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="next-week" class="level2">
+<h2 class="anchored" data-anchor-id="next-week">Next Week</h2>
+<p>Next week, we will discuss:</p>
+<ul>
+<li>Inequalities</li>
+</ul>
+<p><img src="assets/img/markov.jpeg" class="img-fluid"></p>
+<p>Feel free to upload the pencil problem you wish to be discussed next week <a href="https://forms.gle/RBmMNYJp4u3qD5W79">here</a>.</p>
+<p>Note that a verified email address is needed in the GForm so we don’t get scammy input! :)</p>
+<p><span class="math inline">\(\,\)</span></p>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const disableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'prefetch';
+    }
+  }
+  const enableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'stylesheet';
+    }
+  }
+  const manageTransitions = (selector, allowTransitions) => {
+    const els = window.document.querySelectorAll(selector);
+    for (let i=0; i < els.length; i++) {
+      const el = els[i];
+      if (allowTransitions) {
+        el.classList.remove('notransition');
+      } else {
+        el.classList.add('notransition');
+      }
+    }
+  }
+  const toggleColorMode = (alternate) => {
+    // Switch the stylesheets
+    const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+    manageTransitions('#quarto-margin-sidebar .nav-link', false);
+    if (alternate) {
+      enableStylesheet(alternateStylesheets);
+      for (const sheetNode of alternateStylesheets) {
+        if (sheetNode.id === "quarto-bootstrap") {
+          toggleBodyColorMode(sheetNode);
+        }
+      }
+    } else {
+      disableStylesheet(alternateStylesheets);
+      toggleBodyColorPrimary();
+    }
+    manageTransitions('#quarto-margin-sidebar .nav-link', true);
+    // Switch the toggles
+    const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+    for (let i=0; i < toggles.length; i++) {
+      const toggle = toggles[i];
+      if (toggle) {
+        if (alternate) {
+          toggle.classList.add("alternate");     
+        } else {
+          toggle.classList.remove("alternate");
+        }
+      }
+    }
+    // Hack to workaround the fact that safari doesn't
+    // properly recolor the scrollbar when toggling (#1455)
+    if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+      manageTransitions("body", false);
+      window.scrollTo(0, 1);
+      setTimeout(() => {
+        window.scrollTo(0, 0);
+        manageTransitions("body", true);
+      }, 40);  
+    }
+  }
+  const isFileUrl = () => { 
+    return window.location.protocol === 'file:';
+  }
+  const hasAlternateSentinel = () => {  
+    let styleSentinel = getColorSchemeSentinel();
+    if (styleSentinel !== null) {
+      return styleSentinel === "alternate";
+    } else {
+      return false;
+    }
+  }
+  const setStyleSentinel = (alternate) => {
+    const value = alternate ? "alternate" : "default";
+    if (!isFileUrl()) {
+      window.localStorage.setItem("quarto-color-scheme", value);
+    } else {
+      localAlternateSentinel = value;
+    }
+  }
+  const getColorSchemeSentinel = () => {
+    if (!isFileUrl()) {
+      const storageValue = window.localStorage.getItem("quarto-color-scheme");
+      return storageValue != null ? storageValue : localAlternateSentinel;
+    } else {
+      return localAlternateSentinel;
+    }
+  }
+  let localAlternateSentinel = 'default';
+  // Dark / light mode switch
+  window.quartoToggleColorScheme = () => {
+    // Read the current dark / light value 
+    let toAlternate = !hasAlternateSentinel();
+    toggleColorMode(toAlternate);
+    setStyleSentinel(toAlternate);
+  };
+  // Ensure there is a toggle, if there isn't float one in the top right
+  if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+    const a = window.document.createElement('a');
+    a.classList.add('top-right');
+    a.classList.add('quarto-color-scheme-toggle');
+    a.href = "";
+    a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+    const i = window.document.createElement("i");
+    i.classList.add('bi');
+    a.appendChild(i);
+    window.document.body.appendChild(a);
+  }
+  // Switch to dark mode if need be
+  if (hasAlternateSentinel()) {
+    toggleColorMode(true);
+  } else {
+    toggleColorMode(false);
+  }
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./06_Section_6.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Section 6</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./meme.html" class="pagination-link">
+        <span class="nav-page-text">Quotes</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+</body></html>

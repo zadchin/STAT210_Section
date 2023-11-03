@@ -231,7 +231,7 @@
 
 \begin{document}
 \maketitle
-\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[breakable, interior hidden, borderline west={3pt}{0pt}{shadecolor}, sharp corners, frame hidden, enhanced, boxrule=0pt]}{\end{tcolorbox}}\fi
+\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[borderline west={3pt}{0pt}{shadecolor}, sharp corners, breakable, enhanced, interior hidden, boxrule=0pt, frame hidden]}{\end{tcolorbox}}\fi
 
 \renewcommand*\contentsname{Table of contents}
 {
@@ -395,7 +395,7 @@ intersections, i.e.~if \(A_1, A_2, \cdots\) are in the
 requirement \(\emptyset \in \mathcal{F}\) can be replaced by the
 requirements \(\mathcal{F} \neq \emptyset\).
 
-\begin{tcolorbox}[enhanced jigsaw, colframe=quarto-callout-tip-color-frame, arc=.35mm, toprule=.15mm, bottomrule=.15mm, colback=white, rightrule=.15mm, breakable, opacityback=0, leftrule=.75mm, left=2mm]
+\begin{tcolorbox}[enhanced jigsaw, colback=white, arc=.35mm, colframe=quarto-callout-tip-color-frame, bottomrule=.15mm, rightrule=.15mm, toprule=.15mm, opacityback=0, left=2mm, leftrule=.75mm, breakable]
 \begin{minipage}[t]{5.5mm}
 \textcolor{quarto-callout-tip-color}{\faLightbulb}
 \end{minipage}%
@@ -415,7 +415,7 @@ some element of A. Then \(A \cap A^c = \emptyset \in \mathcal{F}\).
 \end{minipage}%
 \end{tcolorbox}
 
-\begin{tcolorbox}[enhanced jigsaw, opacitybacktitle=0.6, coltitle=black, toprule=.15mm, colback=white, titlerule=0mm, opacityback=0, left=2mm, colframe=quarto-callout-note-color-frame, arc=.35mm, colbacktitle=quarto-callout-note-color!10!white, bottomrule=.15mm, toptitle=1mm, bottomtitle=1mm, breakable, rightrule=.15mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Tip: De Morgan Laws}, leftrule=.75mm]
+\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, colframe=quarto-callout-note-color-frame, coltitle=black, toprule=.15mm, leftrule=.75mm, colback=white, titlerule=0mm, bottomrule=.15mm, bottomtitle=1mm, colbacktitle=quarto-callout-note-color!10!white, toptitle=1mm, opacityback=0, left=2mm, opacitybacktitle=0.6, breakable, rightrule=.15mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Tip: De Morgan Laws}]
 
 \[\left(\bigcup_{n=1}^{\infty} A_n \right)^c = \bigcap_{n=1}^{\infty} A_n ^c.\]
 
@@ -431,7 +431,7 @@ Check that an intersection of \(\sigma-\)algebras, even uncountably
 many, is \(\sigma\)-algebra. Give a simple example showing that a union
 of \(\sigma\)-algebras may not be a \(\sigma\)-algebra.
 
-\begin{tcolorbox}[enhanced jigsaw, colframe=quarto-callout-tip-color-frame, arc=.35mm, toprule=.15mm, bottomrule=.15mm, colback=white, rightrule=.15mm, breakable, opacityback=0, leftrule=.75mm, left=2mm]
+\begin{tcolorbox}[enhanced jigsaw, colback=white, arc=.35mm, colframe=quarto-callout-tip-color-frame, bottomrule=.15mm, rightrule=.15mm, toprule=.15mm, opacityback=0, left=2mm, leftrule=.75mm, breakable]
 \begin{minipage}[t]{5.5mm}
 \textcolor{quarto-callout-tip-color}{\faLightbulb}
 \end{minipage}%
@@ -456,7 +456,7 @@ that \(\mathcal{F_1} \cup \mathcal{F_2}\) contains \(\{a,b\}\) and
 \end{minipage}%
 \end{tcolorbox}
 
-\begin{tcolorbox}[enhanced jigsaw, colframe=quarto-callout-important-color-frame, arc=.35mm, toprule=.15mm, bottomrule=.15mm, colback=white, rightrule=.15mm, breakable, opacityback=0, leftrule=.75mm, left=2mm]
+\begin{tcolorbox}[enhanced jigsaw, colback=white, arc=.35mm, colframe=quarto-callout-important-color-frame, bottomrule=.15mm, rightrule=.15mm, toprule=.15mm, opacityback=0, left=2mm, leftrule=.75mm, breakable]
 \begin{minipage}[t]{5.5mm}
 \textcolor{quarto-callout-important-color}{\faExclamation}
 \end{minipage}%
@@ -498,7 +498,7 @@ intervals \([a,b]\) instead of open intervals to generate it, and that
 it is also the same if we use ``semi-inifinite'' intervals
 \((-\infty,b)\) to generate it.
 
-\begin{tcolorbox}[enhanced jigsaw, colframe=quarto-callout-tip-color-frame, arc=.35mm, toprule=.15mm, bottomrule=.15mm, colback=white, rightrule=.15mm, breakable, opacityback=0, leftrule=.75mm, left=2mm]
+\begin{tcolorbox}[enhanced jigsaw, colback=white, arc=.35mm, colframe=quarto-callout-tip-color-frame, bottomrule=.15mm, rightrule=.15mm, toprule=.15mm, opacityback=0, left=2mm, leftrule=.75mm, breakable]
 \begin{minipage}[t]{5.5mm}
 \textcolor{quarto-callout-tip-color}{\faLightbulb}
 \end{minipage}%
@@ -556,7 +556,7 @@ function) \(P\) satisfying the following axioms:
 Show that in the first axiom, the condition \(P(\emptyset) = 0\) can be
 eliminated.
 
-\begin{tcolorbox}[enhanced jigsaw, colframe=quarto-callout-tip-color-frame, arc=.35mm, toprule=.15mm, bottomrule=.15mm, colback=white, rightrule=.15mm, breakable, opacityback=0, leftrule=.75mm, left=2mm]
+\begin{tcolorbox}[enhanced jigsaw, colback=white, arc=.35mm, colframe=quarto-callout-tip-color-frame, bottomrule=.15mm, rightrule=.15mm, toprule=.15mm, opacityback=0, left=2mm, leftrule=.75mm, breakable]
 \begin{minipage}[t]{5.5mm}
 \textcolor{quarto-callout-tip-color}{\faLightbulb}
 \end{minipage}%
@@ -580,7 +580,7 @@ Show that \(P\) is subadditive, i.e.~if \(\{A_i\}^{\infty}_{i=1}\) is
 \textit{any} collection of sets in \(\mathcal{F}\), then
 \[P\left( \bigcup_{i=1}^{\infty} A_i\right) \leq  \sum_{i=1}^{\infty} P(A_i).\]
 
-\begin{tcolorbox}[enhanced jigsaw, colframe=quarto-callout-tip-color-frame, arc=.35mm, toprule=.15mm, bottomrule=.15mm, colback=white, rightrule=.15mm, breakable, opacityback=0, leftrule=.75mm, left=2mm]
+\begin{tcolorbox}[enhanced jigsaw, colback=white, arc=.35mm, colframe=quarto-callout-tip-color-frame, bottomrule=.15mm, rightrule=.15mm, toprule=.15mm, opacityback=0, left=2mm, leftrule=.75mm, breakable]
 \begin{minipage}[t]{5.5mm}
 \textcolor{quarto-callout-tip-color}{\faLightbulb}
 \end{minipage}%
@@ -614,7 +614,7 @@ Let \(A_1,A_2,...\) be a sequence of sets in \(\mathcal{F}\) such that
 \(P(A_n) \xrightarrow{n \to \infty} P(A)\). Show that the result also
 holds for \(A_n \downarrow A\). Does the result hold for any measure?
 
-\begin{tcolorbox}[enhanced jigsaw, colframe=quarto-callout-tip-color-frame, arc=.35mm, toprule=.15mm, bottomrule=.15mm, colback=white, rightrule=.15mm, breakable, opacityback=0, leftrule=.75mm, left=2mm]
+\begin{tcolorbox}[enhanced jigsaw, colback=white, arc=.35mm, colframe=quarto-callout-tip-color-frame, bottomrule=.15mm, rightrule=.15mm, toprule=.15mm, opacityback=0, left=2mm, leftrule=.75mm, breakable]
 \begin{minipage}[t]{5.5mm}
 \textcolor{quarto-callout-tip-color}{\faLightbulb}
 \end{minipage}%
@@ -693,7 +693,7 @@ is in \(\mathcal{F}\) for all Borel sets \(\mathcal{B}\) in
 Show that if \(X\) is a random variable, then so is \(g(X)\) for any
 measurable function \(g\).
 
-\begin{tcolorbox}[enhanced jigsaw, colframe=quarto-callout-tip-color-frame, arc=.35mm, toprule=.15mm, bottomrule=.15mm, colback=white, rightrule=.15mm, breakable, opacityback=0, leftrule=.75mm, left=2mm]
+\begin{tcolorbox}[enhanced jigsaw, colback=white, arc=.35mm, colframe=quarto-callout-tip-color-frame, bottomrule=.15mm, rightrule=.15mm, toprule=.15mm, opacityback=0, left=2mm, leftrule=.75mm, breakable]
 \begin{minipage}[t]{5.5mm}
 \textcolor{quarto-callout-tip-color}{\faLightbulb}
 \end{minipage}%
@@ -718,7 +718,7 @@ Let \(F(x,y)\) be a bivariate CDF. Prove that for all \(a_1 \leq b_1\)
 and \(a_2 \leq b_2\),
 \[F(b_1, b_2)-F(a_1, b_2)-F(b_1,a_2)+F(a_1,a_2) \geq 0.\]
 
-\begin{tcolorbox}[enhanced jigsaw, colframe=quarto-callout-tip-color-frame, arc=.35mm, toprule=.15mm, bottomrule=.15mm, colback=white, rightrule=.15mm, breakable, opacityback=0, leftrule=.75mm, left=2mm]
+\begin{tcolorbox}[enhanced jigsaw, colback=white, arc=.35mm, colframe=quarto-callout-tip-color-frame, bottomrule=.15mm, rightrule=.15mm, toprule=.15mm, opacityback=0, left=2mm, leftrule=.75mm, breakable]
 \begin{minipage}[t]{5.5mm}
 \textcolor{quarto-callout-tip-color}{\faLightbulb}
 \end{minipage}%
@@ -774,7 +774,7 @@ We call \(B\) and \(C\), \(\limsup\limits_{n \to \infty}A_n\) and
 Show that
 \(B = \{\omega \in \Omega : \omega \in A_n \text{ for infinitely many values of } n\}\).
 
-\begin{tcolorbox}[enhanced jigsaw, colframe=quarto-callout-tip-color-frame, arc=.35mm, toprule=.15mm, bottomrule=.15mm, colback=white, rightrule=.15mm, breakable, opacityback=0, leftrule=.75mm, left=2mm]
+\begin{tcolorbox}[enhanced jigsaw, colback=white, arc=.35mm, colframe=quarto-callout-tip-color-frame, bottomrule=.15mm, rightrule=.15mm, toprule=.15mm, opacityback=0, left=2mm, leftrule=.75mm, breakable]
 \begin{minipage}[t]{5.5mm}
 \textcolor{quarto-callout-tip-color}{\faLightbulb}
 \end{minipage}%
@@ -803,7 +803,7 @@ It is useful to think about ``\(\bigcup\)'' as ``there exists''
 Show that
 \(C = \{\omega \in \Omega: \omega \in A_n \text{ for all but finitely many values of } n\}\).
 
-\begin{tcolorbox}[enhanced jigsaw, colframe=quarto-callout-tip-color-frame, arc=.35mm, toprule=.15mm, bottomrule=.15mm, colback=white, rightrule=.15mm, breakable, opacityback=0, leftrule=.75mm, left=2mm]
+\begin{tcolorbox}[enhanced jigsaw, colback=white, arc=.35mm, colframe=quarto-callout-tip-color-frame, bottomrule=.15mm, rightrule=.15mm, toprule=.15mm, opacityback=0, left=2mm, leftrule=.75mm, breakable]
 \begin{minipage}[t]{5.5mm}
 \textcolor{quarto-callout-tip-color}{\faLightbulb}
 \end{minipage}%
@@ -843,7 +843,7 @@ that case, we write \(\lim\limits_{n\to \infty} A_n = A\).
 
 Assume the above is the case. Show that \(A \in \mathcal{F}.\)
 
-\begin{tcolorbox}[enhanced jigsaw, colframe=quarto-callout-tip-color-frame, arc=.35mm, toprule=.15mm, bottomrule=.15mm, colback=white, rightrule=.15mm, breakable, opacityback=0, leftrule=.75mm, left=2mm]
+\begin{tcolorbox}[enhanced jigsaw, colback=white, arc=.35mm, colframe=quarto-callout-tip-color-frame, bottomrule=.15mm, rightrule=.15mm, toprule=.15mm, opacityback=0, left=2mm, leftrule=.75mm, breakable]
 \begin{minipage}[t]{5.5mm}
 \textcolor{quarto-callout-tip-color}{\faLightbulb}
 \end{minipage}%
@@ -866,13 +866,13 @@ Since \(\mathcal{F}\) is closed under countable unions,
 
 Show that \(\lim\limits_{n \to \infty} P(A_n) = P(A)\).
 
-\begin{tcolorbox}[enhanced jigsaw, opacitybacktitle=0.6, coltitle=black, toprule=.15mm, colback=white, titlerule=0mm, opacityback=0, left=2mm, colframe=quarto-callout-note-color-frame, arc=.35mm, colbacktitle=quarto-callout-note-color!10!white, bottomrule=.15mm, toptitle=1mm, bottomtitle=1mm, breakable, rightrule=.15mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Tip: A useful inequality}, leftrule=.75mm]
+\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, colframe=quarto-callout-note-color-frame, coltitle=black, toprule=.15mm, leftrule=.75mm, colback=white, titlerule=0mm, bottomrule=.15mm, bottomtitle=1mm, colbacktitle=quarto-callout-note-color!10!white, toptitle=1mm, opacityback=0, left=2mm, opacitybacktitle=0.6, breakable, rightrule=.15mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Tip: A useful inequality}]
 
 \[P(\liminf\limits_{n \to \infty}A_n) \leq \liminf\limits_{n \to \infty}P(A_n) \leq \limsup\limits_{n \to \infty}P(A_n) \leq P(\limsup\limits_{n \to \infty}A_n).\]
 
 \end{tcolorbox}
 
-\begin{tcolorbox}[enhanced jigsaw, colframe=quarto-callout-tip-color-frame, arc=.35mm, toprule=.15mm, bottomrule=.15mm, colback=white, rightrule=.15mm, breakable, opacityback=0, leftrule=.75mm, left=2mm]
+\begin{tcolorbox}[enhanced jigsaw, colback=white, arc=.35mm, colframe=quarto-callout-tip-color-frame, bottomrule=.15mm, rightrule=.15mm, toprule=.15mm, opacityback=0, left=2mm, leftrule=.75mm, breakable]
 \begin{minipage}[t]{5.5mm}
 \textcolor{quarto-callout-tip-color}{\faLightbulb}
 \end{minipage}%
@@ -939,7 +939,7 @@ we then have the following convenient properties:
 
 Verify the above properties of preimages
 
-\begin{tcolorbox}[enhanced jigsaw, colframe=quarto-callout-tip-color-frame, arc=.35mm, toprule=.15mm, bottomrule=.15mm, colback=white, rightrule=.15mm, breakable, opacityback=0, leftrule=.75mm, left=2mm]
+\begin{tcolorbox}[enhanced jigsaw, colback=white, arc=.35mm, colframe=quarto-callout-tip-color-frame, bottomrule=.15mm, rightrule=.15mm, toprule=.15mm, opacityback=0, left=2mm, leftrule=.75mm, breakable]
 \begin{minipage}[t]{5.5mm}
 \textcolor{quarto-callout-tip-color}{\faLightbulb}
 \end{minipage}%
@@ -979,7 +979,7 @@ If \(\mathbf{X}_1, \mathbf{X}_2 , \mathbf{X}_3\) are random vectors
 \((\mathbf{X}_1 , \mathbf{X}_2) \perp\!\!\!\perp \mathbf{X}_3\), then
 \(\mathbf{X}_1, \mathbf{X}_2 , \mathbf{X}_3\) are independent.
 
-\begin{tcolorbox}[enhanced jigsaw, colframe=quarto-callout-tip-color-frame, arc=.35mm, toprule=.15mm, bottomrule=.15mm, colback=white, rightrule=.15mm, breakable, opacityback=0, leftrule=.75mm, left=2mm]
+\begin{tcolorbox}[enhanced jigsaw, colback=white, arc=.35mm, colframe=quarto-callout-tip-color-frame, bottomrule=.15mm, rightrule=.15mm, toprule=.15mm, opacityback=0, left=2mm, leftrule=.75mm, breakable]
 \begin{minipage}[t]{5.5mm}
 \textcolor{quarto-callout-tip-color}{\faLightbulb}
 \end{minipage}%
@@ -1038,7 +1038,7 @@ conditions hold:
 Show that if \(\mathcal{A}\) is both a \(\pi\)-system and a
 \(\lambda\)-system, then it is a \(\sigma\)-algebra.
 
-\begin{tcolorbox}[enhanced jigsaw, colframe=quarto-callout-tip-color-frame, arc=.35mm, toprule=.15mm, bottomrule=.15mm, colback=white, rightrule=.15mm, breakable, opacityback=0, leftrule=.75mm, left=2mm]
+\begin{tcolorbox}[enhanced jigsaw, colback=white, arc=.35mm, colframe=quarto-callout-tip-color-frame, bottomrule=.15mm, rightrule=.15mm, toprule=.15mm, opacityback=0, left=2mm, leftrule=.75mm, breakable]
 \begin{minipage}[t]{5.5mm}
 \textcolor{quarto-callout-tip-color}{\faLightbulb}
 \end{minipage}%
@@ -1209,7 +1209,7 @@ Show that if \(U\sim Unif\), then \(1-U \sim Unif\). Also, show that
 \(2U-1\) is symmetric about 0, while \(U\) is symmetric about \(1/2\);
 see Section 3.10 for more information.)
 
-\begin{tcolorbox}[enhanced jigsaw, colframe=quarto-callout-tip-color-frame, arc=.35mm, toprule=.15mm, bottomrule=.15mm, colback=white, rightrule=.15mm, breakable, opacityback=0, leftrule=.75mm, left=2mm]
+\begin{tcolorbox}[enhanced jigsaw, colback=white, arc=.35mm, colframe=quarto-callout-tip-color-frame, bottomrule=.15mm, rightrule=.15mm, toprule=.15mm, opacityback=0, left=2mm, leftrule=.75mm, breakable]
 \begin{minipage}[t]{5.5mm}
 \textcolor{quarto-callout-tip-color}{\faLightbulb}
 \end{minipage}%
@@ -1234,7 +1234,7 @@ Let \(W_1 \sim Wei(\beta_1), W_2 \sim Wei(\beta_2)\). Show that
 \((W_1|W_1 \geq 1) \preceq (W_2|W_2 \geq 1)\) iff
 \(\beta_1 \leq \beta_2\).
 
-\begin{tcolorbox}[enhanced jigsaw, colframe=quarto-callout-tip-color-frame, arc=.35mm, toprule=.15mm, bottomrule=.15mm, colback=white, rightrule=.15mm, breakable, opacityback=0, leftrule=.75mm, left=2mm]
+\begin{tcolorbox}[enhanced jigsaw, colback=white, arc=.35mm, colframe=quarto-callout-tip-color-frame, bottomrule=.15mm, rightrule=.15mm, toprule=.15mm, opacityback=0, left=2mm, leftrule=.75mm, breakable]
 \begin{minipage}[t]{5.5mm}
 \textcolor{quarto-callout-tip-color}{\faLightbulb}
 \end{minipage}%
@@ -1261,7 +1261,7 @@ that \(\beta_1 \leq \beta_2\).
 Let \(C \sim\) Cauchy and \(U \sim\) Unif. Show that
 \[tan(2 \pi U) \sim C\]
 
-\begin{tcolorbox}[enhanced jigsaw, colframe=quarto-callout-tip-color-frame, arc=.35mm, toprule=.15mm, bottomrule=.15mm, colback=white, rightrule=.15mm, breakable, opacityback=0, leftrule=.75mm, left=2mm]
+\begin{tcolorbox}[enhanced jigsaw, colback=white, arc=.35mm, colframe=quarto-callout-tip-color-frame, bottomrule=.15mm, rightrule=.15mm, toprule=.15mm, opacityback=0, left=2mm, leftrule=.75mm, breakable]
 \begin{minipage}[t]{5.5mm}
 \textcolor{quarto-callout-tip-color}{\faLightbulb}
 \end{minipage}%
@@ -1282,7 +1282,7 @@ Show that if \(C\sim\) Cauchy, \(S\) is a random sign, and \(B\sim\)
 Beta(1/2, 1/2), then
 \[C+\frac{1}{C} \sim 2S\sqrt{1+C^2}\sim \frac{2S}{\sqrt{B}}\]
 
-\begin{tcolorbox}[enhanced jigsaw, colframe=quarto-callout-tip-color-frame, arc=.35mm, toprule=.15mm, bottomrule=.15mm, colback=white, rightrule=.15mm, breakable, opacityback=0, leftrule=.75mm, left=2mm]
+\begin{tcolorbox}[enhanced jigsaw, colback=white, arc=.35mm, colframe=quarto-callout-tip-color-frame, bottomrule=.15mm, rightrule=.15mm, toprule=.15mm, opacityback=0, left=2mm, leftrule=.75mm, breakable]
 \begin{minipage}[t]{5.5mm}
 \textcolor{quarto-callout-tip-color}{\faLightbulb}
 \end{minipage}%
@@ -1313,7 +1313,7 @@ Next, I am lazy to type so ask in office hour!
 Show that NBin\((r,p)\) PMF is \(P(X=x)=\) \(r+x-1 \choose x\)
 \(p^r q^x\), where \(q\equiv 1-p\).
 
-\begin{tcolorbox}[enhanced jigsaw, colframe=quarto-callout-tip-color-frame, arc=.35mm, toprule=.15mm, bottomrule=.15mm, colback=white, rightrule=.15mm, breakable, opacityback=0, leftrule=.75mm, left=2mm]
+\begin{tcolorbox}[enhanced jigsaw, colback=white, arc=.35mm, colframe=quarto-callout-tip-color-frame, bottomrule=.15mm, rightrule=.15mm, toprule=.15mm, opacityback=0, left=2mm, leftrule=.75mm, breakable]
 \begin{minipage}[t]{5.5mm}
 \textcolor{quarto-callout-tip-color}{\faLightbulb}
 \end{minipage}%
@@ -1337,7 +1337,7 @@ minimum is also Exponentially distributed, with \(n\) times the rate:
 \(Y_{(1)} \sim \frac{1}{n} Expo\) (the rate parameter is defined to be
 reciprocal of the scale parameter)
 
-\begin{tcolorbox}[enhanced jigsaw, colframe=quarto-callout-tip-color-frame, arc=.35mm, toprule=.15mm, bottomrule=.15mm, colback=white, rightrule=.15mm, breakable, opacityback=0, leftrule=.75mm, left=2mm]
+\begin{tcolorbox}[enhanced jigsaw, colback=white, arc=.35mm, colframe=quarto-callout-tip-color-frame, bottomrule=.15mm, rightrule=.15mm, toprule=.15mm, opacityback=0, left=2mm, leftrule=.75mm, breakable]
 \begin{minipage}[t]{5.5mm}
 \textcolor{quarto-callout-tip-color}{\faLightbulb}
 \end{minipage}%
@@ -1581,7 +1581,7 @@ the following ``random'\,' quadratic equation: \[
 A x^2 + 2B x + C = 0.
 \] What is the probability that the above equation has real root?
 
-\begin{tcolorbox}[enhanced jigsaw, colframe=quarto-callout-tip-color-frame, arc=.35mm, toprule=.15mm, bottomrule=.15mm, colback=white, rightrule=.15mm, breakable, opacityback=0, leftrule=.75mm, left=2mm]
+\begin{tcolorbox}[enhanced jigsaw, colback=white, arc=.35mm, colframe=quarto-callout-tip-color-frame, bottomrule=.15mm, rightrule=.15mm, toprule=.15mm, opacityback=0, left=2mm, leftrule=.75mm, breakable]
 \begin{minipage}[t]{5.5mm}
 \textcolor{quarto-callout-tip-color}{\faLightbulb}
 \end{minipage}%
@@ -1619,7 +1619,7 @@ X = \frac{Z_1^2 + \cdots + Z_m^2}{ Z_1^2 + \cdots + Z_{2n}^2},
 \] where \(m< 2n\). Find the distribution of
 \(Y = (U_1 U_2 \cdots U_n)^{-X}\).
 
-\begin{tcolorbox}[enhanced jigsaw, colframe=quarto-callout-tip-color-frame, arc=.35mm, toprule=.15mm, bottomrule=.15mm, colback=white, rightrule=.15mm, breakable, opacityback=0, leftrule=.75mm, left=2mm]
+\begin{tcolorbox}[enhanced jigsaw, colback=white, arc=.35mm, colframe=quarto-callout-tip-color-frame, bottomrule=.15mm, rightrule=.15mm, toprule=.15mm, opacityback=0, left=2mm, leftrule=.75mm, breakable]
 \begin{minipage}[t]{5.5mm}
 \textcolor{quarto-callout-tip-color}{\faLightbulb}
 \end{minipage}%
@@ -1671,7 +1671,7 @@ let \(X_1,X_2 \overset{i.i.d}{\sim} \chi_1^2\). Show that \[
 Z_1Z_2\sim \frac{1}{2} (X_1 - X_2).
 \]
 
-\begin{tcolorbox}[enhanced jigsaw, colframe=quarto-callout-tip-color-frame, arc=.35mm, toprule=.15mm, bottomrule=.15mm, colback=white, rightrule=.15mm, breakable, opacityback=0, leftrule=.75mm, left=2mm]
+\begin{tcolorbox}[enhanced jigsaw, colback=white, arc=.35mm, colframe=quarto-callout-tip-color-frame, bottomrule=.15mm, rightrule=.15mm, toprule=.15mm, opacityback=0, left=2mm, leftrule=.75mm, breakable]
 \begin{minipage}[t]{5.5mm}
 \textcolor{quarto-callout-tip-color}{\faLightbulb}
 \end{minipage}%
@@ -1708,7 +1708,7 @@ Consequently, we have \[
   \]
 \end{enumerate}
 
-\begin{tcolorbox}[enhanced jigsaw, colframe=quarto-callout-tip-color-frame, arc=.35mm, toprule=.15mm, bottomrule=.15mm, colback=white, rightrule=.15mm, breakable, opacityback=0, leftrule=.75mm, left=2mm]
+\begin{tcolorbox}[enhanced jigsaw, colback=white, arc=.35mm, colframe=quarto-callout-tip-color-frame, bottomrule=.15mm, rightrule=.15mm, toprule=.15mm, opacityback=0, left=2mm, leftrule=.75mm, breakable]
 \begin{minipage}[t]{5.5mm}
 \textcolor{quarto-callout-tip-color}{\faLightbulb}
 \end{minipage}%
@@ -1743,7 +1743,7 @@ density of \(Y\) is
 Suppose that \(\theta\) has a Cauchy distribution (centered at \(0\)).
 Find the marginal distribution of \(Y\).
 
-\begin{tcolorbox}[enhanced jigsaw, colframe=quarto-callout-tip-color-frame, arc=.35mm, toprule=.15mm, bottomrule=.15mm, colback=white, rightrule=.15mm, breakable, opacityback=0, leftrule=.75mm, left=2mm]
+\begin{tcolorbox}[enhanced jigsaw, colback=white, arc=.35mm, colframe=quarto-callout-tip-color-frame, bottomrule=.15mm, rightrule=.15mm, toprule=.15mm, opacityback=0, left=2mm, leftrule=.75mm, breakable]
 \begin{minipage}[t]{5.5mm}
 \textcolor{quarto-callout-tip-color}{\faLightbulb}
 \end{minipage}%
@@ -1800,7 +1800,7 @@ expressing your answer in terms of a harmonic number \(H_m\) for some
 H_m=\sum_{k=1}^m \frac{1}{k} .
 \]
 
-\begin{tcolorbox}[enhanced jigsaw, colframe=quarto-callout-tip-color-frame, arc=.35mm, toprule=.15mm, bottomrule=.15mm, colback=white, rightrule=.15mm, breakable, opacityback=0, leftrule=.75mm, left=2mm]
+\begin{tcolorbox}[enhanced jigsaw, colback=white, arc=.35mm, colframe=quarto-callout-tip-color-frame, bottomrule=.15mm, rightrule=.15mm, toprule=.15mm, opacityback=0, left=2mm, leftrule=.75mm, breakable]
 \begin{minipage}[t]{5.5mm}
 \textcolor{quarto-callout-tip-color}{\faLightbulb}
 \end{minipage}%
@@ -1846,7 +1846,7 @@ splits, \(T_2\) the time of the next splitting occurrence, etc.
   for any \(t>0\).
 \end{enumerate}
 
-\begin{tcolorbox}[enhanced jigsaw, colframe=quarto-callout-tip-color-frame, arc=.35mm, toprule=.15mm, bottomrule=.15mm, colback=white, rightrule=.15mm, breakable, opacityback=0, leftrule=.75mm, left=2mm]
+\begin{tcolorbox}[enhanced jigsaw, colback=white, arc=.35mm, colframe=quarto-callout-tip-color-frame, bottomrule=.15mm, rightrule=.15mm, toprule=.15mm, opacityback=0, left=2mm, leftrule=.75mm, breakable]
 \begin{minipage}[t]{5.5mm}
 \textcolor{quarto-callout-tip-color}{\faLightbulb}
 \end{minipage}%
@@ -1907,7 +1907,7 @@ the sample mean of \(Y_1, \ldots, Y_n\).
   knowing \(\lambda\) ).
 \end{enumerate}
 
-\begin{tcolorbox}[enhanced jigsaw, colframe=quarto-callout-tip-color-frame, arc=.35mm, toprule=.15mm, bottomrule=.15mm, colback=white, rightrule=.15mm, breakable, opacityback=0, leftrule=.75mm, left=2mm]
+\begin{tcolorbox}[enhanced jigsaw, colback=white, arc=.35mm, colframe=quarto-callout-tip-color-frame, bottomrule=.15mm, rightrule=.15mm, toprule=.15mm, opacityback=0, left=2mm, leftrule=.75mm, breakable]
 \begin{minipage}[t]{5.5mm}
 \textcolor{quarto-callout-tip-color}{\faLightbulb}
 \end{minipage}%
@@ -2079,7 +2079,7 @@ is empty, they take the seat and eat for the next 20 minutes. Otherwise,
 they leave out out of frustration. What is the probability that both
 people get to enjoy their 20 minute meal?
 
-\begin{tcolorbox}[enhanced jigsaw, colframe=quarto-callout-tip-color-frame, arc=.35mm, toprule=.15mm, bottomrule=.15mm, colback=white, rightrule=.15mm, breakable, opacityback=0, leftrule=.75mm, left=2mm]
+\begin{tcolorbox}[enhanced jigsaw, colback=white, arc=.35mm, colframe=quarto-callout-tip-color-frame, bottomrule=.15mm, rightrule=.15mm, toprule=.15mm, opacityback=0, left=2mm, leftrule=.75mm, breakable]
 \begin{minipage}[t]{5.5mm}
 \textcolor{quarto-callout-tip-color}{\faLightbulb}
 \end{minipage}%
@@ -2124,7 +2124,7 @@ list, and \(R=L_3/L_2\)
   of these subintervals and the second longest of these subintervals.
 \end{enumerate}
 
-\begin{tcolorbox}[enhanced jigsaw, colframe=quarto-callout-tip-color-frame, arc=.35mm, toprule=.15mm, bottomrule=.15mm, colback=white, rightrule=.15mm, breakable, opacityback=0, leftrule=.75mm, left=2mm]
+\begin{tcolorbox}[enhanced jigsaw, colback=white, arc=.35mm, colframe=quarto-callout-tip-color-frame, bottomrule=.15mm, rightrule=.15mm, toprule=.15mm, opacityback=0, left=2mm, leftrule=.75mm, breakable]
 \begin{minipage}[t]{5.5mm}
 \textcolor{quarto-callout-tip-color}{\faLightbulb}
 \end{minipage}%
@@ -2206,7 +2206,7 @@ R=\frac{U_{(3)}-U_{(2)}}{U_{(2)}-U_{(1)}} \sim \frac{X_3}{X_2} .
   \(1 \leq i<j \leq n\) (as a sum of simple terms).
 \end{enumerate}
 
-\begin{tcolorbox}[enhanced jigsaw, colframe=quarto-callout-tip-color-frame, arc=.35mm, toprule=.15mm, bottomrule=.15mm, colback=white, rightrule=.15mm, breakable, opacityback=0, leftrule=.75mm, left=2mm]
+\begin{tcolorbox}[enhanced jigsaw, colback=white, arc=.35mm, colframe=quarto-callout-tip-color-frame, bottomrule=.15mm, rightrule=.15mm, toprule=.15mm, opacityback=0, left=2mm, leftrule=.75mm, breakable]
 \begin{minipage}[t]{5.5mm}
 \textcolor{quarto-callout-tip-color}{\faLightbulb}
 \end{minipage}%
@@ -2257,7 +2257,7 @@ T=\sum_{j=1}^n\left(X_j-X_{(1)}\right) .
 \] Find the distribution of \(T\). Simplify fully; you can give the name
 and parameters (if it is a distribution we have studied), or the PDF.
 
-\begin{tcolorbox}[enhanced jigsaw, colframe=quarto-callout-tip-color-frame, arc=.35mm, toprule=.15mm, bottomrule=.15mm, colback=white, rightrule=.15mm, breakable, opacityback=0, leftrule=.75mm, left=2mm]
+\begin{tcolorbox}[enhanced jigsaw, colback=white, arc=.35mm, colframe=quarto-callout-tip-color-frame, bottomrule=.15mm, rightrule=.15mm, toprule=.15mm, opacityback=0, left=2mm, leftrule=.75mm, breakable]
 \begin{minipage}[t]{5.5mm}
 \textcolor{quarto-callout-tip-color}{\faLightbulb}
 \end{minipage}%
@@ -2296,7 +2296,7 @@ r.v.s of the form \[
 W_k=\frac{X_k}{X_1+\cdots+X_{n+1}},
 \] the sum \(W_1+\cdots+W_{n+1}\) has variance 0 .
 
-\begin{tcolorbox}[enhanced jigsaw, colframe=quarto-callout-tip-color-frame, arc=.35mm, toprule=.15mm, bottomrule=.15mm, colback=white, rightrule=.15mm, breakable, opacityback=0, leftrule=.75mm, left=2mm]
+\begin{tcolorbox}[enhanced jigsaw, colback=white, arc=.35mm, colframe=quarto-callout-tip-color-frame, bottomrule=.15mm, rightrule=.15mm, toprule=.15mm, opacityback=0, left=2mm, leftrule=.75mm, breakable]
 \begin{minipage}[t]{5.5mm}
 \textcolor{quarto-callout-tip-color}{\faLightbulb}
 \end{minipage}%
@@ -2358,7 +2358,7 @@ Assume that \(U_1, \cdots, U_n \sim_{iid} \textnormal{Unif}\), and
   \(U_{(i)}| (U_{(i+1)},\cdots, U_{(n)}).\)
 \end{enumerate}
 
-\begin{tcolorbox}[enhanced jigsaw, colframe=quarto-callout-tip-color-frame, arc=.35mm, toprule=.15mm, bottomrule=.15mm, colback=white, rightrule=.15mm, breakable, opacityback=0, leftrule=.75mm, left=2mm]
+\begin{tcolorbox}[enhanced jigsaw, colback=white, arc=.35mm, colframe=quarto-callout-tip-color-frame, bottomrule=.15mm, rightrule=.15mm, toprule=.15mm, opacityback=0, left=2mm, leftrule=.75mm, breakable]
 \begin{minipage}[t]{5.5mm}
 \textcolor{quarto-callout-tip-color}{\faLightbulb}
 \end{minipage}%
@@ -2671,7 +2671,7 @@ probability space.
   \(P(X=Y)=1\).
 \end{enumerate}
 
-\begin{tcolorbox}[enhanced jigsaw, colframe=quarto-callout-tip-color-frame, arc=.35mm, toprule=.15mm, bottomrule=.15mm, colback=white, rightrule=.15mm, breakable, opacityback=0, leftrule=.75mm, left=2mm]
+\begin{tcolorbox}[enhanced jigsaw, colback=white, arc=.35mm, colframe=quarto-callout-tip-color-frame, bottomrule=.15mm, rightrule=.15mm, toprule=.15mm, opacityback=0, left=2mm, leftrule=.75mm, breakable]
 \begin{minipage}[t]{5.5mm}
 \textcolor{quarto-callout-tip-color}{\faLightbulb}
 \end{minipage}%
@@ -2706,7 +2706,7 @@ probability space.
 Show that for any r.v.s \(X\) and \(Y\) with Var\((Y)\) finite, we have
 \[E(Y|E(Y|X))=E(Y|X)\]
 
-\begin{tcolorbox}[enhanced jigsaw, colframe=quarto-callout-tip-color-frame, arc=.35mm, toprule=.15mm, bottomrule=.15mm, colback=white, rightrule=.15mm, breakable, opacityback=0, leftrule=.75mm, left=2mm]
+\begin{tcolorbox}[enhanced jigsaw, colback=white, arc=.35mm, colframe=quarto-callout-tip-color-frame, bottomrule=.15mm, rightrule=.15mm, toprule=.15mm, opacityback=0, left=2mm, leftrule=.75mm, breakable]
 \begin{minipage}[t]{5.5mm}
 \textcolor{quarto-callout-tip-color}{\faLightbulb}
 \end{minipage}%
@@ -2734,7 +2734,7 @@ Let \(X_1, X_2\) and \(Y\) be random variable, \(E(Y^2)\) finite. Let
 \[A=E(Y|X_1) \text{ and } B=E(Y|X_1,X_2)\] Show that
 \[Var(A) \leq Var(B)\]
 
-\begin{tcolorbox}[enhanced jigsaw, colframe=quarto-callout-tip-color-frame, arc=.35mm, toprule=.15mm, bottomrule=.15mm, colback=white, rightrule=.15mm, breakable, opacityback=0, leftrule=.75mm, left=2mm]
+\begin{tcolorbox}[enhanced jigsaw, colback=white, arc=.35mm, colframe=quarto-callout-tip-color-frame, bottomrule=.15mm, rightrule=.15mm, toprule=.15mm, opacityback=0, left=2mm, leftrule=.75mm, breakable]
 \begin{minipage}[t]{5.5mm}
 \textcolor{quarto-callout-tip-color}{\faLightbulb}
 \end{minipage}%
@@ -2773,7 +2773,7 @@ Let \(Y\) be a nonnegative \(r.v.\) with \(E(Y)< \infty\).
   and Tonelli).
 \end{enumerate}
 
-\begin{tcolorbox}[enhanced jigsaw, colframe=quarto-callout-tip-color-frame, arc=.35mm, toprule=.15mm, bottomrule=.15mm, colback=white, rightrule=.15mm, breakable, opacityback=0, leftrule=.75mm, left=2mm]
+\begin{tcolorbox}[enhanced jigsaw, colback=white, arc=.35mm, colframe=quarto-callout-tip-color-frame, bottomrule=.15mm, rightrule=.15mm, toprule=.15mm, opacityback=0, left=2mm, leftrule=.75mm, breakable]
 \begin{minipage}[t]{5.5mm}
 \textcolor{quarto-callout-tip-color}{\faLightbulb}
 \end{minipage}%
@@ -2818,7 +2818,7 @@ Let \(X\) be a positive valued random variable with finite expectation.
 Show that:
 \[\frac{d}{dt}E(e^{-tX}) = - E(Xe^{-tX}) ; \hspace{0.2cm}t>0\]
 
-\begin{tcolorbox}[enhanced jigsaw, colframe=quarto-callout-tip-color-frame, arc=.35mm, toprule=.15mm, bottomrule=.15mm, colback=white, rightrule=.15mm, breakable, opacityback=0, leftrule=.75mm, left=2mm]
+\begin{tcolorbox}[enhanced jigsaw, colback=white, arc=.35mm, colframe=quarto-callout-tip-color-frame, bottomrule=.15mm, rightrule=.15mm, toprule=.15mm, opacityback=0, left=2mm, leftrule=.75mm, breakable]
 \begin{minipage}[t]{5.5mm}
 \textcolor{quarto-callout-tip-color}{\faLightbulb}
 \end{minipage}%
@@ -3058,7 +3058,7 @@ Let \(X_1, X_2\) and \(Y\) be random variable, \(E(Y^2)\) finite. Let
 \[A=E(Y|X_1) \text{ and } B=E(Y|X_1,X_2)\] Show that
 \[Var(A) \leq Var(B)\]
 
-\begin{tcolorbox}[enhanced jigsaw, colframe=quarto-callout-tip-color-frame, arc=.35mm, toprule=.15mm, bottomrule=.15mm, colback=white, rightrule=.15mm, breakable, opacityback=0, leftrule=.75mm, left=2mm]
+\begin{tcolorbox}[enhanced jigsaw, colback=white, arc=.35mm, colframe=quarto-callout-tip-color-frame, bottomrule=.15mm, rightrule=.15mm, toprule=.15mm, opacityback=0, left=2mm, leftrule=.75mm, breakable]
 \begin{minipage}[t]{5.5mm}
 \textcolor{quarto-callout-tip-color}{\faLightbulb}
 \end{minipage}%
@@ -3093,7 +3093,7 @@ E(Y \mid X, Z)=\beta_0+\beta_1 X+\beta_2 Z, E(Z \mid X)=\alpha_0+\alpha_1 X .
   \(\operatorname{Var}(E(Y \mid X, Z))=\operatorname{Var}(E(Y \mid X))+\operatorname{Var}(E(Y \mid Z))\).
 \end{enumerate}
 
-\begin{tcolorbox}[enhanced jigsaw, colframe=quarto-callout-tip-color-frame, arc=.35mm, toprule=.15mm, bottomrule=.15mm, colback=white, rightrule=.15mm, breakable, opacityback=0, leftrule=.75mm, left=2mm]
+\begin{tcolorbox}[enhanced jigsaw, colback=white, arc=.35mm, colframe=quarto-callout-tip-color-frame, bottomrule=.15mm, rightrule=.15mm, toprule=.15mm, opacityback=0, left=2mm, leftrule=.75mm, breakable]
 \begin{minipage}[t]{5.5mm}
 \textcolor{quarto-callout-tip-color}{\faLightbulb}
 \end{minipage}%
@@ -3171,7 +3171,7 @@ Show that \[
 \operatorname{Cov}\left(Y-E\left(Y \mid X_2\right), X_1-E\left(X_1 \mid X_2\right)\right)=\beta_1 E \operatorname{Var}\left(X_1 \mid X_2\right)
 \]
 
-\begin{tcolorbox}[enhanced jigsaw, colframe=quarto-callout-tip-color-frame, arc=.35mm, toprule=.15mm, bottomrule=.15mm, colback=white, rightrule=.15mm, breakable, opacityback=0, leftrule=.75mm, left=2mm]
+\begin{tcolorbox}[enhanced jigsaw, colback=white, arc=.35mm, colframe=quarto-callout-tip-color-frame, bottomrule=.15mm, rightrule=.15mm, toprule=.15mm, opacityback=0, left=2mm, leftrule=.75mm, breakable]
 \begin{minipage}[t]{5.5mm}
 \textcolor{quarto-callout-tip-color}{\faLightbulb}
 \end{minipage}%
@@ -3225,7 +3225,7 @@ Let \(Y\) be a nonnegative \(r.v.\) with \(E(Y)< \infty\).
   and Tonelli).
 \end{enumerate}
 
-\begin{tcolorbox}[enhanced jigsaw, colframe=quarto-callout-tip-color-frame, arc=.35mm, toprule=.15mm, bottomrule=.15mm, colback=white, rightrule=.15mm, breakable, opacityback=0, leftrule=.75mm, left=2mm]
+\begin{tcolorbox}[enhanced jigsaw, colback=white, arc=.35mm, colframe=quarto-callout-tip-color-frame, bottomrule=.15mm, rightrule=.15mm, toprule=.15mm, opacityback=0, left=2mm, leftrule=.75mm, breakable]
 \begin{minipage}[t]{5.5mm}
 \textcolor{quarto-callout-tip-color}{\faLightbulb}
 \end{minipage}%
@@ -3305,7 +3305,7 @@ Let \(g(X)\) satisfy the Stat 210 definition of \(E(Y \mid X)\), with
 \(g^{-1}(B)\) is Borel for all Borel \(B\) ). Show that \(g(X)\)
 satisfies conditions (i) and (ii).
 
-\begin{tcolorbox}[enhanced jigsaw, colframe=quarto-callout-tip-color-frame, arc=.35mm, toprule=.15mm, bottomrule=.15mm, colback=white, rightrule=.15mm, breakable, opacityback=0, leftrule=.75mm, left=2mm]
+\begin{tcolorbox}[enhanced jigsaw, colback=white, arc=.35mm, colframe=quarto-callout-tip-color-frame, bottomrule=.15mm, rightrule=.15mm, toprule=.15mm, opacityback=0, left=2mm, leftrule=.75mm, breakable]
 \begin{minipage}[t]{5.5mm}
 \textcolor{quarto-callout-tip-color}{\faLightbulb}
 \end{minipage}%
@@ -3394,7 +3394,7 @@ get scammy input! :)
 
 \markboth{Section 6}{Section 6}
 
-Last Updated: 19 Oct 2023
+Last Updated: 20 Oct 2023
 
 Date: 20 Oct 2023
 
@@ -3608,7 +3608,7 @@ Show that \(\mathcal{V}\) contains every random variable on
 Hint: First consider the set
 \(\{A \in \mathcal{F}: I(A) \in \mathcal{V}\}\).
 
-\begin{tcolorbox}[enhanced jigsaw, colframe=quarto-callout-tip-color-frame, arc=.35mm, toprule=.15mm, bottomrule=.15mm, colback=white, rightrule=.15mm, breakable, opacityback=0, leftrule=.75mm, left=2mm]
+\begin{tcolorbox}[enhanced jigsaw, colback=white, arc=.35mm, colframe=quarto-callout-tip-color-frame, bottomrule=.15mm, rightrule=.15mm, toprule=.15mm, opacityback=0, left=2mm, leftrule=.75mm, breakable]
 \begin{minipage}[t]{5.5mm}
 \textcolor{quarto-callout-tip-color}{\faLightbulb}
 \end{minipage}%
@@ -3616,7 +3616,93 @@ Hint: First consider the set
 
 \textbf{Solution}\vspace{2mm}
 
-Will be released after section!
+By (i) and (ii), \(\mathcal{V}\) is closed under linear combinations,
+i.e., if \(X_{1}, \ldots, X_{n} \in \mathcal{L}\) and
+\(c_{1}, \ldots, c_{n} \in \mathbb{R}\), then
+\(c_{1} X_{1}+\cdots+c_{n} X_{n} \in \mathcal{L}\). In the spirit of
+InSiPoD, we will show that every indicator r.v. is in \(\mathcal{V}\),
+then that every simple r.v. is in \(\mathcal{V}\), then that every
+nonnegative r.v. is in \(\mathcal{V}\), and lastly that every r.v. is in
+\(\mathcal{V}\). Let
+
+\[
+\mathcal{L}=\{A \in \mathcal{F}: I(A) \in \mathcal{V}\} .
+\]
+
+Then \(\mathcal{L}\) is a \(\lambda\)-system since:
+
+\begin{enumerate}
+\def\labelenumi{(\alph{enumi})}
+\item
+  We have \(\Omega \in \mathcal{L}\) since \(\Omega \in \mathcal{S}\) so
+  by (iv), \(I(\Omega) \in \mathcal{V}\).
+\item
+  If \(A, B \in \mathcal{L}\) with \(A \subseteq B\), then, by closure
+  under linear combinations,
+\end{enumerate}
+
+\[
+I(B \backslash A)=I(B)-I(A) \in \mathcal{V}
+\]
+
+\begin{enumerate}
+\def\labelenumi{(\alph{enumi})}
+\setcounter{enumi}{2}
+\tightlist
+\item
+  If \(A_{1}, A_{2}, \cdots \in \mathcal{L}\) with
+  \(A_{1} \subseteq A_{2} \subseteq \ldots\), then
+  \(A=\bigcup_{n=1}^{\infty} A_{n} \in \mathcal{L}\) by (iii), since
+\end{enumerate}
+
+\[
+I(A)=\sup _{n} I\left(A_{n}\right)
+\]
+
+To check the above equation in more detail, note that if
+\(\omega \notin A\) then \(I(A)(\omega)=0\) and
+\(I\left(A_{n}\right)(\omega)=0\) for all \(n\), whereas if
+\(\omega \in A\), then
+\(I(A)(\omega)=1, I\left(A_{n}\right)(\omega) \in\{0,1\}\) for all
+\(n\), and \(I\left(A_{n}\right)(\omega)=1\) for all sufficiently large
+\(n\).
+
+By (iv), \(\mathcal{S} \subseteq \mathcal{L}\). So by the
+\(\pi-\lambda\) theorem, \(\sigma(\mathcal{S}) \subseteq \mathcal{L}\).
+But \(\sigma(\mathcal{S})=\mathcal{F}\), so
+
+\[
+\mathcal{L}=\mathcal{F}
+\]
+
+Thus, all indicator r.v.s are in \(\mathcal{V}\). Every simple r.v. is a
+linear combination of indicator r.v.s, so all simple r.v.s are in
+\(\mathcal{V}\).
+
+Now let \(X\) be a nonnegative r.v. Write
+
+\[
+X=\lim _{n \rightarrow \infty} X_{n}
+\]
+
+with the \(X_{n}\) nonnegative simple r.v.s and
+\(X_{1} \leq X_{2} \leq \cdots \leq X\). Then \(X=\sup _{n} X_{n}\) (to
+check that for each \(\omega, X(\omega)\) is the least upper bound of
+\(\left\{X_{1}(\omega), X_{2}(\omega), \ldots\right\}\), note that
+\(X_{n}(\omega) \leq X(\omega)\) for all \(n\), and if
+\(X_{n}(\omega) \leq c\) for all \(n\), then
+\(\lim _{n \rightarrow \infty} X_{n}(\omega) \leq\)
+\(\lim _{n \rightarrow \infty} c\), which gives
+\(\left.X(\omega) \leq c\right)\).
+
+Thus, by (iii) we have \(X \in \mathcal{V}\). Now let \(X\) be an
+arbitrary r.v., and (as usual) let \(X^{+}=\max (X, 0)\) and
+\(X^{-}=\max (-X, 0)\). Then \(X^{+}\)and \(X^{-}\)are in
+\(\mathcal{V}\) since they are nonnegative r.v.s, so
+
+\[
+X=X^{+}-X^{-} \in \mathcal{V}
+\]
 
 \end{minipage}%
 \end{tcolorbox}
@@ -3646,7 +3732,7 @@ Note: avoid using density functions and integrals here; instead, think
 through why the results above are ``obvious'' from a representation
 perspective. Be careful to justify independence, wherever used.
 
-\begin{tcolorbox}[enhanced jigsaw, colframe=quarto-callout-tip-color-frame, arc=.35mm, toprule=.15mm, bottomrule=.15mm, colback=white, rightrule=.15mm, breakable, opacityback=0, leftrule=.75mm, left=2mm]
+\begin{tcolorbox}[enhanced jigsaw, colback=white, arc=.35mm, colframe=quarto-callout-tip-color-frame, bottomrule=.15mm, rightrule=.15mm, toprule=.15mm, opacityback=0, left=2mm, leftrule=.75mm, breakable]
 \begin{minipage}[t]{5.5mm}
 \textcolor{quarto-callout-tip-color}{\faLightbulb}
 \end{minipage}%
@@ -3654,7 +3740,71 @@ perspective. Be careful to justify independence, wherever used.
 
 \textbf{Solution}\vspace{2mm}
 
-Will be released after section!
+\begin{enumerate}
+\def\labelenumi{(\alph{enumi})}
+\tightlist
+\item
+  Let \(Y \sim \mathcal{N}\left(\mu, \sigma^{2}\right)\), with
+  \(\mu \sim \mathcal{N}\left(\mu_{0}, \sigma^{2} / r\right)\). Show by
+  representation that
+\end{enumerate}
+
+\[
+Y \sim \mathcal{N}\left(\mu_{0}, \sigma^{2} \cdot(1+1 / r)\right)
+\]
+
+By the properties of MVN,
+
+\[
+\begin{aligned}
+Y \mid \mu & \sim \mathcal{N}\left(\mu, \sigma^{2}\right), \mu \sim \mathcal{N}\left(\mu_{0}, \sigma^{2} / r\right) \\
+(Y, \mu) & \sim \mathcal{N}\left(\left(\begin{array}{c}
+\mu_{0} \\
+\mu_{0}
+\end{array}\right),\left(\begin{array}{cc}
+\sigma^{2}+\sigma^{2} / r & \sigma^{2} / r \\
+\sigma^{2} / r & \sigma^{2} / r
+\end{array}\right)\right) \\
+Y & \sim \mathcal{N}\left(\mu_{0}, \sigma^{2}(1+1 / r)\right)
+\end{aligned}
+\]
+
+\begin{enumerate}
+\def\labelenumi{(\alph{enumi})}
+\setcounter{enumi}{1}
+\tightlist
+\item
+  Now suppose \(\mu=0\) is known, but \(\sigma^{2} \sim t\). Expo. Given
+  only one Uniform \(U \sim\) Unif and one independent Normal
+  \(Z \sim \mathcal{N}(0,1)\), show how one can easily simulate one draw
+  from the marginal distribution of \(Y\). What is the marginal variance
+  of \(Y\) ?
+\end{enumerate}
+
+Note: avoid using density functions and integrals here; instead, think
+through why the results above are ``obvious'' from a representation
+perspective. Be careful to justify independence, wherever used.
+
+We want to simulate a draw from
+\(Y \mid \sigma^{2} \sim \mathcal{N}\left(0, \sigma^{2}\right), \sigma^{2} \sim t\)
+Expo. First, we can pick \(\sigma^{2}\) from the distribution
+\(-t \log U\), as we are given the Uniform. Second, wecan pick \(Y\)
+from \(Y \mid \sigma^{2}\), as we already picked the \(\sigma^{2}\)
+according to the Exponential distribution. Then
+
+\[
+Y \mid \sigma^{2} \sim \mathcal{N}\left(0, \sigma^{2}\right)
+\]
+
+Write \(Y=\sigma Z\). Then \(Z\) is independent of \(\sigma\) since the
+conditional distribution of \(Z=Y / \sigma\) is \(\mathcal{N}(0,1)\),
+which does not depend on \(\sigma\).
+
+The variance of \(Y\) is
+
+\[
+\operatorname{Var}(Y)=\operatorname{Var}\left(E\left(Y \mid \sigma^{2}\right)\right)+E\left(\operatorname{Var}\left(Y \mid \sigma^{2}\right)\right)=E\left(\sigma^{2}\right)=t
+\]
 
 \end{minipage}%
 \end{tcolorbox}
@@ -3676,7 +3826,7 @@ T=\sum_{j=1}^{N} X_{j}
 Find the \(r\) th cumulant of \(T\), for \(r\) a positive integer (in
 terms of \(m_{1}, m_{2}, \ldots\) ).
 
-\begin{tcolorbox}[enhanced jigsaw, colframe=quarto-callout-tip-color-frame, arc=.35mm, toprule=.15mm, bottomrule=.15mm, colback=white, rightrule=.15mm, breakable, opacityback=0, leftrule=.75mm, left=2mm]
+\begin{tcolorbox}[enhanced jigsaw, colback=white, arc=.35mm, colframe=quarto-callout-tip-color-frame, bottomrule=.15mm, rightrule=.15mm, toprule=.15mm, opacityback=0, left=2mm, leftrule=.75mm, breakable]
 \begin{minipage}[t]{5.5mm}
 \textcolor{quarto-callout-tip-color}{\faLightbulb}
 \end{minipage}%
@@ -3684,7 +3834,29 @@ terms of \(m_{1}, m_{2}, \ldots\) ).
 
 \textbf{Solution}\vspace{2mm}
 
-Will be released after section!
+Let \(M\) be the MGF of \(X_{1}\), with \(M(t)<\infty\) for all
+\(t \in(-a, a)\). For the rest of this solution, suppose that
+\(t \in(-a, a)\). Then
+
+\[
+M(t)=\sum_{n=0}^{\infty} \frac{m_{n} t^{n}}{n !}
+\]
+
+By Adam's law and LOTUS, the MGF of \(T\) is given by
+
+\[
+E\left(E\left(e^{t \sum_{j=1}^{N} X_{j}} \mid N\right)\right)=E\left(M(t)^{N}\right)=e^{-1} \sum_{n=0}^{\infty} \frac{M(t)^{n}}{n !}=e^{M(t)-1}
+\]
+
+So the CGF of \(T\) is
+
+\[
+M(t)-1=\sum_{n=1}^{\infty} \frac{m_{n} t^{n}}{n !}
+\]
+
+The \(r\) th cumulant of \(T\) is the coefficient of \(t^{r} / r\) ! in
+the Taylor expansion of the CGF of \(T\) about 0 . Hence, the \(r\) th
+cumulant of \(T\) is \(m_{r}\).
 
 \end{minipage}%
 \end{tcolorbox}
@@ -3704,6 +3876,344 @@ Next week, we will discuss:
 \end{itemize}
 
 \includegraphics{./assets/img/gluck.jpeg}
+
+Feel free to upload the pencil problem you wish to be discussed next
+week \href{https://forms.gle/RBmMNYJp4u3qD5W79}{here}.
+
+Note that a verified email address is needed in the GForm so we don't
+get scammy input! :)
+
+\(\,\)
+
+\bookmarksetup{startatroot}
+
+\hypertarget{section-7}{%
+\chapter*{Section 7}\label{section-7}}
+\addcontentsline{toc}{chapter}{Section 7}
+
+\markboth{Section 7}{Section 7}
+
+Last Updated: 2 Nov 2023
+
+Date: 3 Nov 2023
+
+\hypertarget{welcome-back}{%
+\section*{Welcome Back}\label{welcome-back}}
+\addcontentsline{toc}{section}{Welcome Back}
+
+\markright{Welcome Back}
+
+In this section, we will discuss:
+
+\begin{itemize}
+\tightlist
+\item
+  How was Midterm?
+\item
+  Multivariate Normal
+\end{itemize}
+
+\hypertarget{definition-by-representation}{%
+\section*{Definition by
+Representation}\label{definition-by-representation}}
+\addcontentsline{toc}{section}{Definition by Representation}
+
+\markright{Definition by Representation}
+
+Let's define what is MVN, building from i.i.d of univariate Normals.
+
+\leavevmode\vadjust pre{\hypertarget{def-MVN}{}}%
+\begin{definition}[]\label{def-MVN}
+
+(Multivariate Normal) The random vector
+\(\mathbf{Y} = (Y_1, Y_2, \cdots, Y_k)\) has the \emph{Multivariate
+Normal Distribution} if it is the form
+\[\mathbf{Y} = A \mathbf{Z} + \mathbf{\mu}, \] where
+\(Z_1, Z_2, \cdots, Z_m\) are i.i.d \(N(0,1)\) random variable, \(A\) is
+a \(k\) by \(m\) matrix, and \(\mathbf{\mu} \in \mathbb{R}^k\). We write
+\(\mathbf{Y} \sim N_k(\mathbf{\mu}, V)\) if \(\mathbf{Y}\) is a
+Multivariate Normal of dimension \(k\) with mean \(\mathbf{\mu}\) and
+covariance matrix \(V\).
+
+\end{definition}
+
+\leavevmode\vadjust pre{\hypertarget{def-MVN-2}{}}%
+\begin{definition}[]\label{def-MVN-2}
+
+(Multivariate Normal by Projections).A random vector \(\mathbf{Y}\) is
+multivariate normal if and only if every non zero linear combination of
+its components,\(\mathbf{b}^T\mathbf{Y}\) where \(\mathbf{b}=0\),is
+distributed according to a univariate normal.
+
+\end{definition}
+
+\hypertarget{properties-about-multivariate-normal}{%
+\section*{Properties about Multivariate
+Normal}\label{properties-about-multivariate-normal}}
+\addcontentsline{toc}{section}{Properties about Multivariate Normal}
+
+\markright{Properties about Multivariate Normal}
+
+\leavevmode\vadjust pre{\hypertarget{thm-moment-MVN}{}}%
+\begin{theorem}[]\label{thm-moment-MVN}
+
+(Cramér-Wold device).Given a finite-dimensional random vector
+\(\mathbf{X}\), the joint distribution of \(\mathbf{X}\) is uniquely
+determined by its projections onto 1-dimensional spaces. In other words,
+knowing the marginal distribution of \(\mathbf{t}^T \mathbf{X}\), for
+every fixed \(\mathbf{t}\), is enough.
+
+\end{theorem}
+
+The above proposition follows from the fact that joint characteristic
+functions determine multivariate distributions (a hard but standard fact
+from analysis). This is because the joint characteristic function is
+just \[
+\varphi_{\mathbf{X}}(\mathbf{t})=\mathbf{E}\left[e^{i \mathbf{t}^T \mathbf{X}}\right] .
+\]
+
+In particular, \(\mathbf{t}^T \mathbf{X}\) occurs in the exponent, so
+values of the characteristic function are completely determined from
+marginal distributions of projections of \(\mathbf{X}\).
+
+\leavevmode\vadjust pre{\hypertarget{def-mgf-mvn}{}}%
+\begin{definition}[]\label{def-mgf-mvn}
+
+(MGF of multivariate normal). Recall that the moment generating function
+of a univariate \(\mathcal{N}\left(\mu, \sigma^2\right)\) normal
+distribution is \[
+e^{t \mu+\sigma^2 t^2 / 2}
+\]
+
+The joint moment generating function of a multivariate normal
+\(\mathcal{N}(\mu, \Sigma)\) is analogously \[
+e^{\mathbf{t}^T\left(\mu+\frac{1}{2} \Sigma \mathbf{t}\right)} .
+\]
+
+This is because if we let \(\mathbf{W} \sim \mathcal{N}(\mu, \Sigma)\)
+and consider the projection \(\mathbf{t}^T \mathbf{W}\), we get
+\(\mathbf{E}\left[\mathbf{t}^T \mathbf{W}\right]=\mathbf{t}^T \mu\) and
+\(\operatorname{Var}\left[\mathbf{t}^T \mathbf{W}\right]=\operatorname{Var}\left[\mathbf{t}^T\left(\Sigma^{1 / 2} \mathbf{W}+\mu\right)\right]=\operatorname{Var}\left[\mathbf{t}^T \Sigma^{1 / 2} \mathbf{Z}\right]=\mathbf{t}^T \Sigma \mathbf{t}\).
+Therefore, the distribution of each projection of a multivariate normal
+is also normal, so we can compute the joint MGF from the univariate MGF.
+
+\end{definition}
+
+\leavevmode\vadjust pre{\hypertarget{def-closure}{}}%
+\begin{definition}[]\label{def-closure}
+
+(Closure properties of MVN). The multivariate normal distribution has
+many nice closure properties, such as:
+
+\begin{itemize}
+\item
+  If you take a linear combination or shift of multivariate normals, it
+  is also multivariate normal.
+\item
+  Any vector of projections (i.e., projection matrix) is also
+  multivariate normal.
+\item
+  The conditional distribution of a multivariate normal is also
+  multivariate normal.
+\end{itemize}
+
+\end{definition}
+
+\hypertarget{some-useful-linear-algebra-results}{%
+\section*{Some useful linear algebra
+results}\label{some-useful-linear-algebra-results}}
+\addcontentsline{toc}{section}{Some useful linear algebra results}
+
+\markright{Some useful linear algebra results}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  The trace of a matrix is a linear function.
+\item
+  If \(A\) is \(n\times k\) and \(B\) is \(k\times n\),
+  \(\mbox{tr}(AB)=\mbox{tr}(BA)\).
+\item
+  \textbf{Spectral decomposition}: Suppose \(A_{n\times n}\) is a real
+  valued and symmetric with rank \(k\). Then there exists a matrix
+  \(\Gamma_{n\times k}=(\gamma_{1},\dots,\gamma_{k})\) with orthogonal
+  columns and
+  \(\Lambda_{k \times k}=\mbox{{diag}}(\lambda_{1},\dots,\lambda_{k})\)
+  with \(\lambda_{i}\neq0\) such that \(A=\Gamma\Lambda\Gamma^{\top}\).
+  The \(\gamma_{i}\)s are the eigenvectors of \(A\), with
+  \(\lambda_{i}\)s being the corresponding nonzero eigenvalues.
+\item
+  If \(A\) is non-negative definite it has nonnegative eigenvalues.
+\end{enumerate}
+
+\hypertarget{section-discussion-questions-5}{%
+\section*{Section Discussion
+Questions}\label{section-discussion-questions-5}}
+\addcontentsline{toc}{section}{Section Discussion Questions}
+
+\markright{Section Discussion Questions}
+
+\hypertarget{section-problem-1-5}{%
+\subsection*{✏️ Section Problem 1}\label{section-problem-1-5}}
+\addcontentsline{toc}{subsection}{✏️ Section Problem 1}
+
+Suppose
+\(\mathbf{Y}_{n\times 1}\sim \mathcal{N}_n(\mathbf{\mu},\Sigma)\), and
+define \(Q=\mathbf{Y}^{\top}A\mathbf{Y}\), where \(A\) is a
+\(n \times n\) symmetric matrix.
+
+\begin{enumerate}
+\def\labelenumi{(\alph{enumi})}
+\item
+  Find the expectation of \(Q\).
+\item
+  Find the variance of \(Q\).
+\item
+  For symmetric matrices \(A_{1}\) and \(A_{2}\) and corresponding
+  quadratic forms \(Q_{i}=\mathbf{Y}^{\top}A_{i}\mathbf{Y}\), find the
+  covariance of \(Q_{1}\) and \(Q_{2}\).
+\item
+  How could we have solved this problem if \(A\) was not symmetric?
+\end{enumerate}
+
+\begin{tcolorbox}[enhanced jigsaw, colback=white, arc=.35mm, colframe=quarto-callout-tip-color-frame, bottomrule=.15mm, rightrule=.15mm, toprule=.15mm, opacityback=0, left=2mm, leftrule=.75mm, breakable]
+\begin{minipage}[t]{5.5mm}
+\textcolor{quarto-callout-tip-color}{\faLightbulb}
+\end{minipage}%
+\begin{minipage}[t]{\textwidth - 5.5mm}
+
+\textbf{Solution}\vspace{2mm}
+
+Will be posted after section
+
+\end{minipage}%
+\end{tcolorbox}
+
+\hypertarget{section-problem-2-8.17}{%
+\subsection*{✏️ Section Problem 2 (8.17)}\label{section-problem-2-8.17}}
+\addcontentsline{toc}{subsection}{✏️ Section Problem 2 (8.17)}
+
+(Interclass correlation model) Let \(\mathbf{X}=(X_1, \cdots, X_k)\) be
+Multivariate Normal with mean vector \(\mu(1,1,\cdots, 1)\) and
+covariance matrix \(\sigma^2 C\), where \(C_{ii}=1\) for all \(i\) and
+\(C_{ij}=\rho\) for all \(i\neq j\), for some \(\rho \in (-1,1)\). This
+is known as the \emph{interclass correlation model} (and is based on an
+exchangeability assumption)
+
+\begin{enumerate}
+\def\labelenumi{(\alph{enumi})}
+\item
+  Assume \(k=3\) for this part. Why do we require that
+  \(rho \geq -1/2\)?
+\item
+  Find the joint distribution (with means and covariance) of the vector
+  \((\bar{X}, X_1-\bar{X}, X_1-X_2)\).
+\item
+  Show that \(\sigma^2 C\) has only two distinct eigenvalues (for
+  \(\rho \neq 0\)), namely \(\lambda_1 \equiv \sigma^2(1+(k-1)\rho)\)
+  and \(\lambda_2 \equiv \sigma^2(1-\rho)\), with multiplicities 1 and
+  \(k-1\) respectively.
+\end{enumerate}
+
+Hint: Write \(C = (1-\rho)I + \rho J\) in terms of the projection
+matrices \(J/k\) and \(I-J/k\), where \(J\) is the matrix of all 1's.
+
+\begin{tcolorbox}[enhanced jigsaw, colback=white, arc=.35mm, colframe=quarto-callout-tip-color-frame, bottomrule=.15mm, rightrule=.15mm, toprule=.15mm, opacityback=0, left=2mm, leftrule=.75mm, breakable]
+\begin{minipage}[t]{5.5mm}
+\textcolor{quarto-callout-tip-color}{\faLightbulb}
+\end{minipage}%
+\begin{minipage}[t]{\textwidth - 5.5mm}
+
+\textbf{Solution}\vspace{2mm}
+
+Will be posted after section
+
+\end{minipage}%
+\end{tcolorbox}
+
+\hypertarget{section-problem-3-8.11}{%
+\subsection*{✏️ Section Problem 3 (8.11)}\label{section-problem-3-8.11}}
+\addcontentsline{toc}{subsection}{✏️ Section Problem 3 (8.11)}
+
+(Matrix times a MVN vector) Let \(Y \sim N_k(\mu, V)\) be Multivariate
+Normal and \(X=B Y\), where \(B\) is an \(m\) by \(k\) matrix of
+constants, such that \(B V B^{\top}\) is invertible.
+
+\begin{enumerate}
+\def\labelenumi{(\alph{enumi})}
+\item
+  Is \((X, Y)\) Multivariate Normal? Explain.
+\item
+  Find the conditional distribution of \(Y\) given \(X\).
+\item
+  What does your answer reduce to when \(m=k\) and \(B\) is invertible?
+  Does this make sense intuitively?
+\end{enumerate}
+
+\begin{tcolorbox}[enhanced jigsaw, colback=white, arc=.35mm, colframe=quarto-callout-tip-color-frame, bottomrule=.15mm, rightrule=.15mm, toprule=.15mm, opacityback=0, left=2mm, leftrule=.75mm, breakable]
+\begin{minipage}[t]{5.5mm}
+\textcolor{quarto-callout-tip-color}{\faLightbulb}
+\end{minipage}%
+\begin{minipage}[t]{\textwidth - 5.5mm}
+
+\textbf{Solution}\vspace{2mm}
+
+Will be posted after section
+
+\end{minipage}%
+\end{tcolorbox}
+
+\hypertarget{section-problem-4-final-2011-q2}{%
+\subsection*{✏️ Section Problem 4 (Final 2011,
+Q2)}\label{section-problem-4-final-2011-q2}}
+\addcontentsline{toc}{subsection}{✏️ Section Problem 4 (Final 2011, Q2)}
+
+\begin{enumerate}
+\def\labelenumi{(\alph{enumi})}
+\item
+  Show that within a Multivariate Normal, conditioning on more
+  information reduces variance:
+  \(\operatorname{Var}\left(Y \mid \mathbf{X}_1\right) \leq \operatorname{Var}\left(Y \mid \mathbf{X}_{\mathbf{2}}\right)\)
+  if \(Y, \mathbf{X}_1, \mathbf{X}_{\mathbf{2}}\) are subvectors of a
+  MVN random vector, with \(Y\) onedimensional and
+  \(\mathbf{X}_{\mathbf{2}}\) a subvector of
+  \(\mathbf{X}_{\mathbf{1}}\).
+\item
+  Give a counterexample to the above if the distribution is not MVN. On
+  the other hand, show that on average conditioning on more information
+  reduces variance:
+  \(E\left(\operatorname{Var}\left(Y \mid \mathbf{X}_1\right)\right) \leq\)
+  \(E\left(\operatorname{Var}\left(Y \mid \mathbf{X}_{\mathbf{2}}\right)\right)\).
+\end{enumerate}
+
+\begin{tcolorbox}[enhanced jigsaw, colback=white, arc=.35mm, colframe=quarto-callout-tip-color-frame, bottomrule=.15mm, rightrule=.15mm, toprule=.15mm, opacityback=0, left=2mm, leftrule=.75mm, breakable]
+\begin{minipage}[t]{5.5mm}
+\textcolor{quarto-callout-tip-color}{\faLightbulb}
+\end{minipage}%
+\begin{minipage}[t]{\textwidth - 5.5mm}
+
+\textbf{Solution}\vspace{2mm}
+
+Will be posted after section
+
+\end{minipage}%
+\end{tcolorbox}
+
+\hypertarget{next-week-6}{%
+\section*{Next Week}\label{next-week-6}}
+\addcontentsline{toc}{section}{Next Week}
+
+\markright{Next Week}
+
+Next week, we will discuss:
+
+\begin{itemize}
+\tightlist
+\item
+  Inequalities
+\end{itemize}
+
+\includegraphics{./assets/img/markov.jpeg}
 
 Feel free to upload the pencil problem you wish to be discussed next
 week \href{https://forms.gle/RBmMNYJp4u3qD5W79}{here}.
