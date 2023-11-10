@@ -35,7 +35,7 @@ Some of the important terms and definitons of Chapter 3 is as follow:
 
 9. **Weibull**: $W = X^\beta \sim$ Wei($\beta$) where $X \sim Expo$ and $\beta >0.$ 
 
-10. **Beta**: $B = \frac{G_a}{G_a+G_b} \sim Beta(a,b)$ where $ G_a\sim Gamma(a)$, $G_b\sim Gamma(b)$ and $G_a \perp\!\!\!\!\perp G_b$; note that $U^{1/\alpha} \sim Beta(\alpha,1).$
+10. **Beta**: $B = \frac{G_a}{G_a+G_b} \sim Beta(a,b)$ where $G_a \sim Gamma(a)$, $G_b\sim Gamma(b)$ and $G_a \perp\!\!\!\!\perp G_b$; note that $U^{1/\alpha} \sim Beta(\alpha,1).$
 
 11. **Beta-Gamma**: Let $G_a \sim Gamma(a) \perp\!\!\!\!\perp G_b\sim Gamma(b)$ , $B = \frac{G_a}{G_a+G_b}$ and $T = G_a + G_b \sim Gamma(a+b).$ Then $T \perp\!\!\!\!\perp B.$
 
