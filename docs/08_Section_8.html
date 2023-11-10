@@ -270,14 +270,14 @@ $$
 <ol type="1">
 <li><p>Cauchy-Schwartz: <span class="math inline">\({|E(XY)| \leq \sqrt{ E(X^2)E(Y^2) }}.\)</span></p></li>
 <li><p>Monotonicity (of expectation): <span class="math inline">\(E(Y_1) \leq E(Y_2)\)</span> for <span class="math inline">\(Y_1\leq Y_2.\)</span></p></li>
-<li><p>Markov: for any $a&gt;0, {P(|Y|a ) }. $</p></li>
+<li><p>Markov: for any <span class="math inline">\(a&gt;0, {P(|Y|\geq a ) \leq \frac{E|Y|}{a} }.\)</span></p></li>
 <li><p>Chebyshev: for any <span class="math inline">\(Y\sim [\mu,\sigma^2 (&lt;\infty)]\)</span> and <span class="math inline">\(\epsilon&gt;0, {P(|Y-\mu| \geq \epsilon ) \leq \frac{\sigma^2}{\epsilon^2}}.\)</span></p></li>
 <li><p>Chernoff: for any <span class="math inline">\(Y\)</span> with MGF <span class="math inline">\(M(\cdot)\)</span> and any <span class="math inline">\(a&gt;0,t&gt;0\)</span> which <span class="math inline">\(M(t)\)</span> exists, we have <span class="math inline">\(P(Y\geq a ) \leq e^{-at}M(t).\)</span></p></li>
 <li><p>Concentration (Hoeffding): Let <span class="math inline">\(Y_1,Y_2,\cdots,Y_n\)</span> be bounded, independent and <span class="math inline">\(\epsilon&gt;0.\)</span> If <span class="math inline">\(|Y_j|\leq c\)</span> for each <span class="math inline">\(j\)</span> then <span class="math inline">\(P( |\bar{Y_n} - E\bar{Y_n}|&gt;\epsilon ) \leq 2 e^{-n\epsilon^2 /(2c^2)}.\)</span> If <span class="math inline">\(a_j \leq Y_j \leq b_j\)</span>, then <span class="math inline">\(P( |\bar{Y_n} - E\bar{Y_n}|&gt;\epsilon ) \leq 2 e^{-2n^2\epsilon^2 /(\sum (b_j-a_j)^2)}.\)</span></p></li>
-<li><p>Convexity (Jensen): $Eg(Y) g(EY) $ for <span class="math inline">\(g\)</span> convex (<span class="math inline">\(g''(x) \geq 0.\)</span>)</p></li>
-<li><p>Contraction: for any <span class="math inline">\(r\geq 1\)</span>, $ | E(Y|X)| _r |Y|_r.$</p></li>
-<li><p>Correlation inequality: for <span class="math inline">\(g,h\)</span> increasing functions $ (g(Y),h(Y)) .$</p></li>
-<li><p>Mills inequality: let <span class="math inline">\(Z \sim \N(0,1)\)</span>, then $ P(Z &gt; t ) $ for all <span class="math inline">\(t&gt;0.\)</span></p></li>
+<li><p>Convexity (Jensen): <span class="math inline">\(E[g(Y)] \geq g(EY)\)</span> for <span class="math inline">\(g\)</span> convex (<span class="math inline">\(g''(x) \geq 0.\)</span>)</p></li>
+<li><p>Contraction: for any <span class="math inline">\(r\geq 1\)</span>, <span class="math inline">\(\| E(Y|X)\| _r \leq \|Y\|_r.\)</span></p></li>
+<li><p>Correlation inequality: for <span class="math inline">\(g,h\)</span> increasing functions <span class="math inline">\(Cor(g(Y),h(Y)) \geq 0.\)</span></p></li>
+<li><p>Mills inequality: let <span class="math inline">\(Z \sim \N(0,1)\)</span>, then <span class="math inline">\(P(Z &gt; t ) \leq \frac{\varphi(t)}{t}\)</span> for all <span class="math inline">\(t&gt;0.\)</span></p></li>
 <li><p>Minkowski: for <span class="math inline">\(1\leq r &lt;\infty\)</span>, <span class="math inline">\(\|X+Y\|_r \leq \|X\|_r + \|Y\|_r.\)</span></p></li>
 <li><p>Monotonicity of norms: for any <span class="math inline">\(1 \leq r \leq s &lt;\infty\)</span>,$ { |Y|_r |Y|_s}.$</p></li>
 <li><p>Conjugate Norms (Holder): for <span class="math inline">\(\frac{1}{r} + \frac{1}{s}= 1, {\|XY\|_1 \leq \|X\|_r \|Y\|_s}.\)</span></p></li>
@@ -312,42 +312,28 @@ Solution
 </div>
 <div id="callout-1" class="callout-1-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>Will be posted after section! :) <!--
-(a) Following the hint, we write
-$$
-E(X)=E\left(X \mathbf{1}_{X \leq \theta E(X)}\right)+E\left(X \mathbf{1}_{X>\theta E(X)}\right) .
-$$
-
-The first addend
-$$
+<ol type="a">
+<li>Following the hint, we write <span class="math display">\[
+E(X)=E\left(X \mathbf{1}_{X \leq \theta E(X)}\right)+E\left(X \mathbf{1}_{X&gt;\theta E(X)}\right) .
+\]</span></li>
+</ol>
+<p>The first addend <span class="math display">\[
 E\left(X 1_{X \leq \theta E(X)}\right) \leq \theta E[X]
-$$
-while the second addend
-$$
-E\left(X 1_{X>\theta E(X)}\right) \leq E\left[X^2\right]^{1 / 2} \mathbb{P}(X>\theta E[X])^{1 / 2}
-$$
-by the Cauchy-Schwarz inequality. The desired inequality then follows.
-
-(b) By the Cauchy-Schwarz inequality;
-$$
-E(X-\theta E[X]) \leq E\left((X-\theta E[X]) 1_{X>\theta E(X)}\right) \leq E\left[(X-\theta E[X])^2\right]^{1 / 2} \mathbb{P}(X>\theta E[X])^{1 / 2}
-$$
-which, after rearranging, implies that
-$$
-\mathbb{P}(X>\theta E[X]) \geq \frac{(1-\theta)^2 E[X]^2}{E\left[(X-\theta E[X])^2\right]}=\frac{(1-\theta)^2 E[X]^2}{\operatorname{Var}(X)+(1-\theta)^2 E[X]^2} .
-$$
-
-The lower bound in part (a) can be rewritten as
-$$
+\]</span> while the second addend <span class="math display">\[
+E\left(X 1_{X&gt;\theta E(X)}\right) \leq E\left[X^2\right]^{1 / 2} \mathbb{P}(X&gt;\theta E[X])^{1 / 2}
+\]</span> by the Cauchy-Schwarz inequality. The desired inequality then follows.</p>
+<ol start="2" type="a">
+<li>By the Cauchy-Schwarz inequality; <span class="math display">\[
+E(X-\theta E[X]) \leq E\left((X-\theta E[X]) 1_{X&gt;\theta E(X)}\right) \leq E\left[(X-\theta E[X])^2\right]^{1 / 2} \mathbb{P}(X&gt;\theta E[X])^{1 / 2}
+\]</span> which, after rearranging, implies that <span class="math display">\[
+\mathbb{P}(X&gt;\theta E[X]) \geq \frac{(1-\theta)^2 E[X]^2}{E\left[(X-\theta E[X])^2\right]}=\frac{(1-\theta)^2 E[X]^2}{\operatorname{Var}(X)+(1-\theta)^2 E[X]^2} .
+\]</span></li>
+</ol>
+<p>The lower bound in part (a) can be rewritten as <span class="math display">\[
 \frac{(1-\theta)^2 E[X]^2}{\operatorname{Var}(X)+E[X]^2}
-$$
-which is strictly smaller than
-$$
+\]</span> which is strictly smaller than <span class="math display">\[
 \frac{(1-\theta)^2 E[X]^2}{\operatorname{Var}(X)+(1-\theta)^2 E[X]^2}
-$$
-provided that $E[X]^2>0$ and $0<\theta \leq 1$.
-The rest follows by considering the substitution $\theta=1-\tilde{\theta} \sigma / \mu$ for $0 \leq \mu-\tilde{\theta} \sigma \leq \mu$.
---></p>
+\]</span> provided that <span class="math inline">\(E[X]^2&gt;0\)</span> and <span class="math inline">\(0&lt;\theta \leq 1\)</span>. The rest follows by considering the substitution <span class="math inline">\(\theta=1-\tilde{\theta} \sigma / \mu\)</span> for <span class="math inline">\(0 \leq \mu-\tilde{\theta} \sigma \leq \mu\)</span>.</p>
 </div>
 </div>
 </div>
@@ -369,27 +355,19 @@ Solution
 </div>
 <div id="callout-2" class="callout-2-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>Will be posted after section! :) <!--
-Let $\displaystyle Y=X_{J}$, where $J$ is a random index supported on $\{1,\dotsc ,n\}$. By LOTP,
-\begin{equation}
+<p>Let <span class="math inline">\(\displaystyle Y=X_{J}\)</span>, where <span class="math inline">\(J\)</span> is a random index supported on <span class="math inline">\(\{1,\dotsc ,n\}\)</span>. By LOTP, <span class="math display">\[\begin{equation}
 E\left( |Y|^{\ell }\right) =\frac{1}{n}\sum _{j=1}^{n} E\left( |X_{j} |^{\ell }\right)
-\end{equation}
-for $\displaystyle \ell =2,3,4$. By Cauchy-Schwarz,
-\begin{equation*}
+\end{equation}\]</span> for <span class="math inline">\(\displaystyle \ell =2,3,4\)</span>. By Cauchy-Schwarz, <span class="math display">\[\begin{equation*}
 E\left( |Y|^{3}\right) \leq \sqrt{E\left( |Y|^{2}\right) E\left( |Y|^{4}\right)} .
-\end{equation*}
-So from (1), we get the inequality
-\begin{equation*}
+\end{equation*}\]</span> So from (1), we get the inequality <span class="math display">\[\begin{equation*}
 \frac{1}{n}\sum _{j=1}^{n} E\left( |X_{j} |^{3}\right) \leq \sqrt{\left(\frac{1}{n}\sum _{j=1}^{n} E\left( |X_{j} |^{2}\right)\right)\left(\frac{1}{n}\sum _{j=1}^{n} E\left( |X_{j} |^{4}\right)\right)} .
-\end{equation*}
-Removing the unnecessary absolute values on the left and multiplying both sides by $\displaystyle n$, we get the desired inequality.
---></p>
+\end{equation*}\]</span> Removing the unnecessary absolute values on the left and multiplying both sides by <span class="math inline">\(\displaystyle n\)</span>, we get the desired inequality.</p>
 </div>
 </div>
 </div>
 </section>
 <section id="section-problem-3" class="level3">
-<h3 class="anchored" data-anchor-id="section-problem-3">✏️ Section Problem 3</h3>
+<h3 class="anchored">✏️ Section Problem 3</h3>
 <p>Let <span class="math inline">\(X_1,X_2,\cdots\)</span> be independent with mean 0 and <span class="math inline">\(\sigma^2_i = \E\left(X_i^2\right) &lt; \infty\)</span> and define partial sums <span class="math inline">\(S_k = X_1 + X_2 + \cdots + X_k.\)</span> Then <span class="math display">\[\begin{equation}
 P\left( \max_{1\leq k \leq n} |S_k| \geq \epsilon \right) \leq \frac{\E\left(S_n^2\right)}{\epsilon^2}.
 \end{equation}\]</span></p>
@@ -404,22 +382,13 @@ Solution
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
 <div id="callout-3" class="callout-3-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<p>Will be posted after section! :) <!--
-## Solution
-Let $A_k = \{|S_k| \geq \epsilon, |S_i| < \epsilon \ \forall i < k\}$. This is the sets of events consisting of $X_1,\cdots, X_n$ such that $|S_k|$ is the first partial sum with absolute value greater than $\epsilon.$ We can see that $A_k$'s are disjoint and the union $$\cup_{i=1}^n A_i = \{\exists k\in\{1,...,n\} \ s.t. \  |S_k| \geq \epsilon\} = \{\max_{1\leq k \leq n } |S_k| \geq \epsilon\}.$$ 
-
-We must have 
-$$ \E\left(S_n^2\right) \geq \E\left(S_n^2 \mathbb{I} \left(\cup_{k=1}^n A_k\right)\right) = \sum_{k=1}^{n}\E\left(S_n^2 \mathbb{I}(A_k)\right),$$ because $A_k$'s are disjoint and indicator function is always $\leq 1$. For each $k$ we must have $S_n^2 = S_k^2 + 2(S_n-S_k)S_k + (S_n-S_k)^2$ and therefore 
-$$
-E\left(S_n^2 \mathbb{I}(A_k)\right) = E\left(S_k^2 \mathbb{I}(A_k)\right) + E\left( (S_n-S_k)^2 \mathbb{I}(A_k) \right)+ 2 E\left((S_n-S_k)S_k \mathbb{I}(A_k)\right) .$$ 
-We know that $E\left( (S_n-S_k)^2 \mathbb{I}(A_k) \right) \geq 0$ and since $X_i$'s are iid and $\mathbb{I}(A_k)$ only depends on $X_1,\cdots,X_k$ we must have $$E\left((S_n-S_k)S_k \mathbb{I}(A_k)\right)  = E\left[S_n-S_k\right] E\left[S_k\mathbb{I}(A_k)\right]= 0.$$ 
-
-More importantly $$E(S_k^2\mathbb{I}(A_k)) = \mathbb{P}(A_k) E\left[S_k^2|A_k\right] \geq \mathbb{P}(A_k)\epsilon^2.$$
-So $$ \E\left(S_n^2 \mathbb{I}(A_k)\right) \geq \mathbb{P}(A_k) \epsilon^2 \quad \forall k.$$ Finally 
-$$ E(S_n^2) \geq \sum_{k=1}^n \mathbb{P}(A_k)\epsilon^2 = \epsilon^2 \mathbb{P}\left(\cup_{k=1}^n A_k\right) = \epsilon^2 \mathbb{P}\left(\max_{1\leq k \leq n} |S_k| \geq \epsilon\right).$$
---></p>
-</div>
+<section id="solution-3" class="level2 callout-body-container callout-body">
+<h2 class="anchored" data-anchor-id="solution-3">Solution</h2>
+<p>Let <span class="math inline">\(A_k = \{|S_k| \geq \epsilon, |S_i| &lt; \epsilon \ \forall i &lt; k\}\)</span>. This is the sets of events consisting of <span class="math inline">\(X_1,\cdots, X_n\)</span> such that <span class="math inline">\(|S_k|\)</span> is the first partial sum with absolute value greater than <span class="math inline">\(\epsilon.\)</span> We can see that <span class="math inline">\(A_k\)</span>’s are disjoint and the union <span class="math display">\[\cup_{i=1}^n A_i = \{\exists k\in\{1,...,n\} \ s.t. \  |S_k| \geq \epsilon\} = \{\max_{1\leq k \leq n } |S_k| \geq \epsilon\}.\]</span></p>
+<p>We must have <span class="math display">\[ \E\left(S_n^2\right) \geq \E\left(S_n^2 \mathbb{I} \left(\cup_{k=1}^n A_k\right)\right) = \sum_{k=1}^{n}\E\left(S_n^2 \mathbb{I}(A_k)\right),\]</span> because <span class="math inline">\(A_k\)</span>’s are disjoint and indicator function is always <span class="math inline">\(\leq 1\)</span>. For each <span class="math inline">\(k\)</span> we must have <span class="math inline">\(S_n^2 = S_k^2 + 2(S_n-S_k)S_k + (S_n-S_k)^2\)</span> and therefore <span class="math display">\[
+E\left(S_n^2 \mathbb{I}(A_k)\right) = E\left(S_k^2 \mathbb{I}(A_k)\right) + E\left( (S_n-S_k)^2 \mathbb{I}(A_k) \right)+ 2 E\left((S_n-S_k)S_k \mathbb{I}(A_k)\right) .\]</span> We know that <span class="math inline">\(E\left( (S_n-S_k)^2 \mathbb{I}(A_k) \right) \geq 0\)</span> and since <span class="math inline">\(X_i\)</span>’s are iid and <span class="math inline">\(\mathbb{I}(A_k)\)</span> only depends on <span class="math inline">\(X_1,\cdots,X_k\)</span> we must have <span class="math display">\[E\left((S_n-S_k)S_k \mathbb{I}(A_k)\right)  = E\left[S_n-S_k\right] E\left[S_k\mathbb{I}(A_k)\right]= 0.\]</span></p>
+<p>More importantly <span class="math display">\[E(S_k^2\mathbb{I}(A_k)) = \mathbb{P}(A_k) E\left[S_k^2|A_k\right] \geq \mathbb{P}(A_k)\epsilon^2.\]</span> So <span class="math display">\[ \E\left(S_n^2 \mathbb{I}(A_k)\right) \geq \mathbb{P}(A_k) \epsilon^2 \quad \forall k.\]</span> Finally <span class="math display">\[ E(S_n^2) \geq \sum_{k=1}^n \mathbb{P}(A_k)\epsilon^2 = \epsilon^2 \mathbb{P}\left(\cup_{k=1}^n A_k\right) = \epsilon^2 \mathbb{P}\left(\max_{1\leq k \leq n} |S_k| \geq \epsilon\right).\]</span></p>
+</section>
 </div>
 </div>
 </section>

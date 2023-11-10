@@ -19,7 +19,7 @@ Here are some important inequality recap!
 
 2. Monotonicity (of expectation): $E(Y_1) \leq E(Y_2)$ for $Y_1\leq Y_2.$
 
-3. Markov: for any $a>0, {P(|Y|\geq a ) \leq \frac{E|Y|}{a} }. $ 
+3. Markov: for any $a>0, {P(|Y|\geq a ) \leq \frac{E|Y|}{a} }.$ 
 
 4. Chebyshev: for any $Y\sim [\mu,\sigma^2 (<\infty)]$ and $\epsilon>0, {P(|Y-\mu| \geq \epsilon ) \leq \frac{\sigma^2}{\epsilon^2}}.$
 
@@ -27,13 +27,13 @@ Here are some important inequality recap!
 
 6. Concentration (Hoeffding): Let $Y_1,Y_2,\cdots,Y_n$ be bounded, independent and $\epsilon>0.$ If $|Y_j|\leq c$ for each $j$ then $P( |\bar{Y_n} - E\bar{Y_n}|>\epsilon ) \leq 2 e^{-n\epsilon^2 /(2c^2)}.$ If $a_j \leq Y_j \leq b_j$, then $P( |\bar{Y_n} - E\bar{Y_n}|>\epsilon ) \leq 2 e^{-2n^2\epsilon^2 /(\sum (b_j-a_j)^2)}.$
 
-7. Convexity (Jensen): $Eg(Y) \geq g(EY) $ for $g$ convex ($g''(x) \geq 0.$)
+7. Convexity (Jensen): $E[g(Y)] \geq g(EY)$ for $g$ convex ($g''(x) \geq 0.$)
 
-8. Contraction: for any $r\geq 1$, $ \| E(Y|X)\| _r \leq \|Y\|_r.$
+8. Contraction: for any $r\geq 1$, $\| E(Y|X)\| _r \leq \|Y\|_r.$
 
-9. Correlation inequality: for $g,h$ increasing functions $ \cor(g(Y),h(Y)) \geq 0.$ 
+9. Correlation inequality: for $g,h$ increasing functions $Cor(g(Y),h(Y)) \geq 0.$ 
 
-10. Mills inequality: let $Z \sim \N(0,1)$, then $ P(Z > t ) \leq \frac{\varphi(t)}{t}$ for all $t>0.$
+10. Mills inequality: let $Z \sim \N(0,1)$, then $P(Z > t ) \leq \frac{\varphi(t)}{t}$ for all $t>0.$
 
 11. Minkowski: for $1\leq r <\infty$, $\|X+Y\|_r \leq \|X\|_r + \|Y\|_r.$
 
@@ -71,8 +71,7 @@ for $0 \leq \mu-\theta \sigma \leq \mu$.
 ::: {.callout-tip collapse="true" appearance="simple"}
 
 ## Solution 
-Will be posted after section! :)
-<!--
+
 (a) Following the hint, we write
 $$
 E(X)=E\left(X \mathbf{1}_{X \leq \theta E(X)}\right)+E\left(X \mathbf{1}_{X>\theta E(X)}\right) .
@@ -107,7 +106,7 @@ $$
 $$
 provided that $E[X]^2>0$ and $0<\theta \leq 1$.
 The rest follows by considering the substitution $\theta=1-\tilde{\theta} \sigma / \mu$ for $0 \leq \mu-\tilde{\theta} \sigma \leq \mu$.
--->
+
 :::
 
 
@@ -121,8 +120,7 @@ The rest follows by considering the substitution $\theta=1-\tilde{\theta} \sigma
 ::: {.callout-tip collapse="true" appearance="simple"}
 
 ## Solution 
-Will be posted after section! :)
-<!--
+
 Let $\displaystyle Y=X_{J}$, where $J$ is a random index supported on $\{1,\dotsc ,n\}$. By LOTP,
 \begin{equation}
 E\left( |Y|^{\ell }\right) =\frac{1}{n}\sum _{j=1}^{n} E\left( |X_{j} |^{\ell }\right)
@@ -136,7 +134,7 @@ So from (1), we get the inequality
 \frac{1}{n}\sum _{j=1}^{n} E\left( |X_{j} |^{3}\right) \leq \sqrt{\left(\frac{1}{n}\sum _{j=1}^{n} E\left( |X_{j} |^{2}\right)\right)\left(\frac{1}{n}\sum _{j=1}^{n} E\left( |X_{j} |^{4}\right)\right)} .
 \end{equation*}
 Removing the unnecessary absolute values on the left and multiplying both sides by $\displaystyle n$, we get the desired inequality.
--->
+
 :::
 
 ### ✏️ Section Problem 3
@@ -148,8 +146,7 @@ P\left( \max_{1\leq k \leq n} |S_k| \geq \epsilon \right) \leq \frac{\E\left(S_n
 
 ::: {.callout-tip collapse="true" appearance="simple"}
 ## Solution 
-Will be posted after section! :)
-<!--
+
 ## Solution
 Let $A_k = \{|S_k| \geq \epsilon, |S_i| < \epsilon \ \forall i < k\}$. This is the sets of events consisting of $X_1,\cdots, X_n$ such that $|S_k|$ is the first partial sum with absolute value greater than $\epsilon.$ We can see that $A_k$'s are disjoint and the union $$\cup_{i=1}^n A_i = \{\exists k\in\{1,...,n\} \ s.t. \  |S_k| \geq \epsilon\} = \{\max_{1\leq k \leq n } |S_k| \geq \epsilon\}.$$ 
 
@@ -162,7 +159,6 @@ We know that $E\left( (S_n-S_k)^2 \mathbb{I}(A_k) \right) \geq 0$ and since $X_i
 More importantly $$E(S_k^2\mathbb{I}(A_k)) = \mathbb{P}(A_k) E\left[S_k^2|A_k\right] \geq \mathbb{P}(A_k)\epsilon^2.$$
 So $$ \E\left(S_n^2 \mathbb{I}(A_k)\right) \geq \mathbb{P}(A_k) \epsilon^2 \quad \forall k.$$ Finally 
 $$ E(S_n^2) \geq \sum_{k=1}^n \mathbb{P}(A_k)\epsilon^2 = \epsilon^2 \mathbb{P}\left(\cup_{k=1}^n A_k\right) = \epsilon^2 \mathbb{P}\left(\max_{1\leq k \leq n} |S_k| \geq \epsilon\right).$$
--->
 :::
 
 
