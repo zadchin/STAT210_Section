@@ -92,8 +92,6 @@ Suppose $\mathbf{Y}_{n\times 1}\sim \mathcal{N}_n(\mathbf{\mu},\Sigma)$, and def
 
 ## Solution 
 
-Will be posted after section 
-<!--
 (a) By the linearity and the cyclical properties of the trace
 $$
 \begin{align*}
@@ -145,7 +143,6 @@ We could therefore apply (b) to find the covariance.
 (d) The symmetry of $A$ was not required to find $\mathbb{E}(Q)$. However, we used the symmetry of $A$ to find $\operatorname{Var}(Q)$. Since $Q$ is a scalar, we have
 $$Q =  \mathbf{Y}^\top A\mathbf{Y} = (\mathbf{Y}^\top A\mathbf{Y})^\top =  \mathbf{Y}^\top A^\top\mathbf{Y} = \mathbf{Y}^\top\frac{(A+A^\top)}{2}\mathbf{Y}.$$
 Note that $\frac{(A+A^\top)}{2}$ is symmetric. We can now apply the result in (b) to find out $\operatorname{Var}(Q)$.
--->
 :::
 
 
@@ -163,8 +160,6 @@ Hint: Write $C = (1-\rho)I + \rho J$ in terms of the projection matrices $J/k$ a
 ::: {.callout-tip collapse="true" appearance="simple"}
 
 ## Solution 
-Will be posted after section 
-<!--
 (a) Since $\operatorname{var}\left(X_1+X_2+X_2\right)=\sigma^2(1+1+1+2 \rho+2 \rho+2 \rho) \geq 0$, we have $\rho \geq-1 / 2$.
 
 (b) Since $\left(\bar{X}, X_1-\bar{X}, X_1-X_2\right)$ is a linear transformation of $\mathbf{X}$, it follows multivariate normal distribution, and we only need to determine its mean vector and covariance matrix. By linearity, we have $E\left(\bar{X}, X_1-\bar{X}, X_1-X_2\right)=(\mu, 0,0)$. The variances and covariances are
@@ -206,7 +201,6 @@ J \alpha=\frac{\frac{\lambda}{\sigma^2}+\rho-1}{\rho} \alpha
 $$
 
 Since $J \mathbf{1}_k=k \mathbf{1}_k$ and $\operatorname{rank}(J)=\operatorname{rank}\left(\mathbf{1}_k \mathbf{1}_k^{\prime}\right)=\operatorname{rank}\left(\mathbf{1}_k\right)=1$, the matrix $J$ has only one non-zero eigenvalue equal to $k$, and $(k-1)$ zero eigenvalues. From $\lambda / \sigma^2+\rho-1=k \rho$, we have $\lambda=[1+(k-1) \rho] \sigma^2$; and from $\lambda / \sigma^2+\rho-1=0$, we have $\lambda=\sigma^2(1-\rho)$.
--->
 :::
 
 ### ✏️ Section Problem 3 (8.11)
@@ -223,9 +217,6 @@ Since $J \mathbf{1}_k=k \mathbf{1}_k$ and $\operatorname{rank}(J)=\operatorname{
 ::: {.callout-tip collapse="true" appearance="simple"}
 
 ## Solution
-
-Will be posted after section 
-<!--
 (a) Yes. Note that
 $$
 \begin{aligned}
@@ -274,7 +265,6 @@ V-V B^{\top}\left(B V B^{\top}\right)^{-1} B V & =V-V B^{\top}\left(B^{\top}\rig
 $$
 
 Hence $Y \mid X \sim N\left(B^{-1} X, O\right)$. This means that given $X, Y$ is a constant. This sure makes sense because if $B$ is invertible then $Y=B^{-1} X$ is a function of $X$, so knowing $X$ is knowing $Y$.
--->
 :::
 
 
@@ -290,8 +280,6 @@ Hence $Y \mid X \sim N\left(B^{-1} X, O\right)$. This means that given $X, Y$ is
 ::: {.callout-tip collapse="true" appearance="simple"}
 
 ## Solution
-Will be posted after section 
-<!--
 (a) SNoTE and Method 1: First show that within a MVN, conditioning reduces variance; this is the case where $\mathbf{X}_{\mathbf{2}}$ is an empty vector. For this case,
 $$
 \operatorname{Var}\left(Y \mid \mathbf{X}_1\right)=V_{22}-V_{21} V_{11}^{-1} V_{12} \leq V_{22}=\operatorname{Var}(Y),
@@ -316,7 +304,6 @@ E\left(\operatorname{Var}\left(Y \mid \mathbf{X}_2\right)\right) \geq E\left(\op
 $$
 
 This also gives a third proof of the result from (a), since in an MVN conditional variances are constant.
--->
 :::
 
 ## Next Week

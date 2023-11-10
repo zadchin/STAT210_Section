@@ -30,7 +30,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./meme.html" rel="next">
+<link href="./08_Section_8.html" rel="next">
 <link href="./06_Section_6.html" rel="prev">
 <link href="./assets/img/stat210-clear_bg.png" rel="icon" type="image/png">
 <script src="site_libs/quarto-html/quarto.js"></script>
@@ -145,6 +145,11 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./07_Section_7.html" class="sidebar-item-text sidebar-link active">Section 7</a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./08_Section_8.html" class="sidebar-item-text sidebar-link">Section 8</a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -332,59 +337,42 @@ Solution
 </div>
 <div id="callout-1" class="callout-1-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>Will be posted after section <!--
-(a) By the linearity and the cyclical properties of the trace
-$$
+<ol type="a">
+<li><p>By the linearity and the cyclical properties of the trace <span class="math display">\[
 \begin{align*}
-\mathbb{E}[Q] &= \mathbb{E}[\text{tr}(\mathbf{\mu}{Y}^{\top}A\mathbf{\mu}{Y})] =  \mathbb{E}[\text{tr}(A\mathbf{\mu}{Y}\mathbf{\mu}{Y}^{\top})] = \text{tr}[A\mathbb{E}(\mathbf{\mu}{Y}\mathbf{\mu}{Y}^{\top})] \\
-&=  \text{tr}[A(\Sigma + \mathbf{\mu}{\mu}\mathbf{\mu}{\mu}^{\top})] = \text{tr}(A\Sigma) +  \text{tr}(A\mathbf{\mu}{\mu}\mathbf{\mu}{\mu}^{\top}) = \text{tr}(A\Sigma) +  \mathbf{\mu}{\mu}^{\top}A\mathbf{\mu}{\mu}.
+\mathbb{E}[Q] &amp;= \mathbb{E}[\text{tr}(\mathbf{\mu}{Y}^{\top}A\mathbf{\mu}{Y})] =  \mathbb{E}[\text{tr}(A\mathbf{\mu}{Y}\mathbf{\mu}{Y}^{\top})] = \text{tr}[A\mathbb{E}(\mathbf{\mu}{Y}\mathbf{\mu}{Y}^{\top})] \\
+&amp;=  \text{tr}[A(\Sigma + \mathbf{\mu}{\mu}\mathbf{\mu}{\mu}^{\top})] = \text{tr}(A\Sigma) +  \text{tr}(A\mathbf{\mu}{\mu}\mathbf{\mu}{\mu}^{\top}) = \text{tr}(A\Sigma) +  \mathbf{\mu}{\mu}^{\top}A\mathbf{\mu}{\mu}.
 \end{align*}
-$$
-
-(b) Since $\Sigma$ is symmetric, we can find a spectral decomposition $\Sigma=\Gamma^{\star} \Lambda \Gamma^{\star \top}$. Since $\Sigma$ is non-negative definite, its non-zero eigenvectors are positive. Let us denote $\Sigma^{1 / 2}:=\Gamma^{\star} \Lambda^{1 / 2} \Gamma^{\star \top}$ (which is well defined). Note that $\Sigma^{1 / 2}$ is symmetric and $\Sigma^{1 / 2} \Sigma^{1 / 2}=\Sigma$. Hence, we can represent $\mathbf{Y}=\mu+\Sigma^{1 / 2} \mathbf{Z}$, with $\mathbf{Z} \sim \mathcal{N}_n(0, I)$. Now, $Q=\left(\mu+\Sigma^{1 / 2} \mathbf{Z}\right)^{\top} A\left(\mu+\Sigma^{1 / 2} \mathbf{Z}\right)=\mu^{\top} A \mu+2 \mu^{\top} A \Sigma^{1 / 2} \mathbf{Z}+\mathbf{Z}^{\top} \Sigma^{1 / 2} A \Sigma^{1 / 2} \mathbf{Z}$.
-$$
+\]</span></p></li>
+<li><p>Since <span class="math inline">\(\Sigma\)</span> is symmetric, we can find a spectral decomposition <span class="math inline">\(\Sigma=\Gamma^{\star} \Lambda \Gamma^{\star \top}\)</span>. Since <span class="math inline">\(\Sigma\)</span> is non-negative definite, its non-zero eigenvectors are positive. Let us denote <span class="math inline">\(\Sigma^{1 / 2}:=\Gamma^{\star} \Lambda^{1 / 2} \Gamma^{\star \top}\)</span> (which is well defined). Note that <span class="math inline">\(\Sigma^{1 / 2}\)</span> is symmetric and <span class="math inline">\(\Sigma^{1 / 2} \Sigma^{1 / 2}=\Sigma\)</span>. Hence, we can represent <span class="math inline">\(\mathbf{Y}=\mu+\Sigma^{1 / 2} \mathbf{Z}\)</span>, with <span class="math inline">\(\mathbf{Z} \sim \mathcal{N}_n(0, I)\)</span>. Now, <span class="math inline">\(Q=\left(\mu+\Sigma^{1 / 2} \mathbf{Z}\right)^{\top} A\left(\mu+\Sigma^{1 / 2} \mathbf{Z}\right)=\mu^{\top} A \mu+2 \mu^{\top} A \Sigma^{1 / 2} \mathbf{Z}+\mathbf{Z}^{\top} \Sigma^{1 / 2} A \Sigma^{1 / 2} \mathbf{Z}\)</span>. <span class="math display">\[
 \begin{aligned}
-\operatorname{Var}(Q) & =\operatorname{Var}\left(2 \mu^{\top} A \Sigma^{1 / 2} \mathbf{Z}+\mathbf{Z}^{\top} \Sigma^{1 / 2} A \Sigma^{1 / 2} \mathbf{Z}\right) \\
-& =4 \underbrace{\operatorname{Var}\left(\mu^{\top} A \Sigma^{1 / 2} \mathbf{Z}\right)}_{(1)}+\underbrace{\operatorname{Var}\left(\mathbf{Z}^{\top} \Sigma^{1 / 2} A \Sigma^{1 / 2} \mathbf{Z}\right)}_{(2)}+4 \underbrace{\operatorname{Cov}\left(\mu^{\top} A \Sigma^{1 / 2} \mathbf{Z}, \mathbf{Z}^{\top} \Sigma^{1 / 2} A \Sigma^{1 / 2} \mathbf{Z}\right)}_{(3)} .
+\operatorname{Var}(Q) &amp; =\operatorname{Var}\left(2 \mu^{\top} A \Sigma^{1 / 2} \mathbf{Z}+\mathbf{Z}^{\top} \Sigma^{1 / 2} A \Sigma^{1 / 2} \mathbf{Z}\right) \\
+&amp; =4 \underbrace{\operatorname{Var}\left(\mu^{\top} A \Sigma^{1 / 2} \mathbf{Z}\right)}_{(1)}+\underbrace{\operatorname{Var}\left(\mathbf{Z}^{\top} \Sigma^{1 / 2} A \Sigma^{1 / 2} \mathbf{Z}\right)}_{(2)}+4 \underbrace{\operatorname{Cov}\left(\mu^{\top} A \Sigma^{1 / 2} \mathbf{Z}, \mathbf{Z}^{\top} \Sigma^{1 / 2} A \Sigma^{1 / 2} \mathbf{Z}\right)}_{(3)} .
 \end{aligned}
-$$
-
-For term (1), we have
-$$
+\]</span></p></li>
+</ol>
+<p>For term (1), we have <span class="math display">\[
 \operatorname{Var}\left(\mu^{\top} A \Sigma^{1 / 2} \mathbf{Z}\right)=\mu^{\top} A \Sigma^{1 / 2} \operatorname{Var}(\mathbf{Z}) \Sigma^{1 / 2} A \mu=\mu^{\top} A \Sigma A \mu .
-$$
-
-For term (2), we use spectral decomposition $\Sigma^{1 / 2} A \Sigma^{1 / 2}=\Gamma D \Gamma^{\top}$. Since $\Gamma$ is orthogonal, we know $\Gamma^{\top} \Gamma=I$ and have $\tilde{\mathbf{Z}}=\Gamma^{\top} \mathbf{Z} \sim \mathcal{N}(0, I)$. Since $D$ is diagonal, we can write $\mathbf{Z}^{\top} \Sigma^{1 / 2} A \Sigma^{1 / 2} \mathbf{Z}=$ $\sum_{i=1}^p d_{i i} \tilde{Z}_i^2$. Using independence, properties of orthogonal matrices, the cyclical properties of the trace, and the fact that $\operatorname{Var}\left(\tilde{Z}_i^2\right)=2$, term $(2)$ reduces to
-$$
+\]</span></p>
+<p>For term (2), we use spectral decomposition <span class="math inline">\(\Sigma^{1 / 2} A \Sigma^{1 / 2}=\Gamma D \Gamma^{\top}\)</span>. Since <span class="math inline">\(\Gamma\)</span> is orthogonal, we know <span class="math inline">\(\Gamma^{\top} \Gamma=I\)</span> and have <span class="math inline">\(\tilde{\mathbf{Z}}=\Gamma^{\top} \mathbf{Z} \sim \mathcal{N}(0, I)\)</span>. Since <span class="math inline">\(D\)</span> is diagonal, we can write <span class="math inline">\(\mathbf{Z}^{\top} \Sigma^{1 / 2} A \Sigma^{1 / 2} \mathbf{Z}=\)</span> <span class="math inline">\(\sum_{i=1}^p d_{i i} \tilde{Z}_i^2\)</span>. Using independence, properties of orthogonal matrices, the cyclical properties of the trace, and the fact that <span class="math inline">\(\operatorname{Var}\left(\tilde{Z}_i^2\right)=2\)</span>, term <span class="math inline">\((2)\)</span> reduces to <span class="math display">\[
 \begin{aligned}
-\operatorname{Var}\left(\sum d_{i i} \tilde{Z}_i^2\right) & =2 \sum d_{i i}^2=2 \operatorname{tr}\left(D^2\right)=2 \operatorname{tr}\left(D^2 \Gamma^{\top} \Gamma\right) \\
-& =2 \operatorname{tr}\left(\Gamma D^2 \Gamma^{\top}\right)=2 \operatorname{tr}\left(\left(\Gamma D \Gamma^{\top}\right)^2\right) \\
-& =2 \operatorname{tr}\left(\left(\Sigma^{1 / 2} A \Sigma^{1 / 2}\right)^2\right)=2 \operatorname{tr}\left((A \Sigma)^2\right) .
+\operatorname{Var}\left(\sum d_{i i} \tilde{Z}_i^2\right) &amp; =2 \sum d_{i i}^2=2 \operatorname{tr}\left(D^2\right)=2 \operatorname{tr}\left(D^2 \Gamma^{\top} \Gamma\right) \\
+&amp; =2 \operatorname{tr}\left(\Gamma D^2 \Gamma^{\top}\right)=2 \operatorname{tr}\left(\left(\Gamma D \Gamma^{\top}\right)^2\right) \\
+&amp; =2 \operatorname{tr}\left(\left(\Sigma^{1 / 2} A \Sigma^{1 / 2}\right)^2\right)=2 \operatorname{tr}\left((A \Sigma)^2\right) .
 \end{aligned}
-$$
-
-For term (3), since $\mathbf{Z} \sim-\mathbf{Z}$, we can write
-$$
+\]</span></p>
+<p>For term (3), since <span class="math inline">\(\mathbf{Z} \sim-\mathbf{Z}\)</span>, we can write <span class="math display">\[
 \begin{aligned}
-\operatorname{Cov}\left(\mu^{\top} A \Sigma^{1 / 2} \mathbf{Z}, \mathbf{Z}^{\top} \Sigma^{1 / 2} A \Sigma^{1 / 2} \mathbf{Z}\right) & =\operatorname{Cov}\left(\mu^{\top} A \Sigma^{1 / 2}(-\mathbf{Z}),\left(-\mathbf{Z}^{\top}\right) \Sigma^{1 / 2} A \Sigma^{1 / 2}(-\mathbf{Z})\right) \\
-& =-\operatorname{Cov}\left(\mu^{\top} A \Sigma^{1 / 2} \mathbf{Z}, \mathbf{Z}^{\top} \Sigma^{1 / 2} A \Sigma^{1 / 2} \mathbf{Z}\right),
+\operatorname{Cov}\left(\mu^{\top} A \Sigma^{1 / 2} \mathbf{Z}, \mathbf{Z}^{\top} \Sigma^{1 / 2} A \Sigma^{1 / 2} \mathbf{Z}\right) &amp; =\operatorname{Cov}\left(\mu^{\top} A \Sigma^{1 / 2}(-\mathbf{Z}),\left(-\mathbf{Z}^{\top}\right) \Sigma^{1 / 2} A \Sigma^{1 / 2}(-\mathbf{Z})\right) \\
+&amp; =-\operatorname{Cov}\left(\mu^{\top} A \Sigma^{1 / 2} \mathbf{Z}, \mathbf{Z}^{\top} \Sigma^{1 / 2} A \Sigma^{1 / 2} \mathbf{Z}\right),
 \end{aligned}
-$$
-which gives us $\operatorname{Cov}\left(\mu^{\top} A \Sigma^{1 / 2} \mathbf{Z}, \mathbf{Z}^{\top} \Sigma^{1 / 2} A \Sigma^{1 / 2} \mathbf{Z}\right)=0$.
-The final result is therefore
-$$
+\]</span> which gives us <span class="math inline">\(\operatorname{Cov}\left(\mu^{\top} A \Sigma^{1 / 2} \mathbf{Z}, \mathbf{Z}^{\top} \Sigma^{1 / 2} A \Sigma^{1 / 2} \mathbf{Z}\right)=0\)</span>. The final result is therefore <span class="math display">\[
 \operatorname{Var}\{Q\}=4 \mu^{\top} A \Sigma A \mu+2 \operatorname{tr}\left((A \Sigma)^2\right)
-$$
-
-(c) Firstly, note that
-$$\operatorname{Cov}(Q_1,Q_2) = \frac{\operatorname{Var}(Q_1+Q_2) - \operatorname{Var}(Q_1-Q_2)}{4}.$$
-Moreover, $Q_1+Q_2 = \mathbf{Y}^\top(A_1+A_2)\mathbf{Y}$, $Q_1-Q_2 = \mathbf{Y}^\top(A_1-A_2)\mathbf{Y}$, and $A_1+A_2$, $A_1-A_2$ are symmetric matrices.
-We could therefore apply (b) to find the covariance.
-
-(d) The symmetry of $A$ was not required to find $\mathbb{E}(Q)$. However, we used the symmetry of $A$ to find $\operatorname{Var}(Q)$. Since $Q$ is a scalar, we have
-$$Q =  \mathbf{Y}^\top A\mathbf{Y} = (\mathbf{Y}^\top A\mathbf{Y})^\top =  \mathbf{Y}^\top A^\top\mathbf{Y} = \mathbf{Y}^\top\frac{(A+A^\top)}{2}\mathbf{Y}.$$
-Note that $\frac{(A+A^\top)}{2}$ is symmetric. We can now apply the result in (b) to find out $\operatorname{Var}(Q)$.
---></p>
+\]</span></p>
+<ol start="3" type="a">
+<li><p>Firstly, note that <span class="math display">\[\operatorname{Cov}(Q_1,Q_2) = \frac{\operatorname{Var}(Q_1+Q_2) - \operatorname{Var}(Q_1-Q_2)}{4}.\]</span> Moreover, <span class="math inline">\(Q_1+Q_2 = \mathbf{Y}^\top(A_1+A_2)\mathbf{Y}\)</span>, <span class="math inline">\(Q_1-Q_2 = \mathbf{Y}^\top(A_1-A_2)\mathbf{Y}\)</span>, and <span class="math inline">\(A_1+A_2\)</span>, <span class="math inline">\(A_1-A_2\)</span> are symmetric matrices. We could therefore apply (b) to find the covariance.</p></li>
+<li><p>The symmetry of <span class="math inline">\(A\)</span> was not required to find <span class="math inline">\(\mathbb{E}(Q)\)</span>. However, we used the symmetry of <span class="math inline">\(A\)</span> to find <span class="math inline">\(\operatorname{Var}(Q)\)</span>. Since <span class="math inline">\(Q\)</span> is a scalar, we have <span class="math display">\[Q =  \mathbf{Y}^\top A\mathbf{Y} = (\mathbf{Y}^\top A\mathbf{Y})^\top =  \mathbf{Y}^\top A^\top\mathbf{Y} = \mathbf{Y}^\top\frac{(A+A^\top)}{2}\mathbf{Y}.\]</span> Note that <span class="math inline">\(\frac{(A+A^\top)}{2}\)</span> is symmetric. We can now apply the result in (b) to find out <span class="math inline">\(\operatorname{Var}(Q)\)</span>.</p></li>
+</ol>
 </div>
 </div>
 </div>
@@ -410,23 +398,20 @@ Solution
 </div>
 <div id="callout-2" class="callout-2-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>Will be posted after section <!--
-(a) Since $\operatorname{var}\left(X_1+X_2+X_2\right)=\sigma^2(1+1+1+2 \rho+2 \rho+2 \rho) \geq 0$, we have $\rho \geq-1 / 2$.
-
-(b) Since $\left(\bar{X}, X_1-\bar{X}, X_1-X_2\right)$ is a linear transformation of $\mathbf{X}$, it follows multivariate normal distribution, and we only need to determine its mean vector and covariance matrix. By linearity, we have $E\left(\bar{X}, X_1-\bar{X}, X_1-X_2\right)=(\mu, 0,0)$. The variances and covariances are
-$$
+<ol type="a">
+<li><p>Since <span class="math inline">\(\operatorname{var}\left(X_1+X_2+X_2\right)=\sigma^2(1+1+1+2 \rho+2 \rho+2 \rho) \geq 0\)</span>, we have <span class="math inline">\(\rho \geq-1 / 2\)</span>.</p></li>
+<li><p>Since <span class="math inline">\(\left(\bar{X}, X_1-\bar{X}, X_1-X_2\right)\)</span> is a linear transformation of <span class="math inline">\(\mathbf{X}\)</span>, it follows multivariate normal distribution, and we only need to determine its mean vector and covariance matrix. By linearity, we have <span class="math inline">\(E\left(\bar{X}, X_1-\bar{X}, X_1-X_2\right)=(\mu, 0,0)\)</span>. The variances and covariances are <span class="math display">\[
 \begin{aligned}
-\operatorname{var}(\bar{X}) & =\sigma^2 / k^2\left[k \sigma^2+k(k-1) \rho\right]=\sigma^2[1+(k-1) \rho] / k \\
-\operatorname{var}\left(X_1-\bar{X}\right) & =\sigma^2 / k[k+1+(k-1) \rho-2\{1+(k-1) \rho\}]=(k-1)(1-\rho) \sigma^2 / k \\
-\operatorname{var}\left(X_1-X_2\right) & =\sigma^2(1+1+2 \rho)=2 \sigma^2(1-\rho) \\
-\operatorname{cov}\left(\bar{X}, X_1-\bar{X}\right) & =\sigma^2(1 / k-1 / k)=0 \\
-\operatorname{cov}\left(\bar{X}, X_1-X_2\right) & =0 \\
-\operatorname{cov}\left(X_1-\bar{X}, X_1-X_2\right) & =\sigma^2(1-\rho)
+\operatorname{var}(\bar{X}) &amp; =\sigma^2 / k^2\left[k \sigma^2+k(k-1) \rho\right]=\sigma^2[1+(k-1) \rho] / k \\
+\operatorname{var}\left(X_1-\bar{X}\right) &amp; =\sigma^2 / k[k+1+(k-1) \rho-2\{1+(k-1) \rho\}]=(k-1)(1-\rho) \sigma^2 / k \\
+\operatorname{var}\left(X_1-X_2\right) &amp; =\sigma^2(1+1+2 \rho)=2 \sigma^2(1-\rho) \\
+\operatorname{cov}\left(\bar{X}, X_1-\bar{X}\right) &amp; =\sigma^2(1 / k-1 / k)=0 \\
+\operatorname{cov}\left(\bar{X}, X_1-X_2\right) &amp; =0 \\
+\operatorname{cov}\left(X_1-\bar{X}, X_1-X_2\right) &amp; =\sigma^2(1-\rho)
 \end{aligned}
-$$
-
-Therefore,
-$$
+\]</span></p></li>
+</ol>
+<p>Therefore, <span class="math display">\[
 \left(\begin{array}{c}
 \bar{X} \\
 X_1-\bar{X} \\
@@ -436,23 +421,19 @@ X_1-X_2
 0 \\
 0
 \end{array}\right), \sigma^2\left(\begin{array}{ccc}
-{[1+(k-1) \rho] / k} & 0 & 0 \\
-0 & (k-1)(1-\rho) / k & 1-\rho \\
-0 & 1-\rho & 2(1-\rho)
+{[1+(k-1) \rho] / k} &amp; 0 &amp; 0 \\
+0 &amp; (k-1)(1-\rho) / k &amp; 1-\rho \\
+0 &amp; 1-\rho &amp; 2(1-\rho)
 \end{array}\right)\right]
-$$
-
-(c) The equation $C \alpha=\lambda \alpha$ is equivalent to
-$$
+\]</span></p>
+<ol start="3" type="a">
+<li>The equation <span class="math inline">\(C \alpha=\lambda \alpha\)</span> is equivalent to <span class="math display">\[
 (1-\rho) \alpha+\rho J \alpha=\left(\lambda / \sigma^2\right) \alpha
-$$
-which can be rewritten as
-$$
+\]</span> which can be rewritten as <span class="math display">\[
 J \alpha=\frac{\frac{\lambda}{\sigma^2}+\rho-1}{\rho} \alpha
-$$
-
-Since $J \mathbf{1}_k=k \mathbf{1}_k$ and $\operatorname{rank}(J)=\operatorname{rank}\left(\mathbf{1}_k \mathbf{1}_k^{\prime}\right)=\operatorname{rank}\left(\mathbf{1}_k\right)=1$, the matrix $J$ has only one non-zero eigenvalue equal to $k$, and $(k-1)$ zero eigenvalues. From $\lambda / \sigma^2+\rho-1=k \rho$, we have $\lambda=[1+(k-1) \rho] \sigma^2$; and from $\lambda / \sigma^2+\rho-1=0$, we have $\lambda=\sigma^2(1-\rho)$.
---></p>
+\]</span></li>
+</ol>
+<p>Since <span class="math inline">\(J \mathbf{1}_k=k \mathbf{1}_k\)</span> and <span class="math inline">\(\operatorname{rank}(J)=\operatorname{rank}\left(\mathbf{1}_k \mathbf{1}_k^{\prime}\right)=\operatorname{rank}\left(\mathbf{1}_k\right)=1\)</span>, the matrix <span class="math inline">\(J\)</span> has only one non-zero eigenvalue equal to <span class="math inline">\(k\)</span>, and <span class="math inline">\((k-1)\)</span> zero eigenvalues. From <span class="math inline">\(\lambda / \sigma^2+\rho-1=k \rho\)</span>, we have <span class="math inline">\(\lambda=[1+(k-1) \rho] \sigma^2\)</span>; and from <span class="math inline">\(\lambda / \sigma^2+\rho-1=0\)</span>, we have <span class="math inline">\(\lambda=\sigma^2(1-\rho)\)</span>.</p>
 </div>
 </div>
 </div>
@@ -477,56 +458,54 @@ Solution
 </div>
 <div id="callout-3" class="callout-3-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>Will be posted after section <!--
-(a) Yes. Note that
-$$
+<ol type="a">
+<li>Yes. Note that <span class="math display">\[
 \begin{aligned}
 \left(\begin{array}{c}
 X \\
 Y
-\end{array}\right) & =\left(\begin{array}{c}
+\end{array}\right) &amp; =\left(\begin{array}{c}
 B \\
 I
 \end{array}\right) Y \\
-& \sim N\left(\left(\begin{array}{c}
+&amp; \sim N\left(\left(\begin{array}{c}
 B \\
 I
 \end{array}\right) \mu,\left(\begin{array}{c}
 B \\
 I
 \end{array}\right) V\left(\begin{array}{ll}
-B^{\top} & I
+B^{\top} &amp; I
 \end{array}\right)\right) \\
-& =N\left(\left(\begin{array}{c}
+&amp; =N\left(\left(\begin{array}{c}
 B \mu \\
 \mu
 \end{array}\right),\left(\begin{array}{cc}
-B V B^{\top} & B V \\
-V B^{\top} & V
+B V B^{\top} &amp; B V \\
+V B^{\top} &amp; V
 \end{array}\right)\right) .
 \end{aligned}
-$$
-- $X$ and $Y$ are marginally multivariate normal doesn't imply that $(X, Y)$ is multivariate normal.
-- Any linear transformation of any multivariate normal is still a multivariate normal (you don't have to start with i.i.d. normals).
-
-(b)  By Proposition 8.5.1,
-$$
+\]</span></li>
+</ol>
+<ul>
+<li><span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span> are marginally multivariate normal doesn’t imply that <span class="math inline">\((X, Y)\)</span> is multivariate normal.</li>
+<li>Any linear transformation of any multivariate normal is still a multivariate normal (you don’t have to start with i.i.d. normals).</li>
+</ul>
+<ol start="2" type="a">
+<li><p>By Proposition 8.5.1, <span class="math display">\[
 Y \mid X \sim N\left(\mu+V B^{\top}\left(B V B^{\top}\right)^{-1}(X-B \mu), V-V B^{\top}\left(B V B^{\top}\right)^{-1} B V\right)
-$$
-
-(c)  If $B$ is invertible and $B V B^{\top}$ is invertible, then $V$ is invertible. Now
-$$
+\]</span></p></li>
+<li><p>If <span class="math inline">\(B\)</span> is invertible and <span class="math inline">\(B V B^{\top}\)</span> is invertible, then <span class="math inline">\(V\)</span> is invertible. Now <span class="math display">\[
 \begin{aligned}
-\mu+V B^{\top}\left(B V B^{\top}\right)^{-1}(X-B \mu) & =\mu+V B^{\top}\left(B^{\top}\right)^{-1} V^{-1} B^{-1}(X-B \mu) \\
-& =\mu+B^{-1}(X-B \mu) \\
-& =B^{-1} X . \\
-V-V B^{\top}\left(B V B^{\top}\right)^{-1} B V & =V-V B^{\top}\left(B^{\top}\right)^{-1} V^{-1} B^{-1} B V \\
-& =V-V V^{-1} V=O .
+\mu+V B^{\top}\left(B V B^{\top}\right)^{-1}(X-B \mu) &amp; =\mu+V B^{\top}\left(B^{\top}\right)^{-1} V^{-1} B^{-1}(X-B \mu) \\
+&amp; =\mu+B^{-1}(X-B \mu) \\
+&amp; =B^{-1} X . \\
+V-V B^{\top}\left(B V B^{\top}\right)^{-1} B V &amp; =V-V B^{\top}\left(B^{\top}\right)^{-1} V^{-1} B^{-1} B V \\
+&amp; =V-V V^{-1} V=O .
 \end{aligned}
-$$
-
-Hence $Y \mid X \sim N\left(B^{-1} X, O\right)$. This means that given $X, Y$ is a constant. This sure makes sense because if $B$ is invertible then $Y=B^{-1} X$ is a function of $X$, so knowing $X$ is knowing $Y$.
---></p>
+\]</span></p></li>
+</ol>
+<p>Hence <span class="math inline">\(Y \mid X \sim N\left(B^{-1} X, O\right)\)</span>. This means that given <span class="math inline">\(X, Y\)</span> is a constant. This sure makes sense because if <span class="math inline">\(B\)</span> is invertible then <span class="math inline">\(Y=B^{-1} X\)</span> is a function of <span class="math inline">\(X\)</span>, so knowing <span class="math inline">\(X\)</span> is knowing <span class="math inline">\(Y\)</span>.</p>
 </div>
 </div>
 </div>
@@ -549,32 +528,24 @@ Solution
 </div>
 <div id="callout-4" class="callout-4-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>Will be posted after section <!--
-(a) SNoTE and Method 1: First show that within a MVN, conditioning reduces variance; this is the case where $\mathbf{X}_{\mathbf{2}}$ is an empty vector. For this case,
-$$
+<ol type="a">
+<li>SNoTE and Method 1: First show that within a MVN, conditioning reduces variance; this is the case where <span class="math inline">\(\mathbf{X}_{\mathbf{2}}\)</span> is an empty vector. For this case, <span class="math display">\[
 \operatorname{Var}\left(Y \mid \mathbf{X}_1\right)=V_{22}-V_{21} V_{11}^{-1} V_{12} \leq V_{22}=\operatorname{Var}(Y),
-$$
-since $V_{11}$ is positive definite (which implies that $V_{11}^{-1}$ is positive definite). Remarkably, this SNoTE solves the general case too, since conditional distributions in a MVN are MVN: the conditional distribution of $Y \mid \mathbf{X}_{\mathbf{2}}$ is MVN, and conditioning on any additional components in $\mathbf{X}_1$ reduces the variance.
-
-Method 2: Using the uncorrelation trick, we can write $Y=\tilde{Y}+B \mathbf{X}_1$, with $B$ a constant matrix (a row vector here) and with $\tilde{Y}$ independent of $\mathbf{X}_1$. Note that $\tilde{Y}$ and $\mathbf{X}_1$ are also conditionally independent given $\mathbf{X}_2$. So $\operatorname{Var}\left(Y \mid \mathbf{X}_1\right)=\operatorname{Var}(\tilde{Y})$ and
-$$
+\]</span> since <span class="math inline">\(V_{11}\)</span> is positive definite (which implies that <span class="math inline">\(V_{11}^{-1}\)</span> is positive definite). Remarkably, this SNoTE solves the general case too, since conditional distributions in a MVN are MVN: the conditional distribution of <span class="math inline">\(Y \mid \mathbf{X}_{\mathbf{2}}\)</span> is MVN, and conditioning on any additional components in <span class="math inline">\(\mathbf{X}_1\)</span> reduces the variance.</li>
+</ol>
+<p>Method 2: Using the uncorrelation trick, we can write <span class="math inline">\(Y=\tilde{Y}+B \mathbf{X}_1\)</span>, with <span class="math inline">\(B\)</span> a constant matrix (a row vector here) and with <span class="math inline">\(\tilde{Y}\)</span> independent of <span class="math inline">\(\mathbf{X}_1\)</span>. Note that <span class="math inline">\(\tilde{Y}\)</span> and <span class="math inline">\(\mathbf{X}_1\)</span> are also conditionally independent given <span class="math inline">\(\mathbf{X}_2\)</span>. So <span class="math inline">\(\operatorname{Var}\left(Y \mid \mathbf{X}_1\right)=\operatorname{Var}(\tilde{Y})\)</span> and <span class="math display">\[
 \operatorname{Var}\left(Y \mid \mathbf{X}_2\right)=\operatorname{Var}(\tilde{Y})+\operatorname{Var}\left(B \mathbf{X}_{\mathbf{1}} \mid \mathbf{X}_{\mathbf{2}}\right) \geq \operatorname{Var}\left(Y \mid \mathbf{X}_{\mathbf{1}}\right)
-$$
-
-(b) For a counterexample, we can choose an example where learning something new increases our uncertainty about something else, e.g., if you get into your top choice of school then you may have little uncertainty about where to go, whereas if you don't get in then you may be very uncertain about what to do next. For a simple, precise example, let $Y=W X_1$ where $X_1 \sim \operatorname{Bern}(1 / 2)$ is independent of $W \sim[0,1000]$. Then $\operatorname{Var}(Y)=E\left(W^2\right) E\left(X_1\right)=500$, but $\operatorname{Var}\left(Y \mid X_1=1\right)=1000$.
-
-Returning to the general case, Eve's Law gives
-$$
+\]</span></p>
+<ol start="2" type="a">
+<li>For a counterexample, we can choose an example where learning something new increases our uncertainty about something else, e.g., if you get into your top choice of school then you may have little uncertainty about where to go, whereas if you don’t get in then you may be very uncertain about what to do next. For a simple, precise example, let <span class="math inline">\(Y=W X_1\)</span> where <span class="math inline">\(X_1 \sim \operatorname{Bern}(1 / 2)\)</span> is independent of <span class="math inline">\(W \sim[0,1000]\)</span>. Then <span class="math inline">\(\operatorname{Var}(Y)=E\left(W^2\right) E\left(X_1\right)=500\)</span>, but <span class="math inline">\(\operatorname{Var}\left(Y \mid X_1=1\right)=1000\)</span>.</li>
+</ol>
+<p>Returning to the general case, Eve’s Law gives <span class="math display">\[
 \operatorname{Var}\left(Y \mid \mathbf{X}_{\mathbf{2}}\right)=E\left(\operatorname{Var}\left(Y \mid \mathbf{X}_1\right) \mid \mathbf{X}_{\mathbf{2}}\right)+\operatorname{Var}\left(E\left(Y \mid \mathbf{X}_{\mathbf{1}}\right) \mid \mathbf{X}_{\mathbf{2}}\right) \geq E\left(\operatorname{Var}\left(Y \mid \mathbf{X}_1\right) \mid \mathbf{X}_{\mathbf{2}}\right) .
-$$
-
-Taking expectations of both sides, we have
-$$
+\]</span></p>
+<p>Taking expectations of both sides, we have <span class="math display">\[
 E\left(\operatorname{Var}\left(Y \mid \mathbf{X}_2\right)\right) \geq E\left(\operatorname{Var}\left(Y \mid \mathbf{X}_1\right)\right) .
-$$
-
-This also gives a third proof of the result from (a), since in an MVN conditional variances are constant.
---></p>
+\]</span></p>
+<p>This also gives a third proof of the result from (a), since in an MVN conditional variances are constant.</p>
 </div>
 </div>
 </div>
@@ -850,8 +821,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./meme.html" class="pagination-link">
-        <span class="nav-page-text">Quotes</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./08_Section_8.html" class="pagination-link">
+        <span class="nav-page-text">Section 8</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
