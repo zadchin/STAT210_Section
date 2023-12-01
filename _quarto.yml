@@ -24,6 +24,7 @@ book:
     - 06_Section_6.qmd
     - 07_Section_7.qmd
     - 08_Section_8.qmd
+    - 09_Section_9.qmd
     - meme.qmd
 
 bibliography: references.bib

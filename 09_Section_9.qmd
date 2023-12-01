@@ -1,0 +1,232 @@
+# Section 9 {.unnumbered}
+
+Last Updated: 30 Nov 2023
+
+Date: 1 Dec 2023
+
+
+## This Week
+In this section, we will discuss:
+
+- Convergence
+- CLT
+- Martingale
+
+
+## Recap
+
+Here are some important inequality recap!
+
+1. Delta method: Suppose that $\sqrt{n} (T_n -\theta_0) \overset{\mathcal{L}}{\rightarrow} Z$, then $$\sqrt{n}\left( g(T_n) - g(\theta_0)  \right) \overset{\mathcal{L}}{\rightarrow} (\nabla g(\theta_0))' Z$$or  $$\sqrt{n}\left( g(T_n) - g(\theta_0)  \right) \overset{\mathcal{L}}{\rightarrow}  g'(\theta_0) Z$$ for the univariate case.
+
+2. Slutsky: Let $X_n \overset{\mathcal{L}}{\to}X$ and $Y_n \overset{\mathcal{L}}{\to }c$ where $c$ is a constant. Then $$X_n + Y_n \overset{\mathcal{L}}{\to } X + c, \quad X_nY_n \overset{\mathcal{L}}{\to} cX.$$
+
+3. WLLN: Let $X_i $ be i.i.d. random variables with mean $\mu$, then $$\frac{1}{n} \sum_{i=1}^n X_i \overset{P}{\to } \mu.$$
+
+4. SLLN: Suppose $X_i$ independent random variables with mean $0$, and $E(X_j^4) < \infty \forall j$, then $ \overline{X_n} \to 0$ a.s.
+
+5. CLT: Let $X_i \overset{iid}{\sim} [\mu,\sigma^2]$, and let $S_n = \sum_{i=1}^{n} X_i$, then
+$$ \frac{S_n - n\mu}{\sigma \sqrt{n}}  = \frac{\sqrt{n}}{\sigma} (\overline{X_n} - \mu) \overset{\mathcal{L}}{\to }\mathcal{N}(0,1).$$
+
+
+
+## Section Discussion Questions
+
+### ✏️ Section Problem 1
+
+Pencil 13.7.5 (CLT for a Beta) Let $X\sim Beta(a_{1} ,a_{0})$. Exhibit the following convergence in distribution 
+$$
+\begin{equation*}
+(X-\mu )/\sqrt{\mu (1-\mu )/(r+1)}\rightarrow N(0,1)
+\end{equation*}
+$$
+ as $a_{1} ,a_{0}$ both approach infinity, with $a_{1} /(a_{1} +a_{0} )\rightarrow \mu$ while $r=a_{1} +a_{0}\rightarrow \infty$.
+
+::: {.callout-tip collapse="true" appearance="simple"}
+## Solution 
+
+Write $\displaystyle X=G_{a_{1}} /G_{a_{1}} +G_{a_{0}}$, where $\displaystyle G_{a_{1}} \sim Gamma( a_{1})$ and $\displaystyle G_{a_{0}} \sim Gamma( a_{0})$. Then,
+$$
+\begin{equation*}
+a_{0} G_{a_{1}} -a_{1} G_{a_{0}} =\sum _{i=1}^{a_{1}}( a_{0} X_{i} -a_{1} Y_{i}) ,
+\end{equation*}
+$$
+where $\displaystyle X_{i} \sim Gamma( 1)$ and $\displaystyle Y_{i} \sim Gamma( a_{0} /a_{1})$. Note that $\displaystyle a_{0} X_{i} -a_{1} Y_{i}$ has mean 0 and variance $\displaystyle a_{0} r$, so applying iid CLT, we get (as $\displaystyle r\rightarrow \infty $)
+$$
+\begin{equation*}
+\sum _{i=1}^{a_{1}}( a_{0} X_{i} -a_{1} Y_{i})\rightarrow _{d} N( 0,a_{1} a_{0} r) .
+\end{equation*}
+$$
+Also, $\displaystyle r/( G_{a_{1}} +G_{a_{0}})\rightarrow _{p} 1$ as $\displaystyle r\rightarrow \infty $ by WLLN and CMT, so Slutsky's gives
+$$
+\begin{equation*}
+X-\frac{a_{1}}{a_{1} +a_{0}} =\frac{a_{0} G_{a_{1}} -a_{1} G_{a_{0}}}{r( G_{a_{1}} +G_{a_{0}})}\rightarrow _{d} N\left( 0,a_{1} a_{0} /r^{3}\right) .
+\end{equation*}
+$$
+Now, setting $\displaystyle \sigma ^{2} \equiv a_{1} a_{0} /r^{2}( r+1)$, we find that as $\displaystyle r\rightarrow \infty $, we finally get
+$$
+\begin{equation*}
+\frac{X-\frac{a_{1}}{a_{1} +a_{0}}}{\sigma }\rightarrow _{d} N\left( 0,\frac{a_{1} a_{0}}{r^{3}} \cdot \frac{r^{2}( r+1)}{a_{1} a_{0}}\right) =N\left( 0,\frac{r+1}{r}\right)\rightarrow N( 0,1) .
+\end{equation*}
+$$
+
+Next, set $\displaystyle \xi =\sqrt{\mu ( 1-\mu ) /( r+1)}$. As $\displaystyle a_{1} /( a_{1} +a_{0})\rightarrow \mu $, $\displaystyle \sigma \rightarrow \xi$, and hence
+$$
+\begin{equation*}
+\frac{X-\mu }{\xi } =\frac{\sigma }{\xi }\left(\frac{X-\frac{a_{1}}{a_{1} +a_{0}}}{\sigma } +\frac{\frac{a_{1}}{a_{1} +a_{0}} -\mu }{\sigma }\right)\rightarrow _{d} N( 0,1)
+\end{equation*}
+$$
+by Slutsky's theorem (as both $\displaystyle a_{1} /( a_{1} +a_{0})\rightarrow \mu$ and $\displaystyle r\rightarrow \infty$). (The second term in the sum above goes to zero as well since we are allowed to assume this from the relevant Ed post.) So done.
+:::
+
+### ✏️ Section Problem 2
+Pencil 14.3.8 (Stopped martingales) Show that if $T$ is a stopping time and $M_{n}$ is a martingale, the "stopped martingale" $S_{n} =M_{\min \{T,n\}}$ is a martingale. Similarly, a stopped submartingale is a submartingale. What happens if $T$ is not required to be a stopping time
+
+::: {.callout-tip collapse="true" appearance="simple"}
+
+## Solution 
+
+First, 
+$$
+\begin{equation*}
+E|S_{n} |\leq E|M_{0} |+\cdots +E|M_{n} |< \infty .
+\end{equation*}
+$$
+
+Second, $\displaystyle S_{n}$ is measurable since $\displaystyle M_{n}$ is.
+
+Third, $\displaystyle S_{n} =M_{n}$ and $\displaystyle S_{n+1} =M_{n+1}$ if $\displaystyle T >n$ and $\displaystyle S_{n+1} =S_{n}$ if $\displaystyle T\leq n$, so
+$$
+\begin{equation*}
+S_{n+1} =S_{n} +I( T >n)( M_{n+1} -M_{n}) .
+\end{equation*}
+$$
+
+Thus, if $\displaystyle F_{n} =\sigma ( M_{0} ,\dotsc ,M_{n})$,
+$$
+\begin{equation}
+E( I( T >n)( M_{n+1} -M_{n}) \mid F_{n}) =I( T >n)( E( M_{n+1} \mid F_{n}) -M_{n}) =0
+\end{equation}
+$$
+and thus $\displaystyle E( S_{n+1} \mid F_{n}) =S_{n}$.
+
+Since $\displaystyle \{T >n\}$ is determined by $\displaystyle \{M_{0} ,\dotsc ,M_{n}\}$, $\displaystyle \sigma ( S_{0} ,\dotsc ,S_{n}) \subset F_{n}$, so
+$$
+\begin{equation*}
+E( S_{n+1} \mid S_{0} ,\dotsc ,S_{n}) =S_{n} .
+\end{equation*}
+$$
+
+By replacing the $\displaystyle =$with $\displaystyle \geq $in the last equality in (1), it is clear that a stopped submartingale is a submartingale as well.
+
+If $\displaystyle T$ is not a stopping time, $\displaystyle S_{n}$ may not be a martingale. If $\displaystyle M_{n}$ is SSRW given by sums of iid random signs $\displaystyle X_{1} ,\dotsc ,X_{n}$, we can let $\displaystyle T$ be 1 if $\displaystyle X_{2} =-1$ and 2 otherwise. Then, 
+$$
+\begin{equation*}
+E( S_{1}) =E( M_{1}) =E( X_{1}) =0,
+\end{equation*}
+$$
+but
+$$
+\begin{equation*}
+E( S_{2}) =\frac{1}{2} E( M_{1} \mid X_{2} =-1) +\frac{1}{2} E( M_{2} \mid X_{2} =1) =0+\frac{1}{2}( E( X_{1}) +1) =\frac{1}{2}  >0.
+\end{equation*}
+$$
+:::
+
+
+### ✏️ Section Problem 3
+
+(14.5) (Markov chains and martingales) Let $S=\{1,2,\dotsc ,m\}$ or $S=\{1,2,\dotsc \}$ or $S=\ZZ $ be the state space. Set $Q$ to be a nonnegative matrix of entries $q_{ij}$ for each $i,j\in S$, where each row sum is 1. Now, a sequence $X_{0} ,X_{1} ,\cdots$ of r.v.s taking values in $S$ is a Markov chain with transition matrix $Q$ if $P(X_{n+1} =j\mid X_{n} =i,X_{n-1} =i_{n-1} ,\dotsc ,X_{0} =i_{0} )=q_{ij}$. 
+
+(a) Give an example of a Markov chain with $E(X_{n} )=c$ for all $n$ (with $c$ a constant) such that the chain is not a martingale. 
+
+(b) Give an example of a martingale which is not a Markov chain. 
+
+(c) Let $X_{0} ,X_{1} ,\dotsc$ be a Markov chain with transition matrix $Q$ and state space $S$. Let $h$ be an eigenvector of $Q$ with corresponding eigenvalue $\lambda$. Assume that $\lambda \neq 0$, and that $E|h(X_{n} )|< \infty$ for all $n$. Show that $h(X_{n} )/\lambda ^{n}$, $n\geq 0$ is a martingale with respect to the sequence of r.v.s $X_{0} ,X_{1} ,\dotsc$ (i.e. the Markov chain)
+
+::: {.callout-tip collapse="true" appearance="simple"}
+
+## Solution 
+
+(a) Choose $\displaystyle S=\{1,\dotsc ,m\}$, and let $\displaystyle X_{0} \sim DUnif( m)$, and set
+$$
+\begin{equation*}
+X_{n+1} =X_{n} +1\bmod m
+\end{equation*}
+$$
+with probability 1. Since each $\displaystyle X_{n+1}$ depends only on $\displaystyle X_{n}$, $\displaystyle X_{0} ,X_{1} ,\dotsc $ is a Markov chain. And each $\displaystyle X_{n}$ is marginally $\displaystyle DUnif( m)$, so they all have constant expectation $\displaystyle m( m+1) /2$.
+
+But we can check that
+$$
+\begin{align*}
+E( X_{n+1} \mid X_{0} ,\dotsc ,X_{n}) & =E( X_{n+1} \mid X_{n})\\
+ & =E( X_{n} +1\bmod m\mid X_{n})\\
+ & =X_{n} +1\bmod m\\
+ & \neq X_{n} ,
+\end{align*}
+$$
+ so $\displaystyle X_{0} ,X_{1} ,\dotsc $ is not a martingale.
+
+(b) Choose $\displaystyle S=\mathbb{Z}$, $\displaystyle X_{0} \sim Bern( 1/2)$, and set
+$$
+\begin{equation*}
+X_{n+1} =X_{n} +R_{n} X_{0} ,
+\end{equation*}
+$$
+where $\displaystyle R_{0} ,R_{1} ,\dotsc $ are iid Rademacher independent of $\displaystyle X_{0}$. 
+
+$\displaystyle E|X_{0} |< \infty $, so $\displaystyle E|X_{n} |< \infty $ for all $\displaystyle n$ by induction.
+
+$\displaystyle X_{n}$ is a function of itself.
+
+We can compute
+$$
+\begin{equation*}
+E( X_{n+1} \mid X_{0} ,\dotsc ,X_{n}) =E( X_{n} +R_{n} X_{0} \mid X_{0} ,\dotsc ,X_{n}) =X_{n} +E( R_{n}) X_{0} =X_{n} .
+\end{equation*}
+$$
+These three statements show that $\displaystyle X_{0} ,X_{1} ,\dotsc $is a martingale.
+
+But clearly knowing $\displaystyle X_{0}$ allows for a better prediction for $\displaystyle X_{n+1}$, so 
+$$
+\begin{equation*}
+X_{n+1} \mid X_{0} ,\dotsc ,X_{n} \nsim X_{n+1} \mid X_{n} ,
+\end{equation*}
+$$
+and thus $\displaystyle X_{0} ,X_{1} ,\dotsc $ is not a Markov chain.
+
+(c) Since $\displaystyle E|h( X_{n}) |< \infty $, $\displaystyle E|h( X_{n}) /\lambda ^{n} |< \infty $ as well since $\displaystyle \lambda \neq 0$.
+
+$\displaystyle h( X_{n}) /\lambda ^{n}$ is a function of $\displaystyle X_{n}$.
+
+We can compute
+$$
+\begin{align*}
+E( h( X_{n+1}) \mid X_{0} ,\dotsc ,X_{n}) & =E( h( X_{n+1}) \mid X_{n})\\
+ & =\sum _{j\in S} h( j) q_{X_{n} j}\\
+ & =\lambda h( X_{n}) ,
+\end{align*}
+$$
+where the first equality is due to the Markov property, the second equality is due to LOTUS, and the third equality is due to $\displaystyle h$ being an eigenvector of $\displaystyle Q$ with eigenvalue $\displaystyle \lambda $.
+
+Therefore,
+$$
+\begin{equation*}
+E\left( h( X_{n+1}) /\lambda ^{n+1} \mid X_{0} ,\dotsc ,X_{n}\right) =h( X_{n}) /\lambda ^{n} ,
+\end{equation*}
+$$
+so done.
+:::
+
+
+
+## Next Week
+Next week, we will discuss:
+
+- Final Period (No more section)
+
+Feel free to upload the pencil problem you wish to be discussed next week [here](https://forms.gle/RBmMNYJp4u3qD5W79).
+
+Note that a verified email address is needed in the GForm so we don't get scammy input! :) 
+
+$\,$
