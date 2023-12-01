@@ -44,7 +44,8 @@ $$
 
 ::: {.callout-tip collapse="true" appearance="simple"}
 ## Solution 
-
+Solution will be posted after section! :)
+<!--
 Write $\displaystyle X=G_{a_{1}} /G_{a_{1}} +G_{a_{0}}$, where $\displaystyle G_{a_{1}} \sim Gamma( a_{1})$ and $\displaystyle G_{a_{0}} \sim Gamma( a_{0})$. Then,
 $$
 \begin{equation*}
@@ -77,6 +78,7 @@ $$
 \end{equation*}
 $$
 by Slutsky's theorem (as both $\displaystyle a_{1} /( a_{1} +a_{0})\rightarrow \mu$ and $\displaystyle r\rightarrow \infty$). (The second term in the sum above goes to zero as well since we are allowed to assume this from the relevant Ed post.) So done.
+-->
 :::
 
 ### ✏️ Section Problem 2
@@ -85,7 +87,8 @@ Pencil 14.3.8 (Stopped martingales) Show that if $T$ is a stopping time and $M_{
 ::: {.callout-tip collapse="true" appearance="simple"}
 
 ## Solution 
-
+Solution will be posted after section! :)
+<!--
 First, 
 $$
 \begin{equation*}
@@ -131,6 +134,7 @@ $$
 E( S_{2}) =\frac{1}{2} E( M_{1} \mid X_{2} =-1) +\frac{1}{2} E( M_{2} \mid X_{2} =1) =0+\frac{1}{2}( E( X_{1}) +1) =\frac{1}{2}  >0.
 \end{equation*}
 $$
+-->
 :::
 
 
@@ -147,7 +151,8 @@ $$
 ::: {.callout-tip collapse="true" appearance="simple"}
 
 ## Solution 
-
+Solution will be posted after section! :)
+<!--
 (a) Choose $\displaystyle S=\{1,\dotsc ,m\}$, and let $\displaystyle X_{0} \sim DUnif( m)$, and set
 $$
 \begin{equation*}
@@ -216,6 +221,7 @@ E\left( h( X_{n+1}) /\lambda ^{n+1} \mid X_{0} ,\dotsc ,X_{n}\right) =h( X_{n}) 
 \end{equation*}
 $$
 so done.
+-->
 :::
 
 
