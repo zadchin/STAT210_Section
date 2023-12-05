@@ -303,40 +303,28 @@ Solution
 </div>
 <div id="callout-1" class="callout-1-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>Solution will be posted after section! :) <!--
-Write $\displaystyle X=G_{a_{1}} /G_{a_{1}} +G_{a_{0}}$, where $\displaystyle G_{a_{1}} \sim Gamma( a_{1})$ and $\displaystyle G_{a_{0}} \sim Gamma( a_{0})$. Then,
-$$
+<p>Write <span class="math inline">\(\displaystyle X=G_{a_{1}} /G_{a_{1}} +G_{a_{0}}\)</span>, where <span class="math inline">\(\displaystyle G_{a_{1}} \sim Gamma( a_{1})\)</span> and <span class="math inline">\(\displaystyle G_{a_{0}} \sim Gamma( a_{0})\)</span>. Then, <span class="math display">\[
 \begin{equation*}
 a_{0} G_{a_{1}} -a_{1} G_{a_{0}} =\sum _{i=1}^{a_{1}}( a_{0} X_{i} -a_{1} Y_{i}) ,
 \end{equation*}
-$$
-where $\displaystyle X_{i} \sim Gamma( 1)$ and $\displaystyle Y_{i} \sim Gamma( a_{0} /a_{1})$. Note that $\displaystyle a_{0} X_{i} -a_{1} Y_{i}$ has mean 0 and variance $\displaystyle a_{0} r$, so applying iid CLT, we get (as $\displaystyle r\rightarrow \infty $)
-$$
+\]</span> where <span class="math inline">\(\displaystyle X_{i} \sim Gamma( 1)\)</span> and <span class="math inline">\(\displaystyle Y_{i} \sim Gamma( a_{0} /a_{1})\)</span>. Note that <span class="math inline">\(\displaystyle a_{0} X_{i} -a_{1} Y_{i}\)</span> has mean 0 and variance <span class="math inline">\(\displaystyle a_{0} r\)</span>, so applying iid CLT, we get (as $r$) <span class="math display">\[
 \begin{equation*}
 \sum _{i=1}^{a_{1}}( a_{0} X_{i} -a_{1} Y_{i})\rightarrow _{d} N( 0,a_{1} a_{0} r) .
 \end{equation*}
-$$
-Also, $\displaystyle r/( G_{a_{1}} +G_{a_{0}})\rightarrow _{p} 1$ as $\displaystyle r\rightarrow \infty $ by WLLN and CMT, so Slutsky's gives
-$$
+\]</span> Also, <span class="math inline">\(\displaystyle r/( G_{a_{1}} +G_{a_{0}})\rightarrow _{p} 1\)</span> as $r$ by WLLN and CMT, so Slutsky’s gives <span class="math display">\[
 \begin{equation*}
 X-\frac{a_{1}}{a_{1} +a_{0}} =\frac{a_{0} G_{a_{1}} -a_{1} G_{a_{0}}}{r( G_{a_{1}} +G_{a_{0}})}\rightarrow _{d} N\left( 0,a_{1} a_{0} /r^{3}\right) .
 \end{equation*}
-$$
-Now, setting $\displaystyle \sigma ^{2} \equiv a_{1} a_{0} /r^{2}( r+1)$, we find that as $\displaystyle r\rightarrow \infty $, we finally get
-$$
+\]</span> Now, setting <span class="math inline">\(\displaystyle \sigma ^{2} \equiv a_{1} a_{0} /r^{2}( r+1)\)</span>, we find that as $r$, we finally get <span class="math display">\[
 \begin{equation*}
 \frac{X-\frac{a_{1}}{a_{1} +a_{0}}}{\sigma }\rightarrow _{d} N\left( 0,\frac{a_{1} a_{0}}{r^{3}} \cdot \frac{r^{2}( r+1)}{a_{1} a_{0}}\right) =N\left( 0,\frac{r+1}{r}\right)\rightarrow N( 0,1) .
 \end{equation*}
-$$
-
-Next, set $\displaystyle \xi =\sqrt{\mu ( 1-\mu ) /( r+1)}$. As $\displaystyle a_{1} /( a_{1} +a_{0})\rightarrow \mu $, $\displaystyle \sigma \rightarrow \xi$, and hence
-$$
+\]</span></p>
+<p>Next, set <span class="math inline">\(\displaystyle \xi =\sqrt{\mu ( 1-\mu ) /( r+1)}\)</span>. As $a_{1} /( a_{1} +a_{0})$, <span class="math inline">\(\displaystyle \sigma \rightarrow \xi\)</span>, and hence <span class="math display">\[
 \begin{equation*}
 \frac{X-\mu }{\xi } =\frac{\sigma }{\xi }\left(\frac{X-\frac{a_{1}}{a_{1} +a_{0}}}{\sigma } +\frac{\frac{a_{1}}{a_{1} +a_{0}} -\mu }{\sigma }\right)\rightarrow _{d} N( 0,1)
 \end{equation*}
-$$
-by Slutsky's theorem (as both $\displaystyle a_{1} /( a_{1} +a_{0})\rightarrow \mu$ and $\displaystyle r\rightarrow \infty$). (The second term in the sum above goes to zero as well since we are allowed to assume this from the relevant Ed post.) So done.
---></p>
+\]</span> by Slutsky’s theorem (as both <span class="math inline">\(\displaystyle a_{1} /( a_{1} +a_{0})\rightarrow \mu\)</span> and <span class="math inline">\(\displaystyle r\rightarrow \infty\)</span>). (The second term in the sum above goes to zero as well since we are allowed to assume this from the relevant Ed post.) So done.</p>
 </div>
 </div>
 </div>
@@ -356,53 +344,37 @@ Solution
 </div>
 <div id="callout-2" class="callout-2-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>Solution will be posted after section! :) <!--
-First, 
-$$
+<p>First, <span class="math display">\[
 \begin{equation*}
-E|S_{n} |\leq E|M_{0} |+\cdots +E|M_{n} |< \infty .
+E|S_{n} |\leq E|M_{0} |+\cdots +E|M_{n} |&lt; \infty .
 \end{equation*}
-$$
-
-Second, $\displaystyle S_{n}$ is measurable since $\displaystyle M_{n}$ is.
-
-Third, $\displaystyle S_{n} =M_{n}$ and $\displaystyle S_{n+1} =M_{n+1}$ if $\displaystyle T >n$ and $\displaystyle S_{n+1} =S_{n}$ if $\displaystyle T\leq n$, so
-$$
+\]</span></p>
+<p>Second, <span class="math inline">\(\displaystyle S_{n}\)</span> is measurable since <span class="math inline">\(\displaystyle M_{n}\)</span> is.</p>
+<p>Third, <span class="math inline">\(\displaystyle S_{n} =M_{n}\)</span> and <span class="math inline">\(\displaystyle S_{n+1} =M_{n+1}\)</span> if <span class="math inline">\(\displaystyle T &gt;n\)</span> and <span class="math inline">\(\displaystyle S_{n+1} =S_{n}\)</span> if <span class="math inline">\(\displaystyle T\leq n\)</span>, so <span class="math display">\[
 \begin{equation*}
-S_{n+1} =S_{n} +I( T >n)( M_{n+1} -M_{n}) .
+S_{n+1} =S_{n} +I( T &gt;n)( M_{n+1} -M_{n}) .
 \end{equation*}
-$$
-
-Thus, if $\displaystyle F_{n} =\sigma ( M_{0} ,\dotsc ,M_{n})$,
-$$
+\]</span></p>
+<p>Thus, if <span class="math inline">\(\displaystyle F_{n} =\sigma ( M_{0} ,\dotsc ,M_{n})\)</span>, <span class="math display">\[
 \begin{equation}
-E( I( T >n)( M_{n+1} -M_{n}) \mid F_{n}) =I( T >n)( E( M_{n+1} \mid F_{n}) -M_{n}) =0
+E( I( T &gt;n)( M_{n+1} -M_{n}) \mid F_{n}) =I( T &gt;n)( E( M_{n+1} \mid F_{n}) -M_{n}) =0
 \end{equation}
-$$
-and thus $\displaystyle E( S_{n+1} \mid F_{n}) =S_{n}$.
-
-Since $\displaystyle \{T >n\}$ is determined by $\displaystyle \{M_{0} ,\dotsc ,M_{n}\}$, $\displaystyle \sigma ( S_{0} ,\dotsc ,S_{n}) \subset F_{n}$, so
-$$
+\]</span> and thus <span class="math inline">\(\displaystyle E( S_{n+1} \mid F_{n}) =S_{n}\)</span>.</p>
+<p>Since <span class="math inline">\(\displaystyle \{T &gt;n\}\)</span> is determined by <span class="math inline">\(\displaystyle \{M_{0} ,\dotsc ,M_{n}\}\)</span>, <span class="math inline">\(\displaystyle \sigma ( S_{0} ,\dotsc ,S_{n}) \subset F_{n}\)</span>, so <span class="math display">\[
 \begin{equation*}
 E( S_{n+1} \mid S_{0} ,\dotsc ,S_{n}) =S_{n} .
 \end{equation*}
-$$
-
-By replacing the $\displaystyle =$with $\displaystyle \geq $in the last equality in (1), it is clear that a stopped submartingale is a submartingale as well.
-
-If $\displaystyle T$ is not a stopping time, $\displaystyle S_{n}$ may not be a martingale. If $\displaystyle M_{n}$ is SSRW given by sums of iid random signs $\displaystyle X_{1} ,\dotsc ,X_{n}$, we can let $\displaystyle T$ be 1 if $\displaystyle X_{2} =-1$ and 2 otherwise. Then, 
-$$
+\]</span></p>
+<p>By replacing the <span class="math inline">\(\displaystyle =\)</span>with $$in the last equality in (1), it is clear that a stopped submartingale is a submartingale as well.</p>
+<p>If <span class="math inline">\(\displaystyle T\)</span> is not a stopping time, <span class="math inline">\(\displaystyle S_{n}\)</span> may not be a martingale. If <span class="math inline">\(\displaystyle M_{n}\)</span> is SSRW given by sums of iid random signs <span class="math inline">\(\displaystyle X_{1} ,\dotsc ,X_{n}\)</span>, we can let <span class="math inline">\(\displaystyle T\)</span> be 1 if <span class="math inline">\(\displaystyle X_{2} =-1\)</span> and 2 otherwise. Then, <span class="math display">\[
 \begin{equation*}
 E( S_{1}) =E( M_{1}) =E( X_{1}) =0,
 \end{equation*}
-$$
-but
-$$
+\]</span> but <span class="math display">\[
 \begin{equation*}
-E( S_{2}) =\frac{1}{2} E( M_{1} \mid X_{2} =-1) +\frac{1}{2} E( M_{2} \mid X_{2} =1) =0+\frac{1}{2}( E( X_{1}) +1) =\frac{1}{2}  >0.
+E( S_{2}) =\frac{1}{2} E( M_{1} \mid X_{2} =-1) +\frac{1}{2} E( M_{2} \mid X_{2} =1) =0+\frac{1}{2}( E( X_{1}) +1) =\frac{1}{2}  &gt;0.
 \end{equation*}
-$$
---></p>
+\]</span></p>
 </div>
 </div>
 </div>
@@ -427,76 +399,56 @@ Solution
 </div>
 <div id="callout-3" class="callout-3-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>Solution will be posted after section! :) <!--
-(a) Choose $\displaystyle S=\{1,\dotsc ,m\}$, and let $\displaystyle X_{0} \sim DUnif( m)$, and set
-$$
+<ol type="a">
+<li>Choose <span class="math inline">\(\displaystyle S=\{1,\dotsc ,m\}\)</span>, and let <span class="math inline">\(\displaystyle X_{0} \sim DUnif( m)\)</span>, and set <span class="math display">\[
 \begin{equation*}
 X_{n+1} =X_{n} +1\bmod m
 \end{equation*}
-$$
-with probability 1. Since each $\displaystyle X_{n+1}$ depends only on $\displaystyle X_{n}$, $\displaystyle X_{0} ,X_{1} ,\dotsc $ is a Markov chain. And each $\displaystyle X_{n}$ is marginally $\displaystyle DUnif( m)$, so they all have constant expectation $\displaystyle m( m+1) /2$.
-
-But we can check that
-$$
+\]</span> with probability 1. Since each <span class="math inline">\(\displaystyle X_{n+1}\)</span> depends only on <span class="math inline">\(\displaystyle X_{n}\)</span>, $X_{0} ,X_{1} ,$ is a Markov chain. And each <span class="math inline">\(\displaystyle X_{n}\)</span> is marginally <span class="math inline">\(\displaystyle DUnif( m)\)</span>, so they all have constant expectation <span class="math inline">\(\displaystyle m( m+1) /2\)</span>.</li>
+</ol>
+<p>But we can check that <span class="math display">\[
 \begin{align*}
-E( X_{n+1} \mid X_{0} ,\dotsc ,X_{n}) & =E( X_{n+1} \mid X_{n})\\
- & =E( X_{n} +1\bmod m\mid X_{n})\\
- & =X_{n} +1\bmod m\\
- & \neq X_{n} ,
+E( X_{n+1} \mid X_{0} ,\dotsc ,X_{n}) &amp; =E( X_{n+1} \mid X_{n})\\
+&amp; =E( X_{n} +1\bmod m\mid X_{n})\\
+&amp; =X_{n} +1\bmod m\\
+&amp; \neq X_{n} ,
 \end{align*}
-$$
- so $\displaystyle X_{0} ,X_{1} ,\dotsc $ is not a martingale.
-
-(b) Choose $\displaystyle S=\mathbb{Z}$, $\displaystyle X_{0} \sim Bern( 1/2)$, and set
-$$
+\]</span> so $X_{0} ,X_{1} ,$ is not a martingale.</p>
+<ol start="2" type="a">
+<li>Choose <span class="math inline">\(\displaystyle S=\mathbb{Z}\)</span>, <span class="math inline">\(\displaystyle X_{0} \sim Bern( 1/2)\)</span>, and set <span class="math display">\[
 \begin{equation*}
 X_{n+1} =X_{n} +R_{n} X_{0} ,
 \end{equation*}
-$$
-where $\displaystyle R_{0} ,R_{1} ,\dotsc $ are iid Rademacher independent of $\displaystyle X_{0}$. 
-
-$\displaystyle E|X_{0} |< \infty $, so $\displaystyle E|X_{n} |< \infty $ for all $\displaystyle n$ by induction.
-
-$\displaystyle X_{n}$ is a function of itself.
-
-We can compute
-$$
+\]</span> where $R_{0} ,R_{1} ,$ are iid Rademacher independent of <span class="math inline">\(\displaystyle X_{0}\)</span>.</li>
+</ol>
+<p>$E|X_{0} |&lt; $, so $E|X_{n} |&lt; $ for all <span class="math inline">\(\displaystyle n\)</span> by induction.</p>
+<p><span class="math inline">\(\displaystyle X_{n}\)</span> is a function of itself.</p>
+<p>We can compute <span class="math display">\[
 \begin{equation*}
 E( X_{n+1} \mid X_{0} ,\dotsc ,X_{n}) =E( X_{n} +R_{n} X_{0} \mid X_{0} ,\dotsc ,X_{n}) =X_{n} +E( R_{n}) X_{0} =X_{n} .
 \end{equation*}
-$$
-These three statements show that $\displaystyle X_{0} ,X_{1} ,\dotsc $is a martingale.
-
-But clearly knowing $\displaystyle X_{0}$ allows for a better prediction for $\displaystyle X_{n+1}$, so 
-$$
+\]</span> These three statements show that $X_{0} ,X_{1} ,$is a martingale.</p>
+<p>But clearly knowing <span class="math inline">\(\displaystyle X_{0}\)</span> allows for a better prediction for <span class="math inline">\(\displaystyle X_{n+1}\)</span>, so <span class="math display">\[
 \begin{equation*}
 X_{n+1} \mid X_{0} ,\dotsc ,X_{n} \nsim X_{n+1} \mid X_{n} ,
 \end{equation*}
-$$
-and thus $\displaystyle X_{0} ,X_{1} ,\dotsc $ is not a Markov chain.
-
-(c) Since $\displaystyle E|h( X_{n}) |< \infty $, $\displaystyle E|h( X_{n}) /\lambda ^{n} |< \infty $ as well since $\displaystyle \lambda \neq 0$.
-
-$\displaystyle h( X_{n}) /\lambda ^{n}$ is a function of $\displaystyle X_{n}$.
-
-We can compute
-$$
+\]</span> and thus $X_{0} ,X_{1} ,$ is not a Markov chain.</p>
+<ol start="3" type="a">
+<li>Since $E|h( X_{n}) |&lt; $, $E|h( X_{n}) /^{n} |&lt; $ as well since <span class="math inline">\(\displaystyle \lambda \neq 0\)</span>.</li>
+</ol>
+<p><span class="math inline">\(\displaystyle h( X_{n}) /\lambda ^{n}\)</span> is a function of <span class="math inline">\(\displaystyle X_{n}\)</span>.</p>
+<p>We can compute <span class="math display">\[
 \begin{align*}
-E( h( X_{n+1}) \mid X_{0} ,\dotsc ,X_{n}) & =E( h( X_{n+1}) \mid X_{n})\\
- & =\sum _{j\in S} h( j) q_{X_{n} j}\\
- & =\lambda h( X_{n}) ,
+E( h( X_{n+1}) \mid X_{0} ,\dotsc ,X_{n}) &amp; =E( h( X_{n+1}) \mid X_{n})\\
+&amp; =\sum _{j\in S} h( j) q_{X_{n} j}\\
+&amp; =\lambda h( X_{n}) ,
 \end{align*}
-$$
-where the first equality is due to the Markov property, the second equality is due to LOTUS, and the third equality is due to $\displaystyle h$ being an eigenvector of $\displaystyle Q$ with eigenvalue $\displaystyle \lambda $.
-
-Therefore,
-$$
+\]</span> where the first equality is due to the Markov property, the second equality is due to LOTUS, and the third equality is due to <span class="math inline">\(\displaystyle h\)</span> being an eigenvector of <span class="math inline">\(\displaystyle Q\)</span> with eigenvalue $$.</p>
+<p>Therefore, <span class="math display">\[
 \begin{equation*}
 E\left( h( X_{n+1}) /\lambda ^{n+1} \mid X_{0} ,\dotsc ,X_{n}\right) =h( X_{n}) /\lambda ^{n} ,
 \end{equation*}
-$$
-so done.
---></p>
+\]</span> so done.</p>
 </div>
 </div>
 </div>
